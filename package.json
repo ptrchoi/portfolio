@@ -8,10 +8,15 @@
     "react-scripts": "2.1.5"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "parcel src/index.html --open",
+    "build": "parcel build src/index.html --out-dir build",
+    "test": "jest --watch",
+    "coverage": "jest --coverage"
+  },
+  "jest": {
+    "setupFiles": [
+      "./src/setupTests.js"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -21,5 +26,15 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^24.1.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.10.0",
+    "jest": "^24.1.0",
+    "parcel-bundler": "^1.11.0"
+  }
 }
