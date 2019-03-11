@@ -1,6 +1,6 @@
-@import 'base/variables';
-@import 'base/main';
+@import 'variables';
+@import 'main';
 
 //Components
-@import 'components/app';
-@import 'components/home';
+@import '../Components/App/app';
+@import '../Components/Home/home';

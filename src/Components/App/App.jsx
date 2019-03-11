@@ -3,9 +3,9 @@ import { BrowserRouter } from 'react-router-dom';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 
 //Components
-import Home from './Home';
-import About from './About';
-import Skills from './Skills';
+import Home from '../Home/Home';
+import About from '../About/About';
+import Skills from '../Skills/Skills';
 
 class App extends Component {
   render() {

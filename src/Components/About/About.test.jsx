@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import App from '../Components/App';
+import About from './About';
 
-describe('<App /', () => {
+describe('<About /', () => {
   it('should render a div without crashing', () => {
-    const wrapper = shallow(<App />);
+    const wrapper = shallow(<About />);
     expect(wrapper.find('div').length).toEqual(1);
   });
 });
