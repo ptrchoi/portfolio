@@ -4,6 +4,41 @@ body {
   padding: 0;
 }
 
-p {
+.sectionWrapper {
   color: red;
+  height: 1200px;
+}
+
+.appWrapper {
+  border: dotted 2px gray;
+  padding: 20px;
+}
+
+ul.menu {
+  border: dotted 2px blue;
+  position: fixed;
+}
+ul.menu li {
+  border: dotted 2px aqua;
+  display: inline;
+  list-style-type: none;
+}
+ul.menu a {
+  border: dotted 2px purple;
+  font-weight: bold;
+  padding: 20px;
+  text-decoration: none;
+}
+ul.menu .active {
+  background-color: palegreen;
+}
+
+.contentWrapper {
+  border: dotted 2px red;
+  padding: 20px;
+}
+
+#welcomeButton {
+  background-color: green;
+  color: white;
 }

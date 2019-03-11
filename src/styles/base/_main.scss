@@ -3,6 +3,7 @@ body {
   margin: 0 0;
   padding: 0;
 }
-p {
+.sectionWrapper {
   color: $test-text-color;
+  height: $test-section-height;
 }
