@@ -9,11 +9,6 @@ body {
   height: 1200px;
 }
 
-.appWrapper {
-  border: dotted 2px gray;
-  padding: 20px;
-}
-
 ul.menu {
   border: dotted 2px blue;
   position: fixed;
@@ -29,8 +24,13 @@ ul.menu a {
   padding: 20px;
   text-decoration: none;
 }
-ul.menu .active {
-  background-color: palegreen;
+ul.menu a:focus {
+  background-color: green;
+}
+
+.appWrapper {
+  border: dotted 2px gray;
+  padding: 20px;
 }
 
 .contentWrapper {

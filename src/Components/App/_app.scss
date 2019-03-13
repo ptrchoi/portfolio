@@ -2,24 +2,6 @@
   border: dotted 2px gray;
   padding: 20px;
 }
-ul.menu {
-  border: dotted 2px blue;
-  position: fixed;
-  li {
-    border: dotted 2px aqua;
-    display: inline;
-    list-style-type: none;
-  }
-  a {
-    border: dotted 2px purple;
-    font-weight: bold;
-    padding: 20px;
-    text-decoration: none;
-  }
-  .active {
-    background-color: palegreen;
-  }
-}
 .contentWrapper {
   border: dotted 2px red;
   padding: 20px;
