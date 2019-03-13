@@ -2,9 +2,6 @@ import React from 'react';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 
 const Menu = props => {
-  const selectedStyle = {
-    fontSize: '2rem'
-  };
   const testActive = to => (match, location) => to === location.hash;
 
   return (
@@ -15,8 +12,7 @@ const Menu = props => {
             to="/#home"
             isActive={testActive('#home')}
             exact
-            activeStyle={selectedStyle}
-            // onClick={props.onNavLinkClick(testActive)}
+            activeClassName={'activeLink'}
             scroll={el =>
               el.scrollIntoView({ behavior: 'smooth', block: 'start' })
             }
@@ -29,8 +25,7 @@ const Menu = props => {
             to="/#about"
             isActive={testActive('#about')}
             exact
-            activeStyle={selectedStyle}
-            // onClick={props.onNavLinkClick(testActive)}
+            activeClassName={'activeLink'}
             scroll={el =>
               el.scrollIntoView({ behavior: 'smooth', block: 'start' })
             }
@@ -43,8 +38,7 @@ const Menu = props => {
             to="/#skills"
             isActive={testActive('#skills')}
             exact
-            activeStyle={selectedStyle}
-            // onClick={props.onNavLinkClick(testActive)}
+            activeClassName={'activeLink'}
             scroll={el =>
               el.scrollIntoView({ behavior: 'smooth', block: 'start' })
             }

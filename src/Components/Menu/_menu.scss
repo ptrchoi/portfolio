@@ -12,7 +12,7 @@ ul.menu {
     padding: 20px;
     text-decoration: none;
   }
-  a:focus {
-    background-color: green;
+  .activeLink {
+    font-size: 3rem;
   }
 }

@@ -24,8 +24,8 @@ ul.menu a {
   padding: 20px;
   text-decoration: none;
 }
-ul.menu a:focus {
-  background-color: green;
+ul.menu .activeLink {
+  font-size: 3rem;
 }
 
 .appWrapper {
