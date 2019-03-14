@@ -2,6 +2,8 @@ import React from 'react';
 import $ from 'jquery';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 
+import constants from '../../constants';
+
 class Menu extends React.Component {
   constructor(props) {
     super(props);
@@ -15,7 +17,17 @@ class Menu extends React.Component {
       document.documentElement.scrollHeight -
       document.documentElement.clientHeight;
     const scrolled = winScroll / height;
-    console.log('scrolled: ', scrolled);
+    // console.log('scrolled: ', scrolled);
+
+    $('.menuLink').removeClass('activeLink');
+
+    if (scrolled < constants.ABOUT_TOP) {
+      $('#menu-home').toggleClass('activeLink');
+    } else if (scrolled < constants.SKILLS_TOP) {
+      $('#menu-about').toggleClass('activeLink');
+    } else {
+      $('#menu-skills').toggleClass('activeLink');
+    }
   }
   componentDidMount() {
     window.addEventListener('scroll', this.listenToScroll);
@@ -68,7 +80,7 @@ class Menu extends React.Component {
           </li>
           <li>
             <NavLink
-              id="menu-skill"
+              id="menu-skills"
               className="menuLink"
               to="/#skills"
               isActive={testActive('#skills')}
