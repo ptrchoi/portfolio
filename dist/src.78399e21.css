@@ -28,6 +28,19 @@ ul.menu .activeLink {
   font-size: 3rem;
 }
 
+.menuTestButton {
+  background-color: aqua;
+  color: white;
+  height: 80px;
+  margin: 140px 0 10px 40px;
+  width: 160px;
+}
+
+.menuTestButton:active {
+  background-color: yellow;
+  color: blue;
+}
+
 .appWrapper {
   border: dotted 2px gray;
   padding: 20px;
@@ -38,7 +51,15 @@ ul.menu .activeLink {
   padding: 20px;
 }
 
-#welcomeButton {
+.welcomeButton {
   background-color: green;
   color: white;
+  height: 40px;
+  margin: 150px;
+  width: 80px;
+}
+
+.welcomeButton:active {
+  background-color: yellow;
+  color: blue;
 }

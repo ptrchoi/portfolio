@@ -16,3 +16,14 @@ ul.menu {
     font-size: 3rem;
   }
 }
+.menuTestButton {
+  background-color: aqua;
+  color: white;
+  height: 80px;
+  margin: 140px 0 10px 40px;
+  width: 160px;
+}
+.menuTestButton:active {
+  background-color: yellow;
+  color: blue;
+}

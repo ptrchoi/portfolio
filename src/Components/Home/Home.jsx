@@ -4,7 +4,12 @@ const Home = props => {
   return (
     <div className="sectionWrapper">
       <p>Home Component</p>
-      <button id="welcomeButton">Welcome</button>
+      <button
+        className="welcomeButton"
+        onClick={() => console.log('welcome button pressed!')}
+      >
+        welcome
+      </button>
     </div>
   );
 };

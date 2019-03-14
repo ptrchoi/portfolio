@@ -1,4 +1,11 @@
-#welcomeButton {
+.welcomeButton {
   background-color: green;
   color: white;
+  height: 40px;
+  margin: 150px;
+  width: 80px;
+}
+.welcomeButton:active {
+  background-color: yellow;
+  color: blue;
 }
