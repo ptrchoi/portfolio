@@ -11,15 +11,17 @@
     width: calc(100% - 40px); //subtract wrapper margins ($app-margin-LR*2)
 
     .links-wrapper {
+      align-items: center;
       border: dotted 2px pink;
       display: flex;
+    }
+    .links--left {
+      justify-content: flex-start;
+      width: 40%;
+    }
+    .links--right {
       justify-content: space-around;
-    }
-    .links-left {
-      width: 35%;
-    }
-    .links-right {
-      width: 65%;
+      width: 60%;
     }
     li {
       border: dotted 2px aqua;
@@ -32,11 +34,14 @@
     .activeLink {
       color: red;
     }
+    #menu-icon {
+      padding: 0 8px 0 2px;
+    }
     #name {
       color: green;
       font-size: 1.5rem;
       font-weight: bold;
-      margin-right: auto;
+      // margin-right: auto;
     }
   }
 }

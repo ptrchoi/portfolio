@@ -3,6 +3,7 @@ import $ from 'jquery';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 
 import C from '../../constants';
+import Sidebar from '../Sidebar/Sidebar';
 
 class Menu extends React.Component {
   constructor(props) {
@@ -50,10 +51,13 @@ class Menu extends React.Component {
       <div>
         <div id="navbar">
           <ul className="menu">
-            <div className="links-wrapper links-left">
+            <div className="links-wrapper links--left">
+              <li id="menu-icon">
+                <Sidebar />
+              </li>
               <li id="name">Peter Choi</li>
             </div>
-            <div className="links-wrapper links-right">
+            <div className="links-wrapper links--right">
               <li>
                 <NavLink
                   id="menu-home"

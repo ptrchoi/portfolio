@@ -32,15 +32,17 @@ body {
   width: calc(100% - 40px);
 }
 #navbar ul.menu .links-wrapper {
+  align-items: center;
   border: dotted 2px pink;
   display: flex;
+}
+#navbar ul.menu .links--left {
+  justify-content: flex-start;
+  width: 40%;
+}
+#navbar ul.menu .links--right {
   justify-content: space-around;
-}
-#navbar ul.menu .links-left {
-  width: 35%;
-}
-#navbar ul.menu .links-right {
-  width: 65%;
+  width: 60%;
 }
 #navbar ul.menu li {
   border: dotted 2px aqua;
@@ -53,11 +55,13 @@ body {
 #navbar ul.menu .activeLink {
   color: red;
 }
+#navbar ul.menu #menu-icon {
+  padding: 0 8px 0 2px;
+}
 #navbar ul.menu #name {
   color: green;
   font-size: 1.5rem;
   font-weight: bold;
-  margin-right: auto;
 }
 
 .menuTestButton {
@@ -71,6 +75,33 @@ body {
 .menuTestButton:active {
   background-color: yellow;
   color: blue;
+}
+
+.sidebar-icon--open {
+  display: block;
+  cursor: pointer;
+}
+
+.sidebar-icon--bar1,
+.sidebar-icon--bar2,
+.sidebar-icon--bar3 {
+  width: 26px;
+  height: 4px;
+  margin: 4px 0;
+  background-color: #333;
+  transition: 0.4s;
+}
+
+.sidebar-icon--close .sidebar-icon--bar1 {
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.sidebar-icon--close .sidebar-icon--bar2 {
+  opacity: 0;
+}
+
+.sidebar-icon--close .sidebar-icon--bar3 {
+  transform: rotate(45deg) translate(-6px, -6px);
 }
 
 .appWrapper {
