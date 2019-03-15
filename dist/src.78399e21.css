@@ -20,48 +20,44 @@ body {
   height: 1200px;
 }
 
-#nav {
-  border: dotted 2px chartreuse;
-}
-#nav ul.menu {
+#navbar ul.menu {
   align-items: center;
   border: dotted 2px blue;
   display: flex;
   height: 50px;
   justify-content: space-between;
   list-style-type: none;
+  max-width: 1040px;
   position: fixed;
   width: calc(100% - 40px);
-  max-width: 1040px;
 }
-#nav ul.menu .links-left-wrapper {
+#navbar ul.menu .links-wrapper {
   border: dotted 2px pink;
   display: flex;
   justify-content: space-around;
+}
+#navbar ul.menu .links-left {
   width: 35%;
 }
-#nav ul.menu .links-left-wrapper #name {
-  color: green;
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-right: auto;
-}
-#nav ul.menu .links-right-wrapper {
-  border: dotted 2px pink;
-  display: flex;
-  justify-content: space-around;
+#navbar ul.menu .links-right {
   width: 65%;
 }
-#nav ul.menu li {
+#navbar ul.menu li {
   border: dotted 2px aqua;
 }
-#nav ul.menu a {
+#navbar ul.menu a {
   border: dotted 2px orange;
   font-weight: bold;
   text-decoration: none;
 }
-#nav ul.menu .activeLink {
+#navbar ul.menu .activeLink {
   color: red;
+}
+#navbar ul.menu #name {
+  color: green;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: auto;
 }
 
 .menuTestButton {

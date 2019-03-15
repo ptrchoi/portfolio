@@ -1,7 +1,4 @@
-#nav {
-  border: dotted 2px chartreuse;
-  // background-color: gray;
-
+#navbar {
   ul.menu {
     align-items: center;
     border: dotted 2px blue;
@@ -9,26 +6,19 @@
     height: 50px;
     justify-content: space-between;
     list-style-type: none;
+    max-width: $max-width - 40px;
     position: fixed;
     width: calc(100% - 40px); //subtract wrapper margins ($app-margin-LR*2)
-    max-width: $max-width - 40px;
 
-    .links-left-wrapper {
+    .links-wrapper {
       border: dotted 2px pink;
       display: flex;
       justify-content: space-around;
-      width: 35%;
-      #name {
-        color: green;
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin-right: auto;
-      }
     }
-    .links-right-wrapper {
-      border: dotted 2px pink;
-      display: flex;
-      justify-content: space-around;
+    .links-left {
+      width: 35%;
+    }
+    .links-right {
       width: 65%;
     }
     li {
@@ -41,6 +31,12 @@
     }
     .activeLink {
       color: red;
+    }
+    #name {
+      color: green;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-right: auto;
     }
   }
 }

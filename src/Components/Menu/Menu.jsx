@@ -48,12 +48,12 @@ class Menu extends React.Component {
 
     return (
       <div>
-        <div id="nav">
+        <div id="navbar">
           <ul className="menu">
-            <div className="links-left-wrapper">
+            <div className="links-wrapper links-left">
               <li id="name">Peter Choi</li>
             </div>
-            <div className="links-right-wrapper">
+            <div className="links-wrapper links-right">
               <li>
                 <NavLink
                   id="menu-home"
