@@ -2,15 +2,15 @@ import React from 'react';
 import $ from 'jquery';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 
-import constants from '../../constants';
+import C from '../../constants';
 
 class Menu extends React.Component {
   constructor(props) {
     super(props);
 
-    this.listenToScroll = this.listenToScroll.bind(this);
+    this.updateNavOnScroll = this.updateNavOnScroll.bind(this);
   }
-  listenToScroll() {
+  updateNavOnScroll() {
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
     const height =
@@ -21,19 +21,20 @@ class Menu extends React.Component {
 
     $('.menuLink').removeClass('activeLink');
 
-    if (scrolled < constants.ABOUT_TOP) {
+    // Check page location and update activeLink as needed
+    if (scrolled < C.ABOUT_TOP - C.SCROLL_TOP_OFFSET) {
       $('#menu-home').toggleClass('activeLink');
-    } else if (scrolled < constants.SKILLS_TOP) {
+    } else if (scrolled < C.SKILLS_TOP - C.SCROLL_TOP_OFFSET) {
       $('#menu-about').toggleClass('activeLink');
     } else {
       $('#menu-skills').toggleClass('activeLink');
     }
   }
   componentDidMount() {
-    window.addEventListener('scroll', this.listenToScroll);
+    window.addEventListener('scroll', this.updateNavOnScroll);
   }
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.listenToScroll);
+    window.removeEventListener('scroll', this.updateNavOnScroll);
   }
   render() {
     const changeActiveNavClass = () => {
@@ -46,55 +47,62 @@ class Menu extends React.Component {
     const testActive = to => (match, location) => to === location.hash;
 
     return (
-      <div id="nav">
-        <ul className="menu">
-          <li>
-            <NavLink
-              id="menu-home"
-              className="menuLink"
-              to="/#home"
-              isActive={testActive('#home')}
-              exact
-              activeClassName={'activeLink'}
-              scroll={el =>
-                el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-              }
-            >
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              id="menu-about"
-              className="menuLink"
-              to="/#about"
-              isActive={testActive('#about')}
-              exact
-              activeClassName={'activeLink'}
-              scroll={el =>
-                el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-              }
-            >
-              About
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              id="menu-skills"
-              className="menuLink"
-              to="/#skills"
-              isActive={testActive('#skills')}
-              exact
-              activeClassName={'activeLink'}
-              scroll={el =>
-                el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-              }
-            >
-              Skills
-            </NavLink>
-          </li>
-        </ul>
-        <div>
+      <div>
+        <div id="nav">
+          <ul className="menu">
+            <div className="links-left-wrapper">
+              <li id="name">Peter Choi</li>
+            </div>
+            <div className="links-right-wrapper">
+              <li>
+                <NavLink
+                  id="menu-home"
+                  className="menuLink"
+                  to="/#home"
+                  isActive={testActive('#home')}
+                  exact
+                  activeClassName={'activeLink'}
+                  scroll={el =>
+                    el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                  }
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  id="menu-about"
+                  className="menuLink"
+                  to="/#about"
+                  isActive={testActive('#about')}
+                  exact
+                  activeClassName={'activeLink'}
+                  scroll={el =>
+                    el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                  }
+                >
+                  About
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  id="menu-skills"
+                  className="menuLink"
+                  to="/#skills"
+                  isActive={testActive('#skills')}
+                  exact
+                  activeClassName={'activeLink'}
+                  scroll={el =>
+                    el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                  }
+                >
+                  Skills
+                </NavLink>
+              </li>
+            </div>
+          </ul>
+        </div>
+        <div id="test-div">
           <button className="menuTestButton" onClick={changeActiveNavClass}>
             Toggle active nav class
           </button>

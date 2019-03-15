@@ -1,8 +1,19 @@
-body {
-  box-sizing: border-box;
-  margin: 0 0;
+/* Ensure pure, inclusive box sizing across browsers. */
+* {
+  margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+/* Set the page's max-width within the viewport */
+body {
+  height: 100vh;
+  max-width: $max-width;
+  min-width: $min-width;
+  margin: 0 auto !important;
+  background-color: white;
+}
+
+/* REMOVE! FOR TESTING ONLY */
 .sectionWrapper {
   color: $test-text-color;
   height: $test-section-height;
