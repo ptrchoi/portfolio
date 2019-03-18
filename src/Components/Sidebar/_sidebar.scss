@@ -1,6 +1,8 @@
+/* ICONS
+------------------------------------------- */
 .sidebar-icon--open {
-  display: block;
   cursor: pointer;
+  display: block;
 }
 .sidebar-icon--bar1,
 .sidebar-icon--bar2,
@@ -11,7 +13,6 @@
   background-color: #333;
   transition: 0.4s;
 }
-
 .sidebar-icon--close .sidebar-icon--bar1 {
   // -webkit-transform: rotate(-45deg) translate(-4px, 6px);
   transform: rotate(-45deg) translate(-6px, 6px);
@@ -22,4 +23,23 @@
 .sidebar-icon--close .sidebar-icon--bar3 {
   // -webkit-transform: rotate(45deg) translate(-6px, -6px);
   transform: rotate(45deg) translate(-6px, -6px);
+}
+
+/* SIDEBAR OVERLAY
+------------------------------------------- */
+.sidebar--closed {
+  background: white;
+  box-shadow: 1px 0 5px rgba(0, 0, 0, 0.4);
+  // display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transform: translateX(-100%);
+  transition: 0.25s ease-in-out;
+  width: 60%;
+  z-index: -1;
+}
+.sidebar--open {
+  transform: translateX(0);
 }

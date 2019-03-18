@@ -5,6 +5,7 @@ const Sidebar = props => {
   const toggleIcon = () => {
     console.log('sidebar clicked');
     $('#icon-wrapper').toggleClass('sidebar-icon--close');
+    $('#sidebar').toggleClass('sidebar--open');
   };
   return (
     <div>
@@ -17,6 +18,7 @@ const Sidebar = props => {
         <div className="sidebar-icon--bar2" />
         <div className="sidebar-icon--bar3" />
       </div>
+      <div id="sidebar" className="sidebar--closed" />
     </div>
   );
 };
