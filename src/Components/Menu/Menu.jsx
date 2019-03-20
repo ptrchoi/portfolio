@@ -50,61 +50,53 @@ class Menu extends React.Component {
     return (
       <div>
         <div id="navbar">
-          <ul className="menu">
-            <div className="links-wrapper links--left">
-              <li id="menu-icon">
-                <Sidebar />
-              </li>
-              <li id="name">Peter Choi</li>
-            </div>
-            <div className="links-wrapper links--right">
-              <li>
-                <NavLink
-                  id="menu-home"
-                  className="menuLink"
-                  to="/#home"
-                  isActive={testActive('#home')}
-                  exact
-                  activeClassName={'activeLink'}
-                  scroll={el =>
-                    el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-                  }
-                >
-                  Home
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  id="menu-about"
-                  className="menuLink"
-                  to="/#about"
-                  isActive={testActive('#about')}
-                  exact
-                  activeClassName={'activeLink'}
-                  scroll={el =>
-                    el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-                  }
-                >
-                  About
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  id="menu-skills"
-                  className="menuLink"
-                  to="/#skills"
-                  isActive={testActive('#skills')}
-                  exact
-                  activeClassName={'activeLink'}
-                  scroll={el =>
-                    el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-                  }
-                >
-                  Skills
-                </NavLink>
-              </li>
-            </div>
-          </ul>
+          <div id="name">Peter Choi</div>
+          <div id="menu-icon">
+            <div className="sidebar-icon--bar1" />
+            <div className="sidebar-icon--bar2" />
+            <div className="sidebar-icon--bar3" />
+          </div>
+          <div id="links">
+            <NavLink
+              id="menu-home"
+              className="menuLink"
+              to="/#home"
+              isActive={testActive('#home')}
+              exact
+              activeClassName={'activeLink'}
+              scroll={el =>
+                el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+              }
+            >
+              Home
+            </NavLink>
+            <NavLink
+              id="menu-about"
+              className="menuLink"
+              to="/#about"
+              isActive={testActive('#about')}
+              exact
+              activeClassName={'activeLink'}
+              scroll={el =>
+                el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+              }
+            >
+              About
+            </NavLink>
+            <NavLink
+              id="menu-skills"
+              className="menuLink"
+              to="/#skills"
+              isActive={testActive('#skills')}
+              exact
+              activeClassName={'activeLink'}
+              scroll={el =>
+                el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+              }
+            >
+              Skills
+            </NavLink>
+          </div>
         </div>
         <div id="test-div">
           <button className="menuTestButton" onClick={changeActiveNavClass}>
