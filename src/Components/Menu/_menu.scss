@@ -22,12 +22,7 @@
   #links {
     display: grid;
     height: 100%;
-    grid-template-columns: 1fr 1fr 1fr;
-    // justify-content: space-between;
-    .menuLink {
-      font-size: 1.4rem;
-      justify-self: end;
-    }
+    z-index: 10;
     a {
       font-weight: bold;
       text-decoration: none;
@@ -35,6 +30,17 @@
     .activeLink {
       color: red;
     }
+    .menuLink {
+      font-size: 1.4rem;
+      justify-self: end;
+    }
+  }
+  .links-row {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .links-column {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
   }
 }
 .menuTestButton {
@@ -53,13 +59,22 @@
 @media only screen and (max-width: 600px) {
   #navbar {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
 
-    #links {
+    #links.links-row {
       display: none;
     }
     #menu-icon {
       display: block;
+    }
+  }
+}
+@media only screen and (min-width: 601px) {
+  #navbar {
+    #links.links-column {
+      display: none;
+    }
+    #menu-icon {
+      display: none;
     }
   }
 }

@@ -10,6 +10,7 @@ class Menu extends React.Component {
     super(props);
 
     this.updateNavOnScroll = this.updateNavOnScroll.bind(this);
+    this.toggleLinksHandler = this.toggleLinksHandler.bind(this);
   }
   updateNavOnScroll() {
     const winScroll =
@@ -18,7 +19,6 @@ class Menu extends React.Component {
       document.documentElement.scrollHeight -
       document.documentElement.clientHeight;
     const scrolled = winScroll / height;
-    // console.log('scrolled: ', scrolled);
 
     $('.menuLink').removeClass('activeLink');
 
@@ -37,6 +37,10 @@ class Menu extends React.Component {
   componentWillUnmount() {
     window.removeEventListener('scroll', this.updateNavOnScroll);
   }
+  toggleLinksHandler() {
+    console.log('inside toggleLinksHandler');
+    $('#links').toggleClass('links-row links-column');
+  }
   render() {
     const changeActiveNavClass = () => {
       //get current location on screen and set active link
@@ -52,11 +56,9 @@ class Menu extends React.Component {
         <div id="navbar">
           <div id="name">Peter Choi</div>
           <div id="menu-icon">
-            <div className="sidebar-icon--bar1" />
-            <div className="sidebar-icon--bar2" />
-            <div className="sidebar-icon--bar3" />
+            <Sidebar toggleLinks={this.toggleLinksHandler} />
           </div>
-          <div id="links">
+          <div id="links" className="links-row">
             <NavLink
               id="menu-home"
               className="menuLink"

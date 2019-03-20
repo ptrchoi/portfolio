@@ -44,11 +44,7 @@ body {
 #navbar #links {
   display: grid;
   height: 100%;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-#navbar #links .menuLink {
-  font-size: 1.4rem;
-  justify-self: end;
+  z-index: 10;
 }
 #navbar #links a {
   font-weight: bold;
@@ -56,6 +52,17 @@ body {
 }
 #navbar #links .activeLink {
   color: red;
+}
+#navbar #links .menuLink {
+  font-size: 1.4rem;
+  justify-self: end;
+}
+#navbar .links-row {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+#navbar .links-column {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 
 .menuTestButton {
@@ -75,13 +82,20 @@ body {
 @media only screen and (max-width: 600px) {
   #navbar {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
   }
-  #navbar #links {
+  #navbar #links.links-row {
     display: none;
   }
   #navbar #menu-icon {
     display: block;
+  }
+}
+@media only screen and (min-width: 601px) {
+  #navbar #links.links-column {
+    display: none;
+  }
+  #navbar #menu-icon {
+    display: none;
   }
 }
 /* ICONS
@@ -119,10 +133,10 @@ body {
   background: white;
   box-shadow: 1px 0 5px rgba(0, 0, 0, 0.4);
   height: 100%;
-  left: 0;
+  right: 0;
   position: fixed;
   top: 0;
-  transform: translateX(-100%);
+  transform: translateX(100%);
   transition: 0.25s ease-in-out;
   width: 60%;
   z-index: -1;
@@ -132,6 +146,12 @@ body {
   transform: translateX(0);
 }
 
+/*----------------- Responsive Behavior ------------------*/
+@media only screen and (min-width: 601px) {
+  .sidebar--closed {
+    transform: translateX(100%);
+  }
+}
 .appWrapper {
   border: dotted 2px gray;
   margin: 0 2%;
