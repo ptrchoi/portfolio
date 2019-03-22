@@ -1,71 +1,63 @@
 import React, { Component } from 'react';
 import MediaQuery from 'react-responsive';
 import { BrowserRouter } from 'react-router-dom';
+import $ from 'jquery';
+
+import C from '../../constants';
 
 //Components
-import Links from '../Links/Links';
 import Navbar from '../Navbar/Navbar';
-import Title from '../Title/Title';
 import Sidebar from '../Sidebar/Sidebar';
+import Links from '../Links/Links';
 import Home from '../Home/Home';
 import About from '../About/About';
 import Skills from '../Skills/Skills';
 
-function Menu(size) {
-  console.log('received size.size: ', size.size);
-
-  if (size.size === 'wide') {
-    console.log('returning wide menu');
-    return (
-      <div className="navbarWrapper">
-        <Navbar title={<Title />} links={<Links />} />
-      </div>
-    );
-  } else {
-    console.log('returning narrow menu');
-    return (
-      <div className="sidebarWrapper">
-        <Sidebar links={<Links />} />
-      </div>
-    );
-  }
-}
-
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      menu: 'wide'
-    };
 
-    this.swapMenuHandler = this.swapMenuHandler.bind(this);
+    this.updateNavOnScroll = this.updateNavOnScroll.bind(this);
   }
-  swapMenuHandler() {
-    const { menu } = this.state;
+  updateNavOnScroll() {
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+    const height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    const scrolled = winScroll / height;
 
-    console.log('swapping menu from: ', menu);
+    $('.menuLink').removeClass('activeLink');
 
-    if (menu === 'wide') {
-      this.setState({
-        menu: 'narrow'
-      });
+    // Check page location and update activeLink as needed
+    if (scrolled < C.ABOUT_TOP - C.SCROLL_TOP_OFFSET) {
+      $('#menu-home').toggleClass('activeLink');
+    } else if (scrolled < C.SKILLS_TOP - C.SCROLL_TOP_OFFSET) {
+      $('#menu-about').toggleClass('activeLink');
     } else {
-      this.setState({
-        menu: 'wide'
-      });
+      $('#menu-skills').toggleClass('activeLink');
     }
   }
+  componentDidMount() {
+    window.addEventListener('scroll', this.updateNavOnScroll);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.updateNavOnScroll);
+  }
   render() {
-    const { menu } = this.state;
     return (
-      <div className="appWrapper">
+      <div className="app-wrapper">
         <BrowserRouter>
-          <div className="menusWrapper">
-            <button onClick={this.swapMenuHandler}>SWAP MENU</button>
-            <Menu size={menu} />
+          <div>
+            <MediaQuery query="(min-device-width: 1224px)">
+              <Navbar links={<Links size={'wide'} />} />
+            </MediaQuery>
+            <MediaQuery query="(max-device-width: 1224px)">
+              <Sidebar links={<Links size={'narrow'} />} />
+            </MediaQuery>
           </div>
         </BrowserRouter>
-        <div className="contentWrapper">
+        <div className="content-wrapper">
           <div id="home">
             <Home />
           </div>

@@ -42,20 +42,33 @@ body {
   border: solid 2px pink;
 }
 
-.link-wrapper {
+.links-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
 }
-.link-wrapper a {
+.links-wrapper a {
   font-weight: bold;
   text-decoration: none;
 }
-.link-wrapper .activeLink {
+.links-wrapper .activeLink {
   color: red;
 }
-.link-wrapper .menuLink {
+.links-wrapper .menuLink {
   font-size: 1.4rem;
+}
+
+.links-wrapper--wide {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.links-wrapper--wide .menuLink {
   justify-self: end;
+}
+
+.links-wrapper--narrow {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.links-wrapper--narrow .menuLink {
+  justify-self: center;
 }
 
 .title {
@@ -66,12 +79,12 @@ body {
   border: solid 2px orange;
 }
 
-.appWrapper {
+.app-wrapper {
   border: dotted 2px gray;
   margin: 0 2%;
 }
 
-.contentWrapper {
+.content-wrapper {
   border: dotted 2px red;
   margin: 0 2%;
 }

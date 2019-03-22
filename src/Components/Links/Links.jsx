@@ -1,10 +1,12 @@
 import React from 'react';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 
-const Links = () => {
+const Links = props => {
   const testActive = to => (match, location) => to === location.hash;
+  const classList = 'links-wrapper links-wrapper--' + props.size;
+  // console.log('classList: ', classList);
   return (
-    <div className="link-wrapper">
+    <div className={classList}>
       <NavLink
         id="menu-home"
         className="menuLink"

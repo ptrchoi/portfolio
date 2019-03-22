@@ -1,6 +1,5 @@
-.link-wrapper {
+.links-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   a {
     font-weight: bold;
     text-decoration: none;
@@ -10,6 +9,18 @@
   }
   .menuLink {
     font-size: 1.4rem;
+  }
+}
+.links-wrapper--wide {
+  grid-template-columns: 1fr 1fr 1fr;
+  .menuLink {
     justify-self: end;
+  }
+}
+.links-wrapper--narrow {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  .menuLink {
+    justify-self: center;
   }
 }
