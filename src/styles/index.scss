@@ -2,7 +2,10 @@
 @import 'main';
 
 //Components
-@import '../Components/Menu/menu';
+@import '../Components/Navbar/navbar';
 @import '../Components/Sidebar/sidebar';
+@import '../Components/Links/links';
+@import '../Components/Title/title';
+@import '../Components/Overlay/overlay';
 @import '../Components/App/app';
 @import '../Components/Home/home';

@@ -1,25 +1,14 @@
 import React from 'react';
-import $ from 'jquery';
+
+import Overlay from '../Overlay/Overlay';
 
 const Sidebar = props => {
-  const toggleIcon = () => {
-    console.log('sidebar clicked');
-    $('#icon-wrapper').toggleClass('sidebar-icon--close');
-    $('#sidebar').toggleClass('sidebar--open');
-    props.toggleLinks();
-  };
   return (
-    <div>
-      <div
-        id="icon-wrapper"
-        className="sidebar-icon--open"
-        onClick={toggleIcon}
-      >
-        <div className="sidebar-icon--bar1" />
-        <div className="sidebar-icon--bar2" />
-        <div className="sidebar-icon--bar3" />
+    <div className="sidebar-wrapper">
+      <div className="overlay">
+        <Overlay />
       </div>
-      <div id="sidebar" className="sidebar--closed" />
+      <div className="sidebar">{props.links}</div>
     </div>
   );
 };

@@ -1,0 +1,9 @@
+.navbar-wrapper {
+  border: 2px solid rgb(110, 10, 225);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 80px;
+  justify-content: space-between;
+  position: fixed;
+  width: calc(100% - 40px);
+}

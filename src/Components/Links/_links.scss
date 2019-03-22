@@ -1,0 +1,15 @@
+.link-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  a {
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .activeLink {
+    color: red;
+  }
+  .menuLink {
+    font-size: 1.4rem;
+    justify-self: end;
+  }
+}
