@@ -7,3 +7,16 @@
   position: fixed;
   width: calc(100% - 40px);
 }
+.navbar-wrapper--wide {
+}
+.navbar-wrapper-narrow {
+}
+
+/* Sidebar
+---------------------------------------------- */
+.navSidebar--hide {
+  display: none;
+}
+.navSidebar--show {
+  display: block;
+}

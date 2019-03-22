@@ -30,6 +30,16 @@ body {
   width: calc(100% - 40px);
 }
 
+/* Sidebar
+---------------------------------------------- */
+.navSidebar--hide {
+  display: none;
+}
+
+.navSidebar--show {
+  display: block;
+}
+
 .sidebar-wrapper {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -73,6 +83,34 @@ body {
 
 .title {
   font-size: 2rem;
+}
+
+.icon--open {
+  cursor: pointer;
+  display: block;
+  justify-self: end;
+}
+
+.icon--bar1,
+.icon--bar2,
+.icon--bar3 {
+  width: 26px;
+  height: 4px;
+  margin: 4px 0;
+  background-color: #333;
+  transition: 0.4s;
+}
+
+.icon--close .icon--bar1 {
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.icon--close .icon--bar2 {
+  opacity: 0;
+}
+
+.icon--close .icon--bar3 {
+  transform: rotate(45deg) translate(-6px, -6px);
 }
 
 .overlay {

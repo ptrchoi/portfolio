@@ -7,7 +7,6 @@ import C from '../../constants';
 
 //Components
 import Navbar from '../Navbar/Navbar';
-import Sidebar from '../Sidebar/Sidebar';
 import Links from '../Links/Links';
 import Home from '../Home/Home';
 import About from '../About/About';
@@ -50,10 +49,11 @@ class App extends Component {
         <BrowserRouter>
           <div>
             <MediaQuery query="(min-device-width: 1224px)">
-              <Navbar links={<Links size={'wide'} />} />
+              <Navbar mq={'wide'} links={<Links size={'wide'} />} />
             </MediaQuery>
             <MediaQuery query="(max-device-width: 1224px)">
-              <Sidebar links={<Links size={'narrow'} />} />
+              <Navbar mq={'narrow'} links={<Links size={'narrow'} />} />
+              {/* <Sidebar links={<Links size={'narrow'} />} /> */}
             </MediaQuery>
           </div>
         </BrowserRouter>
