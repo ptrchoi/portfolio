@@ -53,7 +53,6 @@ class App extends Component {
             </MediaQuery>
             <MediaQuery query="(max-device-width: 1224px)">
               <Navbar mq={'narrow'} links={<Links size={'narrow'} />} />
-              {/* <Sidebar links={<Links size={'narrow'} />} /> */}
             </MediaQuery>
           </div>
         </BrowserRouter>

@@ -10,6 +10,7 @@ class Navbar extends Component {
     super(props);
 
     this.matchParentWidth = this.matchParentWidth.bind(this);
+    this.toggleSidebarHandler = this.toggleSidebarHandler.bind(this);
   }
   componentDidMount() {
     window.addEventListener('resize', this.matchParentWidth);
@@ -18,17 +19,20 @@ class Navbar extends Component {
     window.removeEventListener('resize', this.matchParentWidth);
   }
   matchParentWidth() {
-    let parentWidth = $('.parent').width();
-    $('.child').width(parentWidth);
+    let parentWidth = $('.navbar-wrapper')
+      .parent()
+      .width();
+    console.log('parentWidth: ', parentWidth);
+    $('.navbar-wrapper').width(parentWidth);
   }
+  toggleSidebarHandler() {
+    console.log('toggleSidebarHandler');
+    $('#navSidebar').toggleClass('navSidebar--hide');
+  }
+
   render() {
     const { mq } = this.props;
     console.log('mq: ', mq);
-
-    const toggleSidebarHandler = () => {
-      console.log('toggleSidebarHandler');
-      $('#navSidebar').toggleClass('navSidebar--hide');
-    };
 
     if (mq === 'wide') {
       return (
@@ -41,7 +45,7 @@ class Navbar extends Component {
       return (
         <div className="navbar-wrapper navbar-wrapper--narrow">
           <Title />
-          <MenuIcon toggleSidebar={toggleSidebarHandler} />
+          <MenuIcon toggleSidebar={this.toggleSidebarHandler} />
           <div id="navSidebar" className="navSidebar--hide">
             <Sidebar links={this.props.links} />
           </div>

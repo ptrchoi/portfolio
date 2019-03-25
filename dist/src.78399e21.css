@@ -26,10 +26,6 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 80px;
-  width: inherit;
-}
-
-.fixed {
   position: fixed;
 }
 

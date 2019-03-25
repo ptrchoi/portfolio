@@ -4,15 +4,11 @@
   grid-template-columns: 1fr 1fr;
   height: 80px;
   // justify-content: space-between;
-  width: inherit;
-  // max-width: inherit;
+  position: fixed;
 }
 .navbar-wrapper--wide {
 }
 .navbar-wrapper-narrow {
-}
-.fixed {
-  position: fixed;
 }
 /* Sidebar
 ---------------------------------------------- */
