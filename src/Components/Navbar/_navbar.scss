@@ -3,20 +3,19 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 80px;
-  justify-content: space-between;
-  position: fixed;
-  width: calc(100% - 40px);
+  // justify-content: space-between;
+  width: inherit;
+  // max-width: inherit;
 }
 .navbar-wrapper--wide {
 }
 .navbar-wrapper-narrow {
 }
-
+.fixed {
+  position: fixed;
+}
 /* Sidebar
 ---------------------------------------------- */
 .navSidebar--hide {
   display: none;
-}
-.navSidebar--show {
-  display: block;
 }
