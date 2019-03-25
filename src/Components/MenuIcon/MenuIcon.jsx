@@ -8,7 +8,7 @@ const MenuIcon = props => {
     props.toggleSidebar();
   };
   return (
-    <div id="icon-wrapper" className="icon--open" onClick={toggleIcon}>
+    <div id="icon-wrapper" className="icon" onClick={toggleIcon}>
       <div className="icon--bar1" />
       <div className="icon--bar2" />
       <div className="icon--bar3" />

@@ -1,7 +1,8 @@
-.icon--open {
+.icon {
   cursor: pointer;
   display: block;
   justify-self: end;
+  z-index: 100;
 }
 .icon--bar1,
 .icon--bar2,

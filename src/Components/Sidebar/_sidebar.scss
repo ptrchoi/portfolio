@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   height: 100vh; // THIS NEEDS TO BE FULL HEIGHT
-  position: fixed;
   width: calc(100% - 40px);
 }
 .sidebar {

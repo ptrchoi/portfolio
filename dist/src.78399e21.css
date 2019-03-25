@@ -31,6 +31,14 @@ body {
 
 /* Sidebar
 ---------------------------------------------- */
+#navSidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100% - 40px);
+  z-index: 10;
+}
+
 .navSidebar--hide {
   display: none;
 }
@@ -39,7 +47,6 @@ body {
   display: grid;
   grid-template-columns: 1fr 2fr;
   height: 100vh;
-  position: fixed;
   width: calc(100% - 40px);
 }
 
@@ -80,10 +87,11 @@ body {
   font-size: 2rem;
 }
 
-.icon--open {
+.icon {
   cursor: pointer;
   display: block;
   justify-self: end;
+  z-index: 100;
 }
 
 .icon--bar1,
@@ -109,7 +117,7 @@ body {
 }
 
 .overlay {
-  border: solid 2px orange;
+  background-color: rgba(193, 193, 193, 0.5);
 }
 
 .app-wrapper {

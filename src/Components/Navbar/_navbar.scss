@@ -6,12 +6,16 @@
   // justify-content: space-between;
   position: fixed;
 }
-.navbar-wrapper--wide {
-}
-.navbar-wrapper-narrow {
-}
+
 /* Sidebar
 ---------------------------------------------- */
+#navSidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100% - 40px);
+  z-index: 10;
+}
 .navSidebar--hide {
   display: none;
 }
