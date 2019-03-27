@@ -24,30 +24,46 @@ body {
 .navbar-wrapper {
   border: 2px solid #6e0ae1;
   display: grid;
-  grid-template-columns: 1fr 1fr;
   height: 80px;
   position: fixed;
+}
+
+.navbar-wrapper--wide {
+  grid-template-columns: 1fr 1fr;
+}
+
+.navbar-wrapper--narrow {
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 /* Sidebar
 ---------------------------------------------- */
 #navSidebar {
   position: fixed;
+  left: 2%;
   top: 0;
-  left: 0;
   width: calc(100% - 40px);
   z-index: 10;
 }
 
-.navSidebar--hide {
+.navSidebar--close {
   display: none;
 }
 
+#menuIcon {
+  border: solid 1px green;
+  padding: 20px;
+  position: absolute;
+  right: 2%;
+  top: 0;
+  z-index: 20;
+}
+
 .sidebar-wrapper {
+  border: solid 3px pink;
   display: grid;
   grid-template-columns: 1fr 2fr;
   height: 100vh;
-  width: calc(100% - 40px);
 }
 
 .sidebar {

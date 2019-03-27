@@ -1,21 +1,34 @@
 .navbar-wrapper {
   border: 2px solid rgb(110, 10, 225);
   display: grid;
-  grid-template-columns: 1fr 1fr;
   height: 80px;
   // justify-content: space-between;
   position: fixed;
+}
+.navbar-wrapper--wide {
+  grid-template-columns: 1fr 1fr;
+}
+.navbar-wrapper--narrow {
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 /* Sidebar
 ---------------------------------------------- */
 #navSidebar {
   position: fixed;
+  left: $app-margin-LR;
   top: 0;
-  left: 0;
   width: calc(100% - 40px);
   z-index: 10;
 }
-.navSidebar--hide {
+.navSidebar--close {
   display: none;
+}
+#menuIcon {
+  border: solid 1px green;
+  padding: 20px;
+  position: absolute;
+  right: $app-margin-LR;
+  top: 0;
+  z-index: 20;
 }

@@ -18,6 +18,12 @@ class App extends Component {
 
     this.updateNavOnScroll = this.updateNavOnScroll.bind(this);
   }
+  componentDidMount() {
+    window.addEventListener('scroll', this.updateNavOnScroll);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.updateNavOnScroll);
+  }
   updateNavOnScroll() {
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
@@ -36,12 +42,6 @@ class App extends Component {
     } else {
       $('#menu-skills').toggleClass('activeLink');
     }
-  }
-  componentDidMount() {
-    window.addEventListener('scroll', this.updateNavOnScroll);
-  }
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.updateNavOnScroll);
   }
   render() {
     return (
