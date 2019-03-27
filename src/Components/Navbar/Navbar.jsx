@@ -14,10 +14,7 @@ class Navbar extends Component {
     };
 
     this.matchParentWidth = this.matchParentWidth.bind(this);
-    this.toggleSidebarHandler = this.toggleSidebarHandler.bind(this);
-    this.sidebarClickHandler = this.sidebarClickHandler.bind(this);
-    this.openSidebar = this.openSidebar.bind(this);
-    this.closeSidebar = this.closeSidebar.bind(this);
+    this.toggleSidebar = this.toggleSidebar.bind(this);
   }
   componentDidMount() {
     this.matchParentWidth(); //Initialize width to match parent, then listen for resize events
@@ -32,32 +29,13 @@ class Navbar extends Component {
       .width();
     $('.navbar-wrapper').width(parentWidth);
   }
-  toggleSidebarHandler() {
-    this.state.sidebarIsOpen ? this.closeSidebar() : this.openSidebar();
-  }
-  sidebarClickHandler() {
-    this.closeSidebar();
-  }
-  openSidebar() {
-    if (!this.state.sidebarIsOpen) {
-      this.setState({
-        sidebarIsOpen: true
-      });
-      $('#navSidebar').removeClass('navSidebar--close');
-      //set small delay to start listening for click event to avoid immediate click event on menu icon
-      // setTimeout(() => {
-      //   window.addEventListener('click', this.closeSidebar);
-      // }, 500);
-    }
-  }
-  closeSidebar() {
-    if (this.state.sidebarIsOpen) {
-      this.setState({
-        sidebarIsOpen: false
-      });
-      $('#navSidebar').addClass('navSidebar--close');
-      // window.removeEventListener('click', this.closeSidebar);
-    }
+  toggleSidebar() {
+    this.setState(prevState => {
+      return {
+        sidebarIsOpen: !prevState.sidebarIsOpen
+      };
+    });
+    $('#navSidebar').toggleClass('navSidebar--close');
   }
   render() {
     const { sidebarIsOpen } = this.state;
@@ -65,9 +43,6 @@ class Navbar extends Component {
     // console.log('mq: ', mq);
 
     if (mq === 'wide') {
-      if (sidebarIsOpen) {
-        this.closeSidebar();
-      }
       return (
         <div className="navbar-wrapper navbar-wrapper--wide">
           <Title />
@@ -83,13 +58,13 @@ class Navbar extends Component {
           <div id="navSidebar" className="navSidebar--close">
             <Sidebar
               links={this.props.links}
-              sidebarClick={this.sidebarClickHandler}
+              sidebarClick={this.toggleSidebar}
             />
           </div>
           <div id="menuIcon">
             <MenuIcon
               sidebarIsOpen={sidebarIsOpen}
-              toggleSidebar={this.toggleSidebarHandler}
+              menuIconClick={this.toggleSidebar}
             />
           </div>
         </div>
