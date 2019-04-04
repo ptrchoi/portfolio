@@ -1,9 +1,14 @@
 import React from 'react';
 import $ from 'jquery';
 
+/**
+ * Functional React component, renders menu icon.
+ * @function
+ * @param {object} props -  { sidebarIsOpen } to test sidebar state, { menuIconClick } callback on icon click event.
+ * @return {JSX.Element} - Rendered icon.
+ */
 const MenuIcon = props => {
   const toggleIcon = () => {
-    // console.log('menuicon clicked');
     $('#icon-wrapper').toggleClass('icon--close');
     props.menuIconClick();
   };

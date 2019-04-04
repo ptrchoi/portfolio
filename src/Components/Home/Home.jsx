@@ -1,6 +1,11 @@
 import React from 'react';
 
-const Home = props => {
+/**
+ * Functional React component, simply renders a page content element.
+ * @function
+ * @return {JSX.Element} - Rendered component.
+ */
+const Home = () => {
   return (
     <div className="sectionWrapper">
       <p>Home Component</p>

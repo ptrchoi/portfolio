@@ -5,6 +5,11 @@ import Title from '../Title/Title';
 import Sidebar from '../Sidebar/Sidebar';
 import MenuIcon from '../MenuIcon/MenuIcon';
 
+/**
+ * Class component, renders responsive menu components based on mediaQuery.
+ * @param {object} props - { mq } mediaQuery size from parent/App.
+ * @return {JSX.Element} - Rendered component, with wide format navbar OR narrow with icon & sidebar.
+ */
 class Navbar extends Component {
   constructor(props) {
     super(props);
@@ -17,7 +22,8 @@ class Navbar extends Component {
     this.toggleSidebar = this.toggleSidebar.bind(this);
   }
   componentDidMount() {
-    this.matchParentWidth(); //Initialize width to match parent, then listen for resize events
+    //Initialize width to match parent container, then listen for resize events
+    this.matchParentWidth();
     window.addEventListener('resize', this.matchParentWidth);
   }
   componentWillUnmount() {
@@ -35,32 +41,33 @@ class Navbar extends Component {
         sidebarIsOpen: !prevState.sidebarIsOpen
       };
     });
-    $('#navSidebar').toggleClass('navSidebar--close');
   }
   render() {
-    const { sidebarIsOpen } = this.state;
     const { mq } = this.props;
-    // console.log('mq: ', mq);
+    const { sidebarIsOpen } = this.state;
+    let sidebar; //default to null
 
+    if (sidebarIsOpen) {
+      sidebar = (
+        <Sidebar links={this.props.links} sidebarClick={this.toggleSidebar} />
+      );
+    }
+
+    // Check mediaquery prop for wide or narrow layout
     if (mq === 'wide') {
       return (
-        <div className="navbar-wrapper navbar-wrapper--wide">
+        <div className="navbar-wrapper">
           <Title />
           <div>{this.props.links}</div>
         </div>
       );
     } else {
       return (
-        <div className="navbar-wrapper navbar-wrapper--narrow">
+        <div className="navbar-wrapper">
           <div>
             <Title />
           </div>
-          <div id="navSidebar" className="navSidebar--close">
-            <Sidebar
-              links={this.props.links}
-              sidebarClick={this.toggleSidebar}
-            />
-          </div>
+          <div id="navSidebar">{sidebar}</div>
           <div id="menuIcon">
             <MenuIcon
               sidebarIsOpen={sidebarIsOpen}

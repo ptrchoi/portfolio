@@ -25,29 +25,16 @@ body {
   border: 2px solid #6e0ae1;
   display: grid;
   height: 80px;
+  grid-template-columns: 1fr 1fr;
   position: fixed;
 }
 
-.navbar-wrapper--wide {
-  grid-template-columns: 1fr 1fr;
-}
-
-.navbar-wrapper--narrow {
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-/* Sidebar
----------------------------------------------- */
 #navSidebar {
   position: fixed;
   left: 2%;
   top: 0;
   width: calc(100% - 40px);
   z-index: 10;
-}
-
-.navSidebar--close {
-  display: none;
 }
 
 #menuIcon {

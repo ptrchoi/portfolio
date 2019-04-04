@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import MediaQuery from 'react-responsive';
 import { BrowserRouter } from 'react-router-dom';
+import MediaQuery from 'react-responsive';
 import $ from 'jquery';
 
 import C from '../../constants';
@@ -12,6 +12,14 @@ import Home from '../Home/Home';
 import About from '../About/About';
 import Skills from '../Skills/Skills';
 
+/**
+ * App Component handles:
+ * - routing
+ * - content components
+ * - Menu/Navigation:
+ *    - page scroll updating
+ *    - media query layouts
+ */
 class App extends Component {
   constructor(props) {
     super(props);
@@ -34,7 +42,7 @@ class App extends Component {
 
     $('.menuLink').removeClass('activeLink');
 
-    // Check page location and update activeLink as needed
+    // Check page scroll location and update activeLink as needed
     if (scrolled < C.ABOUT_TOP - C.SCROLL_TOP_OFFSET) {
       $('#menu-home').toggleClass('activeLink');
     } else if (scrolled < C.SKILLS_TOP - C.SCROLL_TOP_OFFSET) {

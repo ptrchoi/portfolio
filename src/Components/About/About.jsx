@@ -1,6 +1,11 @@
 import React from 'react';
 
-const About = props => {
+/**
+ * Functional React component, simply renders a page content element.
+ * @function
+ * @return {JSX.Element} - Rendered component.
+ */
+const About = () => {
   return (
     <div className="sectionWrapper">
       <p>About Component</p>
