@@ -3,8 +3,6 @@ import { BrowserRouter } from 'react-router-dom';
 import MediaQuery from 'react-responsive';
 import $ from 'jquery';
 
-import C from '../../constants';
-
 //Components
 import Navbar from '../Navbar/Navbar';
 import Links from '../Links/Links';
@@ -28,29 +26,33 @@ class App extends Component {
     super(props);
 
     this.state = {
-      landingPageHeight: 800,
+      landingPageHeight: ABOUT_SECTION_HEIGHT,
       onLandingPage: true
     };
 
-    this.updateNavOnScroll = this.updateNavOnScroll.bind(this);
+    this.updateLinksOnScroll = this.updateLinksOnScroll.bind(this);
     this.updateLandingPageHeight = this.updateLandingPageHeight.bind(this);
+    this.renderNav = this.renderNav.bind(this);
+    this.renderContentComponents = this.renderContentComponents.bind(this);
   }
   componentDidMount() {
-    window.addEventListener('scroll', this.updateNavOnScroll);
-    window.addEventListener('resize', this.updateLandingPageHeight);
+    this.updateLinksOnScroll();
+    this.updateLandingPageHeight();
 
-    this.updateLandingPageHeight(); //Initialize
+    window.addEventListener('scroll', this.updateLinksOnScroll);
+    window.addEventListener('resize', this.updateLandingPageHeight);
   }
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.updateNavOnScroll);
+    window.removeEventListener('scroll', this.updateLinksOnScroll);
     window.removeEventListener('resize', this.updateLandingPageHeight);
   }
-  updateNavOnScroll() {
+  updateLinksOnScroll() {
     let { landingPageHeight, onLandingPage } = this.state;
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
 
     $('.menuLink').removeClass('activeLink');
+    onLandingPage = false;
 
     // Check page scroll location/height and update activeLink & onLandingPage as needed
     if (winScroll < landingPageHeight) {
@@ -58,10 +60,8 @@ class App extends Component {
       onLandingPage = true;
     } else if (winScroll < landingPageHeight + ABOUT_SECTION_HEIGHT) {
       $('#menu-about').toggleClass('activeLink');
-      onLandingPage = false;
     } else {
       $('#menu-skills').toggleClass('activeLink');
-      onLandingPage = false;
     }
     this.setState({
       onLandingPage: onLandingPage
@@ -77,49 +77,45 @@ class App extends Component {
       landingPageHeight: height
     });
   }
+  renderNav() {
+    return (
+      <BrowserRouter>
+        <div>
+          <MediaQuery query="(min-device-width: 1224px)">
+            <Navbar mq={'wide'} links={<Links size={'wide'} />} />
+          </MediaQuery>
+          <MediaQuery query="(max-device-width: 1224px)">
+            <Navbar mq={'narrow'} links={<Links size={'narrow'} />} />
+          </MediaQuery>
+        </div>
+      </BrowserRouter>
+    );
+  }
+  renderContentComponents() {
+    return (
+      <div className="content-wrapper">
+        <div id="home">
+          <Home height={this.state.landingPageHeight} />
+        </div>
+        <div id="about">
+          <About />
+        </div>
+        <div id="skills">
+          <Skills />
+        </div>
+      </div>
+    );
+  }
   render() {
     const { onLandingPage } = this.state;
 
     if (onLandingPage) {
-      return (
-        <div className="app-wrapper">
-          <div className="content-wrapper">
-            <div id="home">
-              <Home height={this.state.landingPageHeight} />
-            </div>
-            <div id="about">
-              <About />
-            </div>
-            <div id="skills">
-              <Skills />
-            </div>
-          </div>
-        </div>
-      );
+      return <div>{this.renderContentComponents()}</div>;
     } else {
       return (
-        <div className="app-wrapper">
-          <BrowserRouter>
-            <div>
-              <MediaQuery query="(min-device-width: 1224px)">
-                <Navbar mq={'wide'} links={<Links size={'wide'} />} />
-              </MediaQuery>
-              <MediaQuery query="(max-device-width: 1224px)">
-                <Navbar mq={'narrow'} links={<Links size={'narrow'} />} />
-              </MediaQuery>
-            </div>
-          </BrowserRouter>
-          <div className="content-wrapper">
-            <div id="home">
-              <Home height={this.state.landingPageHeight} />
-            </div>
-            <div id="about">
-              <About />
-            </div>
-            <div id="skills">
-              <Skills />
-            </div>
-          </div>
+        <div>
+          {this.renderNav()}
+          {this.renderContentComponents()}
         </div>
       );
     }
