@@ -33,21 +33,17 @@ class App extends Component {
     };
 
     this.updateNavOnScroll = this.updateNavOnScroll.bind(this);
+    this.updateLandingPageHeight = this.updateLandingPageHeight.bind(this);
   }
   componentDidMount() {
     window.addEventListener('scroll', this.updateNavOnScroll);
+    window.addEventListener('resize', this.updateLandingPageHeight);
 
-    //Set the height of the Landing Page
-    let height = window.innerHeight;
-    $(window).resize(function() {
-      $('#home-section').css('height', height);
-    });
-    this.setState({
-      landingPageHeight: height
-    });
+    this.updateLandingPageHeight(); //Initialize
   }
   componentWillUnmount() {
     window.removeEventListener('scroll', this.updateNavOnScroll);
+    window.removeEventListener('resize', this.updateLandingPageHeight);
   }
   updateNavOnScroll() {
     let { landingPageHeight, onLandingPage } = this.state;
@@ -69,6 +65,16 @@ class App extends Component {
     }
     this.setState({
       onLandingPage: onLandingPage
+    });
+  }
+  updateLandingPageHeight() {
+    let height = window.innerHeight;
+
+    $(window).resize(function() {
+      $('#home-section').css('height', height);
+    });
+    this.setState({
+      landingPageHeight: height
     });
   }
   render() {
