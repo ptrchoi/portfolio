@@ -37,7 +37,7 @@ class App extends Component {
   componentDidMount() {
     window.addEventListener('scroll', this.updateNavOnScroll);
 
-    //Set the size of the Landing Page
+    //Set the height of the Landing Page
     let height = window.innerHeight;
     $(window).resize(function() {
       $('#home-section').css('height', height);
@@ -105,7 +105,7 @@ class App extends Component {
           </BrowserRouter>
           <div className="content-wrapper">
             <div id="home">
-              <Home />
+              <Home height={this.state.landingPageHeight} />
             </div>
             <div id="about">
               <About />
