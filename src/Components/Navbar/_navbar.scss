@@ -1,13 +1,13 @@
 .navbar-wrapper {
   border: 2px solid rgb(110, 10, 225);
   display: grid;
-  height: 80px;
   grid-template-columns: 1fr 1fr;
+  height: 80px;
   position: fixed;
 }
 #navSidebar {
-  position: fixed;
   left: $app-margin-LR;
+  position: fixed;
   top: 0;
   width: calc(100% - 40px);
   z-index: 10;

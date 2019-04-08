@@ -14,8 +14,41 @@ body {
   background-color: white;
 }
 
+/* CSSTransition Classes
+------------------------------------ */
+.fade-appear {
+  opacity: 0;
+}
+
+.fade-appear.fade-appear-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in-out;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 1000ms ease-in-out;
+}
+
+.fade-exit-done {
+  opacity: 0;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in-out;
+}
+
 /* REMOVE! FOR TESTING ONLY */
-.sectionWrapper {
+.section-wrapper {
   color: red;
   height: 1200px;
 }
@@ -23,14 +56,14 @@ body {
 .navbar-wrapper {
   border: 2px solid #6e0ae1;
   display: grid;
-  height: 80px;
   grid-template-columns: 1fr 1fr;
+  height: 80px;
   position: fixed;
 }
 
 #navSidebar {
-  position: fixed;
   left: 2%;
+  position: fixed;
   top: 0;
   width: calc(100% - 40px);
   z-index: 10;
@@ -133,6 +166,14 @@ body {
 .welcomeButton:active {
   background-color: yellow;
   color: blue;
+}
+
+#aboutWrapper {
+  background-color: lightblue;
+}
+
+#skillsWrapper {
+  background-color: lightyellow;
 }
 
 /*# sourceMappingURL=/src.78399e21.css.map */

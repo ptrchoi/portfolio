@@ -13,8 +13,35 @@ body {
   background-color: white;
 }
 
+/* CSSTransition Classes
+------------------------------------ */
+.fade-appear {
+  opacity: 0;
+}
+.fade-appear.fade-appear-active {
+  opacity: 1;
+  transition: opacity $transition-time ease-in-out;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity $transition-time ease-in-out;
+}
+.fade-exit-done {
+  opacity: 0;
+}
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity $transition-time ease-in-out;
+}
+
 /* REMOVE! FOR TESTING ONLY */
-.sectionWrapper {
+.section-wrapper {
   color: $test-text-color;
   height: $test-section-height;
 }

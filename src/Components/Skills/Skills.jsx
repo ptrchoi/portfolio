@@ -7,7 +7,7 @@ import React from 'react';
  */
 const Skills = () => {
   return (
-    <div className="sectionWrapper">
+    <div id="skillsWrapper" className="section-wrapper">
       <p>Skills Component</p>
     </div>
   );

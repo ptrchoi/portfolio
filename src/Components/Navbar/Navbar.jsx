@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { CSSTransition } from 'react-transition-group';
 import $ from 'jquery';
 
+import C from '../../constants';
 import Title from '../Title/Title';
 import Sidebar from '../Sidebar/Sidebar';
 import MenuIcon from '../MenuIcon/MenuIcon';
@@ -56,24 +58,42 @@ class Navbar extends Component {
     // Check mediaquery prop for wide or narrow layout
     if (mq === 'wide') {
       return (
-        <div className="navbar-wrapper">
-          <Title />
-          <div>{this.props.links}</div>
+        <div>
+          <CSSTransition
+            in={true}
+            appear={true}
+            timeout={C.TRANSITION_TIME}
+            classNames="fade"
+          >
+            <div className="navbar-wrapper">
+              <Title />
+              <div>{this.props.links}</div>
+            </div>
+          </CSSTransition>
         </div>
       );
     } else {
       return (
-        <div className="navbar-wrapper">
-          <div>
-            <Title />
-          </div>
-          <div id="navSidebar">{sidebar}</div>
-          <div id="menuIcon">
-            <MenuIcon
-              sidebarIsOpen={sidebarIsOpen}
-              menuIconClick={this.toggleSidebar}
-            />
-          </div>
+        <div>
+          <CSSTransition
+            in={true}
+            appear={true}
+            timeout={C.TRANSITION_TIME}
+            classNames="fade"
+          >
+            <div className="navbar-wrapper">
+              <div>
+                <Title />
+              </div>
+              <div id="navSidebar">{sidebar}</div>
+              <div id="menuIcon">
+                <MenuIcon
+                  sidebarIsOpen={sidebarIsOpen}
+                  menuIconClick={this.toggleSidebar}
+                />
+              </div>
+            </div>
+          </CSSTransition>
         </div>
       );
     }

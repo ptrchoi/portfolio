@@ -1,5 +1,7 @@
 import React from 'react';
+import { CSSTransition } from 'react-transition-group';
 
+import C from '../../constants';
 import Overlay from '../Overlay/Overlay';
 
 /**
@@ -9,9 +11,18 @@ import Overlay from '../Overlay/Overlay';
  */
 const Sidebar = props => {
   return (
-    <div className="sidebar-wrapper" onClick={props.sidebarClick}>
-      <Overlay />
-      <div className="sidebar">{props.links}</div>
+    <div>
+      <CSSTransition
+        in={true}
+        appear={true}
+        timeout={C.TRANSITION_TIME}
+        classNames="fade"
+      >
+        <div className="sidebar-wrapper" onClick={props.sidebarClick}>
+          <Overlay />
+          <div className="sidebar">{props.links}</div>
+        </div>
+      </CSSTransition>
     </div>
   );
 };
