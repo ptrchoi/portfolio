@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import MediaQuery from 'react-responsive';
 import $ from 'jquery';
+import Debucsser from 'debucsser';
 
 //Components
 import Navbar from '../Navbar/Navbar';
@@ -9,6 +10,14 @@ import Links from '../Links/Links';
 import Home from '../Home/Home';
 import About from '../About/About';
 import Skills from '../Skills/Skills';
+
+//Debucsser settings
+const config = {
+  color: 'red',
+  width: '4px',
+  grayscaleOnDebugAll: true
+};
+const debug = new Debucsser(config).init();
 
 //TEMP UNTIL COMPONENT HEIGHTS ARE SET
 const ABOUT_SECTION_HEIGHT = 800;
