@@ -35,6 +35,17 @@ const Links = props => {
         About
       </NavLink>
       <NavLink
+        id="menu-portfolio"
+        className="menuLink"
+        to="/#portfolio"
+        isActive={testActive('#portfolio')}
+        exact
+        activeClassName={'activeLink'}
+        scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+      >
+        Portfolio
+      </NavLink>
+      <NavLink
         id="menu-skills"
         className="menuLink"
         to="/#skills"

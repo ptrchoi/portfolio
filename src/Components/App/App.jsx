@@ -9,6 +9,7 @@ import Navbar from '../Navbar/Navbar';
 import Links from '../Links/Links';
 import Home from '../Home/Home';
 import About from '../About/About';
+import Portfolio from '../Portfolio/Portfolio';
 import Skills from '../Skills/Skills';
 
 //Debucsser settings
@@ -21,6 +22,7 @@ const debug = new Debucsser(config).init();
 
 //TEMP UNTIL COMPONENT HEIGHTS ARE SET
 const ABOUT_SECTION_HEIGHT = 800;
+const SKILLS_SECTION_HEIGHT = 1600;
 
 /**
  * App Component handles:
@@ -69,6 +71,8 @@ class App extends Component {
       onLandingPage = true;
     } else if (winScroll < landingPageHeight + ABOUT_SECTION_HEIGHT) {
       $('#menu-about').toggleClass('activeLink');
+    } else if (winScroll < landingPageHeight + SKILLS_SECTION_HEIGHT) {
+      $('#menu-portfolio').toggleClass('activeLink');
     } else {
       $('#menu-skills').toggleClass('activeLink');
     }
@@ -108,6 +112,9 @@ class App extends Component {
         </div>
         <div id="about">
           <About />
+        </div>
+        <div id="portfolio">
+          <Portfolio />
         </div>
         <div id="skills">
           <Skills />

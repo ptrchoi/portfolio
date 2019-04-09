@@ -104,7 +104,7 @@ body {
 }
 
 .links-wrapper--wide {
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .links-wrapper--wide .menuLink {
   justify-self: end;
@@ -112,7 +112,7 @@ body {
 
 .links-wrapper--narrow {
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 .links-wrapper--narrow .menuLink {
   justify-self: center;
@@ -170,6 +170,10 @@ body {
 
 #aboutWrapper {
   background-color: lightblue;
+}
+
+#portfolioWrapper {
+  background-color: white;
 }
 
 #skillsWrapper {
