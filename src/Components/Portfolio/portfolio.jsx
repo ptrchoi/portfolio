@@ -45,8 +45,8 @@ const Portfolio = () => {
     } */}
 
       <iframe
-        height="600"
-        style={{ width: 40 + '%' }}
+        height="400"
+        style={{ width: 50 + '%' }}
         scrolling="no"
         title="FreeCodeCamp: Technical Document Demo | JAVASCRIPT (VANILLA)"
         src="//codepen.io/ptrchoi/embed/jvLoOQ/?height=265&theme-id=0&default-tab=html,result"
