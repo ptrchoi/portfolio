@@ -1,3 +1,29 @@
 #aboutWrapper {
   background-color: lightblue;
 }
+#logosWrapper {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+.logo {
+  margin: 8px;
+}
+#profilePic {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+#msftLogo {
+  height: 100px;
+  width: 272px;
+}
+#msftStudiosLogo {
+  height: 70px;
+  width: 246px;
+}
+#eaLogo {
+  height: 70px;
+  width: 190px;
+}

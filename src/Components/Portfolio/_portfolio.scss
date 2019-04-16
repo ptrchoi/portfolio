@@ -4,6 +4,12 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+
+  //Set height to be dynamic/responsive based on content flow
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  max-width: initial;
 }
 .project-card {
   background-color: #fff;

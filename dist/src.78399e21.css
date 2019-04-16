@@ -104,7 +104,7 @@ body {
 }
 
 .links-wrapper--wide {
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 .links-wrapper--wide .menuLink {
   justify-self: end;
@@ -112,7 +112,7 @@ body {
 
 .links-wrapper--narrow {
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }
 .links-wrapper--narrow .menuLink {
   justify-self: center;
@@ -172,12 +172,52 @@ body {
   background-color: lightblue;
 }
 
+#logosWrapper {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.logo {
+  margin: 8px;
+}
+
+#profilePic {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+
+#msftLogo {
+  height: 100px;
+  width: 272px;
+}
+
+#msftStudiosLogo {
+  height: 70px;
+  width: 246px;
+}
+
+#eaLogo {
+  height: 70px;
+  width: 190px;
+}
+
+#skillsWrapper {
+  background-color: lightyellow;
+}
+
 #portfolioWrapper {
   background-color: white;
   color: black;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  max-width: initial;
 }
 
 .project-card {
@@ -196,8 +236,8 @@ body {
   padding: 10px 20px;
 }
 
-#skillsWrapper {
-  background-color: lightyellow;
+#contactWrapper {
+  background-color: pink;
 }
 
 /*# sourceMappingURL=/src.78399e21.css.map */

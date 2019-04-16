@@ -64,22 +64,51 @@ class App extends Component {
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
 
+    //Get array of content-sections scrollTop
+    let sections = [];
+
+    //Compare against current scrollTop
+    $('.content-section').each(function(i) {
+      let offset = $(this).offset().top;
+      let curId = 'menu-' + $(this).attr('id');
+      console.log('i: ', i, ' | id: ', curId, ' | offset: ', offset);
+      sections[i] = {
+        id: curId,
+        offset: offset
+      };
+    });
+
+    console.log('winScroll: ', winScroll);
+    // console.log('sections[]', sections);
     $('.menuLink').removeClass('activeLink');
     onLandingPage = false;
 
-    // Check page scroll location/height and update activeLink & onLandingPage as needed
-    if (winScroll < landingPageHeight) {
+    if (winScroll < sections[1].offset) {
       $('#menu-home').toggleClass('activeLink');
       onLandingPage = true;
-    } else if (winScroll < landingPageHeight + ABOUT_SECTION_HEIGHT) {
+    } else if (winScroll < sections[2].offset) {
       $('#menu-about').toggleClass('activeLink');
-    } else if (winScroll < landingPageHeight + SKILLS_SECTION_HEIGHT) {
+    } else if (winScroll < sections[3].offset) {
       $('#menu-skills').toggleClass('activeLink');
-    } else if (winScroll < landingPageHeight + PORTFOLIO_SECTION_HEIGHT) {
+    } else if (winScroll < sections[4].offset) {
       $('#menu-portfolio').toggleClass('activeLink');
     } else {
       $('#menu-contact').toggleClass('activeLink');
     }
+
+    // Check page scroll location/height and update activeLink & onLandingPage as needed
+    // if (winScroll < landingPageHeight) {
+    //   $('#menu-home').toggleClass('activeLink');
+    //   onLandingPage = true;
+    // } else if (winScroll < landingPageHeight + ABOUT_SECTION_HEIGHT) {
+    //   $('#menu-about').toggleClass('activeLink');
+    // } else if (winScroll < landingPageHeight + SKILLS_SECTION_HEIGHT) {
+    //   $('#menu-skills').toggleClass('activeLink');
+    // } else if (winScroll < landingPageHeight + PORTFOLIO_SECTION_HEIGHT) {
+    //   $('#menu-portfolio').toggleClass('activeLink');
+    // } else {
+    //   $('#menu-contact').toggleClass('activeLink');
+    // }
     this.setState({
       onLandingPage: onLandingPage
     });
@@ -111,19 +140,19 @@ class App extends Component {
   renderContentComponents() {
     return (
       <div className="content-wrapper">
-        <div id="home">
+        <div id="home" className="content-section">
           <Home height={this.state.landingPageHeight} />
         </div>
-        <div id="about">
+        <div id="about" className="content-section">
           <About />
         </div>
-        <div id="skills">
+        <div id="skills" className="content-section">
           <Skills />
         </div>
-        <div id="portfolio">
+        <div id="portfolio" className="content-section">
           <Portfolio />
         </div>
-        <div id="contact">
+        <div id="contact" className="content-section">
           <Contact />
         </div>
       </div>
