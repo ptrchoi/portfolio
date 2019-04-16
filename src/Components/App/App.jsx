@@ -9,8 +9,9 @@ import Navbar from '../Navbar/Navbar';
 import Links from '../Links/Links';
 import Home from '../Home/Home';
 import About from '../About/About';
-import Portfolio from '../Portfolio/Portfolio';
 import Skills from '../Skills/Skills';
+import Portfolio from '../Portfolio/Portfolio';
+import Contact from '../Contact/Contact';
 
 //Debucsser settings
 const config = {
@@ -23,6 +24,7 @@ const debug = new Debucsser(config).init();
 //TEMP UNTIL COMPONENT HEIGHTS ARE SET
 const ABOUT_SECTION_HEIGHT = 800;
 const SKILLS_SECTION_HEIGHT = 1600;
+const PORTFOLIO_SECTION_HEIGHT = 2400;
 
 /**
  * App Component handles:
@@ -72,9 +74,11 @@ class App extends Component {
     } else if (winScroll < landingPageHeight + ABOUT_SECTION_HEIGHT) {
       $('#menu-about').toggleClass('activeLink');
     } else if (winScroll < landingPageHeight + SKILLS_SECTION_HEIGHT) {
+      $('#menu-skills').toggleClass('activeLink');
+    } else if (winScroll < landingPageHeight + PORTFOLIO_SECTION_HEIGHT) {
       $('#menu-portfolio').toggleClass('activeLink');
     } else {
-      $('#menu-skills').toggleClass('activeLink');
+      $('#menu-contact').toggleClass('activeLink');
     }
     this.setState({
       onLandingPage: onLandingPage
@@ -113,11 +117,14 @@ class App extends Component {
         <div id="about">
           <About />
         </div>
+        <div id="skills">
+          <Skills />
+        </div>
         <div id="portfolio">
           <Portfolio />
         </div>
-        <div id="skills">
-          <Skills />
+        <div id="contact">
+          <Contact />
         </div>
       </div>
     );
