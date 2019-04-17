@@ -8,7 +8,33 @@ import { NavHashLink as NavLink } from 'react-router-hash-link';
  * @return {JSX.Element} - Rendered component of nav links, highlighted active link, dynamic layout/styling based .size param.
  */
 const Links = props => {
-  const testActive = to => (match, location) => to === location.hash;
+  // const testActive = to => (match, location) => to === location.hash;
+  // const testActive = to => (match, location) => {
+  //   if (to === location.hash) {
+  //     console.log('testActive returning TRUE with: ', to);
+  //     return true;
+  //   } else {
+  //     console.log('testActive returning      with: ', to);
+  //     return false;
+  //   }
+  // };
+  const testActive = to => (match, location) => {
+    let { activeLink } = props;
+
+    if (to === activeLink) {
+      console.log(
+        'testActive returning TRUE with to: ',
+        to,
+        ', activeLink: ',
+        activeLink
+      );
+      return true;
+    } else {
+      console.log('testActive to: ', to, ', activeLink: ', activeLink);
+      return false;
+    }
+  };
+
   const classList = 'links-wrapper links-wrapper--' + props.size; //props.size -> wide || narrow
   return (
     <div className={classList}>
