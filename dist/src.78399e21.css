@@ -49,7 +49,6 @@ body {
 
 /* REMOVE! FOR TESTING ONLY */
 .section-wrapper {
-  color: red;
   height: 1200px;
 }
 
@@ -168,8 +167,16 @@ body {
   color: blue;
 }
 
-#aboutWrapper {
-  background-color: lightblue;
+.about-wrapper {
+  background-color: whitesmoke;
+  display: grid;
+  height: auto;
+}
+
+.about-item {
+  height: auto;
+  padding: 20px;
+  width: 100%;
 }
 
 #logosWrapper {
@@ -204,16 +211,35 @@ body {
   width: 190px;
 }
 
-#skillsWrapper {
-  background-color: lightyellow;
+#aboutText {
+  color: gray;
+  font-size: 1.4rem;
+  padding: 50px;
 }
 
-#portfolioWrapper {
+.skills-wrapper {
+  background-color: #6a6a6a;
+  color: white;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: auto;
+  width: 100%;
+}
+
+.skills-group {
+  display: grid;
+  grid-template-rows: auto;
+  height: 300px;
+  padding: 30px;
+}
+
+.portfolio-wrapper {
   background-color: white;
   color: black;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  padding: 70px 0 50px 0;
   width: 100%;
   height: auto;
   margin: 0px;
@@ -236,8 +262,18 @@ body {
   padding: 10px 20px;
 }
 
-#contactWrapper {
-  background-color: pink;
+.contact-wrapper {
+  background-color: #6a6a6a;
+  color: white;
+  height: auto;
+  padding: 70px 0 50px 0;
+  width: 100%;
+}
+
+.logo-icon {
+  height: 100px;
+  padding: 10px;
+  width: auto;
 }
 
 /*# sourceMappingURL=/src.78399e21.css.map */

@@ -7,7 +7,7 @@ import React from 'react';
  */
 const Portfolio = () => {
   return (
-    <div id="portfolioWrapper" className="section-wrapper">
+    <div className="section-wrapper portfolio-wrapper">
       <div className="project-card">
         <img
           src={'https://codepen.io/ptrchoi/pen/JayyOP/image/large.png'}

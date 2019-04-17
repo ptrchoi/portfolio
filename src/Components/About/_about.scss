@@ -1,5 +1,12 @@
-#aboutWrapper {
-  background-color: lightblue;
+.about-wrapper {
+  background-color: whitesmoke;
+  display: grid;
+  height: auto;
+}
+.about-item {
+  height: auto;
+  padding: 20px;
+  width: 100%;
 }
 #logosWrapper {
   display: flex;
@@ -26,4 +33,9 @@
 #eaLogo {
   height: 70px;
   width: 190px;
+}
+#aboutText {
+  color: gray;
+  font-size: 1.4rem;
+  padding: 50px;
 }

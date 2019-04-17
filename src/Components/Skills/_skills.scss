@@ -1,3 +1,14 @@
-#skillsWrapper {
-  background-color: lightyellow;
+.skills-wrapper {
+  background-color: rgb(106, 106, 106);
+  color: white;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: auto;
+  width: 100%;
+}
+.skills-group {
+  display: grid;
+  grid-template-rows: auto;
+  height: 300px; //TEMP NEEDS TO BE DYNAMIC
+  padding: 30px;
 }

@@ -7,8 +7,16 @@ import React from 'react';
  */
 const Skills = () => {
   return (
-    <div id="skillsWrapper" className="section-wrapper">
-      <p>Skills Component</p>
+    <div className="section-wrapper skills-wrapper">
+      <div className="skills-group">
+        <p>TECHNICAL SKILLS</p>
+      </div>
+      <div className="skills-group">
+        <p>PRODUCTION SKILLS</p>
+      </div>
+      <div className="skills-group">
+        <p>SOFT SKILLS</p>
+      </div>
     </div>
   );
 };
