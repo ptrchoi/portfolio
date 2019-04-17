@@ -64,63 +64,41 @@ class App extends Component {
     let { onLandingPage, activeLink } = this.state;
     const scrollPos =
       document.body.scrollTop || document.documentElement.scrollTop;
-    console.log('scrollPos: ', scrollPos);
 
-    //Get array of content-sections scrollTop
+    //Size/Flow for section containers are responsive/dynamic,
+    //Get the CURRENT topPos's for each content-section
     let sections = [];
-
     $('.content-section').each(function(i) {
       let topPos = $(this).offset().top;
-      let curId = 'menu-' + $(this).attr('id');
-      console.log('i: ', i, ' | id: ', curId, ' | topPos: ', topPos);
       sections[i] = {
-        id: curId,
         topPos: topPos
       };
     });
 
-    //Remove activeLink from all links
+    //Remove current status from all links
     $('.menuLink').removeClass('activeLink');
     onLandingPage = false;
 
-    //Compare current scrollPos against each consecutive section topPos's
-    //& set activeLink
+    //Compare current scrollPos against each consecutive section's topPos
+    //& set appropriate activeLink
     if (scrollPos < sections[1].topPos) {
-      console.log('scrollPos set to Home');
       $('#menu-home').addClass('activeLink');
       activeLink = '#home';
       onLandingPage = true;
     } else if (scrollPos < sections[2].topPos) {
-      console.log('scrollPos set to About');
       $('#menu-about').addClass('activeLink');
       activeLink = '#about';
     } else if (scrollPos < sections[3].topPos) {
-      console.log('scrollPos set to Skills');
       $('#menu-skills').addClass('activeLink');
       activeLink = '#skills';
     } else if (scrollPos < sections[4].topPos) {
-      console.log('scrollPos set to Portfolio');
       $('#menu-portfolio').addClass('activeLink');
       activeLink = '#portfolio';
     } else {
-      console.log('scrollPos set to Contact');
       $('#menu-contact').addClass('activeLink');
       activeLink = '#contact';
     }
 
-    // Check page scroll location/height and update activeLink & onLandingPage as needed
-    // if (scrollPos < landingPageHeight) {
-    //   $('#menu-home').toggleClass('activeLink');
-    //   onLandingPage = true;
-    // } else if (scrollPos < landingPageHeight + ABOUT_SECTION_HEIGHT) {
-    //   $('#menu-about').toggleClass('activeLink');
-    // } else if (scrollPos < landingPageHeight + SKILLS_SECTION_HEIGHT) {
-    //   $('#menu-skills').toggleClass('activeLink');
-    // } else if (scrollPos < landingPageHeight + PORTFOLIO_SECTION_HEIGHT) {
-    //   $('#menu-portfolio').toggleClass('activeLink');
-    // } else {
-    //   $('#menu-contact').toggleClass('activeLink');
-    // }
     this.setState({
       onLandingPage: onLandingPage,
       activeLink: activeLink
@@ -132,7 +110,6 @@ class App extends Component {
     $(window).resize(function() {
       $('#home-section').css('height', height);
     });
-    console.log('updateLandingPageHeight, height: ', height);
     this.setState({
       landingPageHeight: height
     });
