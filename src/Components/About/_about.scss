@@ -1,7 +1,8 @@
 .about-wrapper {
-  background-color: whitesmoke;
+  background-color: $background-white;
   display: grid;
   height: auto;
+  padding-top: 90px;
 }
 .about-item {
   height: auto;
@@ -17,9 +18,13 @@
 .logo {
   margin: 8px;
 }
+#profilePicWrapper {
+  display: grid;
+}
 #profilePic {
   border-radius: 50%;
   height: 100px;
+  justify-self: end;
   width: 100px;
 }
 #msftLogo {

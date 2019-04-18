@@ -1,5 +1,5 @@
 .skills-wrapper {
-  background-color: rgb(106, 106, 106);
+  background-color: $background-gray;
   color: white;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
@@ -9,6 +9,6 @@
 .skills-group {
   display: grid;
   grid-template-rows: auto;
-  height: 300px; //TEMP NEEDS TO BE DYNAMIC
+  height: auto;
   padding: 30px;
 }

@@ -43,4 +43,5 @@ body {
 /* REMOVE! FOR TESTING ONLY */
 .section-wrapper {
   height: $test-section-height;
+  min-height: 600px;
 }

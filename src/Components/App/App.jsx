@@ -39,7 +39,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      landingPageHeight: 0,
+      landingPageHeight: 600, //initial default height
       onLandingPage: true,
       activeLink: '#home'
     };

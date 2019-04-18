@@ -23,7 +23,7 @@ const Portfolio = () => {
           className="project-image"
         />
         <div className="project-text">
-          <p>Product Landing Page</p>
+          <p>Calculator App</p>
         </div>
       </div>
       <div className="project-card">
@@ -32,7 +32,7 @@ const Portfolio = () => {
           className="project-image"
         />
         <div className="project-text">
-          <p>Product Landing Page</p>
+          <p>Drum Machine App</p>
         </div>
       </div>
       <div className="project-card">
@@ -41,7 +41,7 @@ const Portfolio = () => {
           className="project-image"
         />
         <div className="project-text">
-          <p>Product Landing Page</p>
+          <p>Random Quote Generator</p>
         </div>
       </div>
       <div className="project-card">
@@ -50,7 +50,7 @@ const Portfolio = () => {
           className="project-image"
         />
         <div className="project-text">
-          <p>Product Landing Page</p>
+          <p>Technical Documentation</p>
         </div>
       </div>
       <div className="project-card">
@@ -59,7 +59,7 @@ const Portfolio = () => {
           className="project-image"
         />
         <div className="project-text">
-          <p>Product Landing Page</p>
+          <p>Markdown Live Previewer</p>
         </div>
       </div>
     </div>

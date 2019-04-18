@@ -50,10 +50,11 @@ body {
 /* REMOVE! FOR TESTING ONLY */
 .section-wrapper {
   height: 1200px;
+  min-height: 600px;
 }
 
 .navbar-wrapper {
-  border: 2px solid #6e0ae1;
+  background-color: #6a6a6a;
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 80px;
@@ -171,6 +172,7 @@ body {
   background-color: whitesmoke;
   display: grid;
   height: auto;
+  padding-top: 90px;
 }
 
 .about-item {
@@ -190,9 +192,14 @@ body {
   margin: 8px;
 }
 
+#profilePicWrapper {
+  display: grid;
+}
+
 #profilePic {
   border-radius: 50%;
   height: 100px;
+  justify-self: end;
   width: 100px;
 }
 
@@ -229,12 +236,12 @@ body {
 .skills-group {
   display: grid;
   grid-template-rows: auto;
-  height: 300px;
+  height: auto;
   padding: 30px;
 }
 
 .portfolio-wrapper {
-  background-color: white;
+  background-color: whitesmoke;
   color: black;
   display: flex;
   flex-flow: row wrap;
@@ -250,6 +257,7 @@ body {
   background-color: #fff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 30px;
+  padding: 10px;
   width: 500px;
 }
 

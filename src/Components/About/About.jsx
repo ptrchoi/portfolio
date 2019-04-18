@@ -13,6 +13,9 @@ import eaLogo from '../../assets/eaLogo_1280_505.png';
 const About = () => {
   return (
     <div className="section-wrapper about-wrapper">
+      <div id="profilePicWrapper" className="about-item">
+        <img id="profilePic" src={profilePic} />
+      </div>
       <div className="about-item">
         <p id="aboutText">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et inventore
@@ -32,9 +35,6 @@ const About = () => {
         <img id="msftLogo" className="logo" src={msftLogo} />
         <img id="msftStudiosLogo" className="logo" src={msftStudiosLogo} />
         <img id="eaLogo" className="logo" src={eaLogo} />
-      </div>
-      <div className="about-item">
-        <img id="profilePic" src={profilePic} />
       </div>
     </div>
   );
