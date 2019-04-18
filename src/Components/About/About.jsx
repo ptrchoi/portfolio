@@ -32,9 +32,9 @@ const About = () => {
         </p>
       </div>
       <div id="logosWrapper" className="about-item">
-        <img id="msftLogo" className="logo" src={msftLogo} />
-        <img id="msftStudiosLogo" className="logo" src={msftStudiosLogo} />
-        <img id="eaLogo" className="logo" src={eaLogo} />
+        <img id="msftLogo" className="aboutLogo" src={msftLogo} />
+        <img id="msftStudiosLogo" className="aboutLogo" src={msftStudiosLogo} />
+        <img id="eaLogo" className="aboutLogo" src={eaLogo} />
       </div>
     </div>
   );
