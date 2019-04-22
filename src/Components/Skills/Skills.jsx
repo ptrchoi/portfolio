@@ -10,7 +10,15 @@ import nodeLogo from '../../assets/nodejsLogo.png';
 import npmLogo from '../../assets/npmLogo.svg';
 import parcelLogo from '../../assets/parcelLogo.png';
 import webpackLogo from '../../assets/webpackLogo.png';
-import dotIcon from '../../assets/checkIcon.png';
+import dotIcon from '../../assets/blueBoxIcon.png';
+import solverIcon from '../../assets/solverIcon.png';
+import communicationIcon from '../../assets/communicationIcon.png';
+import creativeIcon from '../../assets/creativeIcon.png';
+import proIcon from '../../assets/certIcon.svg';
+import trelloLogo from '../../assets/trelloLogo.png';
+import jiraLogo from '../../assets/jiraLogo.png';
+import jestLogo from '../../assets/jestLogo.png';
+import enzymeLogo from '../../assets/enzymeLogo.png';
 
 /**
  * Functional React component, simply renders a page content element.
@@ -145,6 +153,54 @@ const Skills = () => {
       </div>
       <div className="skills-group">
         <p>PRODUCTION SKILLS</p>
+        <div className="skill-row-wrapper">
+          <div className="logo-card">
+            <img id="jiraLogo" className="techLogo" src={jiraLogo} />
+            <div className="logo-text">
+              <p>Jira</p>
+            </div>
+          </div>
+          <div className="dot-wrapper">
+            <img id="dotIcon" className="dot" src={dotIcon} />
+            <img id="dotIcon" className="dot" src={dotIcon} />
+          </div>
+        </div>
+        <div className="skill-row-wrapper">
+          <div className="logo-card">
+            <img id="trelloLogo" className="techLogo" src={trelloLogo} />
+            <div className="logo-text">
+              <p>Trello</p>
+            </div>
+          </div>
+          <div className="dot-wrapper">
+            <img id="dotIcon" className="dot" src={dotIcon} />
+            <img id="dotIcon" className="dot" src={dotIcon} />
+          </div>
+        </div>
+        <div className="skill-row-wrapper">
+          <div className="logo-card">
+            <img id="jestLogo" className="techLogo" src={jestLogo} />
+            <div className="logo-text">
+              <p>Jest Unit Testing</p>
+            </div>
+          </div>
+          <div className="dot-wrapper">
+            <img id="dotIcon" className="dot" src={dotIcon} />
+            <img id="dotIcon" className="dot" src={dotIcon} />
+          </div>
+        </div>
+        <div className="skill-row-wrapper">
+          <div className="logo-card">
+            <img id="enzymeLogo" className="techLogo" src={enzymeLogo} />
+            <div className="logo-text">
+              <p>Enzyme Testing</p>
+            </div>
+          </div>
+          <div className="dot-wrapper">
+            <img id="dotIcon" className="dot" src={dotIcon} />
+            <img id="dotIcon" className="dot" src={dotIcon} />
+          </div>
+        </div>
         <ul>
           <li>Agile | Jira | Trello</li>
           <li>Git | Github</li>
@@ -154,6 +210,59 @@ const Skills = () => {
       </div>
       <div className="skills-group">
         <p>SOFT SKILLS</p>
+        <div className="skill-row-wrapper">
+          <div className="logo-card">
+            <img
+              id="communicationIcon"
+              className="techLogo"
+              src={communicationIcon}
+            />
+            <div className="logo-text">
+              <p>Communicator</p>
+            </div>
+          </div>
+          <div className="dot-wrapper">
+            <img id="dotIcon" className="dot" src={dotIcon} />
+            <img id="dotIcon" className="dot" src={dotIcon} />
+          </div>
+        </div>
+        <div className="skill-row-wrapper">
+          <div className="logo-card">
+            <img id="solverIcon" className="techLogo" src={solverIcon} />
+            <div className="logo-text">
+              <p>Problem Solver</p>
+            </div>
+          </div>
+          <div className="dot-wrapper">
+            <img id="dotIcon" className="dot" src={dotIcon} />
+            <img id="dotIcon" className="dot" src={dotIcon} />
+          </div>
+        </div>
+        <div className="skill-row-wrapper">
+          <div className="logo-card">
+            <img id="creativeIcon" className="techLogo" src={creativeIcon} />
+            <div className="logo-text">
+              <p>Creative</p>
+            </div>
+          </div>
+          <div className="dot-wrapper">
+            <img id="dotIcon" className="dot" src={dotIcon} />
+            <img id="dotIcon" className="dot" src={dotIcon} />
+          </div>
+        </div>
+        <div className="skill-row-wrapper">
+          <div className="logo-card">
+            <img id="proIcon" className="techLogo" src={proIcon} />
+            <div className="logo-text">
+              <p>Proven Professional</p>
+            </div>
+          </div>
+          <div className="dot-wrapper">
+            <img id="dotIcon" className="dot" src={dotIcon} />
+            <img id="dotIcon" className="dot" src={dotIcon} />
+          </div>
+        </div>
+
         <ul>
           <li>Leadership | Teamwork</li>
           <li>Creativity | Quality</li>
