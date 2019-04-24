@@ -25,12 +25,14 @@ class Home extends Component {
         className="home-wrapper"
         style={{ height: height }}
       >
-        <button
-          className="welcomeButton"
-          onClick={() => (window.location.href = '/#about')}
-        >
-          welcome
-        </button>
+        <div className="button-wrapper">
+          <button
+            className="welcomeButton"
+            onClick={() => (window.location.href = '/#about')}
+          >
+            welcome
+          </button>
+        </div>
       </div>
     );
   }

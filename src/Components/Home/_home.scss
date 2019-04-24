@@ -1,9 +1,14 @@
+.button-wrapper {
+  padding-top: 40vh;
+  text-align: center;
+  margin: auto;
+  width: 50%;
+}
 .welcomeButton {
   background-color: green;
   color: white;
   height: 40px;
-  margin: 150px;
-  width: 80px;
+  width: 100px;
 }
 .welcomeButton:active {
   background-color: yellow;

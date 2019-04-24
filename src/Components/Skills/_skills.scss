@@ -1,56 +1,82 @@
 .skills-wrapper {
-  background-color: $background-gray;
-  color: white;
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  background-color: $background-white;
+  color: black;
   height: auto;
+  margin: 200px 0 200px 0;
   width: 100%;
 }
-.skills-group {
+.skills-group-wrapper {
   display: grid;
-  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.skills-group {
+  align-items: start;
+  display: grid;
+  justify-items: center;
+  padding: 20px;
+}
+.skills-text {
+  text-align: justify;
+}
+#chart {
+  display: block;
   height: auto;
-  padding: 30px;
-}
-#techLogosWrapper {
-  display: flex;
-  align-items: center;
-  flex-flow: row wrap;
-  justify-content: space-around;
-}
-.skill-row-wrapper {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-}
-.logo-card {
-  background-color: $background-gray;
-  margin-bottom: 10px;
-  width: 80px;
-}
-.techLogo {
-  display: block;
-  height: 40px;
+  padding-bottom: 100px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 58px;
+  margin-top: 100px;
+  width: 50%;
 }
-.logo-text {
-  color: white;
-  font-size: 0.6rem;
-  padding: 2px 0;
-  text-align: center;
+.fa-icon {
+  color: blue;
+  font-size: 4rem;
+  padding: 40px 0 40px 0;
 }
-.dot-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  width: 100px;
-}
-.dot {
-  display: block;
-  height: 20px;
-  margin-left: auto;
-  margin-right: auto;
-}
+// .skills-group {
+//   display: grid;
+//   grid-template-rows: auto;
+//   height: auto;
+//   padding: 30px;
+// }
+// #techLogosWrapper {
+//   display: flex;
+//   align-items: center;
+//   flex-flow: row wrap;
+//   justify-content: space-around;
+// }
+// .skill-row-wrapper {
+//   align-items: center;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: flex-start;
+// }
+// .logo-card {
+//   background-color: $background-gray;
+//   margin-bottom: 10px;
+//   width: 80px;
+// }
+// .techLogo {
+//   display: block;
+//   height: 40px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   max-width: 58px;
+// }
+// .logo-text {
+//   color: white;
+//   font-size: 0.6rem;
+//   padding: 2px 0;
+//   text-align: center;
+// }
+// .dot-wrapper {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: flex-start;
+//   width: 100px;
+// }
+// .dot {
+//   display: block;
+//   height: 20px;
+//   margin-left: auto;
+//   margin-right: auto;
+// }
