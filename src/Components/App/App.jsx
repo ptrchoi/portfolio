@@ -21,6 +21,9 @@ const config = {
 };
 const debug = new Debucsser(config).init();
 
+const MIN_WIDTH = 1224;
+const MAX_WIDTH = 1224;
+
 //TEMP UNTIL COMPONENT HEIGHTS ARE SET
 // const ABOUT_SECTION_HEIGHT = 800;
 // const SKILLS_SECTION_HEIGHT = 1600;
@@ -40,25 +43,26 @@ class App extends Component {
 
     this.state = {
       landingPageHeight: 600, //initial default height
+      viewWidth: 'narrow', //initial default width
       onLandingPage: true,
       activeLink: '#home'
     };
 
     this.updateLinksOnScroll = this.updateLinksOnScroll.bind(this);
-    this.updateLandingPageHeight = this.updateLandingPageHeight.bind(this);
+    this.updateViewDimensions = this.updateViewDimensions.bind(this);
     this.renderNav = this.renderNav.bind(this);
     this.renderContentComponents = this.renderContentComponents.bind(this);
   }
   componentDidMount() {
     this.updateLinksOnScroll();
-    this.updateLandingPageHeight();
+    this.updateViewDimensions();
 
     window.addEventListener('scroll', this.updateLinksOnScroll);
-    window.addEventListener('resize', this.updateLandingPageHeight);
+    window.addEventListener('resize', this.updateViewDimensions);
   }
   componentWillUnmount() {
     window.removeEventListener('scroll', this.updateLinksOnScroll);
-    window.removeEventListener('resize', this.updateLandingPageHeight);
+    window.removeEventListener('resize', this.updateViewDimensions);
   }
   updateLinksOnScroll() {
     let { onLandingPage, activeLink } = this.state;
@@ -104,27 +108,35 @@ class App extends Component {
       activeLink: activeLink
     });
   }
-  updateLandingPageHeight() {
+  updateViewDimensions() {
     let height = window.innerHeight;
+    let width = window.innerWidth;
+    let { viewWidth } = this.state;
 
     $(window).resize(function() {
       $('#home-section').css('height', height);
     });
+    if (viewWidth === 'narrow' && width > MAX_WIDTH) {
+      viewWidth = 'wide';
+    } else if (viewWidth === 'wide' && width < MAX_WIDTH) {
+      viewWidth = 'narrow';
+    }
     this.setState({
-      landingPageHeight: height
+      landingPageHeight: height,
+      viewWidth: viewWidth
     });
   }
   renderNav() {
     return (
       <BrowserRouter>
         <div>
-          <MediaQuery query="(min-device-width: 1224px)">
+          <MediaQuery minDeviceWidth={MIN_WIDTH}>
             <Navbar
               mq={'wide'}
               links={<Links size={'wide'} activeLink={this.state.activeLink} />}
             />
           </MediaQuery>
-          <MediaQuery query="(max-device-width: 1224px)">
+          <MediaQuery maxDeviceWidth={MAX_WIDTH}>
             <Navbar
               mq={'narrow'}
               links={
@@ -146,7 +158,7 @@ class App extends Component {
           <About />
         </div>
         <div id="skills" className="content-section">
-          <Skills />
+          <Skills size={this.state.viewWidth} />
         </div>
         <div id="portfolio" className="content-section">
           <Portfolio />

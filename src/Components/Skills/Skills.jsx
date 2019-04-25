@@ -1,4 +1,5 @@
 import React from 'react';
+import MediaQuery from 'react-responsive';
 
 import chart from '../../assets/skills_chart_v2.png';
 
@@ -7,10 +8,12 @@ import chart from '../../assets/skills_chart_v2.png';
  * @function
  * @return {JSX.Element} - Rendered component.
  */
-const Skills = () => {
+const Skills = props => {
+  const classList = 'skills-group-wrapper skills-group-wrapper--' + props.size;
+
   return (
     <div className="section-wrapper skills-wrapper">
-      <div className="skills-group-wrapper">
+      <div className={classList}>
         <div className="skills-group">
           <i className="fas fa-cubes fa-icon" />
           <h2>Modular Code</h2>
