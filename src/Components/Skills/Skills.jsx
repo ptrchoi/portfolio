@@ -6,6 +6,7 @@ import chart from '../../assets/skills_chart_v2.png';
 /**
  * Functional React component, simply renders a page content element.
  * @function
+ * @param {object} props - { size } for responsive layouts.
  * @return {JSX.Element} - Rendered component.
  */
 const Skills = props => {

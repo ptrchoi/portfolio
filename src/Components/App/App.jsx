@@ -22,45 +22,40 @@ const debug = new Debucsser(config).init();
 
 const SIZE_LARGE = 992;
 
-//TEMP UNTIL COMPONENT HEIGHTS ARE SET
-// const ABOUT_SECTION_HEIGHT = 800;
-// const SKILLS_SECTION_HEIGHT = 1600;
-// const PORTFOLIO_SECTION_HEIGHT = 2400;
-
 /**
  * App Component handles:
  * - routing
  * - content components
+ * - screen size updates
  * - Menu/Navigation:
  *    - page scroll updating
- *    - media query layouts
  */
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      viewHeight: 600, //initial default height
-      screenSize: 'small', //initial default width
       onLandingPage: true,
-      activeLink: '#home'
+      activeLink: '#home',
+      viewHeight: 600, //default height
+      screenSize: 'small' //default size
     };
 
     this.updateLinksOnScroll = this.updateLinksOnScroll.bind(this);
-    this.updateViewDimensions = this.updateViewDimensions.bind(this);
+    this.updateSizeOnResize = this.updateSizeOnResize.bind(this);
     this.renderNav = this.renderNav.bind(this);
     this.renderContentComponents = this.renderContentComponents.bind(this);
   }
   componentDidMount() {
     this.updateLinksOnScroll();
-    this.updateViewDimensions();
+    this.updateSizeOnResize();
 
     window.addEventListener('scroll', this.updateLinksOnScroll);
-    window.addEventListener('resize', this.updateViewDimensions);
+    window.addEventListener('resize', this.updateSizeOnResize);
   }
   componentWillUnmount() {
     window.removeEventListener('scroll', this.updateLinksOnScroll);
-    window.removeEventListener('resize', this.updateViewDimensions);
+    window.removeEventListener('resize', this.updateSizeOnResize);
   }
   updateLinksOnScroll() {
     let { onLandingPage, activeLink } = this.state;
@@ -106,14 +101,17 @@ class App extends Component {
       activeLink: activeLink
     });
   }
-  updateViewDimensions() {
+  updateSizeOnResize() {
     let height = window.innerHeight;
     let width = window.innerWidth;
     let { screenSize } = this.state;
 
+    //Set home page size for full screen bg img
     $(window).resize(function() {
       $('#home-section').css('height', height);
     });
+
+    //Check for changes to screenSize
     if (screenSize === 'small' && width > SIZE_LARGE) {
       screenSize = 'large';
     } else if (screenSize === 'large' && width < SIZE_LARGE) {
@@ -128,28 +126,26 @@ class App extends Component {
     const { screenSize } = this.state;
     return (
       <BrowserRouter>
-        <div>
-          <Navbar
-            size={screenSize}
-            links={
-              <Links size={screenSize} activeLink={this.state.activeLink} />
-            }
-          />
-        </div>
+        <Navbar
+          size={screenSize}
+          links={<Links size={screenSize} activeLink={this.state.activeLink} />}
+        />
       </BrowserRouter>
     );
   }
   renderContentComponents() {
+    const { viewHeight, screenSize } = this.state;
+
     return (
       <div className="content-wrapper">
         <div id="home" className="content-section">
-          <Home height={this.state.viewHeight} />
+          <Home height={viewHeight} />
         </div>
         <div id="about" className="content-section">
           <About />
         </div>
         <div id="skills" className="content-section">
-          <Skills size={this.state.screenSize} />
+          <Skills size={screenSize} />
         </div>
         <div id="portfolio" className="content-section">
           <Portfolio />
