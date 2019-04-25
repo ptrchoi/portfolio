@@ -11,13 +11,13 @@
     font-size: 1.4rem;
   }
 }
-.links-wrapper--wide {
+.links-wrapper--large {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   .menuLink {
     justify-self: end;
   }
 }
-.links-wrapper--narrow {
+.links-wrapper--small {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   .menuLink {

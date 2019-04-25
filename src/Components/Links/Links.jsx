@@ -4,14 +4,14 @@ import { NavHashLink as NavLink } from 'react-router-hash-link';
 /**
  * Functional React component for navigation link routing with scroll-to feature.
  * @function
- * @param {object} props - { size } 'wide' || 'narrow' layouts.
+ * @param {object} props - { size } 'large' || 'small' layouts.
  * @return {JSX.Element} - Rendered component of nav links, highlighted active link, dynamic layout/styling based .size param.
  */
 const Links = props => {
   //App.jsx sets props.activeLink based on current scrollTop position
   const testActive = to => () => to === props.activeLink;
 
-  const classList = 'links-wrapper links-wrapper--' + props.size; //props.size -> wide || narrow
+  const classList = 'links-wrapper links-wrapper--' + props.size; //props.size -> large || small
   return (
     <div className={classList}>
       <NavLink

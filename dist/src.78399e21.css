@@ -103,18 +103,18 @@ body {
   font-size: 1.4rem;
 }
 
-.links-wrapper--wide {
+.links-wrapper--large {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
-.links-wrapper--wide .menuLink {
+.links-wrapper--large .menuLink {
   justify-self: end;
 }
 
-.links-wrapper--narrow {
+.links-wrapper--small {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }
-.links-wrapper--narrow .menuLink {
+.links-wrapper--small .menuLink {
   justify-self: center;
 }
 
@@ -250,12 +250,12 @@ body {
   padding: 20px;
 }
 
-.skills-group-wrapper--wide {
+.skills-group-wrapper--large {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
 }
 
-.skills-group-wrapper--narrow {
+.skills-group-wrapper--small {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr;
 }

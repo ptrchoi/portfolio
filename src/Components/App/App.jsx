@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import MediaQuery from 'react-responsive';
 import $ from 'jquery';
 import Debucsser from 'debucsser';
 
@@ -21,8 +20,7 @@ const config = {
 };
 const debug = new Debucsser(config).init();
 
-const MIN_WIDTH = 1224;
-const MAX_WIDTH = 1224;
+const SIZE_LARGE = 992;
 
 //TEMP UNTIL COMPONENT HEIGHTS ARE SET
 // const ABOUT_SECTION_HEIGHT = 800;
@@ -42,8 +40,8 @@ class App extends Component {
     super(props);
 
     this.state = {
-      landingPageHeight: 600, //initial default height
-      viewWidth: 'narrow', //initial default width
+      viewHeight: 600, //initial default height
+      screenSize: 'small', //initial default width
       onLandingPage: true,
       activeLink: '#home'
     };
@@ -111,39 +109,32 @@ class App extends Component {
   updateViewDimensions() {
     let height = window.innerHeight;
     let width = window.innerWidth;
-    let { viewWidth } = this.state;
+    let { screenSize } = this.state;
 
     $(window).resize(function() {
       $('#home-section').css('height', height);
     });
-    if (viewWidth === 'narrow' && width > MAX_WIDTH) {
-      viewWidth = 'wide';
-    } else if (viewWidth === 'wide' && width < MAX_WIDTH) {
-      viewWidth = 'narrow';
+    if (screenSize === 'small' && width > SIZE_LARGE) {
+      screenSize = 'large';
+    } else if (screenSize === 'large' && width < SIZE_LARGE) {
+      screenSize = 'small';
     }
     this.setState({
-      landingPageHeight: height,
-      viewWidth: viewWidth
+      viewHeight: height,
+      screenSize: screenSize
     });
   }
   renderNav() {
+    const { screenSize } = this.state;
     return (
       <BrowserRouter>
         <div>
-          <MediaQuery minDeviceWidth={MIN_WIDTH}>
-            <Navbar
-              mq={'wide'}
-              links={<Links size={'wide'} activeLink={this.state.activeLink} />}
-            />
-          </MediaQuery>
-          <MediaQuery maxDeviceWidth={MAX_WIDTH}>
-            <Navbar
-              mq={'narrow'}
-              links={
-                <Links size={'narrow'} activeLink={this.state.activeLink} />
-              }
-            />
-          </MediaQuery>
+          <Navbar
+            size={screenSize}
+            links={
+              <Links size={screenSize} activeLink={this.state.activeLink} />
+            }
+          />
         </div>
       </BrowserRouter>
     );
@@ -152,13 +143,13 @@ class App extends Component {
     return (
       <div className="content-wrapper">
         <div id="home" className="content-section">
-          <Home height={this.state.landingPageHeight} />
+          <Home height={this.state.viewHeight} />
         </div>
         <div id="about" className="content-section">
           <About />
         </div>
         <div id="skills" className="content-section">
-          <Skills size={this.state.viewWidth} />
+          <Skills size={this.state.screenSize} />
         </div>
         <div id="portfolio" className="content-section">
           <Portfolio />

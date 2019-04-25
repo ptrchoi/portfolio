@@ -15,11 +15,11 @@
   justify-items: center;
   padding: 20px;
 }
-.skills-group-wrapper--wide {
+.skills-group-wrapper--large {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
 }
-.skills-group-wrapper--narrow {
+.skills-group-wrapper--small {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr;
 }

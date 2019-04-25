@@ -9,8 +9,8 @@ import MenuIcon from '../MenuIcon/MenuIcon';
 
 /**
  * Class component, renders responsive menu components based on mediaQuery.
- * @param {object} props - { mq } mediaQuery size from parent/App.
- * @return {JSX.Element} - Rendered component, with wide format navbar OR narrow with icon & sidebar.
+ * @param {object} props - { size } mediaQuery size from parent/App.
+ * @return {JSX.Element} - Rendered component, with large format navbar OR small with icon & sidebar.
  */
 class Navbar extends Component {
   constructor(props) {
@@ -45,7 +45,7 @@ class Navbar extends Component {
     });
   }
   render() {
-    const { mq } = this.props;
+    const { size } = this.props;
     const { sidebarIsOpen } = this.state;
     let sidebar; //default to null
 
@@ -55,8 +55,8 @@ class Navbar extends Component {
       );
     }
 
-    // Check mediaquery prop for wide or narrow layout
-    if (mq === 'wide') {
+    // Check mediaquery prop for large or small layout
+    if (size === 'large') {
       return (
         <div>
           <CSSTransition
