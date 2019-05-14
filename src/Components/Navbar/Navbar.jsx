@@ -3,9 +3,9 @@ import { CSSTransition } from 'react-transition-group';
 import $ from 'jquery';
 
 import C from '../../constants';
-import Title from '../Title/Title';
-import Sidebar from '../Sidebar/Sidebar';
-import MenuIcon from '../MenuIcon/MenuIcon';
+import Title from '../title/Title';
+import Sidebar from '../sidebar/Sidebar';
+import MenuIcon from '../menuIcon/MenuIcon';
 
 /**
  * Class component, renders responsive menu components based on mediaQuery.

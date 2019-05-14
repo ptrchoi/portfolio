@@ -2,7 +2,7 @@ import React from 'react';
 import { CSSTransition } from 'react-transition-group';
 
 import C from '../../constants';
-import Overlay from '../Overlay/Overlay';
+import Overlay from '../overlay/Overlay';
 
 /**
  * Functional React component, renders a sidebar with links and an overlay.

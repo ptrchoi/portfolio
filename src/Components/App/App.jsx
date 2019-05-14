@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import $ from 'jquery';
+// import ReactFullPage from '@fullpage/react-fullpage';
 import Debucsser from 'debucsser';
 
 //Components
-import Navbar from '../Navbar/Navbar';
-import Links from '../Links/Links';
-import Home from '../Home/Home';
-import About from '../About/About';
-import Skills from '../Skills/Skills';
-import Portfolio from '../Portfolio/Portfolio';
-import Contact from '../Contact/Contact';
+import Navbar from '../navbar/Navbar';
+import Links from '../links/Links';
+import Home from '../home/Home';
+import About from '../about/About';
+import Skills from '../skills/Skills';
+import Portfolio from '../portfolio/Portfolio';
+import Contact from '../contact/Contact';
 
 //Debucsser settings
 const config = {
@@ -63,9 +64,9 @@ class App extends Component {
       document.body.scrollTop || document.documentElement.scrollTop;
 
     //Size/Flow for section containers are responsive/dynamic,
-    //Get the CURRENT topPos's for each content-section
+    //Get the CURRENT topPos's for each section
     let sections = [];
-    $('.content-section').each(function(i) {
+    $('.section').each(function(i) {
       let topPos = $(this).offset().top;
       sections[i] = {
         topPos: topPos
@@ -137,23 +138,26 @@ class App extends Component {
     const { viewHeight, screenSize } = this.state;
 
     return (
-      <div className="content-wrapper">
-        <div id="home" className="content-section">
+      //wrapper with id="fullpage" & sections with className="section" req'd for fullpage.js
+      // <ReactFullPage.Wrapper>
+      <div>
+        <div id="home" className="section">
           <Home height={viewHeight} />
         </div>
-        <div id="about" className="content-section">
+        <div id="about" className="section">
           <About />
         </div>
-        <div id="skills" className="content-section">
+        <div id="skills" className="section">
           <Skills size={screenSize} />
         </div>
-        <div id="portfolio" className="content-section">
+        <div id="portfolio" className="section">
           <Portfolio />
         </div>
-        <div id="contact" className="content-section">
+        <div id="contact" className="section">
           <Contact />
         </div>
       </div>
+      // </ReactFullPage.Wrapper>
     );
   }
   render() {

@@ -1,7 +1,7 @@
 import React from 'react';
 import MediaQuery from 'react-responsive';
 
-import chart from '../../assets/skills_chart_v2.png';
+import chart from '../../assets/skills_chart_v6.png';
 
 /**
  * Functional React component, simply renders a page content element.
