@@ -139,26 +139,30 @@ class App extends Component {
     const { viewHeight, screenSize } = this.state;
 
     return (
-      //wrapper with id="fullpage" & sections with className="section" req'd for fullpage.js
-      // <ReactFullPage.Wrapper>
-      <div>
-        <div id="home" className="section">
-          <Home height={viewHeight} />
-        </div>
-        <div id="about" className="section">
-          <About />
-        </div>
-        <div id="skills" className="section">
-          <Skills size={screenSize} />
-        </div>
-        <div id="portfolio" className="section">
-          <Portfolio />
-        </div>
-        <div id="contact" className="section">
-          <Contact />
-        </div>
-      </div>
-      // </ReactFullPage.Wrapper>
+      //wrapper with divs with className="section" req'd for fullpage.js
+      <ReactFullPage
+        render={({ state, fullpageApi }) => {
+          return (
+            <ReactFullPage.Wrapper>
+              <div id="home" className="section">
+                <Home height={viewHeight} />
+              </div>
+              <div id="about" className="section">
+                <About />
+              </div>
+              <div id="skills" className="section">
+                <Skills size={screenSize} />
+              </div>
+              <div id="portfolio" className="section">
+                <Portfolio />
+              </div>
+              <div id="contact" className="section">
+                <Contact />
+              </div>
+            </ReactFullPage.Wrapper>
+          );
+        }}
+      />
     );
   }
   render() {
