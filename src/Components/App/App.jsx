@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import $ from 'jquery';
-// import ReactFullPage from '@fullpage/react-fullpage';
+import ReactFullPage from '@fullpage/react-fullpage';
 
 import Debucsser from 'debucsser';
 
