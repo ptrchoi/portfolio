@@ -141,6 +141,7 @@ class App extends Component {
     return (
       //wrapper with divs with className="section" req'd for fullpage.js
       <ReactFullPage
+        licenseKey={'***REMOVED***'}
         render={({ state, fullpageApi }) => {
           return (
             <ReactFullPage.Wrapper>
