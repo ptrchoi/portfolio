@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import $ from 'jquery';
+
+import 'fullpage.js/vendors/scrolloverflow';
 import ReactFullPage from '@fullpage/react-fullpage';
 
 import Debucsser from 'debucsser';
@@ -142,6 +144,7 @@ class App extends Component {
       //wrapper with divs with className="section" req'd for fullpage.js
       <ReactFullPage
         licenseKey={'***REMOVED***'}
+        scrollOverflow={true}
         render={({ state, fullpageApi }) => {
           return (
             <ReactFullPage.Wrapper>
