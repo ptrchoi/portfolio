@@ -6,7 +6,7 @@ import msftStudiosLogo from '../../assets/msftStudios_2000_570.png';
 import eaLogo from '../../assets/eaLogo_1280_505.png';
 
 /**
- * Functional React component, simply renders a page content element.
+ * React Class Component, renders a page content element.
  * @function
  * @return {JSX.Element} - Rendered component.
  */
