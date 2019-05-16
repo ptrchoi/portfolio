@@ -149,16 +149,16 @@ class App extends Component {
                 <Home height={viewHeight} />
               </div>
               <div id="about" className="section">
-                <About />
+                <About height={viewHeight} />
               </div>
               <div id="skills" className="section">
-                <Skills size={screenSize} />
+                <Skills size={screenSize} height={viewHeight} />
               </div>
               <div id="portfolio" className="section">
-                <Portfolio />
+                <Portfolio height={viewHeight} />
               </div>
               <div id="contact" className="section">
-                <Contact />
+                <Contact height={viewHeight} />
               </div>
             </ReactFullPage.Wrapper>
           );
