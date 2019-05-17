@@ -40,7 +40,6 @@ class App extends Component {
 
     this.state = {
       onLandingPage: true,
-      activeLink: '#home',
       viewHeight: 600, //default height
       screenSize: 'small' //default size
     };
@@ -135,10 +134,7 @@ class App extends Component {
 
     return (
       <BrowserRouter>
-        <Navbar
-          size={screenSize}
-          links={<Links size={screenSize} activeLink={this.state.activeLink} />}
-        />
+        <Navbar size={screenSize} links={<Links size={screenSize} />} />
       </BrowserRouter>
     );
   }
@@ -147,7 +143,6 @@ class App extends Component {
 
     return (
       //Set options for fullpage.js
-      // - fixedElements
       // - scrollOverflow = true, allows for longer sections to scroll normally
       // - wrapper requires divs with className="section"
       <ReactFullPage
@@ -165,7 +160,7 @@ class App extends Component {
           return (
             <ReactFullPage.Wrapper>
               <div id="home" className="section">
-                <Home height={viewHeight} />
+                <Home height={viewHeight} fullpage_api={fullpageApi} />
               </div>
               <div id="about" className="section">
                 <About height={viewHeight} />

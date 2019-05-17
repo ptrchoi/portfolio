@@ -18,7 +18,7 @@ class Home extends Component {
     Object.assign(el.style, imageProperties);
   }
   render(props) {
-    let { height } = this.props;
+    let { height, fullpage_api } = this.props;
     return (
       <div
         id="home-section"
@@ -28,7 +28,8 @@ class Home extends Component {
         <div className="button-wrapper">
           <button
             className="welcomeButton"
-            onClick={() => (window.location.href = '/#about')}
+            // onClick={() => (window.location.href = '/#about')}
+            onClick={() => fullpage_api.moveSectionDown()}
           >
             welcome
           </button>

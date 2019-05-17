@@ -9,8 +9,17 @@ import { NavHashLink as NavLink } from 'react-router-hash-link';
  */
 const Links = props => {
   //App.jsx sets props.activeLink based on current scrollTop position
-  const testActive = to => () => to === props.activeLink;
-
+  // const testActive = to => () => to === props.activeLink;
+  // const testActive = to => (match, location) => to === location.hash;
+  const testActive = to => (match, location) => {
+    console.log(
+      'testActive - to: ',
+      to,
+      ' testActive - location.hash: ',
+      location.hash
+    );
+    return to === location.hash;
+  };
   const classList = 'links-wrapper links-wrapper--' + props.size; //props.size -> large || small
 
   console.log('Links: props.activeLink: ', props.activeLink);
