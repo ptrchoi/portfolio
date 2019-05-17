@@ -1,12 +1,15 @@
 .links-wrapper {
   display: grid;
+  li {
+    list-style-type: none;
+  }
   a {
     font-weight: bold;
     text-decoration: none;
   }
-  // .activeLink {
-  //   color: red;
-  // }
+  .active {
+    color: red;
+  }
   .menuLink {
     font-size: 1.4rem;
   }

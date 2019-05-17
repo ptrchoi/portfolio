@@ -88,9 +88,15 @@ body {
 .links-wrapper {
   display: grid;
 }
+.links-wrapper li {
+  list-style-type: none;
+}
 .links-wrapper a {
   font-weight: bold;
   text-decoration: none;
+}
+.links-wrapper .active {
+  color: red;
 }
 .links-wrapper .menuLink {
   font-size: 1.4rem;

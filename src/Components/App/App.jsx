@@ -32,7 +32,7 @@ const SIZE_LARGE = 992;
  * - content components
  * - screen size updates
  * - Menu/Navigation:
- *    - page scroll updating
+ * - ReactFullPage options
  */
 class App extends Component {
   constructor(props) {
@@ -44,20 +44,15 @@ class App extends Component {
       screenSize: 'small' //default size
     };
 
-    // this.updateLinksOnScroll = this.updateLinksOnScroll.bind(this);
     this.updateSizeOnResize = this.updateSizeOnResize.bind(this);
     this.renderNav = this.renderNav.bind(this);
     this.renderContentComponents = this.renderContentComponents.bind(this);
   }
   componentDidMount() {
-    // this.updateLinksOnScroll();
     this.updateSizeOnResize();
-
-    // window.addEventListener('scroll', this.updateLinksOnScroll);
     window.addEventListener('resize', this.updateSizeOnResize);
   }
   componentWillUnmount() {
-    // window.removeEventListener('scroll', this.updateLinksOnScroll);
     window.removeEventListener('resize', this.updateSizeOnResize);
   }
   // updateLinksOnScroll() {
@@ -130,13 +125,7 @@ class App extends Component {
   renderNav() {
     const { screenSize } = this.state;
 
-    console.log('renderNav called');
-
-    return (
-      <BrowserRouter>
-        <Navbar size={screenSize} links={<Links size={screenSize} />} />
-      </BrowserRouter>
-    );
+    return <Navbar size={screenSize} links={<Links size={screenSize} />} />;
   }
   renderContentComponents() {
     const { viewHeight, screenSize } = this.state;
@@ -147,13 +136,7 @@ class App extends Component {
       // - wrapper requires divs with className="section"
       <ReactFullPage
         licenseKey={'***REMOVED***'}
-        anchors={[
-          'menu-home',
-          'menu-about',
-          'menu-skills',
-          'menu-portfolio',
-          'menu-contact'
-        ]}
+        anchors={['anchor-1', 'anchor-2', 'anchor-3', 'anchor-4', 'anchor-5']}
         menu={true}
         scrollOverflow={true}
         render={({ state, fullpageApi }) => {
