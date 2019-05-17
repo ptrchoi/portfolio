@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MediaQuery from 'react-responsive';
+// import MediaQuery from 'react-responsive';
 
 import chart from '../../assets/skills_chart_v6.png';
 
