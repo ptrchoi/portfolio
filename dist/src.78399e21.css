@@ -48,17 +48,13 @@ body {
 }
 
 /* REMOVE! FOR TESTING ONLY */
-.section-wrapper {
-  height: 1200px;
-  min-height: 600px;
-}
-
 .navbar-wrapper {
   background-color: #6a6a6a;
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 80px;
   position: fixed;
+  z-index: 999;
 }
 
 #navSidebar {
@@ -95,9 +91,6 @@ body {
 .links-wrapper a {
   font-weight: bold;
   text-decoration: none;
-}
-.links-wrapper .activeLink {
-  color: red;
 }
 .links-wrapper .menuLink {
   font-size: 1.4rem;

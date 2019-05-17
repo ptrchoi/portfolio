@@ -12,6 +12,9 @@ const Links = props => {
   const testActive = to => () => to === props.activeLink;
 
   const classList = 'links-wrapper links-wrapper--' + props.size; //props.size -> large || small
+
+  console.log('Links: props.activeLink: ', props.activeLink);
+
   return (
     <div className={classList}>
       <NavLink

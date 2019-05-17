@@ -4,6 +4,7 @@
   grid-template-columns: 1fr 1fr;
   height: 80px;
   position: fixed;
+  z-index: 999;
 }
 #navSidebar {
   left: $app-margin-LR;

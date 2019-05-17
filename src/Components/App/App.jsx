@@ -45,66 +45,68 @@ class App extends Component {
       screenSize: 'small' //default size
     };
 
-    this.updateLinksOnScroll = this.updateLinksOnScroll.bind(this);
+    // this.updateLinksOnScroll = this.updateLinksOnScroll.bind(this);
     this.updateSizeOnResize = this.updateSizeOnResize.bind(this);
     this.renderNav = this.renderNav.bind(this);
     this.renderContentComponents = this.renderContentComponents.bind(this);
   }
   componentDidMount() {
-    this.updateLinksOnScroll();
+    // this.updateLinksOnScroll();
     this.updateSizeOnResize();
 
-    window.addEventListener('scroll', this.updateLinksOnScroll);
+    // window.addEventListener('scroll', this.updateLinksOnScroll);
     window.addEventListener('resize', this.updateSizeOnResize);
   }
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.updateLinksOnScroll);
+    // window.removeEventListener('scroll', this.updateLinksOnScroll);
     window.removeEventListener('resize', this.updateSizeOnResize);
   }
-  updateLinksOnScroll() {
-    let { onLandingPage, activeLink } = this.state;
-    const scrollPos =
-      document.body.scrollTop || document.documentElement.scrollTop;
+  // updateLinksOnScroll() {
+  //   let { onLandingPage, activeLink } = this.state;
+  //   const scrollPos =
+  //     document.body.scrollTop || document.documentElement.scrollTop;
 
-    //Size/Flow for section containers are responsive/dynamic,
-    //Get the CURRENT topPos's for each section
-    let sections = [];
-    $('.section').each(function(i) {
-      let topPos = $(this).offset().top;
-      sections[i] = {
-        topPos: topPos
-      };
-    });
+  //   //Size/Flow for section containers are responsive/dynamic,
+  //   //Get the CURRENT topPos's for each section
+  //   let sections = [];
+  //   $('.section').each(function(i) {
+  //     let topPos = $(this).offset().top;
+  //     sections[i] = {
+  //       topPos: topPos
+  //     };
+  //   });
 
-    //Remove current status from all links
-    $('.menuLink').removeClass('activeLink');
-    onLandingPage = false;
+  //   //Remove current status from all links
+  //   $('.menuLink').removeClass('activeLink');
+  //   onLandingPage = false;
 
-    //Compare current scrollPos against each consecutive section's topPos
-    //& set appropriate activeLink
-    if (scrollPos < sections[1].topPos) {
-      $('#menu-home').addClass('activeLink');
-      activeLink = '#home';
-      onLandingPage = true;
-    } else if (scrollPos < sections[2].topPos) {
-      $('#menu-about').addClass('activeLink');
-      activeLink = '#about';
-    } else if (scrollPos < sections[3].topPos) {
-      $('#menu-skills').addClass('activeLink');
-      activeLink = '#skills';
-    } else if (scrollPos < sections[4].topPos) {
-      $('#menu-portfolio').addClass('activeLink');
-      activeLink = '#portfolio';
-    } else {
-      $('#menu-contact').addClass('activeLink');
-      activeLink = '#contact';
-    }
+  //   console.log('scrollPos: ', scrollPos);
 
-    this.setState({
-      onLandingPage: onLandingPage,
-      activeLink: activeLink
-    });
-  }
+  //   //Compare current scrollPos against each consecutive section's topPos
+  //   //& set appropriate activeLink
+  //   if (scrollPos < sections[1].topPos) {
+  //     $('#menu-home').addClass('activeLink');
+  //     activeLink = '#home';
+  //     onLandingPage = true;
+  //   } else if (scrollPos < sections[2].topPos) {
+  //     $('#menu-about').addClass('activeLink');
+  //     activeLink = '#about';
+  //   } else if (scrollPos < sections[3].topPos) {
+  //     $('#menu-skills').addClass('activeLink');
+  //     activeLink = '#skills';
+  //   } else if (scrollPos < sections[4].topPos) {
+  //     $('#menu-portfolio').addClass('activeLink');
+  //     activeLink = '#portfolio';
+  //   } else {
+  //     $('#menu-contact').addClass('activeLink');
+  //     activeLink = '#contact';
+  //   }
+
+  //   this.setState({
+  //     onLandingPage: onLandingPage,
+  //     activeLink: activeLink
+  //   });
+  // }
   updateSizeOnResize() {
     let height = window.innerHeight;
     let width = window.innerWidth;
@@ -128,6 +130,9 @@ class App extends Component {
   }
   renderNav() {
     const { screenSize } = this.state;
+
+    console.log('renderNav called');
+
     return (
       <BrowserRouter>
         <Navbar
@@ -141,9 +146,20 @@ class App extends Component {
     const { viewHeight, screenSize } = this.state;
 
     return (
-      //wrapper with divs with className="section" req'd for fullpage.js
+      //Set options for fullpage.js
+      // - fixedElements
+      // - scrollOverflow = true, allows for longer sections to scroll normally
+      // - wrapper requires divs with className="section"
       <ReactFullPage
         licenseKey={'***REMOVED***'}
+        anchors={[
+          'menu-home',
+          'menu-about',
+          'menu-skills',
+          'menu-portfolio',
+          'menu-contact'
+        ]}
+        menu={true}
         scrollOverflow={true}
         render={({ state, fullpageApi }) => {
           return (
@@ -172,16 +188,17 @@ class App extends Component {
   render() {
     const { onLandingPage } = this.state;
 
-    if (onLandingPage) {
-      return <div>{this.renderContentComponents()}</div>;
-    } else {
-      return (
-        <div>
-          {this.renderNav()}
-          {this.renderContentComponents()}
-        </div>
-      );
-    }
+    // console.log('onLandingPage: ', onLandingPage);
+    // if (onLandingPage) {
+    //   return <div>{this.renderContentComponents()}</div>;
+    // } else {
+    return (
+      <div>
+        {this.renderNav()}
+        {this.renderContentComponents()}
+      </div>
+    );
+    //   }
   }
 }
 

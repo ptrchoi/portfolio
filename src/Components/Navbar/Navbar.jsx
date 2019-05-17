@@ -49,6 +49,9 @@ class Navbar extends Component {
     const { sidebarIsOpen } = this.state;
     let sidebar; //default to null
 
+    console.log('Navbar - sidebarIsOpen: ', sidebarIsOpen);
+    console.log('Navbar - size: ', size);
+
     if (sidebarIsOpen) {
       sidebar = (
         <Sidebar links={this.props.links} sidebarClick={this.toggleSidebar} />

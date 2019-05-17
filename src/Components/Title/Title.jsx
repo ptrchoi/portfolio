@@ -6,6 +6,7 @@ import React from 'react';
  * @return {JSX.Element} - Rendered component.
  */
 const Title = () => {
+  console.log('Title');
   return <div className="title">Peter Choi</div>;
 };
 
