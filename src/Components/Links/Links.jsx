@@ -11,19 +11,19 @@ const Links = props => {
 
   return (
     <ul className={classList}>
-      <li data-menuanchor="anchor-1" className="active">
+      <li id="home-link" data-menuanchor="anchor-1" className="menu-link">
         <a href="#anchor-1">home</a>
       </li>
-      <li data-menuanchor="anchor-2">
+      <li id="about-link" data-menuanchor="anchor-2" className="menu-link">
         <a href="#anchor-2">about</a>
       </li>
-      <li data-menuanchor="anchor-3">
+      <li id="skills-link" data-menuanchor="anchor-3" className="menu-link">
         <a href="#anchor-3">skills</a>
       </li>
-      <li data-menuanchor="anchor-4">
+      <li id="portfolio-link" data-menuanchor="anchor-4" className="menu-link">
         <a href="#anchor-4">portfolio</a>
       </li>
-      <li data-menuanchor="anchor-5">
+      <li id="contact-link" data-menuanchor="anchor-5" className="menu-link">
         <a href="#anchor-5">contact</a>
       </li>
     </ul>

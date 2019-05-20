@@ -92,20 +92,23 @@ body {
   list-style-type: none;
 }
 .links-wrapper a {
+  color: white;
+  font-size: 1.4rem;
   font-weight: bold;
   text-decoration: none;
 }
-.links-wrapper .active {
-  color: red;
+.links-wrapper :active {
+  color: yellow;
 }
-.links-wrapper .menuLink {
-  font-size: 1.4rem;
+.links-wrapper .active-link {
+  background-color: black;
+  color: red;
 }
 
 .links-wrapper--large {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
-.links-wrapper--large .menuLink {
+.links-wrapper--large .menu-link {
   justify-self: end;
 }
 
@@ -113,7 +116,7 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }
-.links-wrapper--small .menuLink {
+.links-wrapper--small .menu-link {
   justify-self: center;
 }
 

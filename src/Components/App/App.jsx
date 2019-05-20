@@ -44,6 +44,7 @@ class App extends Component {
       screenSize: 'small' //default size
     };
 
+    // this.updateCurrentSection = this.updateCurrentSection.bind(this);
     this.updateSizeOnResize = this.updateSizeOnResize.bind(this);
     this.renderNav = this.renderNav.bind(this);
     this.renderContentComponents = this.renderContentComponents.bind(this);
@@ -56,7 +57,9 @@ class App extends Component {
     window.removeEventListener('resize', this.updateSizeOnResize);
   }
   // updateLinksOnScroll() {
-  //   let { onLandingPage, activeLink } = this.state;
+  //   console.log('inside updateLinksOnScroll');
+
+  //   let { onLandingPage } = this.state;
   //   const scrollPos =
   //     document.body.scrollTop || document.documentElement.scrollTop;
 
@@ -71,7 +74,7 @@ class App extends Component {
   //   });
 
   //   //Remove current status from all links
-  //   $('.menuLink').removeClass('activeLink');
+  //   $('.menu-link').removeClass('active-link');
   //   onLandingPage = false;
 
   //   console.log('scrollPos: ', scrollPos);
@@ -79,26 +82,26 @@ class App extends Component {
   //   //Compare current scrollPos against each consecutive section's topPos
   //   //& set appropriate activeLink
   //   if (scrollPos < sections[1].topPos) {
-  //     $('#menu-home').addClass('activeLink');
-  //     activeLink = '#home';
+  //     $('#anchor-1').addClass('active-link');
+  //     // active-link = '#home';
   //     onLandingPage = true;
   //   } else if (scrollPos < sections[2].topPos) {
-  //     $('#menu-about').addClass('activeLink');
-  //     activeLink = '#about';
+  //     $('#anchor-2').addClass('active-link');
+  //     // active-link = '#about';
   //   } else if (scrollPos < sections[3].topPos) {
-  //     $('#menu-skills').addClass('activeLink');
-  //     activeLink = '#skills';
+  //     $('#anchor-3').addClass('active-link');
+  //     // active-link = '#skills';
   //   } else if (scrollPos < sections[4].topPos) {
-  //     $('#menu-portfolio').addClass('activeLink');
-  //     activeLink = '#portfolio';
+  //     $('#anchor-4').addClass('active-link');
+  //     // active-link = '#portfolio';
   //   } else {
-  //     $('#menu-contact').addClass('activeLink');
-  //     activeLink = '#contact';
+  //     $('#achor-5').addClass('active-link');
+  //     // active-link = '#contact';
   //   }
 
   //   this.setState({
-  //     onLandingPage: onLandingPage,
-  //     activeLink: activeLink
+  //     onLandingPage: onLandingPage
+  //     // active-link: active-link
   //   });
   // }
   updateSizeOnResize() {
@@ -130,6 +133,28 @@ class App extends Component {
   renderContentComponents() {
     const { viewHeight, screenSize } = this.state;
 
+    function updateCurrentSection(destination) {
+      $('.menu-link').removeClass('active-link');
+
+      switch (destination) {
+        case 1:
+          $('#about-link').addClass('active-link');
+          break;
+        case 2:
+          $('#skills-link').addClass('active-link');
+          break;
+        case 3:
+          $('#portfolio-link').addClass('active-link');
+          break;
+        case 4:
+          $('#contact-link').addClass('active-link');
+          break;
+        default:
+          $('#home-link').addClass('active-link');
+          break;
+      }
+    }
+
     return (
       //Set options for fullpage.js
       // - scrollOverflow = true, allows for longer sections to scroll normally
@@ -139,6 +164,9 @@ class App extends Component {
         anchors={['anchor-1', 'anchor-2', 'anchor-3', 'anchor-4', 'anchor-5']}
         menu={true}
         scrollOverflow={true}
+        onLeave={function(origin, destination, direction) {
+          updateCurrentSection(destination.index);
+        }}
         render={({ state, fullpageApi }) => {
           return (
             <ReactFullPage.Wrapper>
