@@ -45,7 +45,7 @@ class App extends Component {
 
     this.updateSizeOnResize = this.updateSizeOnResize.bind(this);
     this.renderNav = this.renderNav.bind(this);
-    this.renderContentComponents = this.renderContentComponents.bind(this);
+    this.renderContent = this.renderContent.bind(this);
   }
   componentDidMount() {
     this.updateSizeOnResize();
@@ -75,6 +75,35 @@ class App extends Component {
       screenSize: screenSize
     });
   }
+  updateSectionLink(destination) {
+    let { onLandingPage } = this.state;
+    onLandingPage = false;
+
+    $('.menu-link').removeClass('active-link');
+
+    switch (destination) {
+      case 1:
+        $('#about-link').addClass('active-link');
+        break;
+      case 2:
+        $('#skills-link').addClass('active-link');
+        break;
+      case 3:
+        $('#portfolio-link').addClass('active-link');
+        break;
+      case 4:
+        $('#contact-link').addClass('active-link');
+        break;
+      default:
+        $('#home-link').addClass('active-link');
+        onLandingPage = true;
+        break;
+    }
+
+    this.setState({
+      onLandingPage: onLandingPage
+    });
+  }
   renderNav() {
     const { screenSize, onLandingPage } = this.state;
 
@@ -82,39 +111,10 @@ class App extends Component {
       return <Navbar size={screenSize} links={<Links size={screenSize} />} />;
     }
   }
-  renderContentComponents() {
+  renderContent() {
     const { viewHeight, screenSize } = this.state;
     const that = this;
 
-    function updateSectionLink(destination, that) {
-      let { onLandingPage } = that.that.state;
-
-      onLandingPage = false;
-      $('.menu-link').removeClass('active-link');
-
-      switch (destination) {
-        case 1:
-          $('#about-link').addClass('active-link');
-          break;
-        case 2:
-          $('#skills-link').addClass('active-link');
-          break;
-        case 3:
-          $('#portfolio-link').addClass('active-link');
-          break;
-        case 4:
-          $('#contact-link').addClass('active-link');
-          break;
-        default:
-          $('#home-link').addClass('active-link');
-          onLandingPage = true;
-          break;
-      }
-
-      that.that.setState({
-        onLandingPage: onLandingPage
-      });
-    }
     return (
       //Set options for fullpage.js
       <ReactFullPage
@@ -123,7 +123,7 @@ class App extends Component {
         menu={true}
         scrollOverflow={true}
         onLeave={function(origin, destination, direction) {
-          updateSectionLink(destination.index, { that });
+          that.updateSectionLink(destination.index);
         }}
         render={({ state, fullpageApi }) => {
           return (
@@ -153,7 +153,7 @@ class App extends Component {
     return (
       <div>
         {this.renderNav()}
-        {this.renderContentComponents()}
+        {this.renderContent()}
       </div>
     );
   }
