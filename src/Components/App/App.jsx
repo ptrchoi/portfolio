@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import $ from 'jquery';
 
 import 'fullpage.js/vendors/scrolloverflow';
@@ -44,7 +43,6 @@ class App extends Component {
       screenSize: 'small' //default size
     };
 
-    // this.updateCurrentSection = this.updateCurrentSection.bind(this);
     this.updateSizeOnResize = this.updateSizeOnResize.bind(this);
     this.renderNav = this.renderNav.bind(this);
     this.renderContentComponents = this.renderContentComponents.bind(this);
@@ -56,54 +54,6 @@ class App extends Component {
   componentWillUnmount() {
     window.removeEventListener('resize', this.updateSizeOnResize);
   }
-  // updateLinksOnScroll() {
-  //   console.log('inside updateLinksOnScroll');
-
-  //   let { onLandingPage } = this.state;
-  //   const scrollPos =
-  //     document.body.scrollTop || document.documentElement.scrollTop;
-
-  //   //Size/Flow for section containers are responsive/dynamic,
-  //   //Get the CURRENT topPos's for each section
-  //   let sections = [];
-  //   $('.section').each(function(i) {
-  //     let topPos = $(this).offset().top;
-  //     sections[i] = {
-  //       topPos: topPos
-  //     };
-  //   });
-
-  //   //Remove current status from all links
-  //   $('.menu-link').removeClass('active-link');
-  //   onLandingPage = false;
-
-  //   console.log('scrollPos: ', scrollPos);
-
-  //   //Compare current scrollPos against each consecutive section's topPos
-  //   //& set appropriate activeLink
-  //   if (scrollPos < sections[1].topPos) {
-  //     $('#anchor-1').addClass('active-link');
-  //     // active-link = '#home';
-  //     onLandingPage = true;
-  //   } else if (scrollPos < sections[2].topPos) {
-  //     $('#anchor-2').addClass('active-link');
-  //     // active-link = '#about';
-  //   } else if (scrollPos < sections[3].topPos) {
-  //     $('#anchor-3').addClass('active-link');
-  //     // active-link = '#skills';
-  //   } else if (scrollPos < sections[4].topPos) {
-  //     $('#anchor-4').addClass('active-link');
-  //     // active-link = '#portfolio';
-  //   } else {
-  //     $('#achor-5').addClass('active-link');
-  //     // active-link = '#contact';
-  //   }
-
-  //   this.setState({
-  //     onLandingPage: onLandingPage
-  //     // active-link: active-link
-  //   });
-  // }
   updateSizeOnResize() {
     let height = window.innerHeight;
     let width = window.innerWidth;
@@ -126,14 +76,20 @@ class App extends Component {
     });
   }
   renderNav() {
-    const { screenSize } = this.state;
+    const { screenSize, onLandingPage } = this.state;
 
-    return <Navbar size={screenSize} links={<Links size={screenSize} />} />;
+    if (!onLandingPage) {
+      return <Navbar size={screenSize} links={<Links size={screenSize} />} />;
+    }
   }
   renderContentComponents() {
     const { viewHeight, screenSize } = this.state;
+    const that = this;
 
-    function updateCurrentSection(destination) {
+    function updateSectionLink(destination, that) {
+      let { onLandingPage } = that.that.state;
+
+      onLandingPage = false;
       $('.menu-link').removeClass('active-link');
 
       switch (destination) {
@@ -151,21 +107,23 @@ class App extends Component {
           break;
         default:
           $('#home-link').addClass('active-link');
+          onLandingPage = true;
           break;
       }
-    }
 
+      that.that.setState({
+        onLandingPage: onLandingPage
+      });
+    }
     return (
       //Set options for fullpage.js
-      // - scrollOverflow = true, allows for longer sections to scroll normally
-      // - wrapper requires divs with className="section"
       <ReactFullPage
         licenseKey={'***REMOVED***'}
         anchors={['anchor-1', 'anchor-2', 'anchor-3', 'anchor-4', 'anchor-5']}
         menu={true}
         scrollOverflow={true}
         onLeave={function(origin, destination, direction) {
-          updateCurrentSection(destination.index);
+          updateSectionLink(destination.index, { that });
         }}
         render={({ state, fullpageApi }) => {
           return (
@@ -192,19 +150,12 @@ class App extends Component {
     );
   }
   render() {
-    const { onLandingPage } = this.state;
-
-    // console.log('onLandingPage: ', onLandingPage);
-    // if (onLandingPage) {
-    //   return <div>{this.renderContentComponents()}</div>;
-    // } else {
     return (
       <div>
         {this.renderNav()}
         {this.renderContentComponents()}
       </div>
     );
-    //   }
   }
 }
 
