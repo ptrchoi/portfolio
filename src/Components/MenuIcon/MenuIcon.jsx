@@ -10,18 +10,18 @@ import $ from 'jquery';
  */
 const MenuIcon = props => {
   const toggleIcon = () => {
-    $('#icon-wrapper').toggleClass('icon--close');
+    $('.menu-icon').toggleClass('menu-icon--close');
     props.menuIconClick();
   };
   //If sidebar has closed, then remove .icon--close if still attached
-  if (!props.sidebarIsOpen && $('.icon--close')[0]) {
-    $('#icon-wrapper').toggleClass('icon--close');
+  if (!props.sidebarIsOpen && $('.menu-icon--close')[0]) {
+    $('.menu-icon').toggleClass('menu-icon--close');
   }
   return (
-    <div id="icon-wrapper" className="icon" onClick={toggleIcon}>
-      <div className="icon--bar1" />
-      <div className="icon--bar2" />
-      <div className="icon--bar3" />
+    <div className="menu-icon" onClick={toggleIcon}>
+      <div className="menu-icon--bar1" />
+      <div className="menu-icon--bar2" />
+      <div className="menu-icon--bar3" />
     </div>
   );
 };

@@ -66,7 +66,6 @@ body {
 }
 
 #menuIcon {
-  border: solid 1px green;
   padding: 20px;
   position: absolute;
   right: 2%;
@@ -120,20 +119,21 @@ body {
   justify-self: center;
 }
 
-.title {
+#title {
+  color: white;
   font-size: 2rem;
 }
 
-.icon {
+.menu-icon {
   cursor: pointer;
   display: block;
   justify-self: end;
   z-index: 100;
 }
 
-.icon--bar1,
-.icon--bar2,
-.icon--bar3 {
+.menu-icon--bar1,
+.menu-icon--bar2,
+.menu-icon--bar3 {
   width: 26px;
   height: 4px;
   margin: 4px 0;
@@ -141,15 +141,15 @@ body {
   transition: 0.4s;
 }
 
-.icon--close .icon--bar1 {
+.menu-icon--close .menu-icon--bar1 {
   transform: rotate(-45deg) translate(-6px, 6px);
 }
 
-.icon--close .icon--bar2 {
+.menu-icon--close .menu-icon--bar2 {
   opacity: 0;
 }
 
-.icon--close .icon--bar3 {
+.menu-icon--close .menu-icon--bar3 {
   transform: rotate(45deg) translate(-6px, -6px);
 }
 
@@ -164,14 +164,14 @@ body {
   width: 50%;
 }
 
-.welcomeButton {
+#welcomeButton {
   background-color: green;
   color: white;
   height: 40px;
   width: 100px;
 }
 
-.welcomeButton:active {
+#welcomeButton:active {
   background-color: yellow;
   color: blue;
 }
@@ -189,17 +189,6 @@ body {
   width: 100%;
 }
 
-#logosWrapper {
-  display: flex;
-  align-items: center;
-  flex-flow: row wrap;
-  justify-content: space-around;
-}
-
-.aboutLogo {
-  margin: 8px;
-}
-
 #profilePicWrapper {
   display: grid;
 }
@@ -209,6 +198,17 @@ body {
   height: 100px;
   justify-self: end;
   width: 100px;
+}
+
+#logosWrapper {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.aboutLogo {
+  margin: 8px;
 }
 
 #msftLogo {
@@ -319,24 +319,24 @@ body {
   width: 100%;
 }
 
-.contact-section {
+.logo-icon {
+  font-size: 5rem;
+  padding: 10px;
+}
+
+#contactSection {
   display: flex;
   justify-content: space-evenly;
   margin: auto;
   width: 50%;
 }
 
-.contact-form {
+#contactForm {
   display: flex;
   justify-content: center;
   margin: auto;
   padding: 20px;
   width: 50%;
-}
-
-.logo-icon {
-  font-size: 5rem;
-  padding: 10px;
 }
 
 /*# sourceMappingURL=/src.78399e21.css.map */

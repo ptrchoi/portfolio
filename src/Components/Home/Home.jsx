@@ -16,20 +16,16 @@ class Home extends Component {
       backgroundAttachment: 'fixed'
     };
 
-    let el = document.getElementById('home-section');
+    let el = document.getElementById('homeSection');
     Object.assign(el.style, imageProperties);
   }
   render(props) {
     let { height, fullpage_api } = this.props;
     return (
-      <div
-        id="home-section"
-        className="home-wrapper"
-        style={{ height: height }}
-      >
+      <div id="homeSection" className="home-wrapper" style={{ height: height }}>
         <div className="button-wrapper">
           <button
-            className="welcomeButton"
+            id="welcomeButton"
             onClick={() => fullpage_api.moveSectionDown()}
           >
             welcome

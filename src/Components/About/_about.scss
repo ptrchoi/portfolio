@@ -9,15 +9,6 @@
   padding: 20px;
   width: 100%;
 }
-#logosWrapper {
-  display: flex;
-  align-items: center;
-  flex-flow: row wrap;
-  justify-content: space-around;
-}
-.aboutLogo {
-  margin: 8px;
-}
 #profilePicWrapper {
   display: grid;
 }
@@ -26,6 +17,15 @@
   height: 100px;
   justify-self: end;
   width: 100px;
+}
+#logosWrapper {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+.aboutLogo {
+  margin: 8px;
 }
 #msftLogo {
   height: 100px;
@@ -40,7 +40,7 @@
   width: 190px;
 }
 #aboutText {
-  color: gray;
+  color: $gray-text;
   font-size: 1.4rem;
   padding: 50px;
 }

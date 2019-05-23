@@ -1,24 +1,24 @@
-.icon {
+.menu-icon {
   cursor: pointer;
   display: block;
   justify-self: end;
   z-index: 100;
 }
-.icon--bar1,
-.icon--bar2,
-.icon--bar3 {
+.menu-icon--bar1,
+.menu-icon--bar2,
+.menu-icon--bar3 {
   width: 26px;
   height: 4px;
   margin: 4px 0;
-  background-color: #333;
+  background-color: $menu-icon-color;
   transition: 0.4s;
 }
-.icon--close .icon--bar1 {
+.menu-icon--close .menu-icon--bar1 {
   transform: rotate(-45deg) translate(-6px, 6px);
 }
-.icon--close .icon--bar2 {
+.menu-icon--close .menu-icon--bar2 {
   opacity: 0;
 }
-.icon--close .icon--bar3 {
+.menu-icon--close .menu-icon--bar3 {
   transform: rotate(45deg) translate(-6px, -6px);
 }

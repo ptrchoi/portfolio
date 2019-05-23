@@ -7,7 +7,7 @@ import React from 'react';
  * @return {JSX.Element} - Rendered component.
  */
 const Title = () => {
-  return <div className="title">Peter Choi</div>;
+  return <div id="title">Peter Choi</div>;
 };
 
 export default Title;

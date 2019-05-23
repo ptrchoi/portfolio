@@ -19,7 +19,7 @@ class About extends Component {
     return (
       <div style={{ height: height }} className="about-wrapper">
         <div id="profilePicWrapper" className="about-item">
-          <img id="profilePic" src={profilePic} />
+          <img id="profilePic" src={profilePic} alt="profile pic" />
         </div>
         <div className="about-item">
           <p id="aboutText">
@@ -37,13 +37,14 @@ class About extends Component {
           </p>
         </div>
         <div id="logosWrapper" className="about-item">
-          <img id="msftLogo" className="aboutLogo" src={msftLogo} />
+          <img id="msftLogo" className="aboutLogo" src={msftLogo} alt="logo" />
           <img
             id="msftStudiosLogo"
             className="aboutLogo"
             src={msftStudiosLogo}
+            alt="logo"
           />
-          <img id="eaLogo" className="aboutLogo" src={eaLogo} />
+          <img id="eaLogo" className="aboutLogo" src={eaLogo} alt="logo" />
         </div>
       </div>
     );

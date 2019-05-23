@@ -4,17 +4,17 @@
     list-style-type: none;
   }
   a {
-    color: white;
+    color: white; //TEMP - to be defined in Variables
     font-size: 1.4rem;
     font-weight: bold;
     text-decoration: none;
   }
   :active {
-    color: yellow;
+    color: yellow; //TEMP - to be defined in Variables
   }
   .active-link {
-    background-color: black;
-    color: red;
+    background-color: black; //TEMP - to be defined in Variables
+    color: red; //TEMP - to be defined in Variables
   }
 }
 .links-wrapper--large {

@@ -1,25 +1,24 @@
 .contact-wrapper {
   background-color: $background-gray;
-  color: white;
+  color: $white-text;
   height: auto;
   padding: 70px 0 50px 0;
   width: 100%;
 }
-.contact-section {
+.logo-icon {
+  font-size: 5rem;
+  padding: 10px;
+}
+#contactSection {
   display: flex;
   justify-content: space-evenly;
   margin: auto;
-  // padding: 50px 10px 50px 10px;
   width: 50%;
 }
-.contact-form {
+#contactForm {
   display: flex;
   justify-content: center;
   margin: auto;
   padding: 20px;
   width: 50%;
-}
-.logo-icon {
-  font-size: 5rem;
-  padding: 10px;
 }

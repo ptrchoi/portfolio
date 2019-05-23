@@ -4,13 +4,13 @@
   margin: auto;
   width: 50%;
 }
-.welcomeButton {
-  background-color: green;
-  color: white;
+#welcomeButton {
+  background-color: green; //TEMP - to be defined in Variables
+  color: white; //TEMP - to be defined in Variables
   height: 40px;
   width: 100px;
 }
-.welcomeButton:active {
-  background-color: yellow;
-  color: blue;
+#welcomeButton:active {
+  background-color: yellow; //TEMP - to be defined in Variables
+  color: blue; //TEMP - to be defined in Variables
 }

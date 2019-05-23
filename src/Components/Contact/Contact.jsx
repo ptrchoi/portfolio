@@ -12,13 +12,13 @@ class Contact extends Component {
     let { height } = this.props;
     return (
       <div style={{ height: height }} className="contact-wrapper">
-        <div className="contact-section">
+        <div id="contactSection">
           <i className="fab fa-codepen logo-icon" />
           <i className="fab fa-github logo-icon" />
           <i className="fab fa-free-code-camp logo-icon" />
           <i className="fab fa-linkedin logo-icon" />
         </div>
-        <div className="contact-form">
+        <div id="contactForm">
           <span>CONTACT</span>
           <input type="text" />
           <button>SUBMIT</button>

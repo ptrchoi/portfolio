@@ -51,7 +51,7 @@ class Skills extends Component {
           </div>
         </div>
         <div>
-          <img id="chart" src={chart} />
+          <img id="chart" src={chart} alt="chart" />
         </div>
       </div>
     );
