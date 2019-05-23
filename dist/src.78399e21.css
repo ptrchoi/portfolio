@@ -47,7 +47,6 @@ body {
   transition: opacity 1000ms ease-in-out;
 }
 
-/* REMOVE! FOR TESTING ONLY */
 .navbar-wrapper {
   background-color: #6a6a6a;
   display: grid;
@@ -58,10 +57,9 @@ body {
 }
 
 #navSidebar {
-  left: 2%;
   position: fixed;
   top: 0;
-  width: calc(100% - 40px);
+  width: 100%;
   z-index: 10;
 }
 
@@ -74,14 +72,14 @@ body {
 }
 
 .sidebar-wrapper {
-  border: solid 3px pink;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  height: 100vh;
+  width: 100%;
 }
 
 .sidebar {
-  border: solid 2px pink;
+  background-color: #6a6a6a;
+  padding-top: 25vh;
 }
 
 .links-wrapper {
@@ -154,7 +152,7 @@ body {
 }
 
 .overlay {
-  background-color: rgba(193, 193, 193, 0.5);
+  background-color: rgba(193, 193, 193, 0.8);
 }
 
 .button-wrapper {

@@ -1,10 +1,9 @@
 .sidebar-wrapper {
-  border: solid 3px pink;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  height: 100vh; // THIS NEEDS TO BE FULL HEIGHT
-  //width: 100%;
+  width: 100%;
 }
 .sidebar {
-  border: solid 2px pink;
+  background-color: $background-gray;
+  padding-top: 25vh;
 }

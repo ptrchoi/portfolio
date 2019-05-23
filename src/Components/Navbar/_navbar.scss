@@ -7,10 +7,9 @@
   z-index: 999;
 }
 #navSidebar {
-  left: $app-margin-LR;
   position: fixed;
   top: 0;
-  width: calc(100% - 40px);
+  width: 100%;
   z-index: 10;
 }
 #menuIcon {

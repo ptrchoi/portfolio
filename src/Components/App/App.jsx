@@ -112,10 +112,16 @@ class App extends Component {
     });
   }
   renderNav() {
-    const { screenSize, onLandingPage } = this.state;
+    const { onLandingPage, viewHeight, screenSize } = this.state;
 
     if (!onLandingPage) {
-      return <Navbar size={screenSize} links={<Links size={screenSize} />} />;
+      return (
+        <Navbar
+          height={viewHeight}
+          size={screenSize}
+          links={<Links size={screenSize} />}
+        />
+      );
     }
   }
   renderContent() {

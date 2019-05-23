@@ -14,6 +14,8 @@ import C from '../../constants';
  * @return {JSX.Element} - Rendered sidebar and overlay.
  */
 const Sidebar = props => {
+  let { height } = props;
+  console.log('height', height);
   return (
     <div>
       <CSSTransition
@@ -22,7 +24,11 @@ const Sidebar = props => {
         timeout={C.TRANSITION_TIME}
         classNames="fade"
       >
-        <div className="sidebar-wrapper" onClick={props.sidebarClick}>
+        <div
+          style={{ height: height }}
+          className="sidebar-wrapper"
+          onClick={props.sidebarClick}
+        >
           <Overlay />
           <div className="sidebar">{props.links}</div>
         </div>

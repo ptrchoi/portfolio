@@ -47,13 +47,17 @@ class Navbar extends Component {
     });
   }
   render() {
-    const { size } = this.props;
+    const { size, height } = this.props;
     const { sidebarIsOpen } = this.state;
     let sidebar;
 
     if (sidebarIsOpen) {
       sidebar = (
-        <Sidebar links={this.props.links} sidebarClick={this.toggleSidebar} />
+        <Sidebar
+          height={height}
+          links={this.props.links}
+          sidebarClick={this.toggleSidebar}
+        />
       );
     }
 
