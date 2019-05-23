@@ -1,15 +1,17 @@
+//Libraries
 import React, { Component } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import $ from 'jquery';
 
+//Components
 import C from '../../constants';
 import Title from '../title/Title';
 import Sidebar from '../sidebar/Sidebar';
 import MenuIcon from '../menuIcon/MenuIcon';
 
 /**
- * Class component, renders responsive menu components based on mediaQuery.
- * @param {object} props - { size } mediaQuery size from parent/App.
+ * Class component, renders responsive menu components, matching parent element's width upon resize(), toggles and passes down sidebar status.
+ * @param {object} props - { size } .
  * @return {JSX.Element} - Rendered component, with large format navbar OR small with icon & sidebar.
  */
 class Navbar extends Component {
@@ -47,7 +49,7 @@ class Navbar extends Component {
   render() {
     const { size } = this.props;
     const { sidebarIsOpen } = this.state;
-    let sidebar; //default to null
+    let sidebar;
 
     if (sidebarIsOpen) {
       sidebar = (
@@ -55,7 +57,6 @@ class Navbar extends Component {
       );
     }
 
-    // Check mediaquery prop for large or small layout
     if (size === 'large') {
       return (
         <div>

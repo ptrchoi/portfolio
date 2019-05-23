@@ -1,9 +1,11 @@
+//Libraries
 import React, { Component } from 'react';
 
 /**
- * React Class Component, renders a page content element and fullpage background image.
+ * React Class Component, renders a content section.
  * @function
- * @return {JSX.Element} - Rendered component, with href link button.
+ * @param {object} props - { height } for full screen background image, { fullpage_api } for moveSectionDown() method.
+ * @return {JSX.Element} - Rendered component.
  */
 class Home extends Component {
   componentDidMount() {
@@ -28,7 +30,6 @@ class Home extends Component {
         <div className="button-wrapper">
           <button
             className="welcomeButton"
-            // onClick={() => (window.location.href = '/#about')}
             onClick={() => fullpage_api.moveSectionDown()}
           >
             welcome

@@ -1,13 +1,16 @@
+//Libraries
 import React, { Component } from 'react';
 
+//Assets
 import profilePic from '../../assets/profile.jpg';
 import msftLogo from '../../assets/msftLogo_2096_771.png';
 import msftStudiosLogo from '../../assets/msftStudios_2000_570.png';
 import eaLogo from '../../assets/eaLogo_1280_505.png';
 
 /**
- * React Class Component, renders a page content element.
+ * React Class Component, renders a content section.
  * @function
+ * @param {object} props - { height }.
  * @return {JSX.Element} - Rendered component.
  */
 class About extends Component {

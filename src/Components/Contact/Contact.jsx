@@ -1,8 +1,10 @@
+//Libraries
 import React, { Component } from 'react';
 
 /**
- * React Class Component, renders a page content element.
+ * React Class Component, renders a content section.
  * @function
+ * @param {object} props - { height }.
  * @return {JSX.Element} - Rendered component.
  */
 class Contact extends Component {

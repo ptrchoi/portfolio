@@ -1,12 +1,16 @@
+//Libraries
 import React from 'react';
 import { CSSTransition } from 'react-transition-group';
 
-import C from '../../constants';
+//Components
 import Overlay from '../overlay/Overlay';
 
+//Constants
+import C from '../../constants';
+
 /**
- * Functional React component, renders a sidebar with links and an overlay.
- * @function {object} props - { links } links component, { sidebarClick } callback for click event.
+ * Functional React component, renders sidebar containing menu components.
+ * @function {object} props - { links }, { sidebarClick } callback for click event.
  * @return {JSX.Element} - Rendered sidebar and overlay.
  */
 const Sidebar = props => {

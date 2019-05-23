@@ -1,7 +1,8 @@
+//Libraries
 import React from 'react';
 
 /**
- * Functional React component, renders an overlay component.
+ * Functional React component, renders an overlay.
  * @function
  * @return {JSX.Element} - Rendered overlay.
  */

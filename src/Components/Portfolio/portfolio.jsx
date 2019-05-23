@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+//Libraries
+import React from 'react';
 
 /**
- * React Class Component, renders a page content element.
+ * Functional React Component, renders a content section of "cards".
  * @function
- * @param {object} props
  * @return {JSX.Element} - Rendered component.
  */
 const Portfolio = () => {

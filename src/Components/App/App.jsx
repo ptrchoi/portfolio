@@ -1,3 +1,4 @@
+//Libraries
 import React, { Component } from 'react';
 import $ from 'jquery';
 
@@ -15,23 +16,29 @@ import Skills from '../skills/Skills';
 import Portfolio from '../portfolio/Portfolio';
 import Contact from '../contact/Contact';
 
-//Debucsser settings
+//Constants
+const SIZE_LARGE = 992;
+
+//DEV ONLY *************REMOVE**************
+//Debucsser CSS Debugger settings
 const config = {
   color: 'red',
   width: '4px',
   grayscaleOnDebugAll: true
 };
 const debug = new Debucsser(config).init();
-
-const SIZE_LARGE = 992;
+//DEV ONLY *************REMOVE**************
 
 /**
- * App Component handles:
- * - routing
- * - content components
- * - screen size updates
- * - Menu/Navigation:
- * - ReactFullPage options
+ * App Class Component handles:
+ * - rendering of:
+ *    - navbar
+ *    - content components
+ * - passing screen size props to components
+ * - ReactFullPage scrolling:
+ *    - full page scrolling
+ *    - scroll position updates to nav links
+ *    - landing page behavior (ie. no navbar)
  */
 class App extends Component {
   constructor(props) {
@@ -43,18 +50,18 @@ class App extends Component {
       screenSize: 'small' //default size
     };
 
-    this.updateSizeOnResize = this.updateSizeOnResize.bind(this);
+    this.updateSize = this.updateSize.bind(this);
     this.renderNav = this.renderNav.bind(this);
     this.renderContent = this.renderContent.bind(this);
   }
   componentDidMount() {
-    this.updateSizeOnResize();
-    window.addEventListener('resize', this.updateSizeOnResize);
+    this.updateSize();
+    window.addEventListener('resize', this.updateSize);
   }
   componentWillUnmount() {
-    window.removeEventListener('resize', this.updateSizeOnResize);
+    window.removeEventListener('resize', this.updateSize);
   }
-  updateSizeOnResize() {
+  updateSize() {
     let height = window.innerHeight;
     let width = window.innerWidth;
     let { screenSize } = this.state;

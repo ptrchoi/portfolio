@@ -1,12 +1,13 @@
+//Libraries
 import React, { Component } from 'react';
-// import MediaQuery from 'react-responsive';
 
+//Assets
 import chart from '../../assets/skills_chart_v6.png';
 
 /**
- * React Class Component, renders a page content element.
+ * React Class Component, renders a responsive content section.
  * @function
- * @param {object} props
+ * @param {object} props { size, height }
  * @return {JSX.Element} - Rendered component.
  */
 class Skills extends Component {

@@ -1,10 +1,11 @@
+//Libraries
 import React from 'react';
 
 /**
- * Functional React component for navigation link routing with scroll-to feature.
+ * React component for rendering navbar links.
  * @function
  * @param {object} props - { size } for responsive layouts.
- * @return {JSX.Element} - Rendered component of nav links, highlighted active link, dynamic layout/styling based .size param.
+ * @return {JSX.Element} - Rendered component of responsive nav links.
  */
 const Links = props => {
   const classList = 'links-wrapper links-wrapper--' + props.size; //props.size -> large || small

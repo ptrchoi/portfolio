@@ -1,7 +1,8 @@
+//Libraries
 import React from 'react';
 
 /**
- * Functional React component, simply renders an element with a title.
+ * Functional React component, renders a simple element.
  * @function
  * @return {JSX.Element} - Rendered component.
  */

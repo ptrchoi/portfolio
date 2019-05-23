@@ -1,10 +1,11 @@
+//Libraries
 import React from 'react';
 import $ from 'jquery';
 
 /**
- * Functional React component, renders menu icon.
+ * React Class Component, renders hamburger icon.
  * @function
- * @param {object} props -  { sidebarIsOpen } to test sidebar state, { menuIconClick } callback on icon click event.
+ * @param {object} props -  { sidebarIsOpen }, { menuIconClick } callback on icon click event.
  * @return {JSX.Element} - Rendered icon.
  */
 const MenuIcon = props => {
