@@ -13,29 +13,79 @@ body {
   background-color: white;
 }
 
-/* CSSTransition Classes
+/* CSSTransition "fade" Class
 ------------------------------------ */
-.fade-appear {
+.fade-appear,
+.fade-enter {
   opacity: 0;
 }
-.fade-appear.fade-appear-active {
+.fade-appear-active,
+.fade-enter-active {
   opacity: 1;
   transition: opacity $transition-time ease-in-out;
 }
 .fade-exit {
   opacity: 1;
 }
-.fade-exit.fade-exit-active {
+.fade-exit-active {
   opacity: 0;
   transition: opacity $transition-time ease-in-out;
 }
 .fade-exit-done {
   opacity: 0;
 }
-.fade-enter {
+
+/* CSSTransition "slide" Class
+------------------------------------ */
+//Start appear/enter transition state
+.slide-appear,
+.slide-enter {
   opacity: 0;
 }
-.fade-enter.fade-enter-active {
+//End appear/enter transition state
+.slide-appear-active,
+.slide-enter-active {
   opacity: 1;
-  transition: opacity $transition-time ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
+//Start exit transition state
+.slide-exit {
+  opacity: 1;
+}
+//End exit transition state
+.slide-exit-active {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+// .slide-enter {
+//   // opacity: 0;
+//   transform: translateX(100%);
+// }
+// .slide-enter-active {
+//   // opacity: 1;
+//   transform: translateX(0%);
+//   transition: transform 1s ease-in-out;
+// }
+// .slide-appear {
+//   // opacity: 0;
+//   transform: translateX(100%);
+// }
+// .slide-appear-active {
+//   // opacity: 1;
+//   transform: translateX(0%);
+//   transition: transform 1s ease-in-out;
+// }
+// .slide-exit {
+//   // opacity: 1;
+//   transform: translateX(0%);
+// }
+// .slide-exit-active {
+//   // opacity: 0;
+//   transform: translateX(100%);
+//   transition: transform 1s ease-in-out;
+// }
+// .slide-exit-done {
+//   // opacity: 0;
+//   transform: translateX(0%);
+// }

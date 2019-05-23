@@ -1,12 +1,9 @@
 //Libraries
 import React from 'react';
-import { CSSTransition } from 'react-transition-group';
+// import { CSSTransition } from 'react-transition-group';
 
 //Components
 import Overlay from '../overlay/Overlay';
-
-//Constants
-import C from '../../constants';
 
 /**
  * Functional React component, renders sidebar containing menu components.
@@ -15,24 +12,17 @@ import C from '../../constants';
  */
 const Sidebar = props => {
   let { height } = props;
-  console.log('height', height);
+
   return (
     <div>
-      <CSSTransition
-        in={true}
-        appear={true}
-        timeout={C.TRANSITION_TIME}
-        classNames="fade"
+      <div
+        style={{ height: height }}
+        className="sidebar-wrapper"
+        onClick={props.sidebarClick}
       >
-        <div
-          style={{ height: height }}
-          className="sidebar-wrapper"
-          onClick={props.sidebarClick}
-        >
-          <Overlay />
-          <div className="sidebar">{props.links}</div>
-        </div>
-      </CSSTransition>
+        <Overlay />
+        <div className="sidebar">{props.links}</div>
+      </div>
     </div>
   );
 };

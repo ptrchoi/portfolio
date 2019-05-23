@@ -1,5 +1,5 @@
 //Libraries
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import $ from 'jquery';
 
@@ -53,11 +53,20 @@ class Navbar extends Component {
 
     if (sidebarIsOpen) {
       sidebar = (
-        <Sidebar
-          height={height}
-          links={this.props.links}
-          sidebarClick={this.toggleSidebar}
-        />
+        <CSSTransition
+          in={true}
+          appear={true}
+          timeout={1000}
+          classNames="slide"
+        >
+          <div>
+            <Sidebar
+              height={height}
+              links={this.props.links}
+              sidebarClick={this.toggleSidebar}
+            />
+          </div>
+        </CSSTransition>
       );
     }
 
