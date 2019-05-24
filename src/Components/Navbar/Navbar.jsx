@@ -1,5 +1,5 @@
 //Libraries
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import $ from 'jquery';
 
@@ -49,26 +49,6 @@ class Navbar extends Component {
   render() {
     const { size, height } = this.props;
     const { sidebarIsOpen } = this.state;
-    let sidebar;
-
-    if (sidebarIsOpen) {
-      sidebar = (
-        <CSSTransition
-          in={true}
-          appear={true}
-          timeout={1000}
-          classNames="slide"
-        >
-          <div>
-            <Sidebar
-              height={height}
-              links={this.props.links}
-              sidebarClick={this.toggleSidebar}
-            />
-          </div>
-        </CSSTransition>
-      );
-    }
 
     if (size === 'large') {
       return (
@@ -99,7 +79,14 @@ class Navbar extends Component {
               <div>
                 <Title />
               </div>
-              <div id="navSidebar">{sidebar}</div>
+              <div id="navSidebar">
+                <Sidebar
+                  height={height}
+                  links={this.props.links}
+                  sidebarOpen={sidebarIsOpen}
+                  sidebarClick={this.toggleSidebar}
+                />
+              </div>
               <div id="menuIcon">
                 <MenuIcon
                   sidebarIsOpen={sidebarIsOpen}

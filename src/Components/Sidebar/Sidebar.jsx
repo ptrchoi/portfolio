@@ -1,6 +1,6 @@
 //Libraries
-import React from 'react';
-// import { CSSTransition } from 'react-transition-group';
+import React, { Component } from 'react';
+import $ from 'jquery';
 
 //Components
 import Overlay from '../overlay/Overlay';
@@ -10,21 +10,37 @@ import Overlay from '../overlay/Overlay';
  * @function {object} props - { links }, { sidebarClick } callback for click event.
  * @return {JSX.Element} - Rendered sidebar and overlay.
  */
-const Sidebar = props => {
-  let { height } = props;
+class Sidebar extends Component {
+  constructor(props) {
+    super(props);
 
-  return (
-    <div>
-      <div
-        style={{ height: height }}
-        className="sidebar-wrapper"
-        onClick={props.sidebarClick}
-      >
-        <Overlay />
-        <div className="sidebar">{props.links}</div>
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick() {
+    $('#sidebarWrapper').removeClass('sidebar-wrapper--open');
+    this.props.sidebarClick();
+  }
+  render() {
+    const { height, links, sidebarOpen } = this.props;
+    let classList = 'sidebar-wrapper';
+    if (sidebarOpen) {
+      classList += ' sidebar-wrapper--open';
+    }
+
+    return (
+      <div>
+        <div
+          id="sidebarWrapper"
+          className={classList}
+          style={{ height: height }}
+          onClick={this.handleClick}
+        >
+          <Overlay />
+          <div className="sidebar">{links}</div>
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default Sidebar;
