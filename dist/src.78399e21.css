@@ -43,13 +43,23 @@ body {
 .navbar-wrapper {
   background-color: #6a6a6a;
   display: grid;
-  grid-template-columns: 1fr 1fr;
   height: 80px;
   position: fixed;
   z-index: 999;
 }
 
+.navbar-wrapper--large {
+  border: solid 2px blue;
+  grid-template-columns: 1fr 1fr;
+}
+
+.navbar-wrapper--small {
+  border: solid 2px red;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 #navSidebar {
+  border: solid 2px green;
   position: fixed;
   top: 0;
   width: 100%;
@@ -57,6 +67,7 @@ body {
 }
 
 #menuIcon {
+  border: solid 2px purple;
   padding: 20px;
   position: absolute;
   right: 2%;
@@ -283,20 +294,19 @@ body {
   color: black;
   display: flex;
   flex-flow: row wrap;
+  height: 100%;
   justify-content: space-around;
-  padding: 70px 0 50px 0;
+  padding: 5vh 2vw 7vh 2vw;
   width: 100%;
-  height: auto;
-  margin: 0px;
-  max-width: initial;
 }
 
 .project-card {
   background-color: #fff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 300px;
   margin-bottom: 30px;
   padding: 10px;
-  width: 500px;
+  width: 420px;
 }
 
 .project-image {

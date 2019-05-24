@@ -47,54 +47,38 @@ class Navbar extends Component {
     });
   }
   render() {
-    const { size, height } = this.props;
+    const { height, size, links } = this.props;
     const { sidebarIsOpen } = this.state;
 
     if (size === 'large') {
       return (
-        <div>
-          <CSSTransition
-            in={true}
-            appear={true}
-            timeout={C.TRANSITION_TIME}
-            classNames="fade"
-          >
-            <div className="navbar-wrapper">
-              <Title />
-              <div>{this.props.links}</div>
-            </div>
-          </CSSTransition>
+        <div className="navbar-wrapper navbar-wrapper--large">
+          <div>
+            <Title />
+          </div>
+          <div>{links}</div>
         </div>
       );
     } else {
       return (
-        <div>
-          <CSSTransition
-            in={true}
-            appear={true}
-            timeout={C.TRANSITION_TIME}
-            classNames="fade"
-          >
-            <div className="navbar-wrapper">
-              <div>
-                <Title />
-              </div>
-              <div id="navSidebar">
-                <Sidebar
-                  height={height}
-                  links={this.props.links}
-                  sidebarOpen={sidebarIsOpen}
-                  sidebarClick={this.toggleSidebar}
-                />
-              </div>
-              <div id="menuIcon">
-                <MenuIcon
-                  sidebarIsOpen={sidebarIsOpen}
-                  menuIconClick={this.toggleSidebar}
-                />
-              </div>
-            </div>
-          </CSSTransition>
+        <div className="navbar-wrapper navbar-wrapper--small">
+          <div>
+            <Title />
+          </div>
+          <div id="navSidebar">
+            <Sidebar
+              height={height}
+              links={links}
+              sidebarOpen={sidebarIsOpen}
+              sidebarClick={this.toggleSidebar}
+            />
+          </div>
+          <div id="menuIcon">
+            <MenuIcon
+              sidebarIsOpen={sidebarIsOpen}
+              menuIconClick={this.toggleSidebar}
+            />
+          </div>
         </div>
       );
     }

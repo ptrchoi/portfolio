@@ -10,23 +10,24 @@ import React, { Component } from 'react';
 class Home extends Component {
   componentDidMount() {
     let imageProperties = {
-      backgroundImage: `url('https://source.unsplash.com/user/markusspiske/jUWw_NEXjDw/1600x1200')`,
+      backgroundImage: `url('https://source.unsplash.com/user/markusspiske/jUWw_NEXjDw')`,
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center center',
-      backgroundAttachment: 'fixed'
+      backgroundAttachment: 'fixed',
+      backgroundSize: 'cover'
     };
 
     let el = document.getElementById('homeSection');
     Object.assign(el.style, imageProperties);
   }
   render(props) {
-    let { height, fullpage_api } = this.props;
+    let { height, fullpageApi } = this.props;
     return (
       <div id="homeSection" className="home-wrapper" style={{ height: height }}>
         <div className="button-wrapper">
           <button
             id="welcomeButton"
-            onClick={() => fullpage_api.moveSectionDown()}
+            onClick={() => fullpageApi.moveSectionDown()}
           >
             welcome
           </button>

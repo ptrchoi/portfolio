@@ -6,7 +6,7 @@ import React from 'react';
  * @function
  * @return {JSX.Element} - Rendered component.
  */
-const Portfolio = () => {
+const Portfolio = props => {
   return (
     <div className="portfolio-wrapper">
       <div className="project-card">

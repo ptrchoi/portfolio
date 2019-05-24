@@ -66,11 +66,6 @@ class App extends Component {
     let width = window.innerWidth;
     let { screenSize } = this.state;
 
-    //Set home page size for full screen bg img
-    $(window).resize(function() {
-      $('#home-section').css('height', height);
-    });
-
     //Check for changes to screenSize
     if (screenSize === 'small' && width > SIZE_LARGE) {
       screenSize = 'large';
@@ -114,6 +109,7 @@ class App extends Component {
   renderNav() {
     const { onLandingPage, viewHeight, screenSize } = this.state;
 
+    //Do not render nav on landing page
     if (!onLandingPage) {
       return (
         <Navbar
@@ -142,7 +138,7 @@ class App extends Component {
           return (
             <ReactFullPage.Wrapper>
               <div id="home" className="section">
-                <Home height={viewHeight} fullpage_api={fullpageApi} />
+                <Home height={viewHeight} fullpageApi={fullpageApi} />
               </div>
               <div id="about" className="section">
                 <About height={viewHeight} />
@@ -151,7 +147,7 @@ class App extends Component {
                 <Skills size={screenSize} height={viewHeight} />
               </div>
               <div id="portfolio" className="section">
-                <Portfolio height={viewHeight} />
+                <Portfolio />
               </div>
               <div id="contact" className="section">
                 <Contact height={viewHeight} />
@@ -165,7 +161,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        {this.renderNav()}
+        {/* {this.renderNav()} */}
         {this.renderContent()}
       </div>
     );

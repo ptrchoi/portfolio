@@ -3,22 +3,19 @@
   color: black;
   display: flex;
   flex-flow: row wrap;
+  height: 100%;
   justify-content: space-around;
-  padding: 70px 0 50px 0;
-
-  //Set height to be dynamic/responsive based on content flow
+  padding: 5vh 2vw 7vh 2vw;
   width: 100%;
-  height: auto;
-  margin: 0px;
-  max-width: initial;
 }
+//SHOULD MAKE CARD HEIGHT & WIDTH SCALE RESPONSIVELY
 .project-card {
   background-color: #fff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  // height: auto;
+  height: 300px;
   margin-bottom: 30px;
   padding: 10px;
-  width: 500px;
+  width: 420px;
 }
 .project-image {
   width: 100%;
