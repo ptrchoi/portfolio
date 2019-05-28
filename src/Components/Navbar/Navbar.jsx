@@ -1,6 +1,5 @@
 //Libraries
 import React, { Component } from 'react';
-import { CSSTransition } from 'react-transition-group';
 import $ from 'jquery';
 
 //Components
@@ -40,6 +39,15 @@ class Navbar extends Component {
     $('.navbar-wrapper').width(parentWidth);
   }
   toggleSidebar() {
+    // if ($('#navSidebar').hasClass('navSidebar-on')) {
+    //   console.log('navSidebar has class "on"');
+    //   $('#navSidebar').removeClass('navSidebar-on');
+    // } else {
+    //   console.log('navSidebar does NOT have class "on"');
+    //   $('#navSidebar').addClass('navSidebar-on');
+    // }
+    $('#navSidebar').toggleClass('navSidebar-on');
+
     this.setState(prevState => {
       return {
         sidebarIsOpen: !prevState.sidebarIsOpen
@@ -52,7 +60,7 @@ class Navbar extends Component {
 
     if (size === 'large') {
       return (
-        <div className="navbar-wrapper navbar-wrapper--large">
+        <div className="navbar-wrapper">
           <div>
             <Title />
           </div>
@@ -61,11 +69,11 @@ class Navbar extends Component {
       );
     } else {
       return (
-        <div className="navbar-wrapper navbar-wrapper--small">
+        <div className="navbar-wrapper">
           <div>
             <Title />
           </div>
-          <div id="navSidebar">
+          <div id="navSidebar" className="navSidebar-off">
             <Sidebar
               height={height}
               links={links}

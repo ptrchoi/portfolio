@@ -161,7 +161,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        {/* {this.renderNav()} */}
+        {this.renderNav()}
         {this.renderContent()}
       </div>
     );

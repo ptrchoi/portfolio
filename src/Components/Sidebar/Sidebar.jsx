@@ -28,16 +28,14 @@ class Sidebar extends Component {
     }
 
     return (
-      <div>
-        <div
-          id="sidebarWrapper"
-          className={classList}
-          style={{ height: height }}
-          onClick={this.handleClick}
-        >
-          <Overlay />
-          <div className="sidebar">{links}</div>
-        </div>
+      <div
+        id="sidebarWrapper"
+        className={classList}
+        style={{ height: height }}
+        onClick={this.handleClick}
+      >
+        <Overlay />
+        <div className="sidebar">{links}</div>
       </div>
     );
   }

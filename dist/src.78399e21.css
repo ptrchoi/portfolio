@@ -43,27 +43,23 @@ body {
 .navbar-wrapper {
   background-color: #6a6a6a;
   display: grid;
+  grid-template-columns: 1fr;
   height: 80px;
   position: fixed;
   z-index: 999;
 }
 
-.navbar-wrapper--large {
-  border: solid 2px blue;
-  grid-template-columns: 1fr 1fr;
-}
-
-.navbar-wrapper--small {
-  border: solid 2px red;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
 #navSidebar {
-  border: solid 2px green;
-  position: fixed;
-  top: 0;
-  width: 100%;
+  border: solid 2px orange;
   z-index: 10;
+}
+
+.navSidebar-off {
+  visibility: hidden;
+}
+
+.navSidebar-on {
+  visibility: visible;
 }
 
 #menuIcon {
@@ -76,6 +72,7 @@ body {
 }
 
 .sidebar-wrapper {
+  border: solid 2px green;
   display: grid;
   grid-template-columns: 1fr 2fr;
   transform: translateX(100%);

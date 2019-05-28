@@ -1,24 +1,23 @@
 .navbar-wrapper {
   background-color: $background-gray;
   display: grid;
+  grid-template-columns: 1fr;
   height: 80px;
   position: fixed;
   z-index: 999;
 }
-.navbar-wrapper--large {
-  border: solid 2px blue;
-  grid-template-columns: 1fr 1fr;
-}
-.navbar-wrapper--small {
-  border: solid 2px red;
-  grid-template-columns: 1fr 1fr 1fr;
-}
 #navSidebar {
-  border: solid 2px green;
-  position: fixed;
-  top: 0;
-  width: 100%;
+  border: solid 2px orange;
+  // position: fixed;
+  //   top: 0;
+  //   width: 100%;
   z-index: 10;
+}
+.navSidebar-off {
+  visibility: hidden;
+}
+.navSidebar-on {
+  visibility: visible;
 }
 #menuIcon {
   border: solid 2px purple;
