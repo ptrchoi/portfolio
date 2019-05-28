@@ -39,14 +39,14 @@ class Navbar extends Component {
     $('.navbar-wrapper').width(parentWidth);
   }
   toggleSidebar() {
-    // if ($('#navSidebar').hasClass('navSidebar-on')) {
-    //   console.log('navSidebar has class "on"');
-    //   $('#navSidebar').removeClass('navSidebar-on');
-    // } else {
-    //   console.log('navSidebar does NOT have class "on"');
-    //   $('#navSidebar').addClass('navSidebar-on');
-    // }
-    $('#navSidebar').toggleClass('navSidebar-on');
+    if ($('#navSidebar').hasClass('navSidebar-on')) {
+      //Need delay before element's 'visibility = hidden' for transition animation to complete
+      setTimeout(() => {
+        $('#navSidebar').removeClass('navSidebar-on');
+      }, C.TRANSITION_TIME);
+    } else {
+      $('#navSidebar').addClass('navSidebar-on');
+    }
 
     this.setState(prevState => {
       return {

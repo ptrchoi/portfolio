@@ -24,7 +24,7 @@ body {
 .fade-appear-active,
 .fade-enter-active {
   opacity: 1;
-  transition: opacity 1000ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
 }
 
 .fade-exit {
@@ -33,7 +33,7 @@ body {
 
 .fade-exit-active {
   opacity: 0;
-  transition: opacity 1000ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
 }
 
 .fade-exit-done {
@@ -50,20 +50,21 @@ body {
 }
 
 #navSidebar {
-  border: solid 2px orange;
   z-index: 10;
 }
 
 .navSidebar-off {
+  opacity: 0;
   visibility: hidden;
+  transition: all 0s ease-in-out;
 }
 
 .navSidebar-on {
+  opacity: 1;
   visibility: visible;
 }
 
 #menuIcon {
-  border: solid 2px purple;
   padding: 20px;
   position: absolute;
   right: 2%;
@@ -72,11 +73,10 @@ body {
 }
 
 .sidebar-wrapper {
-  border: solid 2px green;
   display: grid;
   grid-template-columns: 1fr 2fr;
   transform: translateX(100%);
-  transition: transform 1s ease-in-out;
+  transition: transform 500ms ease-in-out;
   width: 100%;
 }
 

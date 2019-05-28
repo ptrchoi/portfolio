@@ -1,9 +1,8 @@
 .sidebar-wrapper {
-  border: solid 2px green;
   display: grid;
   grid-template-columns: 1fr 2fr;
   transform: translateX(100%);
-  transition: transform 1s ease-in-out;
+  transition: transform $transition-time ease-in-out;
   width: 100%;
 }
 .sidebar-wrapper--open {
