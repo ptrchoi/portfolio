@@ -6,6 +6,7 @@ import $ from 'jquery';
 import C from '../../constants';
 import Title from '../title/Title';
 import Sidebar from '../sidebar/Sidebar';
+import Overlay from '../overlay/Overlay';
 import MenuIcon from '../menuIcon/MenuIcon';
 
 /**
@@ -22,7 +23,7 @@ class Navbar extends Component {
     };
 
     this.matchParentWidth = this.matchParentWidth.bind(this);
-    this.toggleSidebar = this.toggleSidebar.bind(this);
+    this.toggleSidebarAndOverlay = this.toggleSidebarAndOverlay.bind(this);
   }
   componentDidMount() {
     //Initialize width to match parent container, then listen for resize events
@@ -38,14 +39,19 @@ class Navbar extends Component {
       .width();
     $('.navbar-wrapper').width(parentWidth);
   }
-  toggleSidebar() {
-    if ($('#navSidebar').hasClass('navSidebar-on')) {
+  toggleSidebarAndOverlay() {
+    let el = $('#navSidebar');
+    let bg = $('#overlay');
+
+    if (el.hasClass('navSidebar-on')) {
       //Need delay before element's 'visibility = hidden' for transition animation to complete
       setTimeout(() => {
-        $('#navSidebar').removeClass('navSidebar-on');
+        el.removeClass('navSidebar-on');
       }, C.TRANSITION_TIME);
+      bg.removeClass('overlay-on');
     } else {
-      $('#navSidebar').addClass('navSidebar-on');
+      el.addClass('navSidebar-on');
+      bg.addClass('overlay-on');
     }
 
     this.setState(prevState => {
@@ -78,14 +84,17 @@ class Navbar extends Component {
               height={height}
               links={links}
               sidebarOpen={sidebarIsOpen}
-              sidebarClick={this.toggleSidebar}
+              sidebarClick={this.toggleSidebarAndOverlay}
             />
           </div>
           <div id="menuIcon">
             <MenuIcon
               sidebarIsOpen={sidebarIsOpen}
-              menuIconClick={this.toggleSidebar}
+              menuIconClick={this.toggleSidebarAndOverlay}
             />
+          </div>
+          <div id="overlay" className="overlay-off">
+            <Overlay height={height} />
           </div>
         </div>
       );

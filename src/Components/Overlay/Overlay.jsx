@@ -7,7 +7,7 @@ import React from 'react';
  * @return {JSX.Element} - Rendered overlay.
  */
 
-const Overlay = () => {
+const Overlay = props => {
   return <div className="overlay" />;
 };
 

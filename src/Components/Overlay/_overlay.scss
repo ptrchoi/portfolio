@@ -1,3 +1,9 @@
 .overlay {
-  background-color: rgba(193, 193, 193, 0.8);
+  background: rgba(245, 245, 246, 0.7);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: $navbar-height;
+  width: 100%;
+  z-index: 20;
 }

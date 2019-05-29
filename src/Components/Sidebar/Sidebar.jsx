@@ -2,13 +2,10 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 
-//Components
-import Overlay from '../overlay/Overlay';
-
 /**
  * Functional React component, renders sidebar containing menu components.
  * @function {object} props - { links }, { sidebarClick } callback for click event.
- * @return {JSX.Element} - Rendered sidebar and overlay.
+ * @return {JSX.Element} - Rendered sidebar.
  */
 class Sidebar extends Component {
   constructor(props) {
@@ -23,6 +20,7 @@ class Sidebar extends Component {
   render() {
     const { height, links, sidebarOpen } = this.props;
     let classList = 'sidebar-wrapper';
+
     if (sidebarOpen) {
       classList += ' sidebar-wrapper--open';
     }
@@ -34,7 +32,7 @@ class Sidebar extends Component {
         style={{ height: height }}
         onClick={this.handleClick}
       >
-        <Overlay />
+        <div />
         <div className="sidebar">{links}</div>
       </div>
     );

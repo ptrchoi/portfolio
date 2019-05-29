@@ -4,11 +4,13 @@
   transform: translateX(100%);
   transition: transform $transition-time ease-in-out;
   width: 100%;
+  z-index: 3;
 }
 .sidebar-wrapper--open {
   transform: translateX(0%);
 }
 .sidebar {
-  background-color: $background-gray;
+  background-color: rgba(129, 156, 169, 0.9);
+  margin-top: 40px; //TEMP, NEEDS TO BE DYNAMIC
   padding-top: 25vh;
 }
