@@ -195,53 +195,53 @@ body {
 
 .btn {
   background-color: transparent;
-  border: solid #819ca9 2px;
+  border: solid #819ca9 1;
   color: #819ca9;
   display: inline-block;
-  font-size: 2vw;
-  height: 5vh;
-  padding: 10px 50px;
+  font-size: 2.25vw;
+  height: 5.5vh;
+  padding: 30px 80px;
   position: relative;
   text-align: center;
-  transition: all 0.5s ease-in-out;
+  transition: background-color 0.4s ease-in-out, border-color 0.4s ease-in-out, color 0.4s ease-in-out;
 }
 
 .btn:hover {
   background-color: rgba(129, 156, 169, 0.7);
-  border: solid rgba(129, 156, 169, 0.7) 2px;
+  border-color: rgba(129, 156, 169, 0.2);
   color: #eee;
 }
 
 .btn:hover #buttonIcon {
   opacity: 1;
-  transform: translateY(10px);
+  transform: translateY(20px);
 }
 
 .btn:hover #buttonText {
   opacity: 0;
-  transform: translateY(10px);
+  transform: translateY(16px);
 }
 
 #buttonIcon {
   left: 0;
-  margin: -20px auto 0 auto;
-  transform: translateX(-50%);
+  margin: -30px auto 0 auto;
   opacity: 0;
   position: absolute;
   right: 0;
+  transform: translateX(-50%);
   transform: translateY(0px);
-  transition: opacity 0.25s linear, transform 0.25s linear;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 #buttonText {
   left: 0;
-  margin: -12px auto 0 auto;
-  transform: translateX(-50%);
+  margin: -14px auto 0 auto;
   opacity: 1;
   position: absolute;
   right: 0;
+  transform: translateX(-50%);
   transform: translateY(0px);
-  transition: opacity 0.25s linear, transform 0.25s linear;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .btn:active {

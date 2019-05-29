@@ -32,7 +32,7 @@ class Home extends Component {
           <span>
             <i id="buttonIcon" className="fas fa-angle-double-down" />
           </span>
-          <span id="buttonText">enter</span>
+          <span id="buttonText">welcome</span>
         </button>
       </div>
     );
