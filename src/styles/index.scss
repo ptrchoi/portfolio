@@ -1,7 +1,11 @@
+//External
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+//App
 @import 'variables';
 @import 'main';
 
-//components
+//Components
 @import '../components/navbar/navbar';
 @import '../components/sidebar/sidebar';
 @import '../components/links/links';

@@ -10,7 +10,7 @@ import React, { Component } from 'react';
 class Home extends Component {
   componentDidMount() {
     let imageProperties = {
-      backgroundImage: `url('https://source.unsplash.com/user/markusspiske/jUWw_NEXjDw')`,
+      background: `linear-gradient(rgba(0, 0, 0, 0.35),rgba(0, 0, 0, 0.85)),url('https://source.unsplash.com/user/markusspiske/jUWw_NEXjDw')`,
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center center',
       backgroundAttachment: 'fixed',
@@ -24,14 +24,16 @@ class Home extends Component {
     let { height, fullpageApi } = this.props;
     return (
       <div id="homeSection" className="home-wrapper" style={{ height: height }}>
-        <div className="button-wrapper">
-          <button
-            id="welcomeButton"
-            onClick={() => fullpageApi.moveSectionDown()}
-          >
-            welcome
-          </button>
-        </div>
+        <button
+          id="welcomeButton"
+          className="btn"
+          onClick={() => fullpageApi.moveSectionDown()}
+        >
+          <span>
+            <i id="buttonIcon" className="fas fa-angle-double-down" />
+          </span>
+          <span id="buttonText">enter</span>
+        </button>
       </div>
     );
   }

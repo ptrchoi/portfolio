@@ -1,6 +1,6 @@
 .sidebar-wrapper {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 3fr;
   transform: translateX(100%);
   transition: transform $transition-time ease-in-out;
   width: 100%;
