@@ -17,7 +17,10 @@ class Skills extends Component {
     const classList = 'skills-group-wrapper skills-group-wrapper--' + size;
 
     return (
-      <div style={{ height: height }} className="skills-wrapper">
+      <div
+        style={{ height: height }}
+        className="section-wrapper skills-wrapper"
+      >
         <div className={classList}>
           <div className="skills-group">
             <i className="fas fa-cubes fa-icon" />

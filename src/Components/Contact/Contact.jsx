@@ -11,7 +11,10 @@ class Contact extends Component {
   render(props) {
     let { height } = this.props;
     return (
-      <div style={{ height: height }} className="contact-wrapper">
+      <div
+        style={{ height: height }}
+        className="section-wrapper contact-wrapper"
+      >
         <div id="contactSection">
           <i className="fab fa-codepen logo-icon" />
           <i className="fab fa-github logo-icon" />
