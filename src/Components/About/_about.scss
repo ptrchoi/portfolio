@@ -1,21 +1,17 @@
 .about-wrapper {
   background-color: $background-white;
   display: grid;
-  height: auto;
+  grid-auto-rows: minmax(min-content, max-content);
 }
-.about-item {
-  height: auto;
-  padding: 20px;
-  width: 100%;
-}
-#profilePicWrapper {
+.about-content-block {
   display: grid;
+  padding: 4vw;
+  width: 100%;
 }
 #profilePic {
   border-radius: 50%;
-  height: 100px;
   justify-self: end;
-  width: 100px;
+  @include fluid-type(width, $min-width, $max-width, 100px, 150px);
 }
 #logosWrapper {
   display: flex;
@@ -23,23 +19,27 @@
   flex-flow: row wrap;
   justify-content: space-around;
 }
-.aboutLogo {
-  margin: 8px;
+.about-logo {
+  @include fluid-type(width, $min-width, $max-width, 26vw, 30vw);
 }
-#msftLogo {
-  height: 100px;
-  width: 272px;
-}
-#msftStudiosLogo {
-  height: 70px;
-  width: 246px;
-}
-#eaLogo {
-  height: 70px;
-  width: 190px;
-}
-#aboutText {
+.about-text {
+  align-self: stretch;
   color: $gray-text;
-  font-size: 1.4rem;
-  padding: 50px;
+  @include fluid-type(font-size, $min-width, $max-width, 16px, 32px);
+  padding: 4vw;
 }
+// #msftLogo {
+//   height: 100px;
+//   width: 272px;
+//   width: 25vw;
+// }
+// #msftStudiosLogo {
+//   height: 70px;
+//   width: 246px;
+//   width: 25vw;
+// }
+// #eaLogo {
+//   height: 70px;
+//   width: 190px;
+//   width: 25vw;
+// }

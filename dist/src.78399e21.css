@@ -20,6 +20,8 @@ body {
   padding-top: 10vh;
 }
 
+/* Mixins
+------------------------------------ */
 /* CSSTransition "fade" Class
 ------------------------------------ */
 .fade-appear,
@@ -259,24 +261,29 @@ button:focus {
 .about-wrapper {
   background-color: whitesmoke;
   display: grid;
-  height: auto;
+  grid-auto-rows: minmax(min-content, max-content);
 }
 
-.about-item {
-  height: auto;
-  padding: 20px;
-  width: 100%;
-}
-
-#profilePicWrapper {
+.about-content-block {
   display: grid;
+  padding: 4vw;
+  width: 100%;
 }
 
 #profilePic {
   border-radius: 50%;
-  height: 100px;
   justify-self: end;
   width: 100px;
+}
+@media screen and (min-width: 400px) {
+  #profilePic {
+    width: calc( 100px + 50 * (100vw - 400px) / 680 );
+  }
+}
+@media screen and (min-width: 1080px) {
+  #profilePic {
+    width: 150px;
+  }
 }
 
 #logosWrapper {
@@ -286,29 +293,35 @@ button:focus {
   justify-content: space-around;
 }
 
-.aboutLogo {
-  margin: 8px;
+.about-logo {
+  width: 26vw;
+}
+@media screen and (min-width: 400px) {
+  .about-logo {
+    width: calc( 26vw + 4 * (100vw - 400px) / 680 );
+  }
+}
+@media screen and (min-width: 1080px) {
+  .about-logo {
+    width: 30vw;
+  }
 }
 
-#msftLogo {
-  height: 100px;
-  width: 272px;
-}
-
-#msftStudiosLogo {
-  height: 70px;
-  width: 246px;
-}
-
-#eaLogo {
-  height: 70px;
-  width: 190px;
-}
-
-#aboutText {
+.about-text {
+  align-self: stretch;
   color: gray;
-  font-size: 1.4rem;
-  padding: 50px;
+  font-size: 16px;
+  padding: 4vw;
+}
+@media screen and (min-width: 400px) {
+  .about-text {
+    font-size: calc( 16px + 16 * (100vw - 400px) / 680 );
+  }
+}
+@media screen and (min-width: 1080px) {
+  .about-text {
+    font-size: 32px;
+  }
 }
 
 .skills-wrapper {

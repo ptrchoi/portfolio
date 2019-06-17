@@ -17,34 +17,39 @@ class About extends Component {
   render(props) {
     let { height } = this.props;
     return (
-      <div style={{ height: height }} className="section-wrapper about-wrapper">
-        <div id="profilePicWrapper" className="about-item">
+      <div
+        style={{ minHeight: height }}
+        className="section-wrapper about-wrapper"
+      >
+        <div id="profilePicWrapper" className="about-content-block">
           <img id="profilePic" src={profilePic} alt="profile pic" />
         </div>
-        <div className="about-item">
-          <p id="aboutText">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et
-            inventore similique veritatis excepturi perferendis quia quas.
-            Cumque possimus dicta hic, nulla in dolorum dolore nostrum
-            dignissimos vero totam cum ea! Lorem ipsum dolor sit, amet
-            consectetur adipisicing elit. Quo minus provident soluta similique
-            dolorem et sunt animi illo cum aut consectetur nihil dignissimos
-            earum, eius suscipit non omnis alias reprehenderit? Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Quo saepe dolor
-            laudantium dolorum odit. Magni quia impedit assumenda quis neque
-            sequi nulla, sunt optio officiis eveniet deleniti est ipsam non.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <div className="about-content-block">
+          <p className="about-text">Welcome and thanks for visiting.</p>
+          <p className="about-text">
+            I'm a Developer | Designer | Producer with 15+ years of experience
+            at leading Fortune 500 companies, including Microsoft and Electronic
+            Arts. With a background in both creative and business oriented
+            product development, I understand the importance and value of the
+            user experience.
+          </p>
+          <p className="about-text">
+            My goal is always to build robust, beautiful, repsonsive user
+            experiences on mobile and the web. I'm an advocate of functional
+            programming, modular Javascript + React, unit-testing, and seek to
+            leverage modern API's, libraries, methodologies and tools where
+            effective and efficient.
           </p>
         </div>
-        <div id="logosWrapper" className="about-item">
-          <img id="msftLogo" className="aboutLogo" src={msftLogo} alt="logo" />
+        <div id="logosWrapper" className="about-content-block">
+          <img id="msftLogo" className="about-logo" src={msftLogo} alt="logo" />
           <img
             id="msftStudiosLogo"
-            className="aboutLogo"
+            className="about-logo"
             src={msftStudiosLogo}
             alt="logo"
           />
-          <img id="eaLogo" className="aboutLogo" src={eaLogo} alt="logo" />
+          <img id="eaLogo" className="about-logo" src={eaLogo} alt="logo" />
         </div>
       </div>
     );
