@@ -1,16 +1,16 @@
-.navbar-wrapper {
-  background-color: #546e7a;
+.nav-wrapper {
   display: grid;
   grid-template-columns: auto;
-  height: $navbar-height;
   position: fixed;
-  z-index: 10;
+  z-index: $nav-wrapper-layer;
+}
+#navbar {
+  background-color: #546e7a;
+  @include fluid-type(height, $min-width, $max-width, 60px, 140px);
+  z-index: $navbar-layer;
 }
 #navSidebar {
-  // position: fixed;
-  //   top: 0;
-  //   width: 100%;
-  z-index: 30;
+  z-index: $sidebar-layer;
 }
 .navSidebar-off {
   opacity: 0;
@@ -26,10 +26,10 @@
   position: absolute;
   right: $app-margin-LR;
   top: 0;
-  z-index: 30;
+  z-index: $icon-layer;
 }
 #overlay {
-  z-index: 20;
+  z-index: $overlay-layer;
 }
 .overlay-off {
   opacity: 0;

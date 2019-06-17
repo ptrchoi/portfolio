@@ -9,8 +9,8 @@
 /* Set the page's max-width within the viewport */
 body {
   height: 100vh;
-  max-width: 1080px;
-  min-width: 400px;
+  max-width: 1200px;
+  min-width: 320px;
   margin: 0 auto !important;
   background-color: white;
   font-family: "Roboto", sans-serif;
@@ -48,17 +48,31 @@ body {
   opacity: 0;
 }
 
-.navbar-wrapper {
-  background-color: #546e7a;
+.nav-wrapper {
   display: grid;
   grid-template-columns: auto;
-  height: 80px;
   position: fixed;
-  z-index: 10;
+  z-index: 5;
+}
+
+#navbar {
+  background-color: #546e7a;
+  height: 60px;
+  z-index: 8;
+}
+@media screen and (min-width: 320px) {
+  #navbar {
+    height: calc( 60px + 80 * (100vw - 320px) / 880 );
+  }
+}
+@media screen and (min-width: 1200px) {
+  #navbar {
+    height: 140px;
+  }
 }
 
 #navSidebar {
-  z-index: 30;
+  z-index: 7;
 }
 
 .navSidebar-off {
@@ -77,11 +91,11 @@ body {
   position: absolute;
   right: 2%;
   top: 0;
-  z-index: 30;
+  z-index: 9;
 }
 
 #overlay {
-  z-index: 20;
+  z-index: 6;
 }
 
 .overlay-off {
@@ -101,7 +115,6 @@ body {
   transform: translateX(100%);
   transition: transform 500ms ease-in-out;
   width: 100%;
-  z-index: 3;
 }
 
 .sidebar-wrapper--open {
@@ -110,7 +123,6 @@ body {
 
 .sidebar {
   background-color: rgba(129, 156, 169, 0.9);
-  margin-top: 40px;
   padding-top: 25vh;
 }
 
@@ -187,9 +199,8 @@ body {
   height: 100%;
   left: 0;
   position: fixed;
-  top: 80px;
+  top: 0;
   width: 100%;
-  z-index: 20;
 }
 
 .home-wrapper {
@@ -273,14 +284,14 @@ button:focus {
 #profilePic {
   border-radius: 50%;
   justify-self: end;
-  width: 100px;
+  width: 76px;
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 320px) {
   #profilePic {
-    width: calc( 100px + 50 * (100vw - 400px) / 680 );
+    width: calc( 76px + 74 * (100vw - 320px) / 880 );
   }
 }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 1200px) {
   #profilePic {
     width: 150px;
   }
@@ -296,12 +307,12 @@ button:focus {
 .about-logo {
   width: 26vw;
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 320px) {
   .about-logo {
-    width: calc( 26vw + 4 * (100vw - 400px) / 680 );
+    width: calc( 26vw + 4 * (100vw - 320px) / 880 );
   }
 }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 1200px) {
   .about-logo {
     width: 30vw;
   }
@@ -310,17 +321,17 @@ button:focus {
 .about-text {
   align-self: stretch;
   color: gray;
-  font-size: 16px;
+  font-size: 12px;
   padding: 4vw;
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 320px) {
   .about-text {
-    font-size: calc( 16px + 16 * (100vw - 400px) / 680 );
+    font-size: calc( 12px + 24 * (100vw - 320px) / 880 );
   }
 }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 1200px) {
   .about-text {
-    font-size: 32px;
+    font-size: 36px;
   }
 }
 

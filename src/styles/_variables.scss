@@ -17,9 +17,17 @@ $white-text: white;
 
 //LAYOUT Variables:
 $app-margin-LR: 2%;
-$max-width: 1080px;
-$min-width: 400px;
-$navbar-height: 80px;
+$max-width: 1200px;
+$min-width: 320px;
+
+//Z-INDEX Variables:
+$bottom-layer: 0;
+$nav-wrapper-layer: 5;
+$overlay-layer: 6;
+$sidebar-layer: 7;
+$navbar-layer: 8;
+$icon-layer: 9;
+$top-layer: 10;
 
 //ANIMATION Variables:
 $transition-time: 500ms; //REMOVE/REPLACE

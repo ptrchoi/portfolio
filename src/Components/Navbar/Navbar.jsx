@@ -34,10 +34,10 @@ class Navbar extends Component {
     window.removeEventListener('resize', this.matchParentWidth);
   }
   matchParentWidth() {
-    let parentWidth = $('.navbar-wrapper')
+    let parentWidth = $('.nav-wrapper')
       .parent()
       .width();
-    $('.navbar-wrapper').width(parentWidth);
+    $('.nav-wrapper').width(parentWidth);
   }
   toggleSidebarAndOverlay() {
     let el = $('#navSidebar');
@@ -66,18 +66,22 @@ class Navbar extends Component {
 
     if (size === 'large') {
       return (
-        <div className="navbar-wrapper">
-          <div>
-            <Title />
+        <div className="nav-wrapper">
+          <div id="navbar">
+            <div>
+              <Title />
+            </div>
+            <div>{links}</div>
           </div>
-          <div>{links}</div>
         </div>
       );
     } else {
       return (
-        <div className="navbar-wrapper">
-          <div>
-            <Title />
+        <div className="nav-wrapper">
+          <div id="navbar">
+            <div>
+              <Title />
+            </div>
           </div>
           <div id="navSidebar" className="navSidebar-off">
             <Sidebar
