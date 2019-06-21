@@ -21,16 +21,14 @@ $max-width: 1200px;
 $min-width: 320px;
 
 //Z-INDEX Variables:
-$bottom-layer: 0;
-$nav-wrapper-layer: 5;
-$overlay-layer: 6;
-$sidebar-layer: 7;
-$navbar-layer: 8;
-$icon-layer: 9;
-$top-layer: 10;
+$nav-wrapper-layer: 1;
+$overlay-layer: 2;
+$sidebar-layer: 3;
+$navbar-layer: 4;
+$icon-layer: 5;
 
 //ANIMATION Variables:
-$transition-time: 500ms; //REMOVE/REPLACE
+$transition-time: 1000ms; //REMOVE/REPLACE
 $button-transition-slide: 0.3s;
 $button-transition-fade: 0.4s;
 

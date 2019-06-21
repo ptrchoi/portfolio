@@ -18,7 +18,8 @@ class Skills extends Component {
 
     return (
       <div
-        style={{ minHeight: height }}
+        // style={{ minHeight: height }}
+        style={{ height: height }}
         className="section-wrapper skills-wrapper"
       >
         <div className={classList}>

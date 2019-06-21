@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 
-import 'fullpage.js/vendors/scrolloverflow';
+import 'fullpage.js/vendors/scrolloverflow'; // must be loaded after jQuery and before ReactFullPage
 import ReactFullPage from '@fullpage/react-fullpage';
 
 import Debucsser from 'debucsser';
