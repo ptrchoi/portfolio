@@ -3,6 +3,10 @@
   grid-template-columns: auto;
   position: fixed;
   z-index: $nav-wrapper-layer;
+
+  // position: absolute;
+  // top: 0;
+  // left: 0;
 }
 #navbar {
   background-color: #546e7a;
@@ -15,14 +19,24 @@
 .navSidebar-off {
   display: none;
   opacity: 0;
-  transition: all 2.25s ease-in-out;
+  transition: all $navbar-trans-time linear;
   visibility: hidden;
 }
 .navSidebar-on {
+  animation: fade $navbar-trans-time;
   display: block;
   opacity: 1;
   visibility: visible;
 }
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 #menuIcon {
   padding: 20px;
   position: absolute;
@@ -34,13 +48,11 @@
   z-index: $overlay-layer;
 }
 .overlay-off {
-  display: none;
   opacity: 0;
+  transition: all $navbar-trans-time ease-in-out;
   visibility: hidden;
-  transition: all 2.25s ease-in-out;
 }
 .overlay-on {
-  display: block;
   opacity: 1;
   visibility: visible;
 }

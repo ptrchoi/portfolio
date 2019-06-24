@@ -78,16 +78,25 @@ body {
 .navSidebar-off {
   display: none;
   opacity: 0;
-  transition: all 2.25s ease-in-out;
+  transition: all 0.5s linear;
   visibility: hidden;
 }
 
 .navSidebar-on {
+  animation: fade 0.5s;
   display: block;
   opacity: 1;
   visibility: visible;
 }
 
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 #menuIcon {
   padding: 20px;
   position: absolute;
@@ -101,14 +110,12 @@ body {
 }
 
 .overlay-off {
-  display: none;
   opacity: 0;
+  transition: all 0.5s ease-in-out;
   visibility: hidden;
-  transition: all 2.25s ease-in-out;
 }
 
 .overlay-on {
-  display: block;
   opacity: 1;
   visibility: visible;
 }
@@ -117,11 +124,12 @@ body {
   display: grid;
   grid-template-columns: 1fr 3fr;
   transform: translateX(100%);
-  transition: transform 1000ms ease-in-out;
+  transition: transform 0.5s ease-in-out;
   width: 100%;
 }
 
 .sidebar-wrapper--open {
+  animation: slideIn 0.5s;
   transform: translateX(0%);
 }
 
@@ -130,6 +138,14 @@ body {
   padding-top: 25vh;
 }
 
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
 .links-wrapper {
   display: grid;
 }
