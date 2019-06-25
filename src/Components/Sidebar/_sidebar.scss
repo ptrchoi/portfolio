@@ -2,11 +2,11 @@
   display: grid;
   grid-template-columns: 1fr 3fr;
   transform: translateX(100%);
-  transition: transform $navbar-trans-time ease-in-out;
+  transition: transform $sidebar-trans-time ease-in-out;
   width: 100%;
 }
 .sidebar-wrapper--open {
-  animation: slideIn $navbar-trans-time;
+  animation: slideIn $sidebar-trans-time;
   transform: translateX(0%);
 }
 .sidebar {

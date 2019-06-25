@@ -28,8 +28,8 @@ $navbar-layer: 4;
 $icon-layer: 5;
 
 //ANIMATION Variables:
-$transition-time: 1000ms; //REMOVE/REPLACE
-$navbar-trans-time: 0.5s;
+$fade-transition-time: 1s;
+$sidebar-trans-time: 0.5s; //NEEDS TO MATCH UP WITH SIMILAR VAR IN constants.js
 $button-transition-slide: 0.3s;
 $button-transition-fade: 0.4s;
 

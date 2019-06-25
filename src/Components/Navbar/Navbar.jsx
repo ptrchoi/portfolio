@@ -19,10 +19,12 @@ class Navbar extends Component {
     super(props);
 
     this.state = {
-      sidebarIsOpen: false
+      sidebarIsOpen: false,
+      sidebarReady: true
     };
 
     this.matchParentWidth = this.matchParentWidth.bind(this);
+    this.checkSidebarState = this.checkSidebarState.bind(this);
     this.toggleSidebarAndOverlay = this.toggleSidebarAndOverlay.bind(this);
   }
   componentDidMount() {
@@ -39,26 +41,43 @@ class Navbar extends Component {
       .width();
     $('.nav-wrapper').width(parentWidth);
   }
+  checkSidebarState() {
+    let { sidebarReady } = this.state;
+
+    if (sidebarReady) {
+      this.toggleSidebarAndOverlay();
+      this.setState({
+        sidebarReady: false
+      });
+    }
+    return sidebarReady; //Return T||F to onClick() callbacks
+  }
   toggleSidebarAndOverlay() {
     let el = $('#navSidebar');
     let bg = $('#overlay');
 
     if (el.hasClass('navSidebar-on')) {
-      //Need delay before element's 'visibility = hidden' for transition animation to complete
+      //Delay removing .navSidebar-on class until slide anim finishes
       setTimeout(() => {
         el.removeClass('navSidebar-on');
-      }, C.TRANSITION_TIME);
+      }, C.SIDEBAR_TRANS_TIME);
+
       bg.removeClass('overlay-on');
     } else {
       el.addClass('navSidebar-on');
       bg.addClass('overlay-on');
     }
-
     this.setState(prevState => {
       return {
         sidebarIsOpen: !prevState.sidebarIsOpen
       };
     });
+
+    setTimeout(() => {
+      this.setState({
+        sidebarReady: true
+      });
+    }, C.SIDEBAR_TRANS_TIME);
   }
   render() {
     const { height, size, links } = this.props;
@@ -88,13 +107,13 @@ class Navbar extends Component {
               height={height}
               links={links}
               sidebarOpen={sidebarIsOpen}
-              sidebarClick={this.toggleSidebarAndOverlay}
+              sidebarClick={this.checkSidebarState}
             />
           </div>
           <div id="menuIcon">
             <MenuIcon
               sidebarIsOpen={sidebarIsOpen}
-              menuIconClick={this.toggleSidebarAndOverlay}
+              menuIconClick={this.checkSidebarState}
             />
           </div>
           <div id="overlay" className="overlay-off">

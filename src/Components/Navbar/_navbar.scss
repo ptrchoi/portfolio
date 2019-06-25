@@ -19,11 +19,11 @@
 .navSidebar-off {
   display: none;
   opacity: 0;
-  transition: all $navbar-trans-time linear;
+  transition: all $sidebar-trans-time linear;
   visibility: hidden;
 }
 .navSidebar-on {
-  animation: fade $navbar-trans-time;
+  animation: fade $sidebar-trans-time;
   display: block;
   opacity: 1;
   visibility: visible;
@@ -36,7 +36,6 @@
     opacity: 1;
   }
 }
-
 #menuIcon {
   padding: 20px;
   position: absolute;
@@ -49,7 +48,7 @@
 }
 .overlay-off {
   opacity: 0;
-  transition: all $navbar-trans-time ease-in-out;
+  transition: all $sidebar-trans-time ease-in-out;
   visibility: hidden;
 }
 .overlay-on {

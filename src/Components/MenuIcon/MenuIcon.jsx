@@ -1,5 +1,5 @@
 //Libraries
-import React from 'react';
+import React, { Component } from 'react';
 import $ from 'jquery';
 
 /**
@@ -8,22 +8,30 @@ import $ from 'jquery';
  * @param {object} props -  { sidebarIsOpen }, { menuIconClick } callback on icon click event.
  * @return {JSX.Element} - Rendered icon.
  */
-const MenuIcon = props => {
-  const toggleIcon = () => {
-    $('.menu-icon').toggleClass('menu-icon--close');
-    props.menuIconClick();
-  };
-  //If sidebar has closed, then remove .icon--close if still attached
-  if (!props.sidebarIsOpen && $('.menu-icon--close')[0]) {
-    $('.menu-icon').toggleClass('menu-icon--close');
+class MenuIcon extends Component {
+  constructor(props) {
+    super(props);
+
+    this.toggleIcon = this.toggleIcon.bind(this);
   }
-  return (
-    <div className="menu-icon" onClick={toggleIcon}>
-      <div className="menu-icon--bar1" />
-      <div className="menu-icon--bar2" />
-      <div className="menu-icon--bar3" />
-    </div>
-  );
-};
+  toggleIcon() {
+    if (this.props.menuIconClick()) {
+      $('.menu-icon').toggleClass('menu-icon--close');
+    }
+  }
+  render() {
+    //If sidebar has closed, then remove .icon--close class if still attached
+    if (!this.props.sidebarIsOpen && $('.menu-icon--close')[0]) {
+      $('.menu-icon').toggleClass('menu-icon--close');
+    }
+    return (
+      <div className="menu-icon" onClick={this.toggleIcon}>
+        <div className="menu-icon--bar1" />
+        <div className="menu-icon--bar2" />
+        <div className="menu-icon--bar3" />
+      </div>
+    );
+  }
+}
 
 export default MenuIcon;

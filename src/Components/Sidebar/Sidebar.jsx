@@ -14,8 +14,9 @@ class Sidebar extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick() {
-    $('#sidebarWrapper').removeClass('sidebar-wrapper--open');
-    this.props.sidebarClick();
+    if (this.props.sidebarClick()) {
+      $('#sidebarWrapper').removeClass('sidebar-wrapper--open');
+    }
   }
   render() {
     const { height, links, sidebarOpen } = this.props;
