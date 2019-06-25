@@ -358,7 +358,6 @@ button:focus {
 .skills-wrapper {
   background-color: whitesmoke;
   color: black;
-  height: auto;
   width: 100%;
 }
 
@@ -382,6 +381,7 @@ button:focus {
 .skills-group-wrapper--small {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr;
+  height: 100%;
 }
 
 .skills-text {

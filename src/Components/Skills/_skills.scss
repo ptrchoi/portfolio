@@ -1,7 +1,7 @@
 .skills-wrapper {
   background-color: $background-white;
   color: black;
-  height: auto;
+  // height: auto;
   width: 100%;
 }
 .skills-group-wrapper {
@@ -21,6 +21,7 @@
 .skills-group-wrapper--small {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr;
+  height: 100%;
 }
 .skills-text {
   text-align: justify;

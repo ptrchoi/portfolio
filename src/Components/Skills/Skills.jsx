@@ -13,13 +13,16 @@ import chart from '../../assets/skills_chart_v6.png';
 class Skills extends Component {
   render(props) {
     let { size, height } = this.props;
+    let responsiveHeight = height;
 
     const classList = 'skills-group-wrapper skills-group-wrapper--' + size;
+    if (size === 'small') {
+      responsiveHeight = 'auto';
+    }
 
     return (
       <div
-        // style={{ minHeight: height }}
-        style={{ height: height }}
+        style={{ height: responsiveHeight }}
         className="section-wrapper skills-wrapper"
       >
         <div className={classList}>
