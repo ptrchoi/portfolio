@@ -5,7 +5,6 @@
   }
   a {
     color: white; //TEMP - to be defined in Variables
-    font-size: 1.4rem;
     font-weight: bold;
     text-decoration: none;
   }
@@ -16,16 +15,41 @@
     color: #f4511e; //TEMP - to be defined in Variables
   }
 }
+//Horizontal menu
 .links-wrapper--large {
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+  margin-top: 1%;
+  a {
+    font-size: 1.8rem;
+  }
   .menu-link {
-    justify-self: end;
+    justify-self: center;
+  }
+  #home-link {
+    grid-column-start: 2;
+  }
+  #about-link {
+    grid-column-start: 3;
+  }
+  #skills-link {
+    grid-column-start: 4;
+  }
+  #portfolio-link {
+    grid-column-start: 5;
+  }
+  #contact-link {
+    grid-column-start: 6;
   }
 }
+//Vertical menu
 .links-wrapper--small {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  a {
+    font-size: 1.5rem;
+  }
   .menu-link {
     justify-self: center;
+    padding-bottom: 4%;
   }
 }

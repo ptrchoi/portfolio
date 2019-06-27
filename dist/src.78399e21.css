@@ -154,7 +154,6 @@ body {
 }
 .links-wrapper a {
   color: white;
-  font-size: 1.4rem;
   font-weight: bold;
   text-decoration: none;
 }
@@ -166,23 +165,57 @@ body {
 }
 
 .links-wrapper--large {
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+  margin-top: 1%;
+}
+.links-wrapper--large a {
+  font-size: 1.8rem;
 }
 .links-wrapper--large .menu-link {
-  justify-self: end;
+  justify-self: center;
+}
+.links-wrapper--large #home-link {
+  grid-column-start: 2;
+}
+.links-wrapper--large #about-link {
+  grid-column-start: 3;
+}
+.links-wrapper--large #skills-link {
+  grid-column-start: 4;
+}
+.links-wrapper--large #portfolio-link {
+  grid-column-start: 5;
+}
+.links-wrapper--large #contact-link {
+  grid-column-start: 6;
 }
 
 .links-wrapper--small {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }
+.links-wrapper--small a {
+  font-size: 1.5rem;
+}
 .links-wrapper--small .menu-link {
   justify-self: center;
+  padding-bottom: 4%;
 }
 
 #title {
+  font-size: 24px;
   color: white;
-  font-size: 2rem;
+  margin: 3% 0 0 3%;
+}
+@media screen and (min-width: 320px) {
+  #title {
+    font-size: calc( 24px + 12 * (100vw - 320px) / 880 );
+  }
+}
+@media screen and (min-width: 1200px) {
+  #title {
+    font-size: 36px;
+  }
 }
 
 .menu-icon {
@@ -298,7 +331,7 @@ button:focus {
 
 .about-content-block {
   display: grid;
-  padding: 2% 4% 0 4%;
+  padding: 4% 4% 0 4%;
   width: 100%;
 }
 
@@ -314,7 +347,7 @@ button:focus {
   align-items: center;
   flex-flow: row wrap;
   justify-content: space-around;
-  margin-top: 4%;
+  margin-top: 6%;
 }
 
 .about-logo {
