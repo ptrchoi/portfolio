@@ -2,31 +2,35 @@
   background-color: $background-white;
   display: grid;
   grid-auto-rows: minmax(min-content, max-content);
+  margin-top: 4%;
 }
 .about-content-block {
   display: grid;
-  padding: 4vw;
+  padding: 2% 4% 0 4%;
   width: 100%;
 }
 #profilePic {
   border-radius: 50%;
+  height: auto;
   justify-self: end;
-  @include fluid-type(width, $min-width, $max-width, 76px, 150px);
+  width: 12%;
 }
 #logosWrapper {
   display: flex;
   align-items: center;
   flex-flow: row wrap;
   justify-content: space-around;
+  margin-top: 4%;
 }
 .about-logo {
-  @include fluid-type(width, $min-width, $max-width, 26vw, 30vw);
+  height: auto;
+  width: 25%;
 }
 .about-text {
-  align-self: stretch;
+  @include fluid-type(font-size, $min-width, $max-width, 12px, 24px);
+  // align-self: stretch;
   color: $gray-text;
-  @include fluid-type(font-size, $min-width, $max-width, 12px, 36px);
-  padding: 4vw;
+  padding: 2%;
 }
 // #msftLogo {
 //   height: 100px;
