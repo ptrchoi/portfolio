@@ -2,48 +2,35 @@
   background-color: $background-white;
   display: grid;
   grid-auto-rows: minmax(min-content, max-content);
-  margin-top: 4%;
+  margin-top: 6%;
 }
 .about-content-block {
   display: grid;
-  padding: 4% 4% 0 4%;
+  padding: 0 6% 0 6%;
   width: 100%;
 }
 #profilePic {
   border-radius: 50%;
   height: auto;
+  margin-bottom: 12%;
   justify-self: end;
-  width: 12%;
+  width: 14%;
+}
+#aboutTextWrapper {
+  margin-bottom: 14%;
+  .about-text {
+    @include fluid-type(font-size, $min-width, $max-width, 12px, 26px);
+    color: $gray-text;
+    padding: 2%;
+  }
 }
 #logosWrapper {
   display: flex;
   align-items: center;
   flex-flow: row wrap;
   justify-content: space-around;
-  margin-top: 6%;
+  .about-logo {
+    height: auto;
+    width: 22%;
+  }
 }
-.about-logo {
-  height: auto;
-  width: 25%;
-}
-.about-text {
-  @include fluid-type(font-size, $min-width, $max-width, 12px, 24px);
-  // align-self: stretch;
-  color: $gray-text;
-  padding: 2%;
-}
-// #msftLogo {
-//   height: 100px;
-//   width: 272px;
-//   width: 25vw;
-// }
-// #msftStudiosLogo {
-//   height: 70px;
-//   width: 246px;
-//   width: 25vw;
-// }
-// #eaLogo {
-//   height: 70px;
-//   width: 190px;
-//   width: 25vw;
-// }

@@ -24,7 +24,7 @@ class About extends Component {
         <div id="profilePicWrapper" className="about-content-block">
           <img id="profilePic" src={profilePic} alt="profile pic" />
         </div>
-        <div className="about-content-block">
+        <div id="aboutTextWrapper" className="about-content-block">
           <p className="about-text">Welcome and thanks for visiting.</p>
           <p className="about-text">
             I'm a Developer | Designer | Producer with 15+ years of experience
