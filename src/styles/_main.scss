@@ -19,10 +19,8 @@ body {
 
 /* Mixins
 ------------------------------------ */
-@function strip-unit($value) {
-  @return $value / ($value * 0 + 1);
-}
-
+//Fluid-type Mixin based on https://github.com/robertraichle/fluid-type-mixin
+//$min-vw & $max-vw are width values (in pixels), not actual vw unit values - essentially break points
 @mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value) {
   @each $property in $properties {
     #{$property}: $min-value;
@@ -44,6 +42,9 @@ body {
       #{$property}: $max-value;
     }
   }
+}
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
 }
 
 /* CSSTransition "fade" Class

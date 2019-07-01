@@ -17,10 +17,7 @@ class About extends Component {
   render(props) {
     let { height } = this.props;
     return (
-      <div
-        style={{ minHeight: height }}
-        className="section-wrapper about-wrapper"
-      >
+      <div style={{ height: height }} className="section-wrapper about-wrapper">
         <div id="profilePicWrapper" className="about-content-block">
           <img id="profilePic" src={profilePic} alt="profile pic" />
         </div>

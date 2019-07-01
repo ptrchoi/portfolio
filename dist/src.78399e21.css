@@ -326,25 +326,24 @@ button:focus {
   background-color: whitesmoke;
   display: grid;
   grid-auto-rows: minmax(min-content, max-content);
-  margin-top: 6%;
 }
 
 .about-content-block {
   display: grid;
   padding: 0 6% 0 6%;
-  width: 100%;
 }
 
 #profilePic {
   border-radius: 50%;
   height: auto;
-  margin-bottom: 12%;
+  margin-bottom: 8vh;
+  margin-top: 4vh;
   justify-self: end;
   width: 14%;
 }
 
 #aboutTextWrapper {
-  margin-bottom: 14%;
+  margin-bottom: 8vh;
 }
 #aboutTextWrapper .about-text {
   font-size: 12px;
@@ -353,23 +352,21 @@ button:focus {
 }
 @media screen and (min-width: 320px) {
   #aboutTextWrapper .about-text {
-    font-size: calc( 12px + 14 * (100vw - 320px) / 880 );
+    font-size: calc( 12px + 12 * (100vw - 320px) / 880 );
   }
 }
 @media screen and (min-width: 1200px) {
   #aboutTextWrapper .about-text {
-    font-size: 26px;
+    font-size: 24px;
   }
 }
 
 #logosWrapper {
   display: flex;
   align-items: center;
-  flex-flow: row wrap;
   justify-content: space-around;
 }
 #logosWrapper .about-logo {
-  height: auto;
   width: 22%;
 }
 
@@ -471,7 +468,6 @@ button:focus {
 .contact-wrapper {
   background-color: #6a6a6a;
   color: white;
-  height: auto;
   padding-bottom: 7vh;
   width: 100%;
 }
