@@ -39,6 +39,20 @@ const Portfolio = props => {
         link={'https://codepen.io/ptrchoi/pen/JayyOP'}
         description={'BACK of the card!'}
       />
+      <Card
+        projectId={'project-5'}
+        title={'Technical Documentation'}
+        image={'https://codepen.io/ptrchoi/pen/jvLoOQ/image/large.png'}
+        link={'https://codepen.io/ptrchoi/pen/JayyOP'}
+        description={'BACK of the card!'}
+      />
+      <Card
+        projectId={'project-6'}
+        title={'Markdown Live Previewer'}
+        image={'https://codepen.io/ptrchoi/pen/rqPKJV/image/large.png'}
+        link={'https://codepen.io/ptrchoi/pen/JayyOP'}
+        description={'BACK of the card!'}
+      />
     </div>
   );
 };
