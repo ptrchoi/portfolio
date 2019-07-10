@@ -1,7 +1,7 @@
 //Libraries
 import React, { Component } from 'react';
-import $ from 'jquery';
 
+//Components
 import Card from '../card/Card';
 
 /**
@@ -17,7 +17,7 @@ const CARDS = [
     image: 'https://codepen.io/ptrchoi/pen/JayyOP/image/large.png',
     link: 'https://codepen.io/ptrchoi/pen/JayyOP',
     description: 'BACK of the card!',
-    active: false
+    flipped: false
   },
   {
     projectId: 'project-2',
@@ -25,7 +25,7 @@ const CARDS = [
     image: 'https://codepen.io/ptrchoi/pen/QJRpvQ/image/large.png',
     link: 'https://codepen.io/ptrchoi/pen/JayyOP',
     description: 'BACK of the card!',
-    active: false
+    flipped: false
   },
   {
     projectId: 'project-3',
@@ -33,7 +33,7 @@ const CARDS = [
     image: 'https://codepen.io/ptrchoi/pen/Xyrppy/image/large.png',
     link: 'https://codepen.io/ptrchoi/pen/JayyOP',
     description: 'BACK of the card!',
-    active: false
+    flipped: false
   },
   {
     projectId: 'project-4',
@@ -41,7 +41,7 @@ const CARDS = [
     image: 'https://codepen.io/ptrchoi/pen/mQEMXv/image/large.png',
     link: 'https://codepen.io/ptrchoi/pen/JayyOP',
     description: 'BACK of the card!',
-    active: false
+    flipped: false
   },
   {
     projectId: 'project-5',
@@ -49,7 +49,7 @@ const CARDS = [
     image: 'https://codepen.io/ptrchoi/pen/jvLoOQ/image/large.png',
     link: 'https://codepen.io/ptrchoi/pen/JayyOP',
     description: 'BACK of the card!',
-    active: false
+    flipped: false
   },
   {
     projectId: 'project-6',
@@ -57,7 +57,7 @@ const CARDS = [
     image: 'https://codepen.io/ptrchoi/pen/rqPKJV/image/large.png',
     link: 'https://codepen.io/ptrchoi/pen/JayyOP',
     description: 'BACK of the card!',
-    active: false
+    flipped: false
   }
 ];
 
@@ -69,105 +69,56 @@ class Portfolio extends Component {
       cards: CARDS
     };
 
-    this.toggleCard = this.toggleCard.bind(this);
-    // this.unflipOtherCards = this.unflipOtherCards.bind(this);
+    this.updateCards = this.updateCards.bind(this);
   }
-  toggleCard(e) {
+  updateCards(e) {
     let { cards } = this.state;
-    let target = e.currentTarget.id;
-    let el = document.getElementById(target);
-    let index = cards.findIndex(i => i.projectId === target);
-    let updatedCard = cards[index];
-    let active = updatedCard.active;
+    let index = cards.findIndex(i => i.projectId === e.currentTarget.id);
+    let isFlipped = cards[index].flipped; //Flipped state of currently clicked card
+    let alreadyFlippedIndex = cards.findIndex(i => i.flipped === true); //Check for already flipped cards
 
-    if (active) {
-      updatedCard.active = false;
-      // el.removeClass('card-flipped');
-      el.className = 'card-content';
-    } else {
-      updatedCard.active = true;
-      // el.addClass('card-flipped');
-      el.className = 'card-content card-flipped';
+    //Flip any already flipped card first
+    if (alreadyFlippedIndex > -1 && alreadyFlippedIndex !== index) {
+      cards = this.toggleCard(cards, alreadyFlippedIndex, true);
     }
-    cards[index] = updatedCard;
+
+    //Toggle current card
+    cards = this.toggleCard(cards, index, isFlipped);
+
     this.setState({
       cards: cards
     });
+  }
+  toggleCard(cards, i, flipped) {
+    let card = cards[i];
+
+    if (flipped) {
+      // .addClass & .removeClass not working ('not a function') - NEED TO FIX!
+      // document.getElementById(card.projectId).removeClass('card-flipped');
+      document.getElementById(card.projectId).className = 'card-content';
+    } else {
+      // document.getElementById(card.projectId).addClass('card-flipped');
+      document.getElementById(card.projectId).className =
+        'card-content card-flipped';
+    }
+    card.flipped = !flipped;
+    cards[i] = card;
+
+    return cards;
   }
   render() {
     const card = this.state.cards;
     return (
       <div className="section-wrapper portfolio-wrapper">
-        <Card card={card[0]} handleClick={this.toggleCard} />
-        <Card card={card[1]} handleClick={this.toggleCard} />
-        <Card card={card[2]} handleClick={this.toggleCard} />
-        <Card card={card[3]} handleClick={this.toggleCard} />
-        <Card card={card[4]} handleClick={this.toggleCard} />
-        <Card card={card[5]} handleClick={this.toggleCard} />
+        <Card card={card[0]} handleClick={this.updateCards} />
+        <Card card={card[1]} handleClick={this.updateCards} />
+        <Card card={card[2]} handleClick={this.updateCards} />
+        <Card card={card[3]} handleClick={this.updateCards} />
+        <Card card={card[4]} handleClick={this.updateCards} />
+        <Card card={card[5]} handleClick={this.updateCards} />
       </div>
     );
   }
 }
 
 export default Portfolio;
-
-// this.state.cards.forEach(function(el) {
-//   // console.log('inside each()');
-//   // console.log('el: ', el.projectId);
-//   if (card.id === el.projectId) {
-//     console.log('MATCH');
-//     e.currentTarget.addClass('card-flipped');
-//   }
-// });
-
-// if ($(this)[0].id === current) {
-//   console.log('MATCH!!!!!!!!!!!!!!!!!!!!!!!!!!!');
-// } else {
-//   console.log(
-//     'NOO MATCH!, removing class - card-flipped from: ',
-//     $(this)[0].id
-//   );
-//   $(this).removeClass('card-flipped');
-//   $(this).setActive(true);
-// }
-
-// if (!active) {
-//   console.log('unflipping');
-
-//   $('.card-flipped').removeClass('card-flipped');
-// this.unflipOtherCards();
-// }
-// if ($('.card-flipped')) {
-//   $('.card-flipped').removeClass('card-flipped');
-// }
-// this.unflipOtherCards();
-
-// this.setActive(active);
-// setActive(status) {
-//   console.log(
-//     'setActive: this: ',
-//     this.props.projectId,
-//     ' from status: ',
-//     status
-//   );
-//   this.setState({ active: !status });
-// }
-// unflipOtherCards(current) {
-//   console.log('unflipping');
-
-//   $('.card-flipped').each(function() {
-//     console.log('inside each()');
-//     console.log('$(this)[0].id: ', $(this)[0].id);
-//     console.log('current: ', current);
-//     if ($(this)[0].id === current) {
-//       console.log('MATCH!!!!!!!!!!!!!!!!!!!!!!!!!!!');
-//     } else {
-//       console.log(
-//         'NOO MATCH!, removing class - card-flipped from: ',
-//         $(this)[0].id
-//       );
-//       $(this).removeClass('card-flipped');
-//       $(this).setActive(true);
-//     }
-//   });
-// }
