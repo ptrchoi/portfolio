@@ -16,47 +16,48 @@ const CARDS = [
     title: 'Project Landing Page',
     image: 'https://codepen.io/ptrchoi/pen/JayyOP/image/large.png',
     link: 'https://codepen.io/ptrchoi/pen/JayyOP',
-    description: 'BACK of the card!',
+    description:
+      'Pure JS & CSS demonstrating a responsive product page, with: Nested flex box and grid layouts | Modal nav menus and image gallery',
     flipped: false
   },
   {
     projectId: 'project-2',
     title: 'Calculator App',
     image: 'https://codepen.io/ptrchoi/pen/QJRpvQ/image/large.png',
-    link: 'https://codepen.io/ptrchoi/pen/JayyOP',
-    description: 'BACK of the card!',
+    link: 'https://codepen.io/ptrchoi/pen/QJRpvQ',
+    description: 'Click to check it out on Codepen',
     flipped: false
   },
   {
     projectId: 'project-3',
     title: 'Drum Machine App',
     image: 'https://codepen.io/ptrchoi/pen/Xyrppy/image/large.png',
-    link: 'https://codepen.io/ptrchoi/pen/JayyOP',
-    description: 'BACK of the card!',
+    link: 'https://codepen.io/ptrchoi/pen/Xyrppy',
+    description: 'Click to check it out on Codepen',
     flipped: false
   },
   {
     projectId: 'project-4',
     title: 'Random Quote Generator',
     image: 'https://codepen.io/ptrchoi/pen/mQEMXv/image/large.png',
-    link: 'https://codepen.io/ptrchoi/pen/JayyOP',
-    description: 'BACK of the card!',
+    link: 'https://codepen.io/ptrchoi/pen/mQEMXv',
+    description: 'Click to check it out on Codepen',
     flipped: false
   },
   {
     projectId: 'project-5',
     title: 'Technical Documentation',
     image: 'https://codepen.io/ptrchoi/pen/jvLoOQ/image/large.png',
-    link: 'https://codepen.io/ptrchoi/pen/JayyOP',
-    description: 'BACK of the card!',
+    link: 'https://codepen.io/ptrchoi/pen/jvLoOQ',
+    description: 'Click to check it out on Codepen',
     flipped: false
   },
   {
     projectId: 'project-6',
     title: 'Markdown Live Previewer',
     image: 'https://codepen.io/ptrchoi/pen/rqPKJV/image/large.png',
-    link: 'https://codepen.io/ptrchoi/pen/JayyOP',
-    description: 'BACK of the card!',
+    link: 'https://codepen.io/ptrchoi/pen/rqPKJV',
+    description: 'Click to check it out on Codepen',
     flipped: false
   }
 ];

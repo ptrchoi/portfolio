@@ -495,7 +495,6 @@ button:focus {
 }
 
 .card-content--back {
-  color: red;
   transform: rotateY(180deg);
 }
 
@@ -506,6 +505,14 @@ button:focus {
 .front-title {
   text-align: center;
   padding: 10px 20px;
+}
+
+.card-title {
+  color: blue;
+}
+
+.demo-link {
+  color: orange;
 }
 
 .contact-wrapper {

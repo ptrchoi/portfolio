@@ -1,4 +1,8 @@
+//Libraries
 import React from 'react';
+
+//Components
+import Cardinfo from '../cardinfo/Cardinfo';
 
 const Card = props => {
   const { projectId, title, image, link, description } = props.card;
@@ -12,9 +16,7 @@ const Card = props => {
           </div>
         </div>
         <div className="card-content--back">
-          <a href={link} target="_blank">
-            <p>{description}</p>
-          </a>
+          <Cardinfo title={title} link={link} info={description} />
         </div>
       </div>
     </div>
