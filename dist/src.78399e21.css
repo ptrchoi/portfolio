@@ -56,7 +56,7 @@ body {
 }
 
 #navbar {
-  background-color: #546e7a;
+  background-color: #1b4664;
   height: 60px;
   z-index: 4;
 }
@@ -257,71 +257,114 @@ body {
 }
 
 .home-wrapper {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.btn {
-  background-color: transparent;
-  border: solid #819ca9 1;
-  color: #819ca9;
-  display: inline-block;
-  font-size: 2.25vw;
-  height: 5.5vh;
-  padding: 30px 80px;
-  position: relative;
-  text-align: center;
-  transition: background-color 0.4s ease-in-out, border-color 0.4s ease-in-out, color 0.4s ease-in-out;
-}
-
-.btn:hover {
-  background-color: rgba(129, 156, 169, 0.7);
-  border-color: rgba(129, 156, 169, 0.2);
-  color: #eee;
-}
-
-.btn:hover #buttonIcon {
-  opacity: 1;
-  transform: translateY(20px);
-}
-
-.btn:hover #buttonText {
-  opacity: 0;
-  transform: translateY(16px);
-}
-
-#buttonIcon {
-  left: 0;
-  margin: -30px auto 0 auto;
-  opacity: 0;
   position: absolute;
-  right: 0;
-  transform: translateX(-50%);
-  transform: translateY(0px);
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-#buttonText {
+  top: 0;
   left: 0;
-  margin: -14px auto 0 auto;
-  opacity: 1;
+  width: 100%;
+}
+@keyframes bgColorCycle {
+  0% {
+    background: linear-gradient(to bottom right, #335e68 0%, #39a48d 100%);
+  }
+  25% {
+    background: linear-gradient(to bottom right, #3a7d8c 0%, #39a48d 100%);
+  }
+  50% {
+    background: linear-gradient(to bottom right, #4897a9 0%, #39a48d 100%);
+  }
+  75% {
+    background: linear-gradient(to bottom right, #6bc7dc 0%, #39a48d 100%);
+  }
+}
+
+/* Confetti Styling ------------------- */
+.confetti {
   position: absolute;
-  right: 0;
-  transform: translateX(-50%);
-  transform: translateY(0px);
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.confetti li {
+  color: white;
+  position: absolute;
+  list-style: none;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.15);
+  bottom: -160px;
+  animation: square 25s infinite;
+  transition-timing-function: linear;
+}
+.confetti li:nth-child(1) {
+  left: 10%;
+}
+.confetti li:nth-child(2) {
+  left: 20%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 2s;
+  animation-duration: 17s;
+}
+.confetti li:nth-child(3) {
+  left: 25%;
+  animation-delay: 4s;
+}
+.confetti li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-duration: 22s;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.confetti li:nth-child(5) {
+  left: 70%;
+}
+.confetti li:nth-child(6) {
+  left: 80%;
+  width: 120px;
+  height: 120px;
+  animation-delay: 3s;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.confetti li:nth-child(7) {
+  left: 32%;
+  width: 160px;
+  height: 160px;
+  animation-delay: 7s;
+}
+.confetti li:nth-child(8) {
+  left: 55%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 15s;
+  animation-duration: 40s;
+}
+.confetti li:nth-child(9) {
+  left: 25%;
+  width: 10px;
+  height: 10px;
+  animation-delay: 2s;
+  animation-duration: 40s;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.confetti li:nth-child(10) {
+  left: 90%;
+  width: 160px;
+  height: 160px;
+  animation-delay: 11s;
 }
 
-.btn:active {
-  background-color: #eee;
+@keyframes square {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-150vh) rotate(600deg);
+  }
 }
-
-button:focus {
-  outline: none;
-}
-
 .about-wrapper {
   background-color: whitesmoke;
   display: grid;

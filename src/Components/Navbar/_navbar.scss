@@ -9,7 +9,7 @@
   // left: 0;
 }
 #navbar {
-  background-color: #546e7a;
+  background-color: $gap-blue;
   @include fluid-type(height, $min-width, $max-width, 60px, 140px);
   z-index: $navbar-layer;
 }

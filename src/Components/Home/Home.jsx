@@ -29,11 +29,23 @@ class Home extends Component {
           className="btn"
           onClick={() => fullpageApi.moveSectionDown()}
         >
-          <span>
+          {/* <span>
             <i id="buttonIcon" className="fas fa-angle-double-down" />
-          </span>
+          </span> */}
           <span id="buttonText">welcome</span>
         </button>
+        <ul className="confetti">
+          <li>Javascript</li>
+          <li>React</li>
+          <li>SCSS</li>
+          <li>CSS</li>
+          <li>HTML5</li>
+          <li>jQuery</li>
+          <li>ES6</li>
+          <li>Responsive</li>
+          <li>Design</li>
+          <li>Creative</li>
+        </ul>
       </div>
     );
   }
