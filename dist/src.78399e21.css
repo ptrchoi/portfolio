@@ -261,11 +261,16 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Confetti Styling ------------------- */
 .confetti {
   position: absolute;
+  overflow: hidden;
   top: 0;
   left: 0;
   width: 100%;
@@ -274,7 +279,7 @@ body {
 }
 .confetti li {
   animation: square 25s infinite;
-  bottom: -160px;
+  top: -60vh;
   color: white;
   display: block;
   list-style: none;
@@ -282,54 +287,60 @@ body {
   transition-timing-function: linear;
 }
 .confetti li:nth-child(1) {
+  color: #1b9327;
   left: 10%;
 }
 .confetti li:nth-child(2) {
   animation-delay: 2s;
   animation-duration: 12s;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.5);
   font-size: 1.6rem;
   left: 20%;
 }
 .confetti li:nth-child(3) {
   animation-delay: 2s;
+  color: rgba(255, 255, 255, 0.7);
   left: 25%;
 }
 .confetti li:nth-child(4) {
   animation-duration: 18s;
-  color: rgba(255, 255, 255, 0.8);
+  color: #4d0e15;
   font-size: 1.4rem;
   left: 40%;
 }
 .confetti li:nth-child(5) {
-  left: 70%;
+  color: rgba(255, 255, 255, 0.7);
   font-size: 0.8rem;
+  left: 70%;
 }
 .confetti li:nth-child(6) {
   animation-delay: 6s;
+  color: #1b9327;
   font-size: 1.8rem;
   left: 80%;
 }
 .confetti li:nth-child(7) {
   animation-delay: 10s;
-  color: rgba(255, 255, 255, 0.7);
+  color: #3981c1;
   left: 32%;
 }
 .confetti li:nth-child(8) {
   animation-delay: 1s;
   animation-duration: 26s;
+  color: #3981c1;
   font-size: 2rem;
   left: 55%;
 }
 .confetti li:nth-child(9) {
   animation-delay: 16s;
   animation-duration: 25s;
+  color: rgba(255, 255, 255, 0.7);
   font-size: 0.7rem;
   left: 25%;
 }
 .confetti li:nth-child(10) {
   animation-delay: 19s;
-  color: rgba(255, 255, 255, 0.6);
+  color: #ddff00;
   font-size: 0.85rem;
   left: 80%;
 }
@@ -339,9 +350,67 @@ body {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-150vh) rotate(550deg);
+    transform: translateY(190vh) rotate(550deg);
   }
 }
+.btn {
+  background-color: transparent;
+  color: #819ca9;
+  display: inline-block;
+  font-size: 2.25vw;
+  height: 5.5vh;
+  padding: 30px 80px;
+  position: relative;
+  text-align: center;
+  transition: background-color 0.4s ease-in-out, border-color 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+
+.btn:hover {
+  background-color: rgba(129, 156, 169, 0.7);
+  border-color: rgba(129, 156, 169, 0.2);
+  color: #eee;
+}
+
+.btn:hover #buttonIcon {
+  opacity: 1;
+  transform: translateY(20px);
+}
+
+.btn:hover #buttonText {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+#buttonIcon {
+  left: 0;
+  margin: -30px auto 0 auto;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  transform: translateX(-50%);
+  transform: translateY(0px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#buttonText {
+  left: 0;
+  margin: -14px auto 0 auto;
+  opacity: 1;
+  position: absolute;
+  right: 0;
+  transform: translateX(-50%);
+  transform: translateY(0px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.btn:active {
+  background-color: #eee;
+}
+
+button:focus {
+  outline: none;
+}
+
 .about-wrapper {
   background-color: whitesmoke;
   display: grid;
