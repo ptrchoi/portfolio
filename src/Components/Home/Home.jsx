@@ -38,13 +38,13 @@ class Home extends Component {
           <li>Javascript</li>
           <li>React</li>
           <li>SCSS</li>
-          <li>CSS</li>
-          <li>HTML5</li>
-          <li>jQuery</li>
           <li>ES6</li>
-          <li>Responsive</li>
+          <li>CSS</li>
+          <li>jQuery</li>
           <li>Design</li>
           <li>Creative</li>
+          <li>HTML5</li>
+          <li>Responsive</li>
         </ul>
       </div>
     );

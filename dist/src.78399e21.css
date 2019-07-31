@@ -262,20 +262,6 @@ body {
   left: 0;
   width: 100%;
 }
-@keyframes bgColorCycle {
-  0% {
-    background: linear-gradient(to bottom right, #335e68 0%, #39a48d 100%);
-  }
-  25% {
-    background: linear-gradient(to bottom right, #3a7d8c 0%, #39a48d 100%);
-  }
-  50% {
-    background: linear-gradient(to bottom right, #4897a9 0%, #39a48d 100%);
-  }
-  75% {
-    background: linear-gradient(to bottom right, #6bc7dc 0%, #39a48d 100%);
-  }
-}
 
 /* Confetti Styling ------------------- */
 .confetti {
@@ -287,60 +273,65 @@ body {
   z-index: 1;
 }
 .confetti li {
-  color: white;
-  position: absolute;
-  list-style: none;
-  display: block;
-  bottom: -160px;
   animation: square 25s infinite;
+  bottom: -160px;
+  color: white;
+  display: block;
+  list-style: none;
+  position: absolute;
   transition-timing-function: linear;
 }
 .confetti li:nth-child(1) {
   left: 10%;
 }
 .confetti li:nth-child(2) {
-  left: 20%;
-  font-size: 1.4rem;
   animation-delay: 2s;
-  animation-duration: 17s;
+  animation-duration: 12s;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.6rem;
+  left: 20%;
 }
 .confetti li:nth-child(3) {
+  animation-delay: 2s;
   left: 25%;
-  animation-delay: 4s;
 }
 .confetti li:nth-child(4) {
+  animation-duration: 18s;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.4rem;
   left: 40%;
-  font-size: 1.2rem;
-  animation-duration: 22s;
 }
 .confetti li:nth-child(5) {
   left: 70%;
+  font-size: 0.8rem;
 }
 .confetti li:nth-child(6) {
+  animation-delay: 6s;
+  font-size: 1.8rem;
   left: 80%;
-  font-size: 1.6rem;
-  animation-delay: 3s;
 }
 .confetti li:nth-child(7) {
+  animation-delay: 10s;
+  color: rgba(255, 255, 255, 0.7);
   left: 32%;
-  animation-delay: 7s;
 }
 .confetti li:nth-child(8) {
+  animation-delay: 1s;
+  animation-duration: 26s;
+  font-size: 2rem;
   left: 55%;
-  font-size: 1.8rem;
-  animation-delay: 15s;
-  animation-duration: 40s;
 }
 .confetti li:nth-child(9) {
+  animation-delay: 16s;
+  animation-duration: 25s;
+  font-size: 0.7rem;
   left: 25%;
-  font-size: 0.5rem;
-  animation-delay: 2s;
-  animation-duration: 40s;
 }
 .confetti li:nth-child(10) {
-  left: 90%;
-  font-size: 0.8rem;
-  animation-delay: 11s;
+  animation-delay: 19s;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
+  left: 80%;
 }
 
 @keyframes square {
@@ -348,7 +339,7 @@ body {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-150vh) rotate(600deg);
+    transform: translateY(-150vh) rotate(550deg);
   }
 }
 .about-wrapper {
