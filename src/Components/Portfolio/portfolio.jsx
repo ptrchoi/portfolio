@@ -13,24 +13,25 @@ import Card from '../card/Card';
 const CARDS = [
   {
     projectId: 'project-1',
-    title: 'Project Landing Page',
+    title: 'Single Product Page',
     image: 'https://codepen.io/ptrchoi/pen/JayyOP/image/large.png',
     link: 'https://codepen.io/ptrchoi/pen/JayyOP',
     description:
-      'Pure JS & CSS demonstrating a responsive product page, with: Nested flex box and grid layouts | Modal nav menus and image gallery',
+      'A pure JS & CSS demo of a single-page, responsive product page. With nested Flex-Box & CSS Grid layouts, nav-menu & image gallery modals, and user-centered design elements throughout.',
     flipped: false
   },
   {
     projectId: 'project-2',
-    title: 'Calculator App',
+    title: 'REACT Calculator',
     image: 'https://codepen.io/ptrchoi/pen/QJRpvQ/image/large.png',
     link: 'https://codepen.io/ptrchoi/pen/QJRpvQ',
-    description: 'Click to check it out on Codepen',
+    description:
+      'A simple REACT Calculator Web App with a clean, modern Material theme, demonstrating functional programming with higher-order functions, advanced ES6 features, and modular programming with React and SCSS components.',
     flipped: false
   },
   {
     projectId: 'project-3',
-    title: 'Drum Machine App',
+    title: 'REACT Drum Machine',
     image: 'https://codepen.io/ptrchoi/pen/Xyrppy/image/large.png',
     link: 'https://codepen.io/ptrchoi/pen/Xyrppy',
     description: 'Click to check it out on Codepen',
@@ -38,26 +39,28 @@ const CARDS = [
   },
   {
     projectId: 'project-4',
-    title: 'Random Quote Generator',
-    image: 'https://codepen.io/ptrchoi/pen/mQEMXv/image/large.png',
-    link: 'https://codepen.io/ptrchoi/pen/mQEMXv',
-    description: 'Click to check it out on Codepen',
+    title: 'Technical Documentation Page',
+    image: 'https://codepen.io/ptrchoi/pen/jvLoOQ/image/large.png',
+    link: 'https://codepen.io/ptrchoi/pen/jvLoOQ',
+    description:
+      "A pure JS & CSS demo of a responsive technical document, recreating a page from VS Code's site from scratch. With active menu scrolling, persistent modal nav-menu, and modern Code Element styling.",
     flipped: false
   },
   {
     projectId: 'project-5',
-    title: 'Technical Documentation',
-    image: 'https://codepen.io/ptrchoi/pen/jvLoOQ/image/large.png',
-    link: 'https://codepen.io/ptrchoi/pen/jvLoOQ',
+    title: 'Markdown Editor with Live Preview',
+    image: 'https://codepen.io/ptrchoi/pen/rqPKJV/image/large.png',
+    link: 'https://codepen.io/ptrchoi/pen/rqPKJV',
     description: 'Click to check it out on Codepen',
     flipped: false
   },
   {
     projectId: 'project-6',
-    title: 'Markdown Live Previewer',
-    image: 'https://codepen.io/ptrchoi/pen/rqPKJV/image/large.png',
-    link: 'https://codepen.io/ptrchoi/pen/rqPKJV',
-    description: 'Click to check it out on Codepen',
+    title: 'Random Quote Generator',
+    image: 'https://codepen.io/ptrchoi/pen/mQEMXv/image/large.png',
+    link: 'https://codepen.io/ptrchoi/pen/mQEMXv',
+    description:
+      'A simple REACT Web App which generates randomized quotes and backgrounds, integrating with the Forismatic API. Fully responsive and designed to have a calming effect.',
     flipped: false
   }
 ];

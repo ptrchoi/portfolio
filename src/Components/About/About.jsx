@@ -31,11 +31,11 @@ class About extends Component {
             user experience.
           </p>
           <p className="about-text">
-            My goal is always to build robust, beautiful, repsonsive user
+            My goal is always to build robust, beautiful, responsive user
             experiences on mobile and the web. I'm an advocate of functional
-            programming, modular Javascript + React, unit-testing, and seek to
-            leverage modern API's, libraries, methodologies and tools where
-            effective and efficient.
+            programming, modular Javascript + React - clean and reusable code -
+            and seek to leverage modern API's, libraries, methodologies and
+            tools where effective and efficient.
           </p>
         </div>
         <div id="logosWrapper" className="about-content-block">

@@ -1,8 +1,27 @@
 .cardinfo {
+  color: black;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin-left: 8px; //offset from _card.scss>.card-content>box-shadow
+
+  p {
+    padding: 2vh 1vw 2vh 1vw;
+  }
+  a:link,
+  a:visited {
+    color: orange;
+    text-decoration: none;
+  }
 }
 .card-title {
   color: blue;
 }
-.demo-link {
+.card-text {
+  font-style: italic;
+}
+.link-icon {
   color: orange;
+  font-size: 0.9rem;
+  padding: 0 0.5vw 0 0.5vw;
 }

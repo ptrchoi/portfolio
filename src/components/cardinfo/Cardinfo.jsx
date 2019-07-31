@@ -5,9 +5,12 @@ const Cardinfo = props => {
   return (
     <div className="cardinfo">
       <p className="card-title"> {props.title} </p>
-      <p>{props.info}</p>
+      <p className="card-text">{props.info}</p>
       <a href={props.link} target="_blank">
-        <span className="demo-link">Demo</span>
+        <p>
+          Demo
+          <i className="link-icon fas fa-external-link-square-alt" />
+        </p>
       </a>
     </div>
   );

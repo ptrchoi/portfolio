@@ -441,10 +441,7 @@ button:focus {
   flex-flow: row wrap;
   height: 100%;
   justify-content: space-around;
-  padding-bottom: 7vh;
-  padding-left: 2vw;
-  padding-right: 2vw;
-  padding-top: 27vh;
+  padding: 27vh 2vw 7vh 2vw;
   width: 100%;
 }
 .portfolio-wrapper a:link,
@@ -507,12 +504,34 @@ button:focus {
   padding: 10px 20px;
 }
 
+.cardinfo {
+  color: black;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin-left: 8px;
+}
+.cardinfo p {
+  padding: 2vh 1vw 2vh 1vw;
+}
+.cardinfo a:link,
+.cardinfo a:visited {
+  color: orange;
+  text-decoration: none;
+}
+
 .card-title {
   color: blue;
 }
 
-.demo-link {
+.card-text {
+  font-style: italic;
+}
+
+.link-icon {
   color: orange;
+  font-size: 0.9rem;
+  padding: 0 0.5vw 0 0.5vw;
 }
 
 .contact-wrapper {
