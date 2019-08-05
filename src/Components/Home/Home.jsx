@@ -1,6 +1,9 @@
 //Libraries
 import React, { Component } from 'react';
 
+//Components
+import Confetti from '../confetti/Confetti';
+
 /**
  * React Class Component, renders a content section.
  * @function
@@ -34,18 +37,7 @@ class Home extends Component {
           </span>
           <span id="buttonText">welcome</span>
         </button>
-        <ul className="confetti">
-          <li>Javascript</li>
-          <li>React</li>
-          <li>SCSS</li>
-          <li>ES6</li>
-          <li>CSS</li>
-          <li>jQuery</li>
-          <li>Design</li>
-          <li>Creative</li>
-          <li>HTML5</li>
-          <li>Responsive</li>
-        </ul>
+        <Confetti />
       </div>
     );
   }
