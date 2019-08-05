@@ -37,7 +37,9 @@ class Home extends Component {
           </span>
           <span id="buttonText">welcome</span>
         </button>
-        <Confetti />
+        <div className="confetti">
+          <Confetti />
+        </div>
       </div>
     );
   }

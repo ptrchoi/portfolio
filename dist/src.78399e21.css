@@ -344,64 +344,6 @@ button:focus {
   position: absolute;
   transition-timing-function: linear;
 }
-.confetti span:nth-child(1) {
-  color: #1b9327;
-  left: 10%;
-}
-.confetti span:nth-child(2) {
-  animation-delay: 2s;
-  animation-duration: 12s;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 1.6rem;
-  left: 20%;
-}
-.confetti span:nth-child(3) {
-  animation-delay: 2s;
-  color: rgba(255, 255, 255, 0.7);
-  left: 25%;
-}
-.confetti span:nth-child(4) {
-  animation-duration: 18s;
-  color: #4d0e15;
-  font-size: 1.4rem;
-  left: 40%;
-}
-.confetti span:nth-child(5) {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.8rem;
-  left: 70%;
-}
-.confetti span:nth-child(6) {
-  animation-delay: 6s;
-  color: #1b9327;
-  font-size: 1.8rem;
-  left: 80%;
-}
-.confetti span:nth-child(7) {
-  animation-delay: 10s;
-  color: #3981c1;
-  left: 32%;
-}
-.confetti span:nth-child(8) {
-  animation-delay: 1s;
-  animation-duration: 26s;
-  color: #3981c1;
-  font-size: 2rem;
-  left: 55%;
-}
-.confetti span:nth-child(9) {
-  animation-delay: 16s;
-  animation-duration: 25s;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.7rem;
-  left: 25%;
-}
-.confetti span:nth-child(10) {
-  animation-delay: 19s;
-  color: #ddff00;
-  font-size: 0.85rem;
-  left: 80%;
-}
 
 @keyframes float {
   0% {
