@@ -32,6 +32,36 @@ const CONFETTI_TEXT = [
   },
   {
     text: 'Responsive'
+  },
+  {
+    text: 'Javascript'
+  },
+  {
+    text: 'React'
+  },
+  {
+    text: 'SCSS'
+  },
+  {
+    text: 'ES6'
+  },
+  {
+    text: 'CSS'
+  },
+  {
+    text: 'jQuery'
+  },
+  {
+    text: 'Design'
+  },
+  {
+    text: 'Creative'
+  },
+  {
+    text: 'HTML5'
+  },
+  {
+    text: 'Responsive'
   }
 ];
 const CONFETTI_COLORS = [
@@ -61,18 +91,21 @@ function getRandFixed(min, max) {
 function getRandProps() {
   let color = CONFETTI_COLORS[getRandInt(0, 14)];
   let indent = getRandInt(1, 8) * 10 + '%'; //10-80%
-  let delay = getRandInt(-10, 10) + 's';
+  let delay = getRandInt(-15, 15) + 's';
   let duration = getRandInt(12, 25) + 's';
-  let size = getRandFixed(0.7, 2.4) + 'rem';
+  let size = getRandFixed(0.6, 2.6) + 'rem';
+  let variation = String(getRandInt(1, 5));
 
   let confettiProps = {
     color: color,
     left: indent,
+    animationName: 'float' + variation,
     animationDelay: delay,
     animationDuration: duration,
+    animationIterationCount: 'infinite',
     fontSize: size
   };
-  // console.log('confettiProps: ', confettiProps);
+  console.log('confettiProps: ', confettiProps);
 
   return confettiProps;
 }

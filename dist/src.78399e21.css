@@ -325,7 +325,6 @@ button:focus {
   outline: none;
 }
 
-/* Confetti Styling ------------------- */
 .confetti {
   font-family: "Inconsolata", monospace;
   position: absolute;
@@ -337,20 +336,50 @@ button:focus {
   z-index: 1;
 }
 .confetti span {
-  animation: float 25s infinite;
   bottom: -60vh;
-  color: white;
   display: block;
   position: absolute;
   transition-timing-function: linear;
 }
 
-@keyframes float {
+@keyframes float1 {
   0% {
-    transform: translateY(0);
+    transform: translateY(0) translateX(0);
   }
   100% {
-    transform: translateY(-190vh) rotate(550deg);
+    transform: translateY(-190vh) translateX(50vw) rotate(580deg);
+  }
+}
+@keyframes float2 {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    transform: translateY(-190vh) translateX(30vw) rotate(-480deg);
+  }
+}
+@keyframes float3 {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    transform: translateY(-190vh) translateX(-50vw) rotate(380deg);
+  }
+}
+@keyframes float4 {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    transform: translateY(-190vh) translateX(-30vw) rotate(480deg);
+  }
+}
+@keyframes float5 {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    transform: translateY(-190vh) translateX(30vw) rotate(-380deg);
   }
 }
 .about-wrapper {
