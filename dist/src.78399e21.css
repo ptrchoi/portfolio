@@ -269,6 +269,7 @@ body {
 
 /* Confetti Styling ------------------- */
 .confetti {
+  font-family: "Inconsolata", monospace;
   position: absolute;
   overflow: hidden;
   top: 0;
@@ -279,7 +280,7 @@ body {
 }
 .confetti li {
   animation: square 25s infinite;
-  top: -60vh;
+  bottom: -60vh;
   color: white;
   display: block;
   list-style: none;
@@ -350,7 +351,7 @@ body {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(190vh) rotate(550deg);
+    transform: translateY(-190vh) rotate(550deg);
   }
 }
 .btn {

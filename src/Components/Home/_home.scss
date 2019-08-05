@@ -12,6 +12,7 @@
 
 /* Confetti Styling ------------------- */
 .confetti {
+  font-family: 'Inconsolata', monospace;
   position: absolute;
   overflow: hidden;
   top: 0;
@@ -22,8 +23,8 @@
 
   li {
     animation: square 25s infinite;
-    // bottom: -20vh;
-    top: -60vh;
+    bottom: -60vh;
+    // top: -60vh;
     color: white;
     display: block;
     list-style: none;
@@ -96,7 +97,7 @@
     transform: translateY(0);
   }
   100% {
-    transform: translateY(190vh) rotate(550deg);
+    transform: translateY(-190vh) rotate(550deg);
   }
 }
 
