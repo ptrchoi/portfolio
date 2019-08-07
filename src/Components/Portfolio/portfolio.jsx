@@ -130,7 +130,7 @@ class Portfolio extends Component {
                 { text: 'fab fa-react' },
                 { text: 'fab fa-free-code-camp' }
               ],
-              num: 35,
+              num: 45,
               color: 'background'
             }}
           />

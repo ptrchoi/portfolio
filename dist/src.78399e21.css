@@ -482,7 +482,8 @@ button:focus {
   }
 }
 
-.skills-graphic {
+.skills-graphic img {
+  position: relative;
   z-index: 9;
 }
 
@@ -608,12 +609,14 @@ button:focus {
   background-color: #6a6a6a;
   color: white;
   padding-bottom: 7vh;
+  padding-top: 30vh;
   width: 100%;
 }
 
 .logo-icon {
   font-size: 5rem;
   padding: 10px;
+  z-index: 9;
 }
 
 #contactSection {
@@ -629,6 +632,11 @@ button:focus {
   margin: auto;
   padding: 20px;
   width: 50%;
+}
+#contactForm button,
+#contactForm input,
+#contactForm span {
+  z-index: 9;
 }
 
 /*# sourceMappingURL=/src.78399e21.css.map */

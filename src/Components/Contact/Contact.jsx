@@ -1,6 +1,9 @@
 //Libraries
 import React, { Component } from 'react';
 
+//Components
+import Confetti from '../confetti/Confetti';
+
 /**
  * React Class Component, renders a content section.
  * @function
@@ -25,6 +28,21 @@ class Contact extends Component {
           <span>CONTACT</span>
           <input type="text" />
           <button>SUBMIT</button>
+        </div>
+        <div className="confetti">
+          <Confetti
+            data={{
+              confetti: 'icon',
+              strArr: [
+                { text: 'fab fa-codepen' },
+                { text: 'fab fa-github' },
+                { text: 'fab fa-linkedin' },
+                { text: 'fab fa-free-code-camp' }
+              ],
+              num: 15,
+              color: 'darkBG'
+            }}
+          />
         </div>
       </div>
     );

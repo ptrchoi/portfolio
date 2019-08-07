@@ -3,11 +3,13 @@
   color: $white-text;
   // height: auto;
   padding-bottom: 7vh;
+  padding-top: 30vh;
   width: 100%;
 }
 .logo-icon {
   font-size: 5rem;
   padding: 10px;
+  z-index: $above-confetti-layer;
 }
 #contactSection {
   display: flex;
@@ -21,4 +23,9 @@
   margin: auto;
   padding: 20px;
   width: 50%;
+  button,
+  input,
+  span {
+    z-index: $above-confetti-layer;
+  }
 }

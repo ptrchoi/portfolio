@@ -20,6 +20,7 @@ const PRIMARY_COLORS = [
   'rgb(255,255,255,.7)'
 ];
 const BG_COLORS = ['rgb(245,245,245)'];
+const DARK_BG_COLORS = ['rgb(106,106,106)'];
 
 //Local Functions
 function getRandInt(min, max) {
@@ -35,8 +36,14 @@ function getRandProps(color) {
   let size = getRandFixed(1.6, 4.6) + 'rem';
   let animNum = String(getRandInt(1, 5));
   let colorArr = BG_COLORS;
+  let shadow = '-1px -1px 2px rgb(27,70,100,.2)';
 
-  if (color === 'primary') colorArr = PRIMARY_COLORS;
+  if (color === 'primary') {
+    colorArr = PRIMARY_COLORS;
+  } else if (color === 'darkBG') {
+    colorArr = DARK_BG_COLORS;
+    shadow = '-2px -2px rgb(245,245,245,.3)';
+  }
   color = colorArr[getRandInt(0, colorArr.length - 1)];
 
   return {
@@ -47,7 +54,7 @@ function getRandProps(color) {
     animationDuration: duration,
     animationIterationCount: 'infinite',
     fontSize: size,
-    textShadow: '-1px -1px 2px rgb(27,70,100,.2)'
+    textShadow: shadow
   };
 }
 function generateParticleArray(strArr, num) {
@@ -58,6 +65,7 @@ function generateParticleArray(strArr, num) {
       newArr.push(str.text);
     });
   }
+
   return newArr;
 }
 
