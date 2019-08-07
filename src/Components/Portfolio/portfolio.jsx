@@ -122,7 +122,18 @@ class Portfolio extends Component {
         <Card card={card[4]} handleClick={this.updateCards} />
         <Card card={card[5]} handleClick={this.updateCards} />
         <div className="confetti">
-          <Confetti caller={'portfolio'} />
+          <Confetti
+            data={{
+              confetti: 'icon',
+              strArr: [
+                { text: 'fab fa-codepen' },
+                { text: 'fab fa-react' },
+                { text: 'fab fa-free-code-camp' }
+              ],
+              num: 35,
+              color: 'background'
+            }}
+          />
         </div>
       </div>
     );

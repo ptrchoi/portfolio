@@ -64,7 +64,19 @@ class Skills extends Component {
           <img id="chart" src={chart} alt="chart" />
         </div>
         <div className="confetti">
-          <Confetti caller={'skills'} />
+          <Confetti
+            data={{
+              confetti: 'icon',
+              strArr: [
+                { text: 'fab fa-react' },
+                { text: 'fab fa-js-square' },
+                { text: 'fab fa-sass' },
+                { text: 'fab fa-html5' }
+              ],
+              num: 25,
+              color: 'background'
+            }}
+          />
         </div>
       </div>
     );

@@ -38,7 +38,25 @@ class Home extends Component {
           <span id="buttonText">welcome</span>
         </button>
         <div className="confetti">
-          <Confetti caller={'home'} />
+          <Confetti
+            data={{
+              confetti: 'text',
+              strArr: [
+                { text: 'Javascript' },
+                { text: 'React' },
+                { text: 'SCSS' },
+                { text: 'ES6' },
+                { text: 'CSS' },
+                { text: 'jQuery' },
+                { text: 'Design' },
+                { text: 'Creative' },
+                { text: 'HTML5' },
+                { text: 'Responsive' }
+              ],
+              num: 10,
+              color: 'primary'
+            }}
+          />
         </div>
       </div>
     );

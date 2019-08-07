@@ -52,10 +52,28 @@ class About extends Component {
           <img id="eaLogo" className="about-logo" src={eaLogo} alt="logo" />
         </div>
         <div className="confetti">
-          <Confetti caller={'about1'} />
+          <Confetti
+            data={{
+              confetti: 'icon',
+              strArr: [
+                { text: 'fas fa-address-card' },
+                { text: 'fab fa-microsoft' },
+                { text: 'fab fa-xbox' }
+              ],
+              num: 20,
+              color: 'background'
+            }}
+          />
         </div>
         <div className="confetti">
-          <Confetti caller={'about2'} />
+          <Confetti
+            data={{
+              confetti: 'text',
+              strArr: [{ text: 'EA' }],
+              num: 20,
+              color: 'background'
+            }}
+          />
         </div>
       </div>
     );
