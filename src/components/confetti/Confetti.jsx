@@ -64,122 +64,473 @@ const CONFETTI_TEXT = [
     text: 'Responsive'
   }
 ];
-// const CONFETTI_STARS = [
-//   {
-//     text: '+'
-//   },
-//   {
-//     text: '+'
-//   },
-//   {
-//     text: '+'
-//   },
-//   {
-//     text: '+'
-//   },
-//   {
-//     text: '+'
-//   },
-//   {
-//     text: '+'
-//   },
-//   {
-//     text: '+'
-//   },
-//   {
-//     text: '+'
-//   },
-//   {
-//     text: '+'
-//   },
-//   {
-//     text: '+'
-//   },
-//   {
-//     text: '+'
-//   },
-//   {
-//     text: '+'
-//   },
-//   {
-//     text: '+'
-//   },
-//   {
-//     text: '+'
-//   },
-//   {
-//     text: '+'
-//   },
-//   {
-//     text: '+'
-//   },
-//   {
-//     text: '+'
-//   },
-//   {
-//     text: '+'
-//   },
-//   {
-//     text: '+'
-//   },
-//   {
-//     text: '+'
-//   },
-//   {
-//     text: '+'
-//   },
-//   {
-//     text: '+'
-//   },
-//   {
-//     text: '+'
-//   },
-//   {
-//     text: '+'
-//   },
-//   {
-//     text: '+'
-//   }
-// ];
+const CONFETTI_CROSS = [
+  {
+    text: '+'
+  },
+  {
+    text: '+'
+  },
+  {
+    text: '+'
+  },
+  {
+    text: '+'
+  },
+  {
+    text: '+'
+  },
+  {
+    text: '+'
+  },
+  {
+    text: '+'
+  },
+  {
+    text: '+'
+  },
+  {
+    text: '+'
+  },
+  {
+    text: '+'
+  },
+  {
+    text: '+'
+  },
+  {
+    text: '+'
+  },
+  {
+    text: '+'
+  },
+  {
+    text: '+'
+  },
+  {
+    text: '+'
+  },
+  {
+    text: '+'
+  },
+  {
+    text: '+'
+  },
+  {
+    text: '+'
+  },
+  {
+    text: '+'
+  },
+  {
+    text: '+'
+  },
+  {
+    text: '+'
+  },
+  {
+    text: '+'
+  },
+  {
+    text: '+'
+  },
+  {
+    text: '+'
+  },
+  {
+    text: '+'
+  }
+];
+const CONFETTI_ABOUT_ICON = [
+  {
+    text: 'fas fa-address-card'
+  },
+  {
+    text: 'fab fa-microsoft'
+  },
+  {
+    text: 'fab fa-xbox'
+  },
+  {
+    text: 'fas fa-address-card'
+  },
+  {
+    text: 'fab fa-microsoft'
+  },
+  {
+    text: 'fab fa-xbox'
+  },
+  {
+    text: 'fas fa-address-card'
+  },
+  {
+    text: 'fab fa-microsoft'
+  },
+  {
+    text: 'fab fa-xbox'
+  },
+  {
+    text: 'fas fa-address-card'
+  },
+  {
+    text: 'fab fa-microsoft'
+  },
+  {
+    text: 'fab fa-xbox'
+  },
+  {
+    text: 'fas fa-address-card'
+  },
+  {
+    text: 'fab fa-microsoft'
+  },
+  {
+    text: 'fab fa-xbox'
+  },
+  {
+    text: 'fas fa-address-card'
+  },
+  {
+    text: 'fab fa-microsoft'
+  },
+  {
+    text: 'fab fa-xbox'
+  },
+  {
+    text: 'fas fa-address-card'
+  },
+  {
+    text: 'fab fa-microsoft'
+  },
+  {
+    text: 'fab fa-xbox'
+  },
+  {
+    text: 'fas fa-address-card'
+  },
+  {
+    text: 'fab fa-microsoft'
+  },
+  {
+    text: 'fab fa-xbox'
+  },
+  {
+    text: 'fas fa-address-card'
+  },
+  {
+    text: 'fab fa-microsoft'
+  },
+  {
+    text: 'fab fa-xbox'
+  },
+  {
+    text: 'fas fa-address-card'
+  },
+  {
+    text: 'fab fa-microsoft'
+  },
+  {
+    text: 'fab fa-xbox'
+  },
+  {
+    text: 'fas fa-address-card'
+  },
+  {
+    text: 'fab fa-microsoft'
+  },
+  {
+    text: 'fab fa-xbox'
+  },
+  {
+    text: 'fas fa-address-card'
+  },
+  {
+    text: 'fab fa-microsoft'
+  },
+  {
+    text: 'fab fa-xbox'
+  },
+  {
+    text: 'fas fa-address-card'
+  },
+  {
+    text: 'fab fa-microsoft'
+  },
+  {
+    text: 'fab fa-xbox'
+  }
+];
+const CONFETTI_ABOUT_TEXT = [
+  {
+    text: 'EA'
+  },
+  {
+    text: 'EA'
+  },
+  {
+    text: 'EA'
+  },
+  {
+    text: 'EA'
+  },
+  {
+    text: 'EA'
+  },
+  {
+    text: 'EA'
+  },
+  {
+    text: 'EA'
+  },
+  {
+    text: 'EA'
+  },
+  {
+    text: 'EA'
+  },
+  {
+    text: 'EA'
+  },
+  {
+    text: 'EA'
+  },
+  {
+    text: 'EA'
+  },
+  {
+    text: 'EA'
+  },
+  {
+    text: 'EA'
+  }
+];
+const CONFETTI_SKILLS = [
+  {
+    text: 'fab fa-react'
+  },
+  {
+    text: 'fab fa-js-square'
+  },
+  {
+    text: 'fab fa-sass'
+  },
+  {
+    text: 'fab fa-html5'
+  },
+  {
+    text: 'fab fa-react'
+  },
+  {
+    text: 'fab fa-js-square'
+  },
+  {
+    text: 'fab fa-sass'
+  },
+  {
+    text: 'fab fa-html5'
+  },
+  {
+    text: 'fab fa-react'
+  },
+  {
+    text: 'fab fa-js-square'
+  },
+  {
+    text: 'fab fa-sass'
+  },
+  {
+    text: 'fab fa-html5'
+  },
+  {
+    text: 'fab fa-react'
+  },
+  {
+    text: 'fab fa-js-square'
+  },
+  {
+    text: 'fab fa-sass'
+  },
+  {
+    text: 'fab fa-html5'
+  },
+  {
+    text: 'fab fa-react'
+  },
+  {
+    text: 'fab fa-js-square'
+  },
+  {
+    text: 'fab fa-sass'
+  },
+  {
+    text: 'fab fa-html5'
+  },
+  {
+    text: 'fab fa-react'
+  },
+  {
+    text: 'fab fa-js-square'
+  },
+  {
+    text: 'fab fa-sass'
+  },
+  {
+    text: 'fab fa-html5'
+  },
+  {
+    text: 'fab fa-react'
+  },
+  {
+    text: 'fab fa-js-square'
+  },
+  {
+    text: 'fab fa-sass'
+  },
+  {
+    text: 'fab fa-html5'
+  }
+];
+const CONFETTI_PORTFOLIO = [
+  {
+    text: 'fab fa-codepen'
+  },
+  {
+    text: 'far fa-file-code'
+  },
+  {
+    text: 'fab fa-free-code-camp'
+  },
+  {
+    text: 'fab fa-codepen'
+  },
+  {
+    text: 'far fa-file-code'
+  },
+  {
+    text: 'fab fa-free-code-camp'
+  },
+  {
+    text: 'fab fa-codepen'
+  },
+  {
+    text: 'far fa-file-code'
+  },
+  {
+    text: 'fab fa-free-code-camp'
+  },
+  {
+    text: 'fab fa-codepen'
+  },
+  {
+    text: 'far fa-file-code'
+  },
+  {
+    text: 'fab fa-free-code-camp'
+  },
+  {
+    text: 'fab fa-codepen'
+  },
+  {
+    text: 'far fa-file-code'
+  },
+  {
+    text: 'fab fa-free-code-camp'
+  },
+  {
+    text: 'fab fa-codepen'
+  },
+  {
+    text: 'far fa-file-code'
+  },
+  {
+    text: 'fab fa-free-code-camp'
+  },
+  {
+    text: 'fab fa-codepen'
+  },
+  {
+    text: 'far fa-file-code'
+  },
+  {
+    text: 'fab fa-free-code-camp'
+  },
+  {
+    text: 'fab fa-codepen'
+  },
+  {
+    text: 'far fa-file-code'
+  },
+  {
+    text: 'fab fa-free-code-camp'
+  },
+  {
+    text: 'fab fa-codepen'
+  },
+  {
+    text: 'far fa-file-code'
+  },
+  {
+    text: 'fab fa-free-code-camp'
+  },
+  {
+    text: 'fab fa-codepen'
+  },
+  {
+    text: 'far fa-file-code'
+  },
+  {
+    text: 'fab fa-free-code-camp'
+  },
+  {
+    text: 'fab fa-codepen'
+  },
+  {
+    text: 'far fa-file-code'
+  },
+  {
+    text: 'fab fa-free-code-camp'
+  }
+];
+
 const CONFETTI_STARS = [
   {
-    text: 'fab fa-envira'
+    text: 'far fa-star'
   },
   {
-    text: 'fab fa-envira'
+    text: 'far fa-star'
   },
   {
-    text: 'fab fa-envira'
+    text: 'far fa-star'
   },
   {
-    text: 'fab fa-envira'
+    text: 'far fa-star'
   },
   {
-    text: 'fab fa-envira'
+    text: 'far fa-star'
   },
   {
-    text: 'fab fa-envira'
+    text: 'far fa-star'
   },
   {
-    text: 'fab fa-envira'
+    text: 'far fa-star'
   },
   {
-    text: 'fab fa-envira'
+    text: 'far fa-star'
   },
   {
-    text: 'fab fa-envira'
+    text: 'far fa-star'
   },
   {
-    text: 'fab fa-envira'
+    text: 'far fa-star'
   },
   {
-    text: 'fab fa-envira'
+    text: 'far fa-star'
   },
   {
-    text: 'fab fa-envira'
+    text: 'far fa-star'
   },
   {
-    text: 'fab fa-envira'
+    text: 'far fa-star'
   }
 ];
 const HOME_COLORS = [
@@ -199,12 +550,13 @@ const HOME_COLORS = [
   'rgb(255,255,255)',
   'rgb(255,255,255,.7)'
 ];
-const BG_COLORS = [
-  'rgb(27,70,100,.2)',
-  'rgb(27,70,100,.3)',
-  'rgb(27,70,100,.4)',
-  'rgb(27,70,100,.5)'
-];
+const BG_COLORS = ['rgb(245,245,245)'];
+// const BG_COLORS = [
+//   'rgb(27,70,100,.2)',
+//   'rgb(27,70,100,.3)',
+//   'rgb(27,70,100,.4)',
+//   'rgb(27,70,100,.5)'
+// ];
 // const BG_COLORS = ['rgb(255,255,255)', 'rgb(255,255,255,.7)'];
 
 //Local Functions
@@ -225,7 +577,8 @@ function getRandProps(caller) {
   let leftOffset = getRandInt(1, 7) * 10 + '%'; //10-80%
   let delay = getRandInt(-15, 15) + 's';
   let duration = getRandInt(10, 40) + 's';
-  let size = getRandFixed(0.6, 2.6) + 'rem';
+  // let size = getRandFixed(0.6, 2.6) + 'rem';
+  let size = getRandFixed(1.6, 4.6) + 'rem';
   let animNum = String(getRandInt(1, 5));
 
   let confettiProps = {
@@ -235,7 +588,8 @@ function getRandProps(caller) {
     animationDelay: delay,
     animationDuration: duration,
     animationIterationCount: 'infinite',
-    fontSize: size
+    fontSize: size,
+    textShadow: '-2px -2px rgb(27,70,100,.15)'
   };
   // console.log('confettiProps: ', confettiProps);
 
@@ -249,6 +603,36 @@ class Confetti extends Component {
     if (caller === 'home') {
       return CONFETTI_TEXT.map(particle => {
         return <span style={getRandProps(caller)}>{particle.text}</span>;
+      });
+    } else if (caller === 'about1') {
+      return CONFETTI_ABOUT_ICON.map(particle => {
+        return (
+          <span style={getRandProps(this.props.caller)}>
+            <i className={particle.text} />
+          </span>
+        );
+      });
+    } else if (caller === 'about2') {
+      return CONFETTI_ABOUT_TEXT.map(particle => {
+        return (
+          <span style={getRandProps(this.props.caller)}>{particle.text}</span>
+        );
+      });
+    } else if (caller === 'skills') {
+      return CONFETTI_SKILLS.map(particle => {
+        return (
+          <span style={getRandProps(this.props.caller)}>
+            <i className={particle.text} />
+          </span>
+        );
+      });
+    } else if (caller === 'portfolio') {
+      return CONFETTI_PORTFOLIO.map(particle => {
+        return (
+          <span style={getRandProps(this.props.caller)}>
+            <i className={particle.text} />
+          </span>
+        );
       });
     } else {
       return CONFETTI_STARS.map(particle => {

@@ -52,7 +52,10 @@ class About extends Component {
           <img id="eaLogo" className="about-logo" src={eaLogo} alt="logo" />
         </div>
         <div className="confetti">
-          <Confetti caller={'about'} />
+          <Confetti caller={'about1'} />
+        </div>
+        <div className="confetti">
+          <Confetti caller={'about2'} />
         </div>
       </div>
     );
