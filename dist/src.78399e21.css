@@ -347,7 +347,7 @@ button:focus {
     transform: translateY(0) translateX(0);
   }
   100% {
-    transform: translateY(-190vh) translateX(50vw) rotate(580deg);
+    transform: translateY(-550vh) translateX(50vw) rotate(580deg);
   }
 }
 @keyframes float2 {
@@ -355,7 +355,7 @@ button:focus {
     transform: translateY(0) translateX(0);
   }
   100% {
-    transform: translateY(-190vh) translateX(30vw) rotate(-480deg);
+    transform: translateY(-550vh) translateX(30vw) rotate(-480deg);
   }
 }
 @keyframes float3 {
@@ -363,7 +363,7 @@ button:focus {
     transform: translateY(0) translateX(0);
   }
   100% {
-    transform: translateY(-190vh) translateX(-50vw) rotate(380deg);
+    transform: translateY(-550vh) translateX(-50vw) rotate(380deg);
   }
 }
 @keyframes float4 {
@@ -371,7 +371,7 @@ button:focus {
     transform: translateY(0) translateX(0);
   }
   100% {
-    transform: translateY(-190vh) translateX(-30vw) rotate(480deg);
+    transform: translateY(-550vh) translateX(-30vw) rotate(480deg);
   }
 }
 @keyframes float5 {
@@ -379,7 +379,7 @@ button:focus {
     transform: translateY(0) translateX(0);
   }
   100% {
-    transform: translateY(-190vh) translateX(30vw) rotate(-380deg);
+    transform: translateY(-550vh) translateX(30vw) rotate(-380deg);
   }
 }
 .about-wrapper {

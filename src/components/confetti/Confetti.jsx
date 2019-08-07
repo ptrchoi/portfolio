@@ -64,6 +64,7 @@ const CONFETTI_TEXT = [
     text: 'Responsive'
   }
 ];
+
 const CONFETTI_CROSS = [
   {
     text: '+'
@@ -395,7 +396,7 @@ const CONFETTI_PORTFOLIO = [
     text: 'fab fa-codepen'
   },
   {
-    text: 'far fa-file-code'
+    text: 'fab fa-react'
   },
   {
     text: 'fab fa-free-code-camp'
@@ -404,7 +405,7 @@ const CONFETTI_PORTFOLIO = [
     text: 'fab fa-codepen'
   },
   {
-    text: 'far fa-file-code'
+    text: 'fab fa-react'
   },
   {
     text: 'fab fa-free-code-camp'
@@ -413,7 +414,7 @@ const CONFETTI_PORTFOLIO = [
     text: 'fab fa-codepen'
   },
   {
-    text: 'far fa-file-code'
+    text: 'fab fa-react'
   },
   {
     text: 'fab fa-free-code-camp'
@@ -422,7 +423,7 @@ const CONFETTI_PORTFOLIO = [
     text: 'fab fa-codepen'
   },
   {
-    text: 'far fa-file-code'
+    text: 'fab fa-react'
   },
   {
     text: 'fab fa-free-code-camp'
@@ -431,7 +432,7 @@ const CONFETTI_PORTFOLIO = [
     text: 'fab fa-codepen'
   },
   {
-    text: 'far fa-file-code'
+    text: 'fab fa-react'
   },
   {
     text: 'fab fa-free-code-camp'
@@ -440,7 +441,7 @@ const CONFETTI_PORTFOLIO = [
     text: 'fab fa-codepen'
   },
   {
-    text: 'far fa-file-code'
+    text: 'fab fa-react'
   },
   {
     text: 'fab fa-free-code-camp'
@@ -449,7 +450,7 @@ const CONFETTI_PORTFOLIO = [
     text: 'fab fa-codepen'
   },
   {
-    text: 'far fa-file-code'
+    text: 'fab fa-react'
   },
   {
     text: 'fab fa-free-code-camp'
@@ -458,7 +459,7 @@ const CONFETTI_PORTFOLIO = [
     text: 'fab fa-codepen'
   },
   {
-    text: 'far fa-file-code'
+    text: 'fab fa-react'
   },
   {
     text: 'fab fa-free-code-camp'
@@ -467,7 +468,7 @@ const CONFETTI_PORTFOLIO = [
     text: 'fab fa-codepen'
   },
   {
-    text: 'far fa-file-code'
+    text: 'fab fa-react'
   },
   {
     text: 'fab fa-free-code-camp'
@@ -476,7 +477,7 @@ const CONFETTI_PORTFOLIO = [
     text: 'fab fa-codepen'
   },
   {
-    text: 'far fa-file-code'
+    text: 'fab fa-react'
   },
   {
     text: 'fab fa-free-code-camp'
@@ -485,13 +486,219 @@ const CONFETTI_PORTFOLIO = [
     text: 'fab fa-codepen'
   },
   {
-    text: 'far fa-file-code'
+    text: 'fab fa-react'
+  },
+  {
+    text: 'fab fa-free-code-camp'
+  },
+  {
+    text: 'fab fa-codepen'
+  },
+  {
+    text: 'fab fa-react'
+  },
+  {
+    text: 'fab fa-free-code-camp'
+  },
+  {
+    text: 'fab fa-codepen'
+  },
+  {
+    text: 'fab fa-react'
+  },
+  {
+    text: 'fab fa-free-code-camp'
+  },
+  {
+    text: 'fab fa-codepen'
+  },
+  {
+    text: 'fab fa-react'
+  },
+  {
+    text: 'fab fa-free-code-camp'
+  },
+  {
+    text: 'fab fa-codepen'
+  },
+  {
+    text: 'fab fa-react'
+  },
+  {
+    text: 'fab fa-free-code-camp'
+  },
+  {
+    text: 'fab fa-codepen'
+  },
+  {
+    text: 'fab fa-react'
+  },
+  {
+    text: 'fab fa-free-code-camp'
+  },
+  {
+    text: 'fab fa-codepen'
+  },
+  {
+    text: 'fab fa-react'
+  },
+  {
+    text: 'fab fa-free-code-camp'
+  },
+  {
+    text: 'fab fa-codepen'
+  },
+  {
+    text: 'fab fa-react'
+  },
+  {
+    text: 'fab fa-free-code-camp'
+  },
+  {
+    text: 'fab fa-codepen'
+  },
+  {
+    text: 'fab fa-react'
+  },
+  {
+    text: 'fab fa-free-code-camp'
+  },
+  {
+    text: 'fab fa-codepen'
+  },
+  {
+    text: 'fab fa-react'
+  },
+  {
+    text: 'fab fa-free-code-camp'
+  },
+  {
+    text: 'fab fa-codepen'
+  },
+  {
+    text: 'fab fa-react'
+  },
+  {
+    text: 'fab fa-free-code-camp'
+  },
+  {
+    text: 'fab fa-codepen'
+  },
+  {
+    text: 'fab fa-react'
+  },
+  {
+    text: 'fab fa-free-code-camp'
+  },
+  {
+    text: 'fab fa-codepen'
+  },
+  {
+    text: 'fab fa-react'
+  },
+  {
+    text: 'fab fa-free-code-camp'
+  },
+  {
+    text: 'fab fa-codepen'
+  },
+  {
+    text: 'fab fa-react'
+  },
+  {
+    text: 'fab fa-free-code-camp'
+  },
+  {
+    text: 'fab fa-codepen'
+  },
+  {
+    text: 'fab fa-react'
+  },
+  {
+    text: 'fab fa-free-code-camp'
+  },
+  {
+    text: 'fab fa-codepen'
+  },
+  {
+    text: 'fab fa-react'
+  },
+  {
+    text: 'fab fa-free-code-camp'
+  },
+  {
+    text: 'fab fa-codepen'
+  },
+  {
+    text: 'fab fa-react'
+  },
+  {
+    text: 'fab fa-free-code-camp'
+  },
+  {
+    text: 'fab fa-codepen'
+  },
+  {
+    text: 'fab fa-react'
+  },
+  {
+    text: 'fab fa-free-code-camp'
+  },
+  {
+    text: 'fab fa-codepen'
+  },
+  {
+    text: 'fab fa-react'
+  },
+  {
+    text: 'fab fa-free-code-camp'
+  },
+  {
+    text: 'fab fa-codepen'
+  },
+  {
+    text: 'fab fa-react'
+  },
+  {
+    text: 'fab fa-free-code-camp'
+  },
+  {
+    text: 'fab fa-codepen'
+  },
+  {
+    text: 'fab fa-react'
+  },
+  {
+    text: 'fab fa-free-code-camp'
+  },
+  {
+    text: 'fab fa-codepen'
+  },
+  {
+    text: 'fab fa-react'
+  },
+  {
+    text: 'fab fa-free-code-camp'
+  },
+  {
+    text: 'fab fa-codepen'
+  },
+  {
+    text: 'fab fa-react'
+  },
+  {
+    text: 'fab fa-free-code-camp'
+  },
+  {
+    text: 'fab fa-codepen'
+  },
+  {
+    text: 'fab fa-react'
   },
   {
     text: 'fab fa-free-code-camp'
   }
 ];
-
 const CONFETTI_STARS = [
   {
     text: 'far fa-star'
@@ -575,8 +782,8 @@ function getRandProps(caller) {
 
   let color = colorSet[getRandInt(0, colorSet.length - 1)];
   let leftOffset = getRandInt(1, 7) * 10 + '%'; //10-80%
-  let delay = getRandInt(-15, 15) + 's';
-  let duration = getRandInt(10, 40) + 's';
+  let delay = getRandInt(-45, 50) + 's';
+  let duration = getRandInt(30, 50) + 's';
   // let size = getRandFixed(0.6, 2.6) + 'rem';
   let size = getRandFixed(1.6, 4.6) + 'rem';
   let animNum = String(getRandInt(1, 5));
@@ -589,7 +796,7 @@ function getRandProps(caller) {
     animationDuration: duration,
     animationIterationCount: 'infinite',
     fontSize: size,
-    textShadow: '-2px -2px rgb(27,70,100,.15)'
+    textShadow: '-1px -1px 2px rgb(27,70,100,.2)'
   };
   // console.log('confettiProps: ', confettiProps);
 
