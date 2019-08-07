@@ -32,10 +32,8 @@
   text-align: justify;
 }
 .skills-graphic {
-  img {
-    position: relative;
-    z-index: $above-confetti-layer;
-  }
+  position: relative;
+  z-index: $above-confetti-layer;
 }
 #chart {
   display: block;
