@@ -52,13 +52,13 @@ body {
   display: grid;
   grid-template-columns: auto;
   position: fixed;
-  z-index: 1;
+  z-index: 10;
 }
 
 #navbar {
   background-color: #1b4664;
   height: 60px;
-  z-index: 4;
+  z-index: 40;
 }
 @media screen and (min-width: 320px) {
   #navbar {
@@ -72,7 +72,7 @@ body {
 }
 
 #navSidebar {
-  z-index: 3;
+  z-index: 30;
 }
 
 .navSidebar-off {
@@ -102,11 +102,11 @@ body {
   position: absolute;
   right: 2%;
   top: 0;
-  z-index: 5;
+  z-index: 50;
 }
 
 #overlay {
-  z-index: 2;
+  z-index: 20;
 }
 
 .overlay-off {
@@ -333,7 +333,7 @@ button:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 0;
 }
 .confetti span {
   bottom: -60vh;
@@ -400,10 +400,12 @@ button:focus {
   margin-top: 4vh;
   justify-self: end;
   width: 14%;
+  z-index: 9;
 }
 
 #aboutTextWrapper {
   margin-bottom: 8vh;
+  z-index: 9;
 }
 #aboutTextWrapper .about-text {
   font-size: 12px;
@@ -425,6 +427,7 @@ button:focus {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  z-index: 9;
 }
 #logosWrapper .about-logo {
   width: 22%;
@@ -450,6 +453,7 @@ button:focus {
   justify-items: center;
   padding: 2% 3% 0 3%;
   width: 75%;
+  z-index: 9;
 }
 
 .skills-group-wrapper--large {
@@ -478,6 +482,11 @@ button:focus {
   }
 }
 
+.skills-graphic {
+  border: solid 1px red;
+  z-index: 9;
+}
+
 #chart {
   display: block;
   height: auto;
@@ -486,6 +495,7 @@ button:focus {
   margin-top: 10%;
   padding-bottom: 5%;
   width: 70%;
+  z-index: 9;
 }
 
 .fa-icon {
@@ -511,11 +521,12 @@ button:focus {
 }
 
 .card {
-  background-color: transparent;
+  background-color: whitesmoke;
   height: 300px;
   margin-bottom: 30px;
   width: 420px;
   perspective: 1000px;
+  z-index: 9;
 }
 
 .card-content {

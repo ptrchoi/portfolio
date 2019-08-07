@@ -38,7 +38,7 @@ class Home extends Component {
           <span id="buttonText">welcome</span>
         </button>
         <div className="confetti">
-          <Confetti />
+          <Confetti caller={'home'} />
         </div>
       </div>
     );

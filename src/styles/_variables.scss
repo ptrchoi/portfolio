@@ -24,11 +24,13 @@ $max-width: 1200px;
 $min-width: 320px;
 
 //Z-INDEX Variables:
-$nav-wrapper-layer: 1;
-$overlay-layer: 2;
-$sidebar-layer: 3;
-$navbar-layer: 4;
-$icon-layer: 5;
+$confetti-layer: 0;
+$above-confetti-layer: 9;
+$nav-wrapper-layer: 10;
+$overlay-layer: 20;
+$sidebar-layer: 30;
+$navbar-layer: 40;
+$icon-layer: 50;
 
 //ANIMATION Variables:
 $fade-transition-time: 1s;

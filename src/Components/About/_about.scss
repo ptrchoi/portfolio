@@ -14,9 +14,11 @@
   margin-top: 4vh;
   justify-self: end;
   width: 14%;
+  z-index: $above-confetti-layer;
 }
 #aboutTextWrapper {
   margin-bottom: 8vh;
+  z-index: $above-confetti-layer;
   .about-text {
     @include fluid-type(font-size, $min-width, $max-width, 12px, 24px);
     color: $gray-text;
@@ -28,6 +30,7 @@
   align-items: center;
   // flex-flow: row wrap;
   justify-content: space-around;
+  z-index: $above-confetti-layer;
   .about-logo {
     width: 22%;
   }

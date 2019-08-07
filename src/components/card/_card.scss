@@ -1,11 +1,12 @@
 //SHOULD MAKE CARD HEIGHT & WIDTH SCALE RESPONSIVELY
 .card {
-  background-color: transparent;
+  background-color: $background-white;
   height: 300px;
   margin-bottom: 30px;
   width: 420px;
 
   perspective: 1000px;
+  z-index: $above-confetti-layer;
 }
 .card-content {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);

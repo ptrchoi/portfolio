@@ -1,6 +1,9 @@
 //Libraries
 import React, { Component } from 'react';
 
+//Components
+import Confetti from '../confetti/Confetti';
+
 //Assets
 import profilePic from '../../assets/profile.jpg';
 import msftLogo from '../../assets/msftLogo_2096_771.png';
@@ -47,6 +50,9 @@ class About extends Component {
             alt="logo"
           />
           <img id="eaLogo" className="about-logo" src={eaLogo} alt="logo" />
+        </div>
+        <div className="confetti">
+          <Confetti caller={'about'} />
         </div>
       </div>
     );

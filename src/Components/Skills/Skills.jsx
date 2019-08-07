@@ -1,6 +1,9 @@
 //Libraries
 import React, { Component } from 'react';
 
+//Components
+import Confetti from '../confetti/Confetti';
+
 //Assets
 import chart from '../../assets/skills_chart_v6.png';
 
@@ -57,8 +60,11 @@ class Skills extends Component {
             </p>
           </div>
         </div>
-        <div>
+        <div className="skills-graphic">
           <img id="chart" src={chart} alt="chart" />
+        </div>
+        <div className="confetti">
+          <Confetti caller={'skills'} />
         </div>
       </div>
     );

@@ -16,6 +16,7 @@
   justify-items: center;
   padding: 2% 3% 0 3%;
   width: 75%;
+  z-index: $above-confetti-layer;
 }
 .skills-group-wrapper--large {
   grid-template-columns: 1fr 1fr 1fr;
@@ -30,6 +31,10 @@
   color: $gray-text;
   text-align: justify;
 }
+.skills-graphic {
+  border: solid 1px red;
+  z-index: $above-confetti-layer;
+}
 #chart {
   display: block;
   height: auto;
@@ -38,6 +43,7 @@
   margin-top: 10%;
   padding-bottom: 5%;
   width: 70%;
+  z-index: $above-confetti-layer;
 }
 .fa-icon {
   color: #28424e; //TEMP - to be defined in Variables

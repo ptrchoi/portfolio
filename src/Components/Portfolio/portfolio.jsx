@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 
 //Components
 import Card from '../card/Card';
+import Confetti from '../confetti/Confetti';
 
 /**
  * Functional React Component, renders a content section of "cards".
@@ -120,6 +121,9 @@ class Portfolio extends Component {
         <Card card={card[3]} handleClick={this.updateCards} />
         <Card card={card[4]} handleClick={this.updateCards} />
         <Card card={card[5]} handleClick={this.updateCards} />
+        <div className="confetti">
+          <Confetti caller={'portfolio'} />
+        </div>
       </div>
     );
   }
