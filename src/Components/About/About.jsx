@@ -54,24 +54,26 @@ class About extends Component {
         <div className="confetti">
           <Confetti
             data={{
-              confetti: 'icon',
+              confettiType: 'icon',
               strArr: [
                 { text: 'fas fa-address-card' },
                 { text: 'fab fa-microsoft' },
                 { text: 'fab fa-xbox' }
               ],
               num: 20,
-              color: 'background'
+              color: 'background',
+              speed: 'slow'
             }}
           />
         </div>
         <div className="confetti">
           <Confetti
             data={{
-              confetti: 'text',
-              strArr: [{ text: 'EA' }],
+              confettiType: 'text',
+              strArr: [{ text: 'EA' }, { text: 'Xbox' }],
               num: 20,
-              color: 'background'
+              color: 'background',
+              speed: 'slow'
             }}
           />
         </div>

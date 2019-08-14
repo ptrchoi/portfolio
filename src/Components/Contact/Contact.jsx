@@ -32,15 +32,14 @@ class Contact extends Component {
         <div className="confetti">
           <Confetti
             data={{
-              confetti: 'icon',
+              confettiType: 'icon',
               strArr: [
-                { text: 'fab fa-codepen' },
-                { text: 'fab fa-github' },
-                { text: 'fab fa-linkedin' },
-                { text: 'fab fa-free-code-camp' }
+                { text: 'far fa-comment' },
+                { text: 'fas fa-mobile-alt' }
               ],
-              num: 15,
-              color: 'darkBG'
+              num: 50,
+              color: 'darkBG',
+              speed: 'medium'
             }}
           />
         </div>

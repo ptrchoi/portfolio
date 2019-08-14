@@ -40,7 +40,7 @@ class Home extends Component {
         <div className="confetti">
           <Confetti
             data={{
-              confetti: 'text',
+              confettiType: 'text',
               strArr: [
                 { text: 'Javascript' },
                 { text: 'React' },
@@ -54,7 +54,8 @@ class Home extends Component {
                 { text: 'Responsive' }
               ],
               num: 10,
-              color: 'primary'
+              color: 'primary',
+              speed: 'medium'
             }}
           />
         </div>

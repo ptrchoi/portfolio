@@ -66,15 +66,16 @@ class Skills extends Component {
         <div className="confetti">
           <Confetti
             data={{
-              confetti: 'icon',
+              confettiType: 'icon',
               strArr: [
                 { text: 'fab fa-react' },
                 { text: 'fab fa-js-square' },
                 { text: 'fab fa-sass' },
                 { text: 'fab fa-html5' }
               ],
-              num: 25,
-              color: 'background'
+              num: 40,
+              color: 'background',
+              speed: 'slow'
             }}
           />
         </div>

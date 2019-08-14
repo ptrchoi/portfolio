@@ -124,14 +124,11 @@ class Portfolio extends Component {
         <div className="confetti">
           <Confetti
             data={{
-              confetti: 'icon',
-              strArr: [
-                { text: 'fab fa-codepen' },
-                { text: 'fab fa-react' },
-                { text: 'fab fa-free-code-camp' }
-              ],
-              num: 45,
-              color: 'background'
+              confettiType: 'icon',
+              strArr: [{ text: 'far fa-file-code' }],
+              num: 200,
+              color: 'icon',
+              speed: 'slowest'
             }}
           />
         </div>
