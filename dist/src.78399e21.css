@@ -276,35 +276,7 @@ body {
   padding: 130px 180px;
   position: relative;
   text-align: center;
-  transition: background-color 0.4s ease-in-out, border-color 0.4s ease-in-out, color 0.4s ease-in-out;
   z-index: 9;
-}
-
-.btn:hover {
-  background-color: rgba(129, 156, 169, 0.7);
-  border-color: rgba(129, 156, 169, 0.2);
-  color: #eee;
-}
-
-.btn:hover #buttonIcon {
-  opacity: 1;
-  transform: translateY(20px);
-}
-
-.btn:hover #buttonText {
-  opacity: 0;
-  transform: translateY(16px);
-}
-
-#buttonIcon {
-  left: 0;
-  margin: -30px auto 0 auto;
-  opacity: 0;
-  position: absolute;
-  right: 0;
-  transform: translateX(-50%);
-  transform: translateY(0px);
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 #buttonText {
@@ -313,17 +285,15 @@ body {
   opacity: 1;
   position: absolute;
   right: 0;
-  transform: translateX(-50%);
-  transform: translateY(0px);
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-.btn:active {
-  background-color: #eee;
 }
 
 button:focus {
   outline: none;
+}
+
+.btn:active {
+  background-color: rgba(238, 238, 238, 0.324);
+  color: #1b4664;
 }
 
 .confetti {

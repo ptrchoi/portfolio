@@ -28,21 +28,11 @@ class Home extends Component {
     let { size, height, fullpageApi } = this.props;
     return (
       <div id="homeSection" className="home-wrapper" style={{ height: height }}>
-        {/* <button
-          id="testButton"
-          className="btn"
-          onClick={() => fullpageApi.moveSectionDown()}
-        >
-          My Button
-        </button> */}
         <button
           id="welcomeButton"
           className="btn"
           onClick={() => fullpageApi.moveSectionDown()}
         >
-          <span>
-            <i id="buttonIcon" className="fas fa-angle-double-down" />
-          </span>
           <span id="buttonText">welcome</span>
         </button>
         <div className="confetti">
