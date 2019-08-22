@@ -138,19 +138,23 @@ class App extends Component {
           return (
             <ReactFullPage.Wrapper>
               <div id="home" className="section">
-                <Home height={viewHeight} fullpageApi={fullpageApi} />
+                <Home
+                  size={screenSize}
+                  height={viewHeight}
+                  fullpageApi={fullpageApi}
+                />
               </div>
               <div id="about" className="section">
-                <About height={viewHeight} />
+                <About size={screenSize} height={viewHeight} />
               </div>
               <div id="skills" className="section">
                 <Skills size={screenSize} height={viewHeight} />
               </div>
               <div id="portfolio" className="section">
-                <Portfolio />
+                <Portfolio size={screenSize} />
               </div>
               <div id="contact" className="section">
-                <Contact height={viewHeight} />
+                <Contact size={screenSize} height={viewHeight} />
               </div>
             </ReactFullPage.Wrapper>
           );

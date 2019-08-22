@@ -111,7 +111,8 @@ class Portfolio extends Component {
 
     return cards;
   }
-  render() {
+  render(props) {
+    let { size } = this.props;
     const card = this.state.cards;
     return (
       <div className="section-wrapper portfolio-wrapper">
@@ -126,7 +127,8 @@ class Portfolio extends Component {
             data={{
               confettiType: 'icon',
               strArr: [{ text: 'far fa-file-code' }],
-              num: 200,
+              screen: size,
+              num: 360,
               color: 'icon',
               speed: 'slowest'
             }}

@@ -31,7 +31,7 @@ class Skills extends Component {
         <div className={classList}>
           <div className="skills-group">
             <i className="fas fa-cubes fa-icon" />
-            <h2>Modular Code</h2>
+            <h3>Modular Code</h3>
             <p className="skills-text">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam
               impedit similique aut iste amet perspiciatis, dolorem nesciunt
@@ -41,7 +41,7 @@ class Skills extends Component {
           </div>
           <div className="skills-group">
             <i className="far fa-check-circle fa-icon" />
-            <h2>Experienced | Quality</h2>
+            <h3>Experienced | Quality</h3>
             <p className="skills-text">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam
               impedit similique aut iste amet perspiciatis, dolorem nesciunt
@@ -51,7 +51,7 @@ class Skills extends Component {
           </div>
           <div className="skills-group">
             <i className="fas fa-user-cog fa-icon" />
-            <h2>User-centered</h2>
+            <h3>User-centered</h3>
             <p className="skills-text">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam
               impedit similique aut iste amet perspiciatis, dolorem nesciunt
@@ -73,7 +73,8 @@ class Skills extends Component {
                 { text: 'fab fa-sass' },
                 { text: 'fab fa-html5' }
               ],
-              num: 40,
+              screen: size,
+              num: 80,
               color: 'background',
               speed: 'slow'
             }}

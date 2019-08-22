@@ -13,7 +13,8 @@ import Confetti from '../confetti/Confetti';
 class Home extends Component {
   componentDidMount() {
     let imageProperties = {
-      background: `linear-gradient(rgba(0, 0, 0, 0.35),rgba(0, 0, 0, 0.85)),url('https://source.unsplash.com/user/markusspiske/jUWw_NEXjDw')`,
+      // background: `linear-gradient(rgba(0, 0, 0, 0.35),rgba(0, 0, 0, 0.85)),url('https://source.unsplash.com/user/markusspiske/jUWw_NEXjDw')`,
+      background: `linear-gradient(rgba(0, 0, 0, 0.35),rgba(0, 0, 0, 0.85)),url('https://source.unsplash.com/user/markusspiske/Fa0pTKuoDVY')`,
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center center',
       backgroundAttachment: 'fixed',
@@ -24,9 +25,16 @@ class Home extends Component {
     Object.assign(el.style, imageProperties);
   }
   render(props) {
-    let { height, fullpageApi } = this.props;
+    let { size, height, fullpageApi } = this.props;
     return (
       <div id="homeSection" className="home-wrapper" style={{ height: height }}>
+        {/* <button
+          id="testButton"
+          className="btn"
+          onClick={() => fullpageApi.moveSectionDown()}
+        >
+          My Button
+        </button> */}
         <button
           id="welcomeButton"
           className="btn"
@@ -53,6 +61,7 @@ class Home extends Component {
                 { text: 'HTML5' },
                 { text: 'Responsive' }
               ],
+              screen: size,
               num: 10,
               color: 'primary',
               speed: 'medium'

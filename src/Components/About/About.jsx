@@ -18,7 +18,7 @@ import eaLogo from '../../assets/eaLogo_1280_505.png';
  */
 class About extends Component {
   render(props) {
-    let { height } = this.props;
+    let { size, height } = this.props;
     return (
       <div style={{ height: height }} className="section-wrapper about-wrapper">
         <div id="profilePicWrapper" className="about-content-block">
@@ -60,7 +60,8 @@ class About extends Component {
                 { text: 'fab fa-microsoft' },
                 { text: 'fab fa-xbox' }
               ],
-              num: 20,
+              screen: size,
+              num: 40,
               color: 'background',
               speed: 'slow'
             }}
@@ -71,7 +72,8 @@ class About extends Component {
             data={{
               confettiType: 'text',
               strArr: [{ text: 'EA' }, { text: 'Xbox' }],
-              num: 20,
+              screen: size,
+              num: 40,
               color: 'background',
               speed: 'slow'
             }}

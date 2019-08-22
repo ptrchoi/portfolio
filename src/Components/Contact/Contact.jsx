@@ -12,7 +12,7 @@ import Confetti from '../confetti/Confetti';
  */
 class Contact extends Component {
   render(props) {
-    let { height } = this.props;
+    let { size, height } = this.props;
     return (
       <div
         style={{ height: height }}
@@ -35,8 +35,10 @@ class Contact extends Component {
               confettiType: 'icon',
               strArr: [
                 { text: 'far fa-comment' },
+                { text: 'far fa-envelope' },
                 { text: 'fas fa-mobile-alt' }
               ],
+              screen: size,
               num: 50,
               color: 'darkBG',
               speed: 'medium'

@@ -32,7 +32,7 @@ function getRandFixed(min, max) {
 }
 function getRandProps(color, speed) {
   let leftOffset = getRandInt(1, 7) * 10 + '%'; //10-80%
-  let size = getRandFixed(1.6, 4.6) + 'rem';
+  let size = getRandFixed(1.4, 3.8) + 'rem';
   let animNum = String(getRandInt(1, 5));
 
   //Set color & shadow
@@ -55,13 +55,12 @@ function getRandProps(color, speed) {
   let duration = getRandInt(60, 90) + 's';
 
   if (speed === 'slowest') {
-    delay = getRandInt(-250, 350) + 's';
-    duration = getRandInt(260, 360) + 's';
+    delay = getRandInt(-320, 320) + 's';
+    duration = getRandInt(200, 320) + 's';
   } else if (speed === 'slow') {
     delay = getRandInt(-180, 180) + 's';
     duration = getRandInt(90, 180) + 's';
   } else if (speed === 'fast') {
-    delay = getRandInt(-50, 50) + 's';
     duration = getRandInt(30, 50) + 's';
   }
 
@@ -91,7 +90,10 @@ function generateParticleArray(strArr, num) {
 //Component
 class Confetti extends Component {
   render(props) {
-    let { confettiType, strArr, num, color, speed } = this.props.data;
+    let { confettiType, strArr, screen, num, color, speed } = this.props.data;
+    if (screen === 'small') {
+      num = num / 2;
+    }
     let particleArr = generateParticleArray(strArr, num);
 
     if (confettiType === 'icon') {

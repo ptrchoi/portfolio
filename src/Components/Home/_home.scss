@@ -9,20 +9,24 @@
   flex-direction: column;
   justify-content: center;
 }
-
+// #testButton {
+//   border: solid 3px red;
+// }
 .btn {
   background-color: transparent;
   // border: solid $primary-blue-light 1;
   color: $primary-blue-light;
+  cursor: pointer;
   display: inline-block;
   font-size: 2.25vw;
   height: 5.5vh;
-  padding: 30px 80px;
+  padding: 130px 180px;
   position: relative;
   text-align: center;
   transition: background-color $button-transition-fade ease-in-out,
     border-color $button-transition-fade ease-in-out,
     color $button-transition-fade ease-in-out;
+  z-index: $above-confetti-layer;
 }
 .btn:hover {
   background-color: rgba(129, 156, 169, 0.7);
