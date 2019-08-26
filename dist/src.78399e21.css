@@ -270,17 +270,17 @@ body {
   background-color: transparent;
   border-top: none;
   border-bottom: none;
-  color: rgba(255, 255, 255, 0.858);
+  color: rgba(255, 255, 255, 0.94);
   cursor: pointer;
   display: inline-block;
-  font-size: 8vw;
+  font-size: 6vw;
   height: 100%;
-  padding: 0 20vw;
+  padding: 10vh 20vw 0 20vw;
   position: relative;
   text-align: center;
+  text-shadow: 2px 2px rgba(128, 128, 128, 0.851);
   z-index: 9;
-  border-width: 6px;
-  border-image: linear-gradient(to bottom, white, rgba(200, 200, 200, 0.728)) 1 100%;
+  border-width: 1.5px;
   border-bottom: none;
 }
 
