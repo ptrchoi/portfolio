@@ -37,7 +37,7 @@ function getRandProps(color, speed, margins, screen) {
   //Set scale based on screen size
   let scale = getRandFixed(1.4, 3.8) + 'rem';
   if (screen === 'small') {
-    scale = getRandFixed(1, 2) + 'rem';
+    scale = getRandFixed(0.8, 1.8) + 'rem';
   }
 
   //Set offset & margins if any

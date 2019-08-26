@@ -13,7 +13,7 @@
   background-color: rgba(50, 50, 50, 0.53);
   border-bottom: none;
   border-top: none;
-  border-width: 1.5px;
+  border-width: 0.1vw;
   color: rgba(255, 255, 255, 0.94);
   cursor: pointer;
   display: inline-block;
@@ -22,16 +22,16 @@
   padding: 10vh 20vw 0 20vw;
   position: relative;
   text-align: center;
-  text-shadow: 2px 2px rgba(128, 128, 128, 0.851);
+  text-shadow: 1px 1px rgba(128, 128, 128, 0.851);
   width: 50%;
   z-index: $above-confetti-layer;
 }
 
 .blur-inner {
-  filter: blur(0.6vw);
+  filter: blur(0.4vw);
 }
 .blur-outer {
-  filter: blur(0.2vw);
+  filter: blur(0.1vw);
 }
 #buttonText {
   left: 0;
