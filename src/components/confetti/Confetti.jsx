@@ -31,16 +31,13 @@ function getRandInt(min, max) {
 function getRandFixed(min, max) {
   return (Math.random() * (max - min) + min).toFixed(2);
 }
-function getRandProps(color, speed, size, margins) {
+function getRandProps(color, speed, margins, screen) {
   let animNum = String(getRandInt(1, 5));
 
-  //Set size/scale if any specified
+  //Set scale based on screen size
   let scale = getRandFixed(1.4, 3.8) + 'rem';
-
-  if (size === 'small') {
-    scale = getRandFixed(1.4, 2.2) + 'rem';
-  } else if (size === 'large') {
-    scale = getRandFixed(2.2, 3.8) + 'rem';
+  if (screen === 'small') {
+    scale = getRandFixed(1, 2) + 'rem';
   }
 
   //Set offset & margins if any
@@ -112,7 +109,6 @@ class Confetti extends Component {
       num,
       color,
       speed,
-      size,
       margins
     } = this.props.data;
     if (screen === 'small') {
@@ -123,7 +119,7 @@ class Confetti extends Component {
     if (confettiType === 'icon') {
       return particleArr.map(particle => {
         return (
-          <span style={getRandProps(color, speed, size, margins)}>
+          <span style={getRandProps(color, speed, margins, screen)}>
             <i className={particle} />
           </span>
         );
@@ -131,7 +127,7 @@ class Confetti extends Component {
     } else {
       return particleArr.map(particle => {
         return (
-          <span style={getRandProps(color, speed, size, margins)}>
+          <span style={getRandProps(color, speed, margins, screen)}>
             {particle}
           </span>
         );

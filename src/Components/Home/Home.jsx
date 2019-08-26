@@ -34,9 +34,7 @@ class Home extends Component {
           onClick={() => fullpageApi.moveSectionDown()}
         >
           <span id="buttonText">welcome</span>
-        </button>
-        <div className="blurEffect">
-          <div className="confetti">
+          <div className="confetti blur-inner">
             <Confetti
               data={{
                 confettiType: 'text',
@@ -55,13 +53,12 @@ class Home extends Component {
                 screen: size,
                 num: 8,
                 color: 'primary',
-                size: 'large',
                 speed: 'medium'
               }}
             />
           </div>
-        </div>
-        <div className="confetti softBlur">
+        </button>
+        <div className="confetti blur-outer">
           <Confetti
             data={{
               confettiType: 'text',
