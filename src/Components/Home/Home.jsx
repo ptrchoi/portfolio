@@ -51,7 +51,7 @@ class Home extends Component {
                   { text: 'Responsive' }
                 ],
                 screen: size,
-                num: 8,
+                num: 6,
                 color: 'primary',
                 speed: 'medium'
               }}
@@ -75,7 +75,7 @@ class Home extends Component {
                 { text: 'Responsive' }
               ],
               screen: size,
-              num: 10,
+              num: 8,
               color: 'primary',
               speed: 'medium',
               margins: true

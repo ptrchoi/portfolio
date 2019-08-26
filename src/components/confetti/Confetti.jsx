@@ -42,7 +42,6 @@ function getRandProps(color, speed, margins, screen) {
 
   //Set offset & margins if any
   let leftOffset = getRandInt(1, 7) * 10 + '%'; //~10-70%
-
   if (margins) {
     leftOffset = MARGINS[getRandInt(0, 1)] * 10 + '%';
   }
@@ -63,18 +62,20 @@ function getRandProps(color, speed, margins, screen) {
   color = colorArr[getRandInt(0, colorArr.length - 1)];
 
   //Set speed
-  let delay = getRandInt(-50, 50) + 's';
-  let duration = getRandInt(60, 90) + 's';
+  // let delay = getRandInt(-50, 50) + 's';
+  // let duration = getRandInt(60, 90) + 's';
 
-  if (speed === 'slowest') {
-    delay = getRandInt(-320, 320) + 's';
-    duration = getRandInt(200, 320) + 's';
-  } else if (speed === 'slow') {
-    delay = getRandInt(-180, 180) + 's';
-    duration = getRandInt(90, 180) + 's';
-  } else if (speed === 'fast') {
-    duration = getRandInt(30, 50) + 's';
-  }
+  // if (speed === 'slowest') {
+  //   delay = getRandInt(-320, 320) + 's';
+  //   duration = getRandInt(200, 320) + 's';
+  // } else if (speed === 'slow') {
+  //   delay = getRandInt(-180, 180) + 's';
+  //   duration = getRandInt(90, 180) + 's';
+  // } else if (speed === 'fast') {
+  //   duration = getRandInt(30, 50) + 's';
+  // }
+  let delay = getRandInt(-90, 90) + 's';
+  let duration = getRandInt(60, 100) + 's';
 
   return {
     color: color,
