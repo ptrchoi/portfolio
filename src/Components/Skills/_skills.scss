@@ -29,6 +29,7 @@
 .skills-text {
   @include fluid-type(font-size, $min-width, $max-width, 12px, 16px);
   color: $gray-text;
+  padding-top: 2vh;
   text-align: justify;
 }
 .skills-graphic {

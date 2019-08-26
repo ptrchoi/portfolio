@@ -31,32 +31,30 @@ class Skills extends Component {
         <div className={classList}>
           <div className="skills-group">
             <i className="fas fa-cubes fa-icon" />
-            <h3>Modular Code</h3>
+            <h3>Skilled Developer</h3>
             <p className="skills-text">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam
-              impedit similique aut iste amet perspiciatis, dolorem nesciunt
-              quisquam, distinctio necessitatibus eius molestiae repellendus id
-              quasi nobis o
+              Modular, functional programming oriented developer. Certified in
+              several languages and libraries with numerous modern web apps
+              developed leveraging React, Responsive Design, Unit Testing
             </p>
           </div>
           <div className="skills-group">
-            <i className="far fa-check-circle fa-icon" />
-            <h3>Experienced | Quality</h3>
+            <i className="far fa-compass fa-icon" />
+            <h3>User-centered Thinker</h3>
             <p className="skills-text">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam
-              impedit similique aut iste amet perspiciatis, dolorem nesciunt
-              quisquam, distinctio necessitatibus eius molestiae repellendus id
-              quasi nobi!
+              Experienced UX and Design professional, well-versed on modern
+              trends and strategies. Constantly focused on the user's journey
+              and end user experience.
             </p>
           </div>
           <div className="skills-group">
-            <i className="fas fa-user-cog fa-icon" />
-            <h3>User-centered</h3>
+            <i className="fas fa-people-carry fa-icon" />
+            <h3>Team Player</h3>
             <p className="skills-text">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam
-              impedit similique aut iste amet perspiciatis, dolorem nesciunt
-              quisquam, distinctio necessitatibus eius molestiae repellendus id
-              quasi nobis odit sit iusto optio
+              Deep background in software production and management, expert with
+              agile methodologies and proven soft skills working with large
+              distributed teams across diverse disciplines, time zones, and
+              cultures.
             </p>
           </div>
         </div>

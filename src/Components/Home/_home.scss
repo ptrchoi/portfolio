@@ -11,16 +11,45 @@
 }
 .btn {
   background-color: transparent;
-  // border: solid $primary-blue-light 1;
-  color: $primary-blue-light;
+  // border-left: outset 4px white;
+  // border-right: outset 4px white;
+  border-top: none;
+  border-bottom: none;
+  color: rgba(255, 255, 255, 0.858);
   cursor: pointer;
   display: inline-block;
-  font-size: 2.25vw;
-  height: 5.5vh;
-  padding: 130px 180px;
+  font-size: 8vw;
+  height: 100%;
+  // height: 5.5vh;
+  // margin-top: 10vh;
+  padding: 0 20vw;
   position: relative;
   text-align: center;
   z-index: $above-confetti-layer;
+
+  border-width: 6px;
+  // border-style: inset;
+  border-image: linear-gradient(to bottom, white, rgba(200, 200, 200, 0.728)) 1
+    100%;
+
+  // border-image: linear-gradient(to bottom, white, rgba(128, 128, 128, 0.632)) 1
+  // 100%;border-top: none;
+  border-bottom: none;
+}
+.blurEffect {
+  background-color: rgb(50, 50, 50);
+  display: inline-block;
+  filter: blur(4px);
+  height: 100%;
+  // height: 5.5vh;
+  // margin-top: 5vh;
+  opacity: 0.6;
+  padding: 10vh 20vw;
+  position: absolute;
+  z-index: 7;
+}
+.softBlur {
+  filter: blur(1.7px);
 }
 #buttonText {
   left: 0;
@@ -40,5 +69,5 @@ button:focus {
     238,
     0.324
   ); //TEMP - to be defined in Variables
-  color: $primary-blue;
+  color: black;
 }

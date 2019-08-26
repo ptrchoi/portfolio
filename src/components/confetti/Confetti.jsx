@@ -22,6 +22,7 @@ const PRIMARY_COLORS = [
 const BG_COLORS = ['rgb(245,245,245)'];
 const ICON_COLORS = ['rgb(110,110,110,.1)'];
 const DARK_BG_COLORS = ['rgb(110,110,110)'];
+const MARGINS = [1, 7];
 
 //Local Functions
 function getRandInt(min, max) {
@@ -30,10 +31,24 @@ function getRandInt(min, max) {
 function getRandFixed(min, max) {
   return (Math.random() * (max - min) + min).toFixed(2);
 }
-function getRandProps(color, speed) {
-  let leftOffset = getRandInt(1, 7) * 10 + '%'; //10-80%
-  let size = getRandFixed(1.4, 3.8) + 'rem';
+function getRandProps(color, speed, size, margins) {
   let animNum = String(getRandInt(1, 5));
+
+  //Set size/scale if any specified
+  let scale = getRandFixed(1.4, 3.8) + 'rem';
+
+  if (size === 'small') {
+    scale = getRandFixed(1.4, 2.2) + 'rem';
+  } else if (size === 'large') {
+    scale = getRandFixed(2.2, 3.8) + 'rem';
+  }
+
+  //Set offset & margins if any
+  let leftOffset = getRandInt(1, 7) * 10 + '%'; //~10-70%
+
+  if (margins) {
+    leftOffset = MARGINS[getRandInt(0, 1)] * 10 + '%';
+  }
 
   //Set color & shadow
   let colorArr = BG_COLORS;
@@ -71,7 +86,7 @@ function getRandProps(color, speed) {
     animationDelay: delay,
     animationDuration: duration,
     animationIterationCount: 'infinite',
-    fontSize: size,
+    fontSize: scale,
     textShadow: shadow
   };
 }
@@ -90,7 +105,16 @@ function generateParticleArray(strArr, num) {
 //Component
 class Confetti extends Component {
   render(props) {
-    let { confettiType, strArr, screen, num, color, speed } = this.props.data;
+    let {
+      confettiType,
+      strArr,
+      screen,
+      num,
+      color,
+      speed,
+      size,
+      margins
+    } = this.props.data;
     if (screen === 'small') {
       num = num / 2;
     }
@@ -99,14 +123,18 @@ class Confetti extends Component {
     if (confettiType === 'icon') {
       return particleArr.map(particle => {
         return (
-          <span style={getRandProps(color, speed)}>
+          <span style={getRandProps(color, speed, size, margins)}>
             <i className={particle} />
           </span>
         );
       });
     } else {
       return particleArr.map(particle => {
-        return <span style={getRandProps(color, speed)}>{particle}</span>;
+        return (
+          <span style={getRandProps(color, speed, size, margins)}>
+            {particle}
+          </span>
+        );
       });
     }
   }
