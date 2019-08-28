@@ -33,9 +33,10 @@ class Skills extends Component {
             <i className="fas fa-cubes fa-icon" />
             <h3>Skilled Developer</h3>
             <p className="skills-text">
-              Modular, functional programming oriented developer. Certified in
-              several languages and libraries with numerous modern web apps
-              developed leveraging React, Responsive Design, Unit Testing
+              Analytical developer focused on modularity, efficiency and
+              functional programming. Certified in several languages and
+              libraries, with numerous modern web apps developed utilizing
+              cutting-edge frontend technologies.
             </p>
           </div>
           <div className="skills-group">
@@ -43,7 +44,7 @@ class Skills extends Component {
             <h3>User-centered Thinker</h3>
             <p className="skills-text">
               Experienced UX and Design professional, well-versed on modern
-              trends and strategies. Constantly focused on the user's journey
+              trends and strategies. Continually focused on the user's journey
               and end user experience.
             </p>
           </div>
@@ -51,10 +52,10 @@ class Skills extends Component {
             <i className="fas fa-people-carry fa-icon" />
             <h3>Team Player</h3>
             <p className="skills-text">
-              Deep background in software production and management, expert with
-              agile methodologies and proven soft skills working with large
-              distributed teams across diverse disciplines, time zones, and
-              cultures.
+              Extensive background in software production and deployment, an
+              expert working in agile environments. Proven communication and
+              soft skills, collaborating with large distributed teams across
+              diverse disciplines, time zones, and cultures.
             </p>
           </div>
         </div>

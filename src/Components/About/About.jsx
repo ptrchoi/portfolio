@@ -27,19 +27,21 @@ class About extends Component {
         <div id="aboutTextWrapper" className="about-content-block">
           <p className="about-text">Welcome and thanks for visiting.</p>
           <p className="about-text">
-            I'm a Developer | Designer | Producer with 15+ years of experience
-            at leading Fortune 500 companies, including Microsoft and Electronic
-            Arts. With a background in both creative and business oriented
-            product development, I understand the importance and value of the
-            user experience.
+            I'm a Developer, Designer, and Producer with over 15 years of
+            experience at leading Fortune 500 companies, including Microsoft and
+            Electronic Arts. With a professional background in both
+            entertainment and business software development and management, I
+            understand the importance and value of an engaging end-user
+            experience, robust implementation, and reliable execution.
           </p>
           <p className="about-text">
-            My goal is always to build robust, beautiful, responsive user
-            experiences on mobile and the web. I'm an advocate of functional
-            programming, modular Javascript + React - clean and reusable code -
-            and seek to leverage modern API's, libraries, methodologies and
-            tools where effective and efficient.
+            I enjoy innovating and collaborating to create elegant, efficient,
+            and delightful mobile and web applications. You can find some
+            examples in my <a href="#anchor-4">portfolio</a> and please feel
+            free to <a href="#anchor-5">reach out</a> if you have a project
+            you'd like to discuss.
           </p>
+          <p className="about-text">- Peter</p>
         </div>
         <div id="logosWrapper" className="about-content-block">
           <img id="msftLogo" className="about-logo" src={msftLogo} alt="logo" />

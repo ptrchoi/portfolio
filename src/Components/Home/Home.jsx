@@ -34,6 +34,20 @@ class Home extends Component {
           onClick={() => fullpageApi.moveSectionDown()}
         >
           <span id="buttonText">welcome</span>
+          <br />
+          <span id="buttonText">환영</span>
+          <br />
+          <span id="buttonText">bienvenido</span>
+          <br />
+          <span id="buttonText">willkommen</span>
+          <br />
+          <span id="buttonText">أهلا بك</span>
+          <br />
+          <span id="buttonText">benvenuto</span>
+          <br />
+          <span id="buttonText">καλωσόρισμα</span>
+          <br />
+          <span id="buttonText">欢迎</span>
           <div className="confetti blur-inner">
             <Confetti
               data={{
@@ -51,7 +65,7 @@ class Home extends Component {
                   { text: 'Responsive' }
                 ],
                 screen: size,
-                num: 6,
+                num: 7,
                 color: 'primary',
                 speed: 'medium'
               }}

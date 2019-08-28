@@ -274,7 +274,8 @@ body {
   color: rgba(255, 255, 255, 0.94);
   cursor: pointer;
   display: inline-block;
-  font-size: 6vw;
+  font-family: "Montserrat", sans-serif;
+  font-size: 4vw;
   height: 100%;
   padding: 10vh 20vw 0 20vw;
   position: relative;
@@ -380,7 +381,7 @@ button:focus {
 #profilePic {
   border-radius: 50%;
   height: auto;
-  margin-bottom: 8vh;
+  margin-bottom: 5vh;
   margin-top: 4vh;
   justify-self: end;
   width: 14%;
@@ -431,7 +432,7 @@ button:focus {
 }
 
 .skills-group {
-  align-items: start;
+  align-content: start;
   display: grid;
   height: auto;
   justify-items: center;

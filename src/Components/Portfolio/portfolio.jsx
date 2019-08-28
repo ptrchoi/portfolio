@@ -14,11 +14,11 @@ import Confetti from '../confetti/Confetti';
 const CARDS = [
   {
     projectId: 'project-1',
-    title: 'Single Product Page',
+    title: 'Single-page Application (SPA) - Product Page',
     image: 'https://codepen.io/ptrchoi/pen/JayyOP/image/large.png',
     link: 'https://codepen.io/ptrchoi/pen/JayyOP',
     description:
-      'A pure JS & CSS demo of a single-page, responsive product page. With nested Flex-Box & CSS Grid layouts, nav-menu & image gallery modals, and user-centered design elements throughout.',
+      'A pure JS & CSS demo of a single-page application, responsive product page. With nested Flex-Box & CSS Grid layouts, nav-menu & image gallery modals, and user-centered design elements throughout.',
     flipped: false
   },
   {

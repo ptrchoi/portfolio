@@ -8,7 +8,7 @@ const Cardinfo = props => {
       <p className="card-text">{props.info}</p>
       <a href={props.link} target="_blank">
         <p>
-          Demo
+          CodePen Demo
           <i className="link-icon fas fa-external-link-square-alt" />
         </p>
       </a>
