@@ -28,26 +28,7 @@ class Home extends Component {
     let { size, height, fullpageApi } = this.props;
     return (
       <div id="homeSection" className="home-wrapper" style={{ height: height }}>
-        <button
-          id="welcomeButton"
-          className="btn"
-          onClick={() => fullpageApi.moveSectionDown()}
-        >
-          <span id="buttonText">welcome</span>
-          <br />
-          <span id="buttonText">환영</span>
-          <br />
-          <span id="buttonText">bienvenido</span>
-          <br />
-          <span id="buttonText">willkommen</span>
-          <br />
-          <span id="buttonText">أهلا بك</span>
-          <br />
-          <span id="buttonText">benvenuto</span>
-          <br />
-          <span id="buttonText">καλωσόρισμα</span>
-          <br />
-          <span id="buttonText">欢迎</span>
+        <div className="frostedOverlay">
           <div className="confetti blur-inner">
             <Confetti
               data={{
@@ -67,11 +48,19 @@ class Home extends Component {
                 screen: size,
                 num: 7,
                 color: 'primary',
-                speed: 'medium'
+                speed: 'medium',
+                margins: 'inner'
               }}
             />
           </div>
-        </button>
+        </div>
+        <div className="overlayText">
+          <p>Hi, I'm <span id="name">Peter Choi</span>,</p>
+          <p>web developer & designer.</p>
+          <button
+            id="innerButton"
+            onClick={() => fullpageApi.moveSectionDown()}>portfolio</button>
+        </div>
         <div className="confetti blur-outer">
           <Confetti
             data={{
@@ -92,7 +81,7 @@ class Home extends Component {
               num: 8,
               color: 'primary',
               speed: 'medium',
-              margins: true
+              margins: 'outer'
             }}
           />
         </div>

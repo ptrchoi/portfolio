@@ -9,37 +9,58 @@
   flex-direction: column;
   justify-content: center;
 }
-.btn {
-  background-color: rgba(50, 50, 50, 0.53);
+.frostedOverlay {
+  // background-color: rgba(50, 50, 50, 0.53);
+  background-image: linear-gradient(to right, 
+  rgba(100, 100, 100, 0.25), 
+  rgba(100, 100, 100, 0.38), 
+  rgba(100, 100, 100, 0.45), 
+  rgba(100, 100, 100, 0.38), 
+  rgba(100, 100, 100, 0.25));
+  
+  border: solid 0.2vw rgba(176, 176, 176, 0.9);
   border-bottom: none;
   border-top: none;
-  border-width: 0.1vw;
-  color: rgba(255, 255, 255, 0.94);
-  cursor: pointer;
-  display: inline-block;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 4vw;
   height: 100%;
-  padding: 10vh 20vw 0 20vw;
-  position: relative;
-  text-align: center;
-  text-shadow: 1px 1px rgba(128, 128, 128, 0.851);
+  padding-top: 50vh;
+  // position: relative;
   width: 50%;
-  z-index: $above-confetti-layer;
+  z-index: 1;
 }
+.overlayText {
+  color: white;
+  font-family: 'Livvic', sans-serif;
+  font-size: 3.5vw;
+  font-weight: 200;
+  position: absolute;
+  text-align: center;
+  text-shadow: 2px 2px rgb(0, 0, 0);
+  z-index: $above-confetti-layer;
 
+  p {
+    padding-top: .8vh;
+  }
+  #name {
+    color: rgb(152, 217, 238);
+    font-weight: 500;
+  }
+}
+#innerButton {
+  background-color: rgba(140, 140, 140, 0.7);
+  border: solid 0.3vw white;
+  color: white;
+  cursor: pointer;
+  font-size: 1.8vw;
+  height: 6vh;
+  margin-top: 5vh;
+  text-shadow: 1px 1px rgb(0, 0, 0);
+  width: 28vw;
+}
 .blur-inner {
   filter: blur(0.4vw);
 }
 .blur-outer {
   filter: blur(0.1vw);
-}
-#buttonText {
-  left: 0;
-  margin: -14px auto 0 auto;
-  opacity: 1;
-  position: absolute;
-  right: 0;
 }
 //For accessibility only on landing page
 button:focus {

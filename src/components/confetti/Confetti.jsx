@@ -2,27 +2,45 @@
 import React, { Component } from 'react';
 
 //CONSTANTS
+// const PRIMARY_COLORS = [
+//   'rgb(255,255,255)',
+//   'rgb(27,147,39)',
+//   'rgb(27,147,39,.7)',
+//   'rgb(77,14,21)',
+//   'rgb(255,255,255)',
+//   'rgb(255,255,255,.5)',
+//   'rgb(77,14,21,.7)',
+//   'rgb(57,129,193)',
+//   'rgb(57,129,193,.7)',
+//   'rgb(221,255,0)',
+//   'rgb(255,255,255)',
+//   'rgb(255,255,255,.7)',
+//   'rgb(221,255,0,.7)',
+//   'rgb(255,255,255)',
+//   'rgb(255,255,255,.7)'
+// ];
 const PRIMARY_COLORS = [
-  'rgb(255,255,255)',
+  'rgb(171,216,232)',
   'rgb(27,147,39)',
   'rgb(27,147,39,.7)',
   'rgb(77,14,21)',
-  'rgb(255,255,255)',
-  'rgb(255,255,255,.5)',
+  'rgb(171,216,232)',
+  'rgb(171,216,232,.5)',
   'rgb(77,14,21,.7)',
   'rgb(57,129,193)',
   'rgb(57,129,193,.7)',
   'rgb(221,255,0)',
-  'rgb(255,255,255)',
-  'rgb(255,255,255,.7)',
+  'rgb(171,216,232)',
+  'rgb(171,216,232,.7)',
   'rgb(221,255,0,.7)',
-  'rgb(255,255,255)',
-  'rgb(255,255,255,.7)'
+  'rgb(171,216,232)',
+  'rgb(171,216,232,.7)'
 ];
 const BG_COLORS = ['rgb(245,245,245)'];
 const ICON_COLORS = ['rgb(110,110,110,.1)'];
 const DARK_BG_COLORS = ['rgb(110,110,110)'];
-const MARGINS = [1, 7];
+const MARGINS_OUTER = [1, 8];
+const MARGINS_INNER = [3, 4, 5];
 
 //Local Functions
 function getRandInt(min, max) {
@@ -42,8 +60,10 @@ function getRandProps(color, speed, margins, screen) {
 
   //Set offset & margins if any
   let leftOffset = getRandInt(1, 7) * 10 + '%'; //~10-70%
-  if (margins) {
-    leftOffset = MARGINS[getRandInt(0, 1)] * 10 + '%';
+  if (margins === 'outer') {
+    leftOffset = MARGINS_OUTER[getRandInt(0, 1)] * 10 + '%';
+  } else if (margins === 'inner') {
+    leftOffset = MARGINS_INNER[getRandInt(0, 2)] * 10 + '%';
   }
 
   //Set color & shadow
