@@ -1,6 +1,7 @@
 #title {
   @include fluid-type(font-size, $min-width, $max-width, 24px, 36px);
   color: $white-text;
+  float: left;
   // font-size: 2rem;
-  margin: 3% 0 0 3%;
+  margin: 1% 0 0 2%;
 }

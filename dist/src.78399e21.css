@@ -57,17 +57,17 @@ body {
 
 #navbar {
   background-color: #1b4664;
-  height: 60px;
+  height: 40px;
   z-index: 40;
 }
 @media screen and (min-width: 320px) {
   #navbar {
-    height: calc( 60px + 80 * (100vw - 320px) / 880 );
+    height: calc( 40px + 20 * (100vw - 320px) / 880 );
   }
 }
 @media screen and (min-width: 1200px) {
   #navbar {
-    height: 140px;
+    height: 60px;
   }
 }
 
@@ -98,7 +98,7 @@ body {
   }
 }
 #menuIcon {
-  padding: 20px;
+  padding: 10px;
   position: absolute;
   right: 2%;
   top: 0;
@@ -204,7 +204,8 @@ body {
 #title {
   font-size: 24px;
   color: white;
-  margin: 3% 0 0 3%;
+  float: left;
+  margin: 1% 0 0 2%;
 }
 @media screen and (min-width: 320px) {
   #title {

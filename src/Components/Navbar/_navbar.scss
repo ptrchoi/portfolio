@@ -10,7 +10,7 @@
 }
 #navbar {
   background-color: $gap-blue;
-  @include fluid-type(height, $min-width, $max-width, 60px, 140px);
+  @include fluid-type(height, $min-width, $max-width, 40px, 60px);
   z-index: $navbar-layer;
 }
 #navSidebar {
@@ -37,7 +37,7 @@
   }
 }
 #menuIcon {
-  padding: 20px;
+  padding: 10px; //needs to be responsive
   position: absolute;
   right: $app-margin-LR;
   top: 0;
