@@ -16,6 +16,10 @@ body {
 .section-wrapper {
   padding-top: 10vh;
 }
+.section-header {
+  text-align: center;
+  z-index: $above-confetti-layer;
+}
 
 /* Mixins
 ------------------------------------ */

@@ -1,37 +1,110 @@
 .about-wrapper {
+  align-content: start;
   background-color: $background-white;
   display: grid;
-  grid-auto-rows: minmax(min-content, max-content);
+  justify-content: center; //Justify/center the grid in the middle of the page
+
+  // grid-auto-rows: minmax(min-content, max-content);
 }
-.about-content-block {
-  display: grid;
-  padding: 0 6% 0 6%;
+.item-a {
+  grid-area: profilePic;
+  justify-self: stretch; 
 }
-#profilePic {
-  border-radius: 50%;
-  height: auto;
-  margin-bottom: 5vh;
-  margin-top: 4vh;
-  justify-self: end;
-  width: 14%;
-  z-index: $above-confetti-layer;
-}
-#aboutTextWrapper {
-  margin-bottom: 8vh;
-  z-index: $above-confetti-layer;
-  .about-text {
-    @include fluid-type(font-size, $min-width, $max-width, 12px, 24px);
-    color: $gray-text;
-    padding: 2%;
-  }
-}
-#logosWrapper {
+.item-b {
   display: flex;
-  align-items: center;
-  // flex-flow: row wrap;
-  justify-content: space-around;
-  z-index: $above-confetti-layer;
-  .about-logo {
-    width: 22%;
-  }
+  flex-direction: column;
+  grid-area: profileText;
 }
+.item-c {
+  grid-area: logo1;  
+}
+.item-d {
+  grid-area: logo2;  
+}
+.item-e {
+  grid-area: logo3;  
+}
+.item-logo {
+  align-self: center;
+  display: flex;
+  justify-content: space-around;
+}
+.about-grid {
+  display: grid;
+  height: 50vw;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+    "profilePic profileText profileText"
+    "logo1 logo2 logo3";
+  margin-top: 5vh;
+  width: 80vw;
+  z-index: $above-confetti-layer;
+}
+.grid-pic {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+.grid-text {
+  @include fluid-type(font-size, $min-width, $max-width, 12px, 18px);
+  background-color: rgb(230, 230, 230);
+  color: $gray-text;
+  flex: 1;
+  padding: 15% 4% 0 4%;
+}
+.grid-logo {
+  height: auto;
+  width: 60%;
+}
+
+
+
+// .about-wrapper {
+//   background-color: $background-white;
+//   display: grid;
+//   grid-auto-rows: minmax(min-content, max-content);
+// }
+// .about-content-block {
+//   // display: grid;
+//   padding: 0 6% 0 6%;
+//   z-index: $above-confetti-layer;
+// }
+// #profilePic {
+//   // border-radius: 50%;
+//   float: left;
+//   height: auto;
+//   margin-bottom: 5vh;
+//   margin-top: 4vh;
+//   // justify-self: end;
+//   width: 14%;
+//   // z-index: $above-confetti-layer;
+// }
+// .about-text {
+//   @include fluid-type(font-size, $min-width, $max-width, 12px, 18px);
+//   background-color: rgb(237, 237, 237);
+//   color: $gray-text;
+//   float: left;
+//   height: 150px;
+//   width: 60vw;
+//   padding: 2%;
+// }
+// // #aboutTextWrapper {
+// //   margin-bottom: 8vh;
+// //   z-index: $above-confetti-layer;
+// //   .about-text {
+// //     @include fluid-type(font-size, $min-width, $max-width, 12px, 24px);
+// //     color: $gray-text;
+// //     padding: 2%;
+// //   }
+// // }
+// #logosWrapper {
+//   display: flex;
+//   align-items: center;
+//   // flex-flow: row wrap;
+//   justify-content: space-around;
+//   z-index: $above-confetti-layer;
+//   .about-logo {
+//     width: 22%;
+//   }
+// }

@@ -21,27 +21,43 @@ class About extends Component {
     let { size, height } = this.props;
     return (
       <div style={{ height: height }} className="section-wrapper about-wrapper">
-        <div id="profilePicWrapper" className="about-content-block">
-          <img id="profilePic" src={profilePic} alt="profile pic" />
+        <div className="section-header">
+          <h1>About</h1>
         </div>
-        <div id="aboutTextWrapper" className="about-content-block">
-          <p className="about-text">Welcome and thanks for visiting.</p>
+        <div className="about-grid">
+          <div className="item-a">
+            <img className="grid-pic" src={profilePic} alt="profile pic" />
+          </div>
+          <div className="item-b">
+            <p className="grid-text">
+              Front-End Developer with a passion for creating elegant, intuitive, and delightful user experiences and solutions.
+            <br />
+              <br />
+              Over 15 years of entertainment and business software development
+              experience at leading Fortune 500 companies, including Microsoft and
+              Electronic Arts.
+          </p>
+          </div>
+          <div className="item-c item-logo">
+            <img className="grid-logo" src={msftLogo} alt="logo" />
+          </div>
+          <div className="item-d item-logo">
+            <img className="grid-logo" src={msftStudiosLogo} alt="logo" />
+          </div>
+          <div className="item-e item-logo">
+            <img className="grid-logo" src={eaLogo} alt="logo" />
+          </div>
+        </div>
+        {/* <div id="profilePicWrapper" className="about-content-block">
+          <img id="profilePic" src={profilePic} alt="profile pic" />
           <p className="about-text">
-            I'm a Developer, Designer, and Producer with over 15 years of
+            Front-End Developer with a passion for creating elegant, intuitive, and delightful user experiences and solutions.
+            <br />
+            <br />
+            Over 15 years of entertainment and business software development
             experience at leading Fortune 500 companies, including Microsoft and
-            Electronic Arts. With a professional background in both
-            entertainment and business software development and management, I
-            understand the importance and value of an engaging end-user
-            experience, robust implementation, and reliable execution.
+            Electronic Arts.
           </p>
-          <p className="about-text">
-            I enjoy innovating and collaborating to create elegant, efficient,
-            and delightful mobile and web applications. You can find some
-            examples in my <a href="#anchor-4">portfolio</a> and please feel
-            free to <a href="#anchor-5">reach out</a> if you have a project
-            you'd like to discuss.
-          </p>
-          <p className="about-text">- Peter</p>
         </div>
         <div id="logosWrapper" className="about-content-block">
           <img id="msftLogo" className="about-logo" src={msftLogo} alt="logo" />
@@ -52,7 +68,7 @@ class About extends Component {
             alt="logo"
           />
           <img id="eaLogo" className="about-logo" src={eaLogo} alt="logo" />
-        </div>
+        </div> */}
         <div className="confetti">
           <Confetti
             data={{

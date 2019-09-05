@@ -20,6 +20,11 @@ body {
   padding-top: 10vh;
 }
 
+.section-header {
+  text-align: center;
+  z-index: 9;
+}
+
 /* Mixins
 ------------------------------------ */
 /* CSSTransition "fade" Class
@@ -383,54 +388,79 @@ button:focus {
   }
 }
 .about-wrapper {
+  align-content: start;
   background-color: whitesmoke;
   display: grid;
-  grid-auto-rows: minmax(min-content, max-content);
+  justify-content: center;
 }
 
-.about-content-block {
+.item-a {
+  grid-area: profilePic;
+  justify-self: stretch;
+}
+
+.item-b {
+  display: flex;
+  flex-direction: column;
+  grid-area: profileText;
+}
+
+.item-c {
+  grid-area: logo1;
+}
+
+.item-d {
+  grid-area: logo2;
+}
+
+.item-e {
+  grid-area: logo3;
+}
+
+.item-logo {
+  align-self: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.about-grid {
   display: grid;
-  padding: 0 6% 0 6%;
-}
-
-#profilePic {
-  border-radius: 50%;
-  height: auto;
-  margin-bottom: 5vh;
-  margin-top: 4vh;
-  justify-self: end;
-  width: 14%;
+  height: 50vw;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "profilePic profileText profileText" "logo1 logo2 logo3";
+  margin-top: 5vh;
+  width: 80vw;
   z-index: 9;
 }
 
-#aboutTextWrapper {
-  margin-bottom: 8vh;
-  z-index: 9;
+.grid-pic {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
 }
-#aboutTextWrapper .about-text {
+
+.grid-text {
   font-size: 12px;
+  background-color: #e6e6e6;
   color: gray;
-  padding: 2%;
+  flex: 1;
+  padding: 15% 4% 0 4%;
 }
 @media screen and (min-width: 320px) {
-  #aboutTextWrapper .about-text {
-    font-size: calc( 12px + 12 * (100vw - 320px) / 880 );
+  .grid-text {
+    font-size: calc( 12px + 6 * (100vw - 320px) / 880 );
   }
 }
 @media screen and (min-width: 1200px) {
-  #aboutTextWrapper .about-text {
-    font-size: 24px;
+  .grid-text {
+    font-size: 18px;
   }
 }
 
-#logosWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  z-index: 9;
-}
-#logosWrapper .about-logo {
-  width: 22%;
+.grid-logo {
+  height: auto;
+  width: 60%;
 }
 
 .skills-wrapper {
