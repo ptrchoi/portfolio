@@ -28,6 +28,9 @@ class Skills extends Component {
         style={{ height: responsiveHeight }}
         className="section-wrapper skills-wrapper"
       >
+        <div className="section-header">
+          <h1>Skills</h1>
+        </div>
         <div className={classList}>
           <div className="skills-group">
             <i className="fas fa-cubes fa-icon" />

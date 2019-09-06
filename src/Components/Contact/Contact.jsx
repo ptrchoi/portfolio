@@ -18,6 +18,9 @@ class Contact extends Component {
         style={{ height: height }}
         className="section-wrapper contact-wrapper"
       >
+        <div className="section-header">
+          <h1>Contact</h1>
+        </div>
         <div id="contactSection">
           <i className="fab fa-codepen logo-icon" />
           <i className="fab fa-github logo-icon" />

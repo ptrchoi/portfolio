@@ -116,23 +116,28 @@ class Portfolio extends Component {
     const card = this.state.cards;
     return (
       <div className="section-wrapper portfolio-wrapper">
-        <Card card={card[0]} handleClick={this.updateCards} />
-        <Card card={card[1]} handleClick={this.updateCards} />
-        <Card card={card[2]} handleClick={this.updateCards} />
-        <Card card={card[3]} handleClick={this.updateCards} />
-        <Card card={card[4]} handleClick={this.updateCards} />
-        <Card card={card[5]} handleClick={this.updateCards} />
-        <div className="confetti">
-          <Confetti
-            data={{
-              confettiType: 'icon',
-              strArr: [{ text: 'far fa-file-code' }],
-              screen: size,
-              num: 360,
-              color: 'icon',
-              speed: 'slowest'
-            }}
-          />
+        <div className="section-header">
+          <h1>Portfolio</h1>
+        </div>
+        <div className="card-wrapper">
+          <Card card={card[0]} handleClick={this.updateCards} />
+          <Card card={card[1]} handleClick={this.updateCards} />
+          <Card card={card[2]} handleClick={this.updateCards} />
+          <Card card={card[3]} handleClick={this.updateCards} />
+          <Card card={card[4]} handleClick={this.updateCards} />
+          <Card card={card[5]} handleClick={this.updateCards} />
+          <div className="confetti">
+            <Confetti
+              data={{
+                confettiType: 'icon',
+                strArr: [{ text: 'far fa-file-code' }],
+                screen: size,
+                num: 360,
+                color: 'icon',
+                speed: 'slowest'
+              }}
+            />
+          </div>
         </div>
       </div>
     );

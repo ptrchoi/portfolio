@@ -542,16 +542,19 @@ button:focus {
 
 .portfolio-wrapper {
   background-color: whitesmoke;
+  height: 100%;
+  width: 100%;
+}
+
+.card-wrapper {
   color: black;
   display: flex;
   flex-flow: row wrap;
-  height: 100%;
   justify-content: space-around;
-  padding: 18vh 2vw 7vh 2vw;
-  width: 100%;
+  padding: 5vh 2vw 7vh 2vw;
 }
-.portfolio-wrapper a:link,
-.portfolio-wrapper a:visited {
+.card-wrapper a:link,
+.card-wrapper a:visited {
   color: black;
   text-decoration: none;
 }
