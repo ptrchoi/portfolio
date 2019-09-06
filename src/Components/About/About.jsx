@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import Confetti from '../confetti/Confetti';
 
 //Assets
-import profilePic from '../../assets/profile.jpg';
+import profilePic from '../../assets/profile2.jpeg';
 import msftLogo from '../../assets/msftLogo_2096_771.png';
 import msftStudiosLogo from '../../assets/msftStudios_2000_570.png';
 import eaLogo from '../../assets/eaLogo_1280_505.png';
@@ -38,13 +38,13 @@ class About extends Component {
               Electronic Arts.
           </p>
           </div>
-          <div className="item-c item-logo">
+          <div className="item-c">
             <img className="grid-logo" src={msftLogo} alt="logo" />
           </div>
-          <div className="item-d item-logo">
+          <div className="item-d">
             <img className="grid-logo" src={msftStudiosLogo} alt="logo" />
           </div>
-          <div className="item-e item-logo">
+          <div className="item-e">
             <img className="grid-logo" src={eaLogo} alt="logo" />
           </div>
         </div>
