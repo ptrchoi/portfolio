@@ -25,10 +25,10 @@ class About extends Component {
           <h1>About</h1>
         </div>
         <div className="about-grid">
-          <div className="item-a">
+          <div className="item-a item">
             <img className="grid-pic" src={profilePic} alt="profile pic" />
           </div>
-          <div className="item-b">
+          <div className="item-b item">
             <p className="grid-text">
               Front-End Developer with a passion for creating elegant, intuitive, and delightful user experiences and solutions.
             <br />
@@ -38,37 +38,16 @@ class About extends Component {
               Electronic Arts.
           </p>
           </div>
-          <div className="item-c">
+          <div className="item-c item">
             <img className="grid-logo" src={msftLogo} alt="logo" />
           </div>
-          <div className="item-d">
+          <div className="item-d item">
             <img className="grid-logo" src={msftStudiosLogo} alt="logo" />
           </div>
-          <div className="item-e">
+          <div className="item-e item">
             <img className="grid-logo" src={eaLogo} alt="logo" />
           </div>
         </div>
-        {/* <div id="profilePicWrapper" className="about-content-block">
-          <img id="profilePic" src={profilePic} alt="profile pic" />
-          <p className="about-text">
-            Front-End Developer with a passion for creating elegant, intuitive, and delightful user experiences and solutions.
-            <br />
-            <br />
-            Over 15 years of entertainment and business software development
-            experience at leading Fortune 500 companies, including Microsoft and
-            Electronic Arts.
-          </p>
-        </div>
-        <div id="logosWrapper" className="about-content-block">
-          <img id="msftLogo" className="about-logo" src={msftLogo} alt="logo" />
-          <img
-            id="msftStudiosLogo"
-            className="about-logo"
-            src={msftStudiosLogo}
-            alt="logo"
-          />
-          <img id="eaLogo" className="about-logo" src={eaLogo} alt="logo" />
-        </div> */}
         <div className="confetti">
           <Confetti
             data={{

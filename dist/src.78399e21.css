@@ -395,12 +395,12 @@ button:focus {
 }
 
 .item-a {
+  display: flex;
   grid-area: profilePic;
 }
 
 .item-b {
-  display: flex;
-  flex-direction: column;
+  background-color: white;
   grid-area: profileText;
 }
 
@@ -430,7 +430,7 @@ button:focus {
 
 .about-grid {
   display: grid;
-  height: auto;
+  height: calc(2/3 * 80vw);
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: "profilePic profileText profileText" "logo1 logo2 logo3";
@@ -440,16 +440,15 @@ button:focus {
 }
 
 .grid-pic {
-  height: auto;
+  object-fit: cover;
   width: 100%;
 }
 
 .grid-text {
   font-size: 12px;
-  background-color: white;
   color: #1b4664;
-  flex: 1;
-  padding: 15% 4% 0 4%;
+  padding: 12% 8% 0 8%;
+  width: 100%;
 }
 @media screen and (min-width: 320px) {
   .grid-text {
@@ -463,7 +462,6 @@ button:focus {
 }
 
 .grid-logo {
-  height: auto;
   left: 20%;
   position: absolute;
   top: 40%;
