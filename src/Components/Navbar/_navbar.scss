@@ -9,8 +9,9 @@
   // left: 0;
 }
 #navbar {
-  background-color: $gap-blue;
   @include fluid-type(height, $min-width, $max-width, 40px, 60px);
+  background-color: $gap-blue;
+  border-bottom: 1.5px solid $secondary-orange-light;
   z-index: $navbar-layer;
 }
 #navSidebar {

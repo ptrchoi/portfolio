@@ -11,9 +11,6 @@ const Card = props => {
       <div id={projectId} onClick={props.handleClick} className="card-content">
         <div className="card-content--front">
           <img src={image} alt="thumbnail" />
-          <div>
-            <p>{title}</p>
-          </div>
         </div>
         <div className="card-content--back">
           <Cardinfo title={title} link={link} info={description} />

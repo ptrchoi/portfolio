@@ -5,6 +5,13 @@ import React, { Component } from 'react';
 import Card from '../card/Card';
 import Confetti from '../confetti/Confetti';
 
+//Assets
+import screenshot1 from '../../assets/project_1.png';
+import screenshot2 from '../../assets/project_2.png';
+import screenshot3 from '../../assets/project_3.png';
+import screenshot4 from '../../assets/project_4.png';
+
+
 /**
  * Functional React Component, renders a content section of "cards".
  * @function
@@ -15,7 +22,7 @@ const CARDS = [
   {
     projectId: 'project-1',
     title: 'Single-page Application (SPA) - Product Page',
-    image: 'https://codepen.io/ptrchoi/pen/JayyOP/image/large.png',
+    image: screenshot1,
     link: 'https://codepen.io/ptrchoi/pen/JayyOP',
     description:
       'A pure JS & CSS demo of a single-page application, responsive product page. With nested Flex-Box & CSS Grid layouts, nav-menu & image gallery modals, and user-centered design elements throughout.',
@@ -24,7 +31,7 @@ const CARDS = [
   {
     projectId: 'project-2',
     title: 'REACT Calculator',
-    image: 'https://codepen.io/ptrchoi/pen/QJRpvQ/image/large.png',
+    image: screenshot4,
     link: 'https://codepen.io/ptrchoi/pen/QJRpvQ',
     description:
       'A simple REACT Calculator Web App with a clean, modern Material theme, demonstrating functional programming with higher-order functions, advanced ES6 features, and modular programming with React and SCSS components.',
@@ -33,7 +40,7 @@ const CARDS = [
   {
     projectId: 'project-3',
     title: 'REACT Drum Machine',
-    image: 'https://codepen.io/ptrchoi/pen/Xyrppy/image/large.png',
+    image: screenshot2,
     link: 'https://codepen.io/ptrchoi/pen/Xyrppy',
     description: 'Click to check it out on Codepen',
     flipped: false
@@ -41,7 +48,7 @@ const CARDS = [
   {
     projectId: 'project-4',
     title: 'Technical Documentation Page',
-    image: 'https://codepen.io/ptrchoi/pen/jvLoOQ/image/large.png',
+    image: screenshot3,
     link: 'https://codepen.io/ptrchoi/pen/jvLoOQ',
     description:
       "A pure JS & CSS demo of a responsive technical document, recreating a page from VS Code's site from scratch. With active menu scrolling, persistent modal nav-menu, and modern Code Element styling.",
@@ -50,7 +57,7 @@ const CARDS = [
   {
     projectId: 'project-5',
     title: 'Markdown Editor with Live Preview',
-    image: 'https://codepen.io/ptrchoi/pen/rqPKJV/image/large.png',
+    image: screenshot1,
     link: 'https://codepen.io/ptrchoi/pen/rqPKJV',
     description: 'Click to check it out on Codepen',
     flipped: false
@@ -58,7 +65,7 @@ const CARDS = [
   {
     projectId: 'project-6',
     title: 'Random Quote Generator',
-    image: 'https://codepen.io/ptrchoi/pen/mQEMXv/image/large.png',
+    image: screenshot4,
     link: 'https://codepen.io/ptrchoi/pen/mQEMXv',
     description:
       'A simple REACT Web App which generates randomized quotes and backgrounds, integrating with the Forismatic API. Fully responsive and designed to have a calming effect.',
