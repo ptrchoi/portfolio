@@ -562,38 +562,42 @@ button:focus {
 
 .card {
   background-color: whitesmoke;
-  height: calc(1/3 * 80vw);
+  height: calc(.4 * 80vw);
+  position: relative;
   width: calc(1/2 * 80vw);
   z-index: 9;
 }
 
-.card-content {
-  position: relative;
-}
-
-.card-flipped .card-content--back {
+.card-front {
   height: 100%;
+  overflow: hidden;
 }
-
-.card-content--front img {
+.card-front img {
   object-fit: cover;
   width: 100%;
 }
 
-.card-content--back {
-  position: absolute;
+.card-back {
+  background-color: rgba(255, 255, 255, 0.728);
   bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(128, 128, 128, 0.475);
-  overflow: hidden;
-  width: 100%;
   height: 0;
-  transition: 0.4s ease;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  transition: 0.3s ease;
+  width: 100%;
+}
+
+.card-flipped .card-front {
+  filter: blur(3px);
+}
+.card-flipped .card-back {
+  height: 100%;
 }
 
 .cardinfo {
-  color: white;
+  color: black;
   height: 100%;
   left: 50%;
   position: absolute;
@@ -607,20 +611,23 @@ button:focus {
 }
 .cardinfo a:link,
 .cardinfo a:visited {
-  color: orange;
+  color: #ff844b;
   text-decoration: none;
 }
 
 .card-title {
-  color: blue;
+  border-bottom: 1.5px solid #ff844b;
+  color: #1b4664;
+  font-weight: bold;
 }
 
 .card-text {
+  color: #1b4664;
   font-style: italic;
 }
 
 .link-icon {
-  color: orange;
+  color: #ff844b;
   font-size: 0.9rem;
   padding: 0 0.5vw 0 0.5vw;
 }

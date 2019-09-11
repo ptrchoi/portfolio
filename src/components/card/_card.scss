@@ -1,32 +1,37 @@
 //SHOULD MAKE CARD HEIGHT & WIDTH SCALE RESPONSIVELY
 .card {
   background-color: $background-white;
-  height: calc(1/3 * 80vw);
+  height: calc(.4 * 80vw);
+  position: relative;
   width: calc(1/2 * 80vw);
   z-index: $above-confetti-layer;
 }
-.card-content {
-  position: relative;
-}
-.card-flipped .card-content--back {
+.card-front {
   height: 100%;
-}
-.card-content--front {
+  overflow: hidden;
   img {
     object-fit: cover;
     width: 100%;
   }
 }
-.card-content--back {
-  position: absolute;
+.card-back {
+  background-color: rgba(255, 255, 255, 0.728);
   bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(128, 128, 128, 0.475);
-  overflow: hidden;
-  width: 100%;
   height: 0;
-  transition: 0.4s ease;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  transition: 0.3s ease;
+  width: 100%;
+}
+.card-flipped {
+  .card-front {
+    filter: blur(3px);
+  }
+  .card-back {
+    height: 100%;
+  }
 }
 
 

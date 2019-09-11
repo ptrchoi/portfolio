@@ -1,5 +1,5 @@
 .cardinfo {
-  color: white;
+  color: black;
   height: 100%;
   left: 50%;
   position: absolute;
@@ -12,18 +12,21 @@
   }
   a:link,
   a:visited {
-    color: orange;
+    color: $secondary-orange-light;
     text-decoration: none;
   }
 }
 .card-title {
-  color: blue;
+  border-bottom: 1.5px solid $secondary-orange-light;
+  color: $gap-blue;
+  font-weight: bold;
 }
 .card-text {
+  color: $gap-blue;
   font-style: italic;
 }
 .link-icon {
-  color: orange;
+  color: $secondary-orange-light;
   font-size: 0.9rem;
   padding: 0 0.5vw 0 0.5vw;
 }

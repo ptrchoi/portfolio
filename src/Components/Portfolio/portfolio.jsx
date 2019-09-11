@@ -112,11 +112,11 @@ class Portfolio extends Component {
     if (flipped) {
       // .addClass & .removeClass not working ('not a function') - NEED TO FIX!
       // document.getElementById(card.projectId).removeClass('card-flipped');
-      document.getElementById(card.projectId).className = 'card-content';
+      document.getElementById(card.projectId).className = 'card';
     } else {
       // document.getElementById(card.projectId).addClass('card-flipped');
       document.getElementById(card.projectId).className =
-        'card-content card-flipped';
+        'card card-flipped';
     }
     card.flipped = !flipped;
     cards[i] = card;
