@@ -1,10 +1,12 @@
 .cardinfo {
-  color: black;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  margin-left: 8px; //offset from _card.scss>.card-content>box-shadow
-
+  color: white;
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);    
+  width: 100%;
   p {
     padding: 2vh 1vw 2vh 1vw;
   }
