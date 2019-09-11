@@ -87,6 +87,11 @@ class Portfolio extends Component {
     let { cards } = this.state;
     let index = cards.findIndex(i => i.projectId === e.currentTarget.id);
     let isFlipped = cards[index].flipped; //Flipped state of currently clicked card
+
+    this.setState({
+      cards: cards
+    });
+
     let alreadyFlippedIndex = cards.findIndex(i => i.flipped === true); //Check for already flipped cards
 
     //Flip any already flipped card first
