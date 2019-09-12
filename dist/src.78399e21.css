@@ -13,7 +13,7 @@ body {
   min-width: 320px;
   margin: 0 auto !important;
   background-color: white;
-  font-family: "Nunito", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .section-wrapper {
@@ -286,9 +286,7 @@ body {
 
 .overlayText {
   color: white;
-  font-family: "Livvic", sans-serif;
   font-size: 3.5vw;
-  font-weight: 200;
   position: absolute;
   text-align: center;
   text-shadow: 2px 2px black;
@@ -299,7 +297,6 @@ body {
 }
 .overlayText #name {
   color: #98d9ee;
-  font-weight: 500;
 }
 
 #innerButton {
@@ -562,6 +559,7 @@ button:focus {
 
 .card {
   background-color: whitesmoke;
+  font-family: "Livvic", sans-serif;
   height: calc(.4 * 80vw);
   position: relative;
   width: calc(1/2 * 80vw);
@@ -571,6 +569,7 @@ button:focus {
 .card-front {
   height: 100%;
   overflow: hidden;
+  transition: filter 1s ease;
 }
 .card-front img {
   object-fit: cover;
@@ -578,24 +577,33 @@ button:focus {
 }
 
 .card-back {
-  background-color: rgba(255, 255, 255, 0.728);
+  background-color: rgba(255, 255, 255, 0.8);
   bottom: 0;
   height: 0;
   left: 0;
   overflow: hidden;
   position: absolute;
   right: 0;
-  transition: 0.3s ease;
+  transition: height 0.5s ease;
   width: 100%;
 }
 
-.card-flipped .card-front {
-  filter: blur(3px);
+@media (hover: hover) {
+  .card:hover .card-front {
+    filter: blur(3px);
+  }
+  .card:hover .card-back {
+    height: 100%;
+  }
 }
-.card-flipped .card-back {
-  height: 100%;
+@media (any-pointer: coarse) {
+  .card-flipped .card-front {
+    filter: blur(3px);
+  }
+  .card-flipped .card-back {
+    height: 100%;
+  }
 }
-
 .cardinfo {
   color: black;
   height: 100%;
@@ -612,6 +620,7 @@ button:focus {
 .cardinfo a:link,
 .cardinfo a:visited {
   color: #ff844b;
+  cursor: pointer;
   text-decoration: none;
 }
 
@@ -623,7 +632,7 @@ button:focus {
 
 .card-text {
   color: #1b4664;
-  font-style: italic;
+  text-shadow: 1px 1px white;
 }
 
 .link-icon {

@@ -1,6 +1,7 @@
 //SHOULD MAKE CARD HEIGHT & WIDTH SCALE RESPONSIVELY
 .card {
   background-color: $background-white;
+  font-family: 'Livvic', sans-serif;
   height: calc(.4 * 80vw);
   position: relative;
   width: calc(1/2 * 80vw);
@@ -9,60 +10,43 @@
 .card-front {
   height: 100%;
   overflow: hidden;
+  transition: filter 1s ease;
   img {
     object-fit: cover;
     width: 100%;
   }
 }
 .card-back {
-  background-color: rgba(255, 255, 255, 0.728);
+  background-color: rgba(255, 255, 255, 0.8);
   bottom: 0;
   height: 0;
   left: 0;
   overflow: hidden;
   position: absolute;
   right: 0;
-  transition: 0.3s ease;
+  transition: height .5s ease;
   width: 100%;
 }
-.card-flipped {
-  .card-front {
-    filter: blur(3px);
-  }
-  .card-back {
-    height: 100%;
-  }
+
+//If hover-capable device, do overlay on hover
+@media (hover: hover) {
+  .card:hover {
+    .card-front {
+      filter: blur(3px);
+    }
+    .card-back {
+      height: 100%;
+    }  
+  }  
 }
-
-
-
-// .card-content {
-//   // object-fit: cover;
-//   // width: 100%;
-
-//   // transition: background-color 0.5s ease-in-out;
-
-//   // transition: transform 0.6s;
-//   // transform-style: preserve-3d;
-// }
-// .card-flipped {
-//   // transform: rotateY(-180deg);
-// }
-
-// .card-content--front,
-// .card-content--back {
-//   backface-visibility: hidden;
-//   position: absolute;
-//   p {
-//     text-align: center;
-//   }
-// }
-// .card-content--front {
-//   img {
-//     object-fit: cover;
-//     width: 100%;
-//   }
-// }
-// .card-content--back {
-//   // transform: rotateY(180deg);
-// }
+//If touch-capable device, do overlay on touch/click
+@media (any-pointer: coarse) {
+  .card-flipped {
+    .card-front {
+      filter: blur(3px);
+    }
+    .card-back {
+      height: 100%;
+    }
+  }  
+}

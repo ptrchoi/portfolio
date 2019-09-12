@@ -59,7 +59,7 @@ class Home extends Component {
           <p>web developer & designer.</p>
           <button
             id="innerButton"
-            onClick={() => fullpageApi.moveSectionDown()}>portfolio</button>
+            onClick={() => fullpageApi.moveSectionDown()}>Learn More</button>
         </div>
         <div className="confetti blur-outer">
           <Confetti

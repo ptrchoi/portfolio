@@ -13,6 +13,7 @@
   a:link,
   a:visited {
     color: $secondary-orange-light;
+    cursor: pointer;
     text-decoration: none;
   }
 }
@@ -23,7 +24,7 @@
 }
 .card-text {
   color: $gap-blue;
-  font-style: italic;
+  text-shadow: 1px 1px rgb(255, 255, 255);  
 }
 .link-icon {
   color: $secondary-orange-light;

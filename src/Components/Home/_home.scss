@@ -29,9 +29,9 @@
 }
 .overlayText {
   color: white;
-  font-family: 'Livvic', sans-serif;
+  // font-family: 'Source Sans Pro', sans-serif;
   font-size: 3.5vw;
-  font-weight: 200;
+  // font-weight: thin;
   position: absolute;
   text-align: center;
   text-shadow: 2px 2px rgb(0, 0, 0);
@@ -42,7 +42,7 @@
   }
   #name {
     color: rgb(152, 217, 238);
-    font-weight: 500;
+    // font-weight: 500;
   }
 }
 #innerButton {
