@@ -308,6 +308,7 @@ body {
   height: 6vh;
   margin-top: 5vh;
   text-shadow: 1px 1px black;
+  transition: 0.1s ease-in-out;
   width: 28vw;
 }
 
@@ -323,11 +324,19 @@ button:focus {
   outline: none;
 }
 
-.btn:active {
-  background-color: rgba(238, 238, 238, 0.324);
-  color: black;
+@media (hover: hover) {
+  #innerButton:hover {
+    background-color: #1b4664;
+    border: solid 0.3vw #98d9ee;
+    color: white;
+  }
 }
-
+@media (any-pointer: coarse) {
+  #innerButton:active {
+    background-color: rgba(238, 238, 238, 0.324);
+    color: black;
+  }
+}
 .confetti {
   font-family: "Inconsolata", monospace;
   position: absolute;

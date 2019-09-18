@@ -54,6 +54,7 @@
   height: 6vh;
   margin-top: 5vh;
   text-shadow: 1px 1px rgb(0, 0, 0);
+  transition: 0.1s ease-in-out;
   width: 28vw;
 }
 .blur-inner {
@@ -66,12 +67,33 @@
 button:focus {
   outline: none;
 }
-.btn:active {
-  background-color: rgba(
-    238,
-    238,
-    238,
-    0.324
-  ); //TEMP - to be defined in Variables
-  color: black;
+// .btn:active {
+//   background-color: rgba(
+//     238,
+//     238,
+//     238,
+//     0.324
+//   ); //TEMP - to be defined in Variables
+//   color: black;
+// }
+
+//If hover-capable device, do overlay on hover
+@media (hover: hover) {
+  #innerButton:hover {
+    background-color: $gap-blue;
+    border: solid 0.3vw rgb(152, 217, 238);
+    color: white;
+    }  
+}
+//If touch-capable device, do overlay on touch/click
+@media (any-pointer: coarse) {
+  #innerButton:active {
+    background-color: rgba(
+      238,
+      238,
+      238,
+      0.324
+    ); //TEMP - to be defined in Variables
+    color: black;
+    }  
 }
