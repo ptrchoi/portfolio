@@ -316,10 +316,6 @@ body {
   filter: blur(0.4vw);
 }
 
-.blur-outer {
-  filter: blur(0.1vw);
-}
-
 button:focus {
   outline: none;
 }

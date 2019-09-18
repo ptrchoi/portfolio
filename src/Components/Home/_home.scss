@@ -60,9 +60,9 @@
 .blur-inner {
   filter: blur(0.4vw);
 }
-.blur-outer {
-  filter: blur(0.1vw);
-}
+// .blur-outer {
+//   filter: blur(0.1vw);
+// }
 //For accessibility only on landing page
 button:focus {
   outline: none;

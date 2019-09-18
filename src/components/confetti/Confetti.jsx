@@ -2,23 +2,6 @@
 import React, { Component } from 'react';
 
 //CONSTANTS
-// const PRIMARY_COLORS = [
-//   'rgb(255,255,255)',
-//   'rgb(27,147,39)',
-//   'rgb(27,147,39,.7)',
-//   'rgb(77,14,21)',
-//   'rgb(255,255,255)',
-//   'rgb(255,255,255,.5)',
-//   'rgb(77,14,21,.7)',
-//   'rgb(57,129,193)',
-//   'rgb(57,129,193,.7)',
-//   'rgb(221,255,0)',
-//   'rgb(255,255,255)',
-//   'rgb(255,255,255,.7)',
-//   'rgb(221,255,0,.7)',
-//   'rgb(255,255,255)',
-//   'rgb(255,255,255,.7)'
-// ];
 const PRIMARY_COLORS = [
   'rgb(171,216,232)',
   'rgb(27,147,39)',
@@ -39,10 +22,13 @@ const PRIMARY_COLORS = [
 const BG_COLORS = ['rgb(245,245,245)'];
 const ICON_COLORS = ['rgb(110,110,110,.1)'];
 const DARK_BG_COLORS = ['rgb(110,110,110)'];
+// const LIGHTS_COLORS = ['rgb(79,58,31)', 'rgb(52,52,47)', 'rgb(94,94,43)', 'rgb(235,249,245)', 'rgb(255,255,255)'];
+// const LIGHTS_COLORS = ['rgba(44,102,88,.25)', 'rgba(100,249,251,.25)', 'rgba(198,206,251,.25)', 'rgba(25,85,149,.25)', 'rgba(255,255,255,.25)'];
+const LIGHTS_COLORS = ['rgba(142,213,237,.25)', 'rgba(219,240,251,.25)', 'rgba(53,186,217,.25)', 'rgba(208,234,248,.25)', 'rgba(255,255,255,.25)'];
 const MARGINS_OUTER = [1, 8];
 const MARGINS_INNER = [3, 4, 5];
 
-//Local Functions
+//LOCAL FUNCTIONS
 function getRandInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -78,6 +64,8 @@ function getRandProps(color, speed, margins, screen) {
   } else if (color === 'darkBG') {
     colorArr = DARK_BG_COLORS;
     shadow = '1px 1px rgb(245,245,245,.3)';
+  } else if (color === 'lights') {
+    colorArr = LIGHTS_COLORS;
   }
   color = colorArr[getRandInt(0, colorArr.length - 1)];
 
@@ -145,11 +133,19 @@ class Confetti extends Component {
           </span>
         );
       });
-    } else {
+    } else if (confettiType === 'text') {
       return particleArr.map(particle => {
         return (
           <span style={getRandProps(color, speed, margins, screen)}>
             {particle}
+          </span>
+        );
+      });
+    } else { // (confettiType === 'shape')
+      return particleArr.map(particle => {
+        return (
+          <span style={getRandProps(color, speed, margins, screen)}>
+            <i className={particle} />
           </span>
         );
       });
