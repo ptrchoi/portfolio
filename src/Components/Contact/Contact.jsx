@@ -36,7 +36,7 @@ class Contact extends Component {
           <div className="confetti">
             <Confetti
               data={{
-                confettiType: 'square',
+                confettiType: 'circle',
                 number: 100,
                 color: 'contact'
               }}
