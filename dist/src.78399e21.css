@@ -62,7 +62,7 @@ body {
 
 #navbar {
   height: 40px;
-  background-color: #1b4664;
+  background-color: #2d7e9a;
   border-bottom: 1.5px solid #ff844b;
   z-index: 40;
 }
@@ -285,14 +285,14 @@ body {
   padding-top: 0.8vh;
 }
 .overlayText #name {
-  color: #98d9ee;
+  color: #fbe345;
   font-weight: 500;
 }
 
-#innerButton {
-  background-color: rgba(140, 140, 140, 0.7);
-  border: solid 0.3vw white;
-  color: white;
+#welcomeBtn {
+  background-color: rgba(27, 70, 100, 0.6);
+  border: solid 0.05vw #98d9ee;
+  color: #98d9ee;
   cursor: pointer;
   font-size: 1.8vw;
   height: 6vh;
@@ -311,14 +311,14 @@ button:focus {
 }
 
 @media (hover: hover) {
-  #innerButton:hover {
-    background-color: #1b4664;
-    border: solid 0.3vw #98d9ee;
+  #welcomeBtn:hover {
+    background-color: rgba(152, 217, 238, 0.7);
+    border: solid 0.3vw white;
     color: white;
   }
 }
 @media (any-pointer: coarse) {
-  #innerButton:active {
+  #welcomeBtn:active {
     background-color: rgba(238, 238, 238, 0.324);
     color: black;
   }
@@ -345,7 +345,7 @@ button:focus {
     transform: translateY(0) translateX(0);
   }
   100% {
-    transform: translateY(-250vh) translateX(80vw) rotate(580deg);
+    transform: translateY(-250vh) translateX(80vw) rotate(880deg);
   }
 }
 @keyframes float2 {
@@ -353,7 +353,7 @@ button:focus {
     transform: translateY(0) translateX(0);
   }
   100% {
-    transform: translateY(-250vh) translateX(40vw) rotate(-480deg);
+    transform: translateY(-250vh) translateX(40vw) rotate(-780deg);
   }
 }
 @keyframes float3 {
@@ -361,7 +361,7 @@ button:focus {
     transform: translateY(0) translateX(0);
   }
   100% {
-    transform: translateY(-250vh) translateX(-80vw) rotate(380deg);
+    transform: translateY(-250vh) translateX(-80vw) rotate(480deg);
   }
 }
 @keyframes float4 {
@@ -369,7 +369,7 @@ button:focus {
     transform: translateY(0) translateX(0);
   }
   100% {
-    transform: translateY(-250vh) translateX(-40vw) rotate(480deg);
+    transform: translateY(-250vh) translateX(-40vw) rotate(400deg);
   }
 }
 @keyframes float5 {

@@ -31,7 +31,7 @@ class Home extends Component {
           <p>Hi, I'm <span id="name">Peter Choi</span>,</p>
           <p>web developer & designer.</p>
           <button
-            id="innerButton"
+            id="welcomeBtn"
             onClick={() => fullpageApi.moveSectionDown()}>Learn More</button>
         </div>
         <div className="confetti blur">

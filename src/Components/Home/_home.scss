@@ -21,14 +21,20 @@
     padding-top: .8vh;
   }
   #name {
-    color: rgb(152, 217, 238);
+    // color: rgb(152, 217, 238);
+    color: rgb(251,227,69);
     font-weight: 500;
   }
 }
-#innerButton {
-  background-color: rgba(140, 140, 140, 0.7);
-  border: solid 0.3vw white;
-  color: white;
+#welcomeBtn {
+  background-color: rgba(27,70,100,.6);
+  border: solid 0.05vw rgb(152, 217, 238);
+  // color: white;
+  // background-color: rgba(140, 140, 140, 0.7);
+  // background-color: rgba(219,240,251,.3);
+  // border: solid 0.2vw rgb(152, 217, 238);
+  // border: solid 0.05vw white;
+  color: rgb(152, 217, 238);
   cursor: pointer;
   font-size: 1.8vw;
   height: 6vh;
@@ -47,15 +53,20 @@ button:focus {
 
 //If hover-capable device, do overlay on hover
 @media (hover: hover) {
-  #innerButton:hover {
-    background-color: $gap-blue;
-    border: solid 0.3vw rgb(152, 217, 238);
+  #welcomeBtn:hover {
+    background-color: rgba(152, 217, 238,.7);
+    // background-color: rgba(140, 140, 140, 0.7);
+    // background-color: rgba(27,70,100,.6);
+    // border: solid 0.4vw rgb(27,70,100);
+    border: solid 0.3vw white;
+    // color: rgb(251,227,69);
     color: white;
+    // color: rgb(152, 217, 238);
     }  
 }
 //If touch-capable device, do overlay on touch/click
 @media (any-pointer: coarse) {
-  #innerButton:active {
+  #welcomeBtn:active {
     background-color: rgba(
       238,
       238,

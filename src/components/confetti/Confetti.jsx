@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 //CONSTANTS
 // const LIGHTS_COLORS = ['rgb(79,58,31)', 'rgb(52,52,47)', 'rgb(94,94,43)', 'rgb(235,249,245)', 'rgb(255,255,255)'];
 // const LIGHTS_COLORS = ['rgba(44,102,88,.25)', 'rgba(100,249,251,.25)', 'rgba(198,206,251,.25)', 'rgba(25,85,149,.25)', 'rgba(255,255,255,.25)'];
-const LIGHTS_COLORS = ['rgba(142,213,237,.3)', 'rgba(219,240,251,.3)', 'rgba(208,234,248,.3)', 'rgba(255,255,255,.3)'];
+const LIGHTS_COLORS = ['rgba(142,213,237,.3)', 'rgba(219,240,251,.3)', 'rgba(208,234,248,.3)', 'rgba(255,255,255,.3)', 'rgba(251,227,69,.3)', 'rgba(255,240,193,.3)', 'rgba(134,168,235,.3)'];
 
 //LOCAL FUNCTIONS
 function getRandInt(min, max) {
@@ -16,8 +16,8 @@ function getRandFixed(min, max) {
 function getRandProps() {
   let color = LIGHTS_COLORS[getRandInt(0, LIGHTS_COLORS.length - 1)];
   let leftOffset = getRandInt(1, 7) * 10 + '%'; //~10-70%
-  let delay = getRandInt(-30, 10) + 's';
-  let duration = getRandInt(40, 60) + 's';
+  let delay = getRandInt(-120, 120) + 's';
+  let duration = getRandInt(50, 120) + 's';
   let animNum = String(getRandInt(1, 5));
   let side = getRandFixed(2, 5) + 'vw';
 
@@ -30,7 +30,7 @@ function getRandProps() {
     animationIterationCount: 'infinite',
     width: side,
     height: side,
-    borderRadius: '1vw'
+    borderRadius: '0.8vw'
   };
 }
 function createArray(count) {
