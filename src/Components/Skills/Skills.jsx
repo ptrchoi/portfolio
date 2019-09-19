@@ -65,7 +65,7 @@ class Skills extends Component {
         <div className="skills-graphic">
           <img id="chart" src={chart} alt="chart" />
         </div>
-        <div className="confetti">
+        {/* <div className="confetti">
           <Confetti
             data={{
               confettiType: 'icon',
@@ -81,7 +81,7 @@ class Skills extends Component {
               speed: 'slow'
             }}
           />
-        </div>
+        </div> */}
       </div>
     );
   }

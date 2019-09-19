@@ -138,7 +138,7 @@ class Portfolio extends Component {
           <Card card={card[3]} handleClick={this.updateCards} />
           <Card card={card[4]} handleClick={this.updateCards} />
           <Card card={card[5]} handleClick={this.updateCards} />
-          <div className="confetti">
+          {/* <div className="confetti">
             <Confetti
               data={{
                 confettiType: 'icon',
@@ -149,7 +149,7 @@ class Portfolio extends Component {
                 speed: 'slowest'
               }}
             />
-          </div>
+          </div> */}
         </div>
       </div>
     );

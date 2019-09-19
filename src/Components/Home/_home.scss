@@ -9,29 +9,9 @@
   flex-direction: column;
   justify-content: center;
 }
-.frostedOverlay {
-  // background-color: rgba(50, 50, 50, 0.53);
-  background-image: linear-gradient(to right, 
-  rgba(100, 100, 100, 0.25), 
-  rgba(100, 100, 100, 0.38), 
-  rgba(100, 100, 100, 0.45), 
-  rgba(100, 100, 100, 0.38), 
-  rgba(100, 100, 100, 0.25));
-  
-  border: solid 0.2vw rgba(176, 176, 176, 0.9);
-  border-bottom: none;
-  border-top: none;
-  height: 100%;
-  padding-top: 50vh;
-  // position: relative;
-  width: 50%;
-  z-index: 1;
-}
 .overlayText {
   color: white;
-  // font-family: 'Source Sans Pro', sans-serif;
   font-size: 3.5vw;
-  // font-weight: thin;
   position: absolute;
   text-align: center;
   text-shadow: 2px 2px rgb(0, 0, 0);
@@ -42,7 +22,7 @@
   }
   #name {
     color: rgb(152, 217, 238);
-    // font-weight: 500;
+    font-weight: 500;
   }
 }
 #innerButton {
@@ -57,25 +37,13 @@
   transition: 0.1s ease-in-out;
   width: 28vw;
 }
-.blur-inner {
-  filter: blur(0.4vw);
+.blur {
+  filter: blur(0.25vw);
 }
-// .blur-outer {
-//   filter: blur(0.1vw);
-// }
 //For accessibility only on landing page
 button:focus {
   outline: none;
 }
-// .btn:active {
-//   background-color: rgba(
-//     238,
-//     238,
-//     238,
-//     0.324
-//   ); //TEMP - to be defined in Variables
-//   color: black;
-// }
 
 //If hover-capable device, do overlay on hover
 @media (hover: hover) {

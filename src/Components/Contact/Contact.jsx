@@ -32,7 +32,7 @@ class Contact extends Component {
           <input type="text" />
           <button>SUBMIT</button>
         </div>
-        <div className="confetti">
+        {/* <div className="confetti">
           <Confetti
             data={{
               confettiType: 'icon',
@@ -47,7 +47,7 @@ class Contact extends Component {
               speed: 'medium'
             }}
           />
-        </div>
+        </div> */}
       </div>
     );
   }

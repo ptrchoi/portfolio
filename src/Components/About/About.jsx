@@ -48,7 +48,7 @@ class About extends Component {
             <img className="grid-logo" src={eaLogo} alt="logo" />
           </div>
         </div>
-        <div className="confetti">
+        {/* <div className="confetti">
           <Confetti
             data={{
               confettiType: 'icon',
@@ -75,7 +75,7 @@ class About extends Component {
               speed: 'slow'
             }}
           />
-        </div>
+        </div> */}
       </div>
     );
   }

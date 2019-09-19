@@ -273,17 +273,6 @@ body {
   justify-content: center;
 }
 
-.frostedOverlay {
-  background-image: linear-gradient(to right, rgba(100, 100, 100, 0.25), rgba(100, 100, 100, 0.38), rgba(100, 100, 100, 0.45), rgba(100, 100, 100, 0.38), rgba(100, 100, 100, 0.25));
-  border: solid 0.2vw rgba(176, 176, 176, 0.9);
-  border-bottom: none;
-  border-top: none;
-  height: 100%;
-  padding-top: 50vh;
-  width: 50%;
-  z-index: 1;
-}
-
 .overlayText {
   color: white;
   font-size: 3.5vw;
@@ -297,6 +286,7 @@ body {
 }
 .overlayText #name {
   color: #98d9ee;
+  font-weight: 500;
 }
 
 #innerButton {
@@ -312,8 +302,8 @@ body {
   width: 28vw;
 }
 
-.blur-inner {
-  filter: blur(0.4vw);
+.blur {
+  filter: blur(0.25vw);
 }
 
 button:focus {
@@ -355,7 +345,7 @@ button:focus {
     transform: translateY(0) translateX(0);
   }
   100% {
-    transform: translateY(-550vh) translateX(40vw) rotate(580deg);
+    transform: translateY(-250vh) translateX(80vw) rotate(580deg);
   }
 }
 @keyframes float2 {
@@ -363,7 +353,7 @@ button:focus {
     transform: translateY(0) translateX(0);
   }
   100% {
-    transform: translateY(-550vh) translateX(20vw) rotate(-480deg);
+    transform: translateY(-250vh) translateX(40vw) rotate(-480deg);
   }
 }
 @keyframes float3 {
@@ -371,7 +361,7 @@ button:focus {
     transform: translateY(0) translateX(0);
   }
   100% {
-    transform: translateY(-550vh) translateX(-40vw) rotate(380deg);
+    transform: translateY(-250vh) translateX(-80vw) rotate(380deg);
   }
 }
 @keyframes float4 {
@@ -379,7 +369,7 @@ button:focus {
     transform: translateY(0) translateX(0);
   }
   100% {
-    transform: translateY(-550vh) translateX(-20vw) rotate(480deg);
+    transform: translateY(-250vh) translateX(-40vw) rotate(480deg);
   }
 }
 @keyframes float5 {
@@ -387,7 +377,7 @@ button:focus {
     transform: translateY(0) translateX(0);
   }
   100% {
-    transform: translateY(-550vh) translateX(20vw) rotate(-380deg);
+    transform: translateY(-250vh) translateX(40vw) rotate(-380deg);
   }
 }
 .about-wrapper {

@@ -22,7 +22,7 @@
     transform: translateY(0) translateX(0);
   }
   100% {
-    transform: translateY(-550vh) translateX(40vw) rotate(580deg);
+    transform: translateY(-250vh) translateX(80vw) rotate(580deg);
   }
 }
 @keyframes float2 {
@@ -30,7 +30,7 @@
     transform: translateY(0) translateX(0);
   }
   100% {
-    transform: translateY(-550vh) translateX(20vw) rotate(-480deg);
+    transform: translateY(-250vh) translateX(40vw) rotate(-480deg);
   }
 }
 @keyframes float3 {
@@ -38,7 +38,7 @@
     transform: translateY(0) translateX(0);
   }
   100% {
-    transform: translateY(-550vh) translateX(-40vw) rotate(380deg);
+    transform: translateY(-250vh) translateX(-80vw) rotate(380deg);
   }
 }
 @keyframes float4 {
@@ -46,7 +46,7 @@
     transform: translateY(0) translateX(0);
   }
   100% {
-    transform: translateY(-550vh) translateX(-20vw) rotate(480deg);
+    transform: translateY(-250vh) translateX(-40vw) rotate(480deg);
   }
 }
 @keyframes float5 {
@@ -54,6 +54,6 @@
     transform: translateY(0) translateX(0);
   }
   100% {
-    transform: translateY(-550vh) translateX(20vw) rotate(-380deg);
+    transform: translateY(-250vh) translateX(40vw) rotate(-380deg);
   }
 }
