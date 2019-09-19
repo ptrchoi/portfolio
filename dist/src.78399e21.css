@@ -382,7 +382,7 @@ button:focus {
 }
 .about-wrapper {
   align-content: start;
-  background-color: whitesmoke;
+  background-color: #dedede;
   display: grid;
   justify-content: center;
 }
@@ -398,12 +398,14 @@ button:focus {
   width: 100%;
 }
 .item-a .first-pic {
+  animation: fadeIn 1s;
   display: inline-block;
-  transition: 1s ease;
+  opacity: 1;
+  transition: opacity 1s ease;
 }
 .item-a .second-pic {
   display: none;
-  transition: 1s ease;
+  opacity: 0;
 }
 
 .item-b {
@@ -431,7 +433,7 @@ button:focus {
 }
 
 .item-c {
-  background-color: #e8e8e8;
+  background-color: #c1c1c1;
   grid-area: logo1;
   position: relative;
   transition: 1s ease;
@@ -449,7 +451,7 @@ button:focus {
 }
 
 .item-e {
-  background-color: #d8e8ed;
+  background-color: #aed3de;
   grid-area: logo3;
   position: relative;
   transition: 1s ease;
@@ -484,10 +486,15 @@ button:focus {
     border-radius: 50%;
   }
   .item-a:hover .first-pic {
+    animation: fadeOut 1s;
     display: none;
+    opacity: 0;
   }
   .item-a:hover .second-pic {
+    animation: fadeIn 1s;
     display: inline-block;
+    opacity: 1;
+    transition: opacity 1s ease;
   }
 
   .item-b:hover {
@@ -513,8 +520,24 @@ button:focus {
     background-color: transparent;
   }
 }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .skills-wrapper {
-  background-color: #e8e8e8;
+  background-color: whitesmoke;
   color: black;
   width: 100%;
 }
@@ -586,7 +609,7 @@ button:focus {
 }
 
 .portfolio-wrapper {
-  background-color: whitesmoke;
+  background-color: #dedede;
   height: 100%;
   width: 100%;
 }

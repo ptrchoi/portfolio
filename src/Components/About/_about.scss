@@ -1,6 +1,6 @@
 .about-wrapper {
   align-content: start;
-  background-color: $background-white;
+  background-color: rgb(222, 222, 222);
   display: grid;
   justify-content: center; //Justify/center the grid in the middle of the page
 }
@@ -11,18 +11,26 @@
   grid-area: profilePic;
 
   img {
+    // animation: squareBorder 1s;
     border-radius: none;
     object-fit: cover;
     transition: border-radius 1s ease;
     width: 100%;
   }
   .first-pic {
+    animation: fadeIn 1s;
     display: inline-block;
-    transition: 1s ease;
+    opacity: 1;
+    // visibility: visible;
+    // transition: opacity 1s ease, visibility 1s ease;
+    transition: opacity 1s ease;
   }
   .second-pic {
+    // animation: fadeOut 1s;
     display: none;
-    transition: 1s ease;
+    opacity: 0;
+    // visibility: hidden;
+    // transition: opacity 1s ease, visibility 1s ease;
   }
 }
 .item-b {
@@ -41,7 +49,7 @@
   }
 }
 .item-c {
-  background-color: rgb(232, 232, 232);
+  background-color: rgb(193, 193, 193);
   grid-area: logo1;
   position: relative;
   transition: 1s ease;
@@ -57,7 +65,7 @@
   }
 }
 .item-e {
-  background-color: rgb(216, 232, 237);
+  background-color: rgb(174, 211, 222);
   grid-area: logo3;  
   position: relative;
   transition: 1s ease;
@@ -91,13 +99,21 @@
 @media (hover: hover) {
   .item-a:hover {
     img {
+      // animation: roundBorder 1s;
       border-radius: 50%;
     }
     .first-pic {
+      animation: fadeOut 1s;
       display: none;
+      opacity: 0;
+      // visibility: hidden;
     }
     .second-pic {
+      animation: fadeIn 1s;
       display: inline-block;
+      opacity: 1;
+      transition: opacity 1s ease;
+      // visibility: visible;
     }
   }
   .item-b:hover {
@@ -120,3 +136,36 @@
     background-color: transparent;
   }  
 }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+// @keyframes roundBorder {
+//   0% {
+//     border-radius: none;
+//   }
+//   100% {
+//     border-radius: 50%;
+//   }
+// }
+// @keyframes squareBorder {
+//   0% {
+//     border-radius: 50%;
+//   }
+//   100% {
+//     border-radius: none;
+//   }
+// }
