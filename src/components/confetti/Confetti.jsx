@@ -5,9 +5,9 @@ import React, { Component } from 'react';
 // const LIGHTS_COLORS = ['rgb(79,58,31)', 'rgb(52,52,47)', 'rgb(94,94,43)', 'rgb(235,249,245)', 'rgb(255,255,255)'];
 // const LIGHTS_COLORS = ['rgba(44,102,88,.25)', 'rgba(100,249,251,.25)', 'rgba(198,206,251,.25)', 'rgba(25,85,149,.25)', 'rgba(255,255,255,.25)'];
 const HOME_COLORS = ['rgba(142,213,237,.3)', 'rgba(219,240,251,.3)', 'rgba(208,234,248,.3)', 'rgba(255,255,255,.3)', 'rgba(251,227,69,.3)', 'rgba(255,240,193,.3)', 'rgba(134,168,235,.3)'];
-const ABOUT_COLORS = ['rgba(232, 232, 232, 1)', 'rgba(0, 0, 0, .2)', 'rgba(216, 232, 237, .7)', 'rgba(216, 232, 237, 1)'];
-const SKILLS_COLORS = ['rgba(255, 255, 255, .4)', 'rgba(216, 232, 237, 1)'];
-const CONTACT_COLORS = ['rgba(255, 255, 255, .1)', 'rgba(255, 255, 255, .4)', 'rgba(216, 232, 237, .2)', 'rgba(216, 232, 237, .4)'];
+const ABOUT_COLORS = ['rgba(232, 232, 232, 1)', 'rgba(0, 0, 0, .2)', 'rgba(216, 232, 237, .7)', 'rgba(216, 232, 237, 1)', 'rgba(174, 211, 222,.6)'];
+const SKILLS_COLORS = ['rgba(255, 255, 255, 1)', 'rgba(216, 232, 237, .5)', 'rgba(216, 232, 237, 1)'];
+const CONTACT_COLORS = ['rgba(255, 255, 255, .1)', 'rgba(255, 255, 255, .4)', 'rgba(216, 232, 237, .2)', 'rgba(216, 232, 237, .4)', 'rgba(216, 232, 237, .7)'];
 
 //LOCAL FUNCTIONS
 function getRandInt(min, max) {

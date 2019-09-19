@@ -57,7 +57,7 @@ class About extends Component {
             <Confetti
               data={{
                 confettiType: 'square',
-                number: 100,
+                number: 150,
                 color: 'about'
               }}
             />

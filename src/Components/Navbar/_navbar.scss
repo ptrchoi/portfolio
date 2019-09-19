@@ -9,11 +9,11 @@
   // left: 0;
 }
 #navbar {
-  @include fluid-type(height, $min-width, $max-width, 40px, 60px);
+  @include fluid-type(height, $min-width, $max-width, 48px, 60px);
   // background-color: $gap-blue; 
   background-color: rgb(45, 126, 154);
   // border-bottom: 1.5px solid $secondary-orange-light;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid rgb(6, 18, 104);
   z-index: $navbar-layer;
 }
 #navSidebar {
