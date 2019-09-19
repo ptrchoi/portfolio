@@ -48,6 +48,17 @@ class About extends Component {
             <img className="grid-logo" src={eaLogo} alt="logo" />
           </div>
         </div>
+        <div className="confetti blur">
+          <div className="confetti">
+            <Confetti
+              data={{
+                confettiType: 'square',
+                number: 100,
+                color: 'about'
+              }}
+            />
+          </div>
+        </div>
         {/* <div className="confetti">
           <Confetti
             data={{

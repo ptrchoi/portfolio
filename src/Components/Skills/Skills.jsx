@@ -65,6 +65,17 @@ class Skills extends Component {
         <div className="skills-graphic">
           <img id="chart" src={chart} alt="chart" />
         </div>
+        <div className="confetti blur">
+          <div className="confetti">
+            <Confetti
+              data={{
+                confettiType: 'square',
+                number: 150,
+                color: 'skills'
+              }}
+            />
+          </div>
+        </div>
         {/* <div className="confetti">
           <Confetti
             data={{

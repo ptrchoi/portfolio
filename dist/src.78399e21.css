@@ -25,6 +25,10 @@ body {
   z-index: 9;
 }
 
+.blur {
+  filter: blur(0.25vw);
+}
+
 /* Mixins
 ------------------------------------ */
 /* CSSTransition "fade" Class
@@ -63,7 +67,7 @@ body {
 #navbar {
   height: 40px;
   background-color: #2d7e9a;
-  border-bottom: 1.5px solid #ff844b;
+  border-bottom: 2px solid black;
   z-index: 40;
 }
 @media screen and (min-width: 320px) {
@@ -300,10 +304,6 @@ body {
   text-shadow: 1px 1px black;
   transition: 0.1s ease-in-out;
   width: 28vw;
-}
-
-.blur {
-  filter: blur(0.25vw);
 }
 
 button:focus {

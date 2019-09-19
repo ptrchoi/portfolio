@@ -138,6 +138,17 @@ class Portfolio extends Component {
           <Card card={card[3]} handleClick={this.updateCards} />
           <Card card={card[4]} handleClick={this.updateCards} />
           <Card card={card[5]} handleClick={this.updateCards} />
+          <div className="confetti blur">
+            <div className="confetti">
+              <Confetti
+                data={{
+                  confettiType: 'square',
+                  number: 200,
+                  color: 'about'
+                }}
+              />
+            </div>
+          </div>
           {/* <div className="confetti">
             <Confetti
               data={{

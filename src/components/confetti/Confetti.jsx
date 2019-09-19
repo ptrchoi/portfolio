@@ -4,7 +4,10 @@ import React, { Component } from 'react';
 //CONSTANTS
 // const LIGHTS_COLORS = ['rgb(79,58,31)', 'rgb(52,52,47)', 'rgb(94,94,43)', 'rgb(235,249,245)', 'rgb(255,255,255)'];
 // const LIGHTS_COLORS = ['rgba(44,102,88,.25)', 'rgba(100,249,251,.25)', 'rgba(198,206,251,.25)', 'rgba(25,85,149,.25)', 'rgba(255,255,255,.25)'];
-const LIGHTS_COLORS = ['rgba(142,213,237,.3)', 'rgba(219,240,251,.3)', 'rgba(208,234,248,.3)', 'rgba(255,255,255,.3)', 'rgba(251,227,69,.3)', 'rgba(255,240,193,.3)', 'rgba(134,168,235,.3)'];
+const HOME_COLORS = ['rgba(142,213,237,.3)', 'rgba(219,240,251,.3)', 'rgba(208,234,248,.3)', 'rgba(255,255,255,.3)', 'rgba(251,227,69,.3)', 'rgba(255,240,193,.3)', 'rgba(134,168,235,.3)'];
+const ABOUT_COLORS = ['rgba(232, 232, 232, 1)', 'rgba(0, 0, 0, .2)', 'rgba(216, 232, 237, .7)', 'rgba(216, 232, 237, 1)'];
+const SKILLS_COLORS = ['rgba(255, 255, 255, .4)', 'rgba(216, 232, 237, 1)'];
+const CONTACT_COLORS = ['rgba(255, 255, 255, .1)', 'rgba(216, 232, 237, .2)', 'rgba(216, 232, 237, .4)'];
 
 //LOCAL FUNCTIONS
 function getRandInt(min, max) {
@@ -13,16 +16,25 @@ function getRandInt(min, max) {
 function getRandFixed(min, max) {
   return (Math.random() * (max - min) + min).toFixed(2);
 }
-function getRandProps() {
-  let color = LIGHTS_COLORS[getRandInt(0, LIGHTS_COLORS.length - 1)];
+function getRandProps(color) {
+  let colorSet = HOME_COLORS[getRandInt(0, HOME_COLORS.length - 1)];
   let leftOffset = getRandInt(1, 7) * 10 + '%'; //~10-70%
   let delay = getRandInt(-120, 120) + 's';
   let duration = getRandInt(50, 120) + 's';
   let animNum = String(getRandInt(1, 5));
   let side = getRandFixed(2, 5) + 'vw';
 
+  if (color === 'about') {
+    colorSet = ABOUT_COLORS[getRandInt(0, ABOUT_COLORS.length - 1)];
+  } else if (color === 'skills') {
+    colorSet = SKILLS_COLORS[getRandInt(0, SKILLS_COLORS.length - 1)];
+  } else if (color === 'contact') {
+    colorSet = CONTACT_COLORS[getRandInt(0, CONTACT_COLORS.length - 1)];
+  }
+
+
   return {
-    backgroundColor: color,
+    backgroundColor: colorSet,
     left: leftOffset,
     animationName: 'float' + animNum,
     animationDelay: delay,
@@ -46,14 +58,15 @@ class Confetti extends Component {
   render(props) {
     let {
       confettiType,
-      number
+      number,
+      color
     } = this.props.data;
 
     let arr = createArray(number);
 
     return arr.map(el => {
       return (
-        <span style={getRandProps()}></span>
+        <span style={getRandProps(color)}></span>
       );
     });
   }

@@ -39,7 +39,8 @@ class Home extends Component {
             <Confetti
               data={{
                 confettiType: 'square',
-                number: 100
+                number: 100,
+                color: 'home'
               }}
             />
           </div>

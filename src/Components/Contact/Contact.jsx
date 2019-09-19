@@ -32,6 +32,17 @@ class Contact extends Component {
           <input type="text" />
           <button>SUBMIT</button>
         </div>
+        <div className="confetti blur">
+          <div className="confetti">
+            <Confetti
+              data={{
+                confettiType: 'square',
+                number: 100,
+                color: 'contact'
+              }}
+            />
+          </div>
+        </div>
         {/* <div className="confetti">
           <Confetti
             data={{
