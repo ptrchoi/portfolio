@@ -7,17 +7,19 @@
 
 //Grid-template-area Items
 .item-a {
+  border-radius: 50%;
+  background-color: rgba(193, 193, 193, 0.578);
   display: flex;
   grid-area: profilePic;
 
   img {
-    border-radius: none;
+    // border-radius: none;
     object-fit: cover;
-    transition: border-radius .4s ease;
+    // transition: border-radius .4s ease;
     width: 100%;
   }
   .first-pic {
-    animation: fadeIn .4s;
+    animation: fadeIn 1s 0s;
     display: inline-block;
   }
   .second-pic {
@@ -89,14 +91,20 @@
 //If hover-capable device, do overlay on hover
 @media (hover: hover) {
   .item-a:hover {
+    // border-radius: 50%;
+    border-radius: none;
+    background-color: none;
+    // overflow: hidden;
+
     img {
-      border-radius: 50%;
+      // border-radius: 50%;
     }
     .first-pic {
       display: none;
     }
     .second-pic {
-      animation: fadeIn .4s;
+      animation: fadeIn 1s 0s;
+      border-radius: 50%;
       display: inline-block;
     }
   }
@@ -124,33 +132,6 @@
 @keyframes fadeIn {
   0% {
     opacity: 0;
-  }
-  10% {
-    opacity: .1;
-  }
-  20% {
-    opacity: .2;
-  }
-  30% {
-    opacity: .3;
-  }
-  40% {
-    opacity: .4;
-  }
-  50% {
-    opacity: .5;
-  }
-  60% {
-    opacity: .6;
-  }
-  70% {
-    opacity: .7;
-  }
-  80% {
-    opacity: .8;
-  }
-  90% {
-    opacity: .9;
   }
   100% {
     opacity: 1;

@@ -389,17 +389,17 @@ button:focus {
 }
 
 .item-a {
+  border-radius: 50%;
+  background-color: rgba(193, 193, 193, 0.578);
   display: flex;
   grid-area: profilePic;
 }
 .item-a img {
-  border-radius: none;
   object-fit: cover;
-  transition: border-radius 0.4s ease;
   width: 100%;
 }
 .item-a .first-pic {
-  animation: fadeIn 0.4s;
+  animation: fadeIn 1s 0s;
   display: inline-block;
 }
 .item-a .second-pic {
@@ -480,14 +480,16 @@ button:focus {
 }
 
 @media (hover: hover) {
-  .item-a:hover img {
-    border-radius: 50%;
+  .item-a:hover {
+    border-radius: none;
+    background-color: none;
   }
   .item-a:hover .first-pic {
     display: none;
   }
   .item-a:hover .second-pic {
-    animation: fadeIn 0.4s;
+    animation: fadeIn 1s 0s;
+    border-radius: 50%;
     display: inline-block;
   }
 
@@ -517,33 +519,6 @@ button:focus {
 @keyframes fadeIn {
   0% {
     opacity: 0;
-  }
-  10% {
-    opacity: 0.1;
-  }
-  20% {
-    opacity: 0.2;
-  }
-  30% {
-    opacity: 0.3;
-  }
-  40% {
-    opacity: 0.4;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  60% {
-    opacity: 0.6;
-  }
-  70% {
-    opacity: 0.7;
-  }
-  80% {
-    opacity: 0.8;
-  }
-  90% {
-    opacity: 0.9;
   }
   100% {
     opacity: 1;
