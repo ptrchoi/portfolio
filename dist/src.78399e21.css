@@ -389,12 +389,11 @@ button:focus {
 }
 
 .item-a {
-  border-radius: 50%;
-  background-color: rgba(193, 193, 193, 0.578);
   display: flex;
   grid-area: profilePic;
 }
 .item-a img {
+  border-radius: none;
   object-fit: cover;
   width: 100%;
 }
@@ -480,16 +479,14 @@ button:focus {
 }
 
 @media (hover: hover) {
-  .item-a:hover {
-    border-radius: none;
-    background-color: none;
+  .item-a:hover img {
+    border-radius: 50%;
   }
   .item-a:hover .first-pic {
     display: none;
   }
   .item-a:hover .second-pic {
     animation: fadeIn 1s 0s;
-    border-radius: 50%;
     display: inline-block;
   }
 
