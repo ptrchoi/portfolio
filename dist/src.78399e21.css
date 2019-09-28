@@ -170,7 +170,8 @@ body {
 .links-wrapper :active {
   color: #f4511e;
 }
-.links-wrapper .active-link {
+
+.active-link a {
   color: #f4511e;
 }
 
@@ -381,6 +382,7 @@ button:focus {
     transform: translateY(-250vh) translateX(40vw) rotate(-380deg);
   }
 }
+/* --- About Wrapper --- */
 .about-wrapper {
   align-content: start;
   background-color: #dedede;
@@ -388,6 +390,7 @@ button:focus {
   justify-content: center;
 }
 
+/* --- Grid-template-area Items --- */
 .item-a {
   display: flex;
   grid-area: profilePic;
@@ -454,12 +457,7 @@ button:focus {
   transition: 0.4s ease;
 }
 
-.item-logo {
-  align-self: center;
-  display: flex;
-  justify-content: space-around;
-}
-
+/* --- Grid --- */
 .about-grid {
   display: grid;
   height: calc(2/3 * 80vw);
@@ -471,6 +469,13 @@ button:focus {
   z-index: 9;
 }
 
+/* --- Logo Styling --- */
+.item-logo {
+  align-self: center;
+  display: flex;
+  justify-content: space-around;
+}
+
 .grid-logo {
   left: 20%;
   position: absolute;
@@ -478,6 +483,19 @@ button:focus {
   width: 60%;
 }
 
+/* --- Slide Class for slide animation --- */
+.item.slide-transition.item-a,
+.item.slide-transition.item-c {
+  animation: slideFromLeft 3s 1s;
+}
+
+.item.slide-transition.item-b,
+.item.slide-transition.item-d,
+.item.slide-transition.item-e {
+  animation: slideFromRight 3s 1s;
+}
+
+/* --- If hover-capable device, hover styling --- */
 @media (hover: hover) {
   .item-a:hover img {
     border-radius: 50%;
@@ -513,12 +531,29 @@ button:focus {
     background-color: transparent;
   }
 }
+/* --- Keyframe Animations --- */
 @keyframes fadeIn {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(0%);
   }
 }
 .skills-wrapper {

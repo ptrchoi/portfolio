@@ -22,9 +22,9 @@ const SIZE_LARGE = 992;
 //DEV ONLY *************REMOVE**************
 //Debucsser CSS Debugger settings
 const config = {
-  color: 'red',
-  width: '4px',
-  grayscaleOnDebugAll: true
+	color: 'red',
+	width: '4px',
+	grayscaleOnDebugAll: true
 };
 const debug = new Debucsser(config).init();
 //DEV ONLY *************REMOVE**************
@@ -41,135 +41,130 @@ const debug = new Debucsser(config).init();
  *    - landing page behavior (ie. no navbar)
  */
 class App extends Component {
-  constructor(props) {
-    super(props);
+	constructor(props) {
+		super(props);
 
-    this.state = {
-      onLandingPage: true,
-      viewHeight: 600, //default height
-      screenSize: 'small' //default size
-    };
+		this.state = {
+			currentSection: 'home',
+			viewHeight: 600, //default height
+			screenSize: 'small' //default size
+		};
 
-    this.updateSize = this.updateSize.bind(this);
-    this.renderNav = this.renderNav.bind(this);
-    this.renderContent = this.renderContent.bind(this);
-  }
-  componentDidMount() {
-    this.updateSize();
-    window.addEventListener('resize', this.updateSize);
-  }
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updateSize);
-  }
-  updateSize() {
-    let height = window.innerHeight;
-    let width = window.innerWidth;
-    let { screenSize } = this.state;
+		this.updateSize = this.updateSize.bind(this);
+		this.renderNav = this.renderNav.bind(this);
+		this.renderContent = this.renderContent.bind(this);
+	}
+	componentDidMount() {
+		this.updateSize();
+		window.addEventListener('resize', this.updateSize);
+	}
+	componentWillUnmount() {
+		window.removeEventListener('resize', this.updateSize);
+	}
+	updateSize() {
+		let height = window.innerHeight;
+		let width = window.innerWidth;
+		let { screenSize } = this.state;
 
-    //Check for changes to screenSize
-    if (screenSize === 'small' && width > SIZE_LARGE) {
-      screenSize = 'large';
-    } else if (screenSize === 'large' && width < SIZE_LARGE) {
-      screenSize = 'small';
-    }
-    this.setState({
-      viewHeight: height,
-      screenSize: screenSize
-    });
-  }
-  updateSectionLink(destination) {
-    let { onLandingPage } = this.state;
-    onLandingPage = false;
+		//Check for changes to screenSize
+		if (screenSize === 'small' && width > SIZE_LARGE) {
+			screenSize = 'large';
+		} else if (screenSize === 'large' && width < SIZE_LARGE) {
+			screenSize = 'small';
+		}
+		this.setState({
+			viewHeight: height,
+			screenSize: screenSize
+		});
+	}
+	updateSectionLink(destination) {
+		let { currentSection } = this.state;
 
-    $('.menu-link').removeClass('active-link');
+		$('.menu-link').removeClass('active-link'); //clear prev active link
+		$('.item').removeClass('slide-transition'); //clear slide anim class
 
-    switch (destination) {
-      case 1:
-        $('#about-link').addClass('active-link');
-        break;
-      case 2:
-        $('#skills-link').addClass('active-link');
-        break;
-      case 3:
-        $('#portfolio-link').addClass('active-link');
-        break;
-      case 4:
-        $('#contact-link').addClass('active-link');
-        break;
-      default:
-        $('#home-link').addClass('active-link');
-        onLandingPage = true;
-        break;
-    }
+		switch (destination) {
+			case 1:
+				$('#about-link').addClass('active-link');
+				$('.item').addClass('slide-transition'); //add slide class for anim
+				currentSection = 'about';
+				break;
+			case 2:
+				$('#skills-link').addClass('active-link');
+				currentSection = 'skills';
+				break;
+			case 3:
+				$('#portfolio-link').addClass('active-link');
+				currentSection = 'portfolio';
+				break;
+			case 4:
+				$('#contact-link').addClass('active-link');
+				currentSection = 'contact';
+				break;
+			default:
+				$('#home-link').addClass('active-link');
+				currentSection = 'home';
+				break;
+		}
 
-    this.setState({
-      onLandingPage: onLandingPage
-    });
-  }
-  renderNav() {
-    const { onLandingPage, viewHeight, screenSize } = this.state;
+		this.setState({
+			currentSection: currentSection
+		});
+	}
+	renderNav() {
+		const { currentSection, viewHeight, screenSize } = this.state;
 
-    //Do not render nav on landing page
-    if (!onLandingPage) {
-      return (
-        <Navbar
-          height={viewHeight}
-          size={screenSize}
-          links={<Links size={screenSize} />}
-        />
-      );
-    }
-  }
-  renderContent() {
-    const { viewHeight, screenSize } = this.state;
-    const that = this;
+		//Do not render nav on landing page
+		if (currentSection !== 'home') {
+			return <Navbar height={viewHeight} size={screenSize} links={<Links size={screenSize} />} />;
+		}
+	}
+	renderContent() {
+		const { viewHeight, screenSize } = this.state;
+		const that = this;
 
-    return (
-      //Set options for fullpage.js
-      <ReactFullPage
-        licenseKey={'***REMOVED***'}
-        anchors={['anchor-1', 'anchor-2', 'anchor-3', 'anchor-4', 'anchor-5']}
-        menu={true}
-        scrollOverflow={true}
-        onLeave={function(origin, destination, direction) {
-          that.updateSectionLink(destination.index);
-        }}
-        render={({ state, fullpageApi }) => {
-          return (
-            <ReactFullPage.Wrapper>
-              <div id="home" className="section">
-                <Home
-                  size={screenSize}
-                  height={viewHeight}
-                  fullpageApi={fullpageApi}
-                />
-              </div>
-              <div id="about" className="section">
-                <About size={screenSize} height={viewHeight} />
-              </div>
-              <div id="skills" className="section">
-                <Skills size={screenSize} height={viewHeight} />
-              </div>
-              <div id="portfolio" className="section">
-                <Portfolio size={screenSize} />
-              </div>
-              <div id="contact" className="section">
-                <Contact size={screenSize} height={viewHeight} />
-              </div>
-            </ReactFullPage.Wrapper>
-          );
-        }}
-      />
-    );
-  }
-  render() {
-    return (
-      <div>
-        {this.renderNav()}
-        {this.renderContent()}
-      </div>
-    );
-  }
+		return (
+			//Set options for fullpage.js
+			<ReactFullPage
+				licenseKey={'***REMOVED***'}
+				anchors={[ 'anchor-1', 'anchor-2', 'anchor-3', 'anchor-4', 'anchor-5' ]}
+				menu={true}
+				scrollOverflow={true}
+				onLeave={function(origin, destination, direction) {
+					that.updateSectionLink(destination.index);
+				}}
+				render={({ state, fullpageApi }) => {
+					return (
+						<ReactFullPage.Wrapper>
+							<div id="home" className="section">
+								<Home size={screenSize} height={viewHeight} fullpageApi={fullpageApi} />
+							</div>
+							<div id="about" className="section">
+								<About size={screenSize} height={viewHeight} fullpageApi={fullpageApi} />
+							</div>
+							<div id="skills" className="section">
+								<Skills size={screenSize} height={viewHeight} />
+							</div>
+							<div id="portfolio" className="section">
+								<Portfolio size={screenSize} />
+							</div>
+							<div id="contact" className="section">
+								<Contact size={screenSize} height={viewHeight} />
+							</div>
+						</ReactFullPage.Wrapper>
+					);
+				}}
+			/>
+		);
+	}
+	render() {
+		return (
+			<div>
+				{this.renderNav()}
+				{this.renderContent()}
+			</div>
+		);
+	}
 }
 
 export default App;
