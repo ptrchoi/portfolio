@@ -77,36 +77,47 @@ class App extends Component {
 			screenSize: screenSize
 		});
 	}
-	updateSectionLink(destination) {
-		let { currentSection } = this.state;
-
+	updateActiveLink(newLink) {
 		$('.menu-link').removeClass('active-link'); //clear prev active link
-		$('.item').removeClass('slide-transition'); //clear slide anim class
+
+		//Delay to allow Navbar to render when scrolling from Home to About
+		setTimeout(function() {
+			$(newLink).addClass('active-link');
+		}, 100);
+	}
+	sectionScrolled(destination) {
+		let { currentSection } = this.state;
+		let currentLink;
 
 		switch (destination) {
 			case 1:
-				$('#about-link').addClass('active-link');
-				$('.item').addClass('slide-transition'); //add slide class for anim
+				/* Set up/reset classes for slide anims */
+				$('.item').removeClass('slide-transition');
+				setTimeout(function() {
+					$('.item').addClass('slide-transition');
+				}, 100);
+				currentLink = '#about-link';
 				currentSection = 'about';
 				break;
 			case 2:
-				$('#skills-link').addClass('active-link');
+				currentLink = '#skills-link';
 				currentSection = 'skills';
 				break;
 			case 3:
-				$('#portfolio-link').addClass('active-link');
+				currentLink = '#portfolio-link';
 				currentSection = 'portfolio';
 				break;
 			case 4:
-				$('#contact-link').addClass('active-link');
+				currentLink = '#contact-link';
 				currentSection = 'contact';
 				break;
 			default:
-				$('#home-link').addClass('active-link');
+				currentLink = '#home-link';
 				currentSection = 'home';
 				break;
 		}
 
+		this.updateActiveLink(currentLink);
 		this.setState({
 			currentSection: currentSection
 		});
@@ -131,7 +142,7 @@ class App extends Component {
 				menu={true}
 				scrollOverflow={true}
 				onLeave={function(origin, destination, direction) {
-					that.updateSectionLink(destination.index);
+					that.sectionScrolled(destination.index);
 				}}
 				render={({ state, fullpageApi }) => {
 					return (
