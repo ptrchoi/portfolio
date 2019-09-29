@@ -151,7 +151,7 @@ class App extends Component {
 								<Home size={screenSize} height={viewHeight} fullpageApi={fullpageApi} />
 							</div>
 							<div id="about" className="section">
-								<About size={screenSize} height={viewHeight} fullpageApi={fullpageApi} />
+								<About size={screenSize} height={viewHeight} />
 							</div>
 							<div id="skills" className="section">
 								<Skills size={screenSize} height={viewHeight} />

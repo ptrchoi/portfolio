@@ -391,6 +391,10 @@ button:focus {
 }
 
 /* --- Grid-template-area Items --- */
+.item {
+  opacity: 0;
+}
+
 .item-a {
   display: flex;
   grid-area: profilePic;
@@ -486,13 +490,13 @@ button:focus {
 /* --- Slide Class for slide animation --- */
 .item.slide-transition.item-a,
 .item.slide-transition.item-c {
-  animation: slideFromLeft 3s 1s;
+  animation: slideFromLeft 0.75s 0.1s forwards;
 }
 
 .item.slide-transition.item-b,
 .item.slide-transition.item-d,
 .item.slide-transition.item-e {
-  animation: slideFromRight 3s 1s;
+  animation: slideFromRight 0.75s 0.1s forwards;
 }
 
 /* --- If hover-capable device, hover styling --- */
@@ -542,17 +546,21 @@ button:focus {
 }
 @keyframes slideFromLeft {
   0% {
+    opacity: 0;
     transform: translateX(-200%);
   }
   100% {
+    opacity: 1;
     transform: translateX(0%);
   }
 }
 @keyframes slideFromRight {
   0% {
+    opacity: 0;
     transform: translateX(200%);
   }
   100% {
+    opacity: 1;
     transform: translateX(0%);
   }
 }

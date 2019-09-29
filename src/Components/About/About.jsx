@@ -20,15 +20,12 @@ import eaLogo from '../../assets/eaLogo_1280_505.png';
  */
 class About extends Component {
 	render(props) {
-		let { size, height, fullpageApi } = this.props;
+		let { size, height } = this.props;
 
 		return (
 			<div style={{ height: height }} className="section-wrapper about-wrapper">
 				<div className="section-header">
 					<h1>About</h1>
-					<button onClick={() => console.log(fullpageApi.getActiveSection())}>
-						Get Fullpage Active Section
-					</button>
 				</div>
 				<div className="about-grid">
 					<div className="item item-a">
