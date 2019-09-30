@@ -22,8 +22,13 @@ body {
 
 .section-header {
   color: #1b4664;
+  opacity: 0;
   text-align: center;
   z-index: 9;
+}
+
+.section-header.slide-in-from-left {
+  animation: slideFromLeft 0.75s 0.1s forwards;
 }
 
 .blur {
@@ -32,32 +37,28 @@ body {
 
 /* Mixins
 ------------------------------------ */
-/* CSSTransition "fade" Class
+/* Shared Keyfram anims
 ------------------------------------ */
-.fade-appear,
-.fade-enter {
-  opacity: 0;
+@keyframes slideFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-200%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }
-
-.fade-appear-active,
-.fade-enter-active {
-  opacity: 1;
-  transition: opacity 1s ease-in-out;
+@keyframes slideFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(200%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }
-
-.fade-exit {
-  opacity: 1;
-}
-
-.fade-exit-active {
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.fade-exit-done {
-  opacity: 0;
-}
-
 .nav-wrapper {
   display: grid;
   grid-template-columns: auto;
@@ -73,7 +74,7 @@ body {
 }
 @media screen and (min-width: 320px) {
   #navbar {
-    height: calc( 48px + 12 * (100vw - 320px) / 880 );
+    height: calc( 				48px + 12 * (100vw - 320px) / 880 			);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -221,7 +222,7 @@ body {
 }
 @media screen and (min-width: 320px) {
   #title {
-    font-size: calc( 24px + 12 * (100vw - 320px) / 880 );
+    font-size: calc( 				24px + 12 * (100vw - 320px) / 880 			);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -427,7 +428,7 @@ button:focus {
 }
 @media screen and (min-width: 320px) {
   .item-b .grid-text {
-    font-size: calc( 12px + 6 * (100vw - 320px) / 880 );
+    font-size: calc( 				12px + 6 * (100vw - 320px) / 880 			);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -501,9 +502,6 @@ button:focus {
 
 /* --- If hover-capable device, hover styling --- */
 @media (hover: hover) {
-  .item-a:hover img {
-    border-radius: 50%;
-  }
   .item-a:hover .first-pic {
     display: none;
   }
@@ -542,26 +540,6 @@ button:focus {
   }
   100% {
     opacity: 1;
-  }
-}
-@keyframes slideFromLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-200%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-}
-@keyframes slideFromRight {
-  0% {
-    opacity: 0;
-    transform: translateX(200%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0%);
   }
 }
 .skills-wrapper {
@@ -605,7 +583,7 @@ button:focus {
 }
 @media screen and (min-width: 320px) {
   .skills-text {
-    font-size: calc( 12px + 4 * (100vw - 320px) / 880 );
+    font-size: calc( 				12px + 4 * (100vw - 320px) / 880 			);
   }
 }
 @media screen and (min-width: 1200px) {

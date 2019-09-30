@@ -1,77 +1,81 @@
 /* Ensure pure, inclusive box sizing across browsers. */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 /* Set the page's max-width within the viewport */
 body {
-  height: 100vh;
-  max-width: $max-width;
-  min-width: $min-width;
-  margin: 0 auto !important;
-  background-color: white;
-  font-family: 'Open Sans', sans-serif;
+	height: 100vh;
+	max-width: $max-width;
+	min-width: $min-width;
+	margin: 0 auto !important;
+	background-color: white;
+	font-family: 'Open Sans', sans-serif;
 }
 .section-wrapper {
-  padding-top: 10vh;
+	padding-top: 10vh;
 }
 .section-header {
-  color: $gap-blue;
-  text-align: center;
-  z-index: $above-confetti-layer;
+	color: $gap-blue;
+	opacity: 0;
+	text-align: center;
+	z-index: $above-confetti-layer;
+}
+.section-header.slide-in-from-left {
+	animation: slideFromLeft .75s .1s forwards;
 }
 .blur {
-  filter: blur(0.25vw);
+	filter: blur(0.25vw);
 }
 /* Mixins
 ------------------------------------ */
 //Fluid-type Mixin based on https://github.com/robertraichle/fluid-type-mixin
 //$min-vw & $max-vw are width values (in pixels), not actual vw unit values - essentially break points
 @mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value) {
-  @each $property in $properties {
-    #{$property}: $min-value;
-  }
+	@each $property in $properties {
+		#{$property}: $min-value;
+	}
 
-  @media screen and (min-width: $min-vw) {
-    @each $property in $properties {
-      #{$property}: calc(
-        #{$min-value} +
-          #{strip-unit($max-value - $min-value)} *
-          (100vw - #{$min-vw}) /
-          #{strip-unit($max-vw - $min-vw)}
-      );
-    }
-  }
+	@media screen and (min-width: $min-vw) {
+		@each $property in $properties {
+			#{$property}: calc(
+				#{$min-value} + #{strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}) / #{strip-unit(
+						$max-vw - $min-vw
+					)}
+			);
+		}
+	}
 
-  @media screen and (min-width: $max-vw) {
-    @each $property in $properties {
-      #{$property}: $max-value;
-    }
-  }
+	@media screen and (min-width: $max-vw) {
+		@each $property in $properties {
+			#{$property}: $max-value;
+		}
+	}
 }
 @function strip-unit($value) {
-  @return $value / ($value * 0 + 1);
+	@return $value / ($value * 0 + 1);
 }
 
-/* CSSTransition "fade" Class
+/* Shared Keyfram anims
 ------------------------------------ */
-.fade-appear,
-.fade-enter {
-  opacity: 0;
+@keyframes slideFromLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(-200%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0%);
+	}
 }
-.fade-appear-active,
-.fade-enter-active {
-  opacity: 1;
-  transition: opacity $fade-transition-time ease-in-out;
-}
-.fade-exit {
-  opacity: 1;
-}
-.fade-exit-active {
-  opacity: 0;
-  transition: opacity $fade-transition-time ease-in-out;
-}
-.fade-exit-done {
-  opacity: 0;
+@keyframes slideFromRight {
+	0% {
+		opacity: 0;
+		transform: translateX(200%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0%);
+	}
 }

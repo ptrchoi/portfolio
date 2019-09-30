@@ -77,6 +77,12 @@ class App extends Component {
 			screenSize: screenSize
 		});
 	}
+	slideInHeader() {
+		$('.section-header').removeClass('slide-in-from-left');
+		setTimeout(function() {
+			$('.section-header').addClass('slide-in-from-left');
+		}, 100);
+	}
 	updateActiveLink(newLink) {
 		$('.menu-link').removeClass('active-link'); //clear prev active link
 
@@ -117,6 +123,7 @@ class App extends Component {
 				break;
 		}
 
+		this.slideInHeader();
 		this.updateActiveLink(currentLink);
 		this.setState({
 			currentSection: currentSection
