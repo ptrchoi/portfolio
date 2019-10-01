@@ -30,15 +30,13 @@ class Contact extends Component {
 					<button>SUBMIT</button>
 				</div>
 				<div className="confetti blur">
-					<div className="confetti">
-						<Confetti
-							data={{
-								confettiType: 'circle',
-								number: 50,
-								color: 'contact'
-							}}
-						/>
-					</div>
+					<Confetti
+						data={{
+							confettiType: 'circle',
+							number: 50,
+							color: 'contact'
+						}}
+					/>
 				</div>
 			</div>
 		);

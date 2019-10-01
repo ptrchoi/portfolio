@@ -54,15 +54,13 @@ class About extends Component {
 					</div>
 				</div>
 				<div className="confetti blur">
-					<div className="confetti">
-						<Confetti
-							data={{
-								confettiType: 'square',
-								number: 100,
-								color: 'about'
-							}}
-						/>
-					</div>
+					<Confetti
+						data={{
+							confettiType: 'square',
+							number: 100,
+							color: 'about'
+						}}
+					/>
 				</div>
 			</div>
 		);

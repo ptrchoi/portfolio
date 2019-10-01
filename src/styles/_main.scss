@@ -24,7 +24,6 @@ body {
 }
 .section-header.slide-in-from-left {
 	animation: slideFromLeft .75s .1s forwards;
-	z-index: $above-confetti-layer;
 }
 .blur {
 	filter: blur(0.25vw);

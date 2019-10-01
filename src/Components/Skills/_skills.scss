@@ -1,8 +1,12 @@
+/* --- Skills Wrapper --- */
 .skills-wrapper {
 	background-color: $background-white;
 	color: black;
+	display: grid;
 	width: 100%;
 }
+
+/* --- Skills Group --- */
 .skills-group-wrapper {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
@@ -46,7 +50,6 @@
 	margin-top: 10%;
 	padding-bottom: 5%;
 	width: 70%;
-	z-index: $above-confetti-layer;
 }
 .fa-icon {
 	color: #28424e; //TEMP - to be defined in Variables

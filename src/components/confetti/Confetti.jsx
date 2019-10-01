@@ -46,7 +46,7 @@ class Confetti extends Component {
 	getRandProps(confettiType, color) {
 		let colorSet = HOME_COLORS[getRandInt(0, HOME_COLORS.length - 1)];
 		let leftOffset = getRandInt(1, 7) * 10 + '%'; //~10-70%
-		let delay = getRandInt(-120, 120) + 's';
+		let delay = getRandInt(-200, 120) + 's';
 		let duration = getRandInt(50, 120) + 's';
 		let animNum = String(getRandInt(1, 5));
 		let side = getRandFixed(2, 5) + 'vw';

@@ -29,7 +29,6 @@ body {
 
 .section-header.slide-in-from-left {
   animation: slideFromLeft 0.75s 0.1s forwards;
-  z-index: 9;
 }
 
 .blur {
@@ -555,12 +554,15 @@ button:focus {
     opacity: 1;
   }
 }
+/* --- Skills Wrapper --- */
 .skills-wrapper {
   background-color: whitesmoke;
   color: black;
+  display: grid;
   width: 100%;
 }
 
+/* --- Skills Group --- */
 .skills-group-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -618,7 +620,6 @@ button:focus {
   margin-top: 10%;
   padding-bottom: 5%;
   width: 70%;
-  z-index: 9;
 }
 
 .fa-icon {
@@ -638,6 +639,7 @@ button:focus {
 
 .portfolio-wrapper {
   background-color: #dedede;
+  display: grid;
   height: 100%;
   width: 100%;
 }
@@ -748,6 +750,7 @@ button:focus {
 .contact-wrapper {
   background-color: #6a6a6a;
   color: white;
+  display: grid;
   padding-bottom: 7vh;
   padding-top: 18vh;
   width: 100%;
