@@ -95,7 +95,7 @@ class App extends Component {
 		//Necessary delay to allow Navbar to render before setting active-link when scrolling from Home to About
 		setTimeout(function() {
 			$(newLink).addClass('active-link');
-		}, 1000);
+		}, 600);
 	}
 	sectionScrolled(destination) {
 		let sectionName,

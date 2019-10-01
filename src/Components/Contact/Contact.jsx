@@ -34,7 +34,7 @@ class Contact extends Component {
 						<Confetti
 							data={{
 								confettiType: 'circle',
-								number: 100,
+								number: 50,
 								color: 'contact'
 							}}
 						/>

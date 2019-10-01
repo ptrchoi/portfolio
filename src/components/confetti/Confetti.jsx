@@ -54,6 +54,8 @@ class Confetti extends Component {
 
 		if (confettiType === 'circle') {
 			shape = '4vw';
+		} else if (confettiType === 'square') {
+			shape = '0';
 		}
 
 		if (color === 'about') {
