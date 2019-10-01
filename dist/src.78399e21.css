@@ -409,16 +409,16 @@ button:focus {
 }
 
 .item-a {
+  background-color: rgba(118, 118, 118, 0.796);
   display: flex;
   grid-area: profilePic;
 }
 .item-a img {
-  border-radius: none;
   object-fit: cover;
   width: 100%;
 }
 .item-a .first-pic {
-  animation: fadeIn 1s 0s;
+  animation: fadeIn 2s ease;
   display: inline-block;
 }
 .item-a .second-pic {
@@ -428,14 +428,14 @@ button:focus {
 .item-b {
   background-color: white;
   grid-area: profileText;
-  transition: 0.4s ease;
+  transition: 1s ease;
 }
 .item-b .grid-text {
   font-size: 12px;
   color: #1b4664;
   font-weight: normal;
   padding: 12% 8% 0 8%;
-  transition: 0.4s ease;
+  transition: 1s ease;
   width: 100%;
 }
 @media screen and (min-width: 320px) {
@@ -453,25 +453,25 @@ button:focus {
   background-color: #c1c1c1;
   grid-area: logo1;
   position: relative;
-  transition: 0.4s ease;
+  transition: 1s ease;
 }
 
 .item-d {
   background-color: black;
   grid-area: logo2;
   position: relative;
-  transition: 0.4s ease;
+  transition: 1s ease;
 }
 .item-d .logo-on-hover {
   opacity: 0;
-  transition: 0.4s ease;
+  transition: 1s ease;
 }
 
 .item-e {
   background-color: #aed3de;
   grid-area: logo3;
   position: relative;
-  transition: 0.4s ease;
+  transition: 1s ease;
 }
 
 /* --- Grid --- */
@@ -518,7 +518,7 @@ button:focus {
     display: none;
   }
   .item-a:hover .second-pic {
-    animation: fadeIn 1s 0s;
+    animation: fadeIn 2s ease;
     display: inline-block;
   }
 

@@ -11,16 +11,16 @@
 	opacity: 0;
 }
 .item-a {
+	background-color: rgba(118, 118, 118, 0.796);
 	display: flex;
 	grid-area: profilePic;
 
 	img {
-		border-radius: none;
 		object-fit: cover;
 		width: 100%;
 	}
 	.first-pic {
-		animation: fadeIn 1s 0s;
+		animation: fadeIn 2s ease;
 		display: inline-block;
 	}
 	.second-pic {
@@ -30,14 +30,14 @@
 .item-b {
 	background-color: rgb(255, 255, 255);
 	grid-area: profileText;
-	transition: .4s ease;
+	transition: 1s ease;
 
 	.grid-text {
 		@include fluid-type(font-size, $min-width, $max-width, 12px, 18px);
 		color: $gap-blue;
 		font-weight: normal;
 		padding: 12% 8% 0 8%;
-		transition: .4s ease;
+		transition: 1s ease;
 		width: 100%;
 	}
 }
@@ -45,23 +45,23 @@
 	background-color: rgb(193, 193, 193);
 	grid-area: logo1;
 	position: relative;
-	transition: .4s ease;
+	transition: 1s ease;
 }
 .item-d {
 	background-color: rgb(0, 0, 0);
 	grid-area: logo2;
 	position: relative;
-	transition: .4s ease;
+	transition: 1s ease;
 	.logo-on-hover {
 		opacity: 0;
-		transition: .4s ease;
+		transition: 1s ease;
 	}
 }
 .item-e {
 	background-color: rgb(174, 211, 222);
 	grid-area: logo3;
 	position: relative;
-	transition: .4s ease;
+	transition: 1s ease;
 }
 
 /* --- Grid --- */
@@ -103,14 +103,11 @@
 /* --- If hover-capable device, hover styling --- */
 @media (hover: hover) {
 	.item-a:hover {
-		img {
-			// border-radius: 50%;
-		}
 		.first-pic {
 			display: none;
 		}
 		.second-pic {
-			animation: fadeIn 1s 0s;
+			animation: fadeIn 2s ease;
 			display: inline-block;
 		}
 	}
