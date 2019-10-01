@@ -293,12 +293,22 @@ body {
 }
 
 .overlayText {
+  font-size: 22px;
   color: white;
-  font-size: 3.5vw;
   position: absolute;
   text-align: center;
   text-shadow: 2px 2px black;
   z-index: 9;
+}
+@media screen and (min-width: 320px) {
+  .overlayText {
+    font-size: calc( 				22px + 22 * (100vw - 320px) / 880 			);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .overlayText {
+    font-size: 44px;
+  }
 }
 .overlayText p {
   padding-top: 0.8vh;
@@ -309,16 +319,27 @@ body {
 }
 
 #welcomeBtn {
+  font-size: 12px;
   background-color: rgba(27, 70, 100, 0.6);
   border: solid 0.05vw #98d9ee;
   color: #98d9ee;
   cursor: pointer;
-  font-size: 1.8vw;
   height: 6vh;
   margin-top: 5vh;
+  min-height: 44px;
   text-shadow: 1px 1px black;
   transition: 0.1s ease-in-out;
   width: 28vw;
+}
+@media screen and (min-width: 320px) {
+  #welcomeBtn {
+    font-size: calc( 				12px + 20 * (100vw - 320px) / 880 			);
+  }
+}
+@media screen and (min-width: 1200px) {
+  #welcomeBtn {
+    font-size: 32px;
+  }
 }
 
 button:focus {
