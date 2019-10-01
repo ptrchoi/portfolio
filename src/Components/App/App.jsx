@@ -83,51 +83,57 @@ class App extends Component {
 			$('.section-header').addClass('slide-in-from-left');
 		}, 100);
 	}
+	slideInSection(slideElement, slideClass) {
+		$(slideElement).removeClass(slideClass);
+		setTimeout(function() {
+			$(slideElement).addClass(slideClass);
+		}, 100);
+	}
 	updateActiveLink(newLink) {
 		$('.menu-link').removeClass('active-link'); //clear prev active link
 
-		//Delay to allow Navbar to render when scrolling from Home to About
+		//Necessary delay to allow Navbar to render before setting active-link when scrolling from Home to About
 		setTimeout(function() {
 			$(newLink).addClass('active-link');
 		}, 100);
 	}
 	sectionScrolled(destination) {
-		let { currentSection } = this.state;
-		let currentLink;
+		let sectionName,
+			altActiveLinkName = false;
 
 		switch (destination) {
 			case 1:
-				/* Set up/reset classes for slide anims */
-				$('.item').removeClass('slide-transition');
-				setTimeout(function() {
-					$('.item').addClass('slide-transition');
-				}, 100);
-				currentLink = '#about-link';
-				currentSection = 'about';
+				sectionName = 'about';
 				break;
 			case 2:
-				currentLink = '#skills-link';
-				currentSection = 'skills';
+				sectionName = 'skills';
 				break;
 			case 3:
-				currentLink = '#portfolio-link';
-				currentSection = 'portfolio';
+				sectionName = 'card';
+				altActiveLinkName = 'portfolio';
 				break;
 			case 4:
-				currentLink = '#contact-link';
-				currentSection = 'contact';
+				sectionName = 'contact';
 				break;
 			default:
-				currentLink = '#home-link';
-				currentSection = 'home';
+				sectionName = 'home';
 				break;
 		}
 
+		/* Set slide anims per section */
+		if (sectionName !== 'home') {
+			this.slideInSection('.' + sectionName, 'slide-' + sectionName);
+		}
+
 		this.slideInHeader();
-		this.updateActiveLink(currentLink);
 		this.setState({
-			currentSection: currentSection
+			currentSection: sectionName
 		});
+
+		if (altActiveLinkName) {
+			sectionName = altActiveLinkName;
+		}
+		this.updateActiveLink('#' + sectionName + '-link');
 	}
 	renderNav() {
 		const { currentSection, viewHeight, screenSize } = this.state;

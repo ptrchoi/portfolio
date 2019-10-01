@@ -24,6 +24,7 @@ body {
 }
 .section-header.slide-in-from-left {
 	animation: slideFromLeft .75s .1s forwards;
+	z-index: $above-confetti-layer;
 }
 .blur {
 	filter: blur(0.25vw);
@@ -77,5 +78,15 @@ body {
 	100% {
 		opacity: 1;
 		transform: translateX(0%);
+	}
+}
+@keyframes slideFromBottom {
+	0% {
+		opacity: 0;
+		transform: translateY(200%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0%);
 	}
 }

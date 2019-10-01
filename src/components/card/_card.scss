@@ -1,52 +1,58 @@
 //SHOULD MAKE CARD HEIGHT & WIDTH SCALE RESPONSIVELY
 .card {
-  background-color: $background-white;
-  font-family: 'Livvic', sans-serif;
-  height: calc(.4 * 80vw);
-  position: relative;
-  width: calc(1/2 * 80vw);
-  z-index: $above-confetti-layer;
+	background-color: $background-white;
+	font-family: 'Livvic', sans-serif;
+	height: calc(.4 * 80vw);
+	opacity: 0;
+	position: relative;
+	width: calc(1/2 * 80vw);
+	z-index: $above-confetti-layer;
 }
 .card-front {
-  height: 100%;
-  overflow: hidden;
-  transition: filter 1s ease;
-  img {
-    object-fit: cover;
-    width: 100%;
-  }
+	height: 100%;
+	overflow: hidden;
+	transition: filter 1s ease;
+	img {
+		object-fit: cover;
+		width: 100%;
+	}
 }
 .card-back {
-  background-color: rgba(255, 255, 255, 0.8);
-  bottom: 0;
-  height: 0;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  transition: height .5s ease;
-  width: 100%;
+	background-color: rgba(255, 255, 255, 0.8);
+	bottom: 0;
+	height: 0;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	transition: height .5s ease;
+	width: 100%;
+}
+
+/* --- Slide Class for slide animation --- */
+.card.slide-card {
+	animation: slideFromBottom .75s .2s forwards;
 }
 
 //If hover-capable device, do overlay on hover
 @media (hover: hover) {
-  .card:hover {
-    .card-front {
-      filter: blur(3px);
-    }
-    .card-back {
-      height: 100%;
-    }  
-  }  
+	.card:hover {
+		.card-front {
+			filter: blur(3px);
+		}
+		.card-back {
+			height: 100%;
+		}
+	}
 }
 //If touch-capable device, do overlay on touch/click
 @media (any-pointer: coarse) {
-  .card-flipped {
-    .card-front {
-      filter: blur(3px);
-    }
-    .card-back {
-      height: 100%;
-    }
-  }  
+	.card-flipped {
+		.card-front {
+			filter: blur(3px);
+		}
+		.card-back {
+			height: 100%;
+		}
+	}
 }

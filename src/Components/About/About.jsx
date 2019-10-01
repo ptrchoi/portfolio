@@ -28,11 +28,11 @@ class About extends Component {
 					<h1>About</h1>
 				</div>
 				<div className="about-grid">
-					<div className="item item-a">
+					<div className="about item-a">
 						<img className="first-pic" src={profilePic1} alt="profile pic" />
 						<img className="second-pic" src={profilePic2} alt="profile pic" />
 					</div>
-					<div className="item item-b">
+					<div className="about item-b">
 						<p className="grid-text">
 							Front-End Developer with a passion for creating elegant, intuitive, and delightful user
 							experiences and solutions.
@@ -42,14 +42,14 @@ class About extends Component {
 							Fortune 500 companies, including Microsoft and Electronic Arts.
 						</p>
 					</div>
-					<div className="item item-c">
+					<div className="about item-c">
 						<img className="grid-logo" src={msftLogo} alt="logo" />
 					</div>
-					<div className="item item-d">
+					<div className="about item-d">
 						<img className="grid-logo" src={msftStudiosLogo1} alt="logo" />
 						<img className="grid-logo logo-on-hover" src={msftStudiosLogo2} alt="logo" />
 					</div>
-					<div className="item item-e">
+					<div className="about item-e">
 						<img className="grid-logo" src={eaLogo} alt="logo" />
 					</div>
 				</div>

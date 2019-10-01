@@ -29,6 +29,7 @@ body {
 
 .section-header.slide-in-from-left {
   animation: slideFromLeft 0.75s 0.1s forwards;
+  z-index: 9;
 }
 
 .blur {
@@ -57,6 +58,16 @@ body {
   100% {
     opacity: 1;
     transform: translateX(0%);
+  }
+}
+@keyframes slideFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(200%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
   }
 }
 .nav-wrapper {
@@ -392,7 +403,7 @@ button:focus {
 }
 
 /* --- Grid-template-area Items --- */
-.item {
+.about {
   opacity: 0;
 }
 
@@ -489,14 +500,14 @@ button:focus {
 }
 
 /* --- Slide Class for slide animation --- */
-.item.slide-transition.item-a,
-.item.slide-transition.item-c {
+.about.slide-about.item-a,
+.about.slide-about.item-c {
   animation: slideFromLeft 0.75s 0.1s forwards;
 }
 
-.item.slide-transition.item-b,
-.item.slide-transition.item-d,
-.item.slide-transition.item-e {
+.about.slide-about.item-b,
+.about.slide-about.item-d,
+.about.slide-about.item-e {
   animation: slideFromRight 0.75s 0.1s forwards;
 }
 
@@ -558,9 +569,9 @@ button:focus {
 .skills-group {
   align-content: start;
   display: grid;
+  height: calc(1/3 * 90vw);
   justify-items: center;
   padding: 2% 3% 0 3%;
-  height: calc(1/3 * 90vw);
   width: calc(1/3 * 90vw);
   z-index: 9;
 }
@@ -614,6 +625,15 @@ button:focus {
   padding: 40px 0 40px 0;
 }
 
+.skills {
+  opacity: 0;
+}
+
+/* --- Slide Class for slide animation --- */
+.skills.slide-skills {
+  animation: slideFromBottom 0.75s 0.2s forwards;
+}
+
 .portfolio-wrapper {
   background-color: #dedede;
   height: 100%;
@@ -637,6 +657,7 @@ button:focus {
   background-color: whitesmoke;
   font-family: "Livvic", sans-serif;
   height: calc(.4 * 80vw);
+  opacity: 0;
   position: relative;
   width: calc(1/2 * 80vw);
   z-index: 9;
@@ -662,6 +683,11 @@ button:focus {
   right: 0;
   transition: height 0.5s ease;
   width: 100%;
+}
+
+/* --- Slide Class for slide animation --- */
+.card.slide-card {
+  animation: slideFromBottom 0.75s 0.2s forwards;
 }
 
 @media (hover: hover) {
@@ -749,6 +775,19 @@ button:focus {
 #contactForm input,
 #contactForm span {
   z-index: 9;
+}
+
+.contact {
+  opacity: 0;
+}
+
+/* --- Slide Class for slide animation --- */
+.contact.slide-contact.slide-contact-right {
+  animation: slideFromRight 0.75s 0.2s forwards;
+}
+
+.contact.slide-contact.slide-contact-left {
+  animation: slideFromLeft 0.75s 0.2s forwards;
 }
 
 /*# sourceMappingURL=/src.78399e21.css.map */

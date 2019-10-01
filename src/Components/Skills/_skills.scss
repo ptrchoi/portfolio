@@ -1,55 +1,62 @@
 .skills-wrapper {
-  background-color: $background-white;
-  color: black;
-  width: 100%;
+	background-color: $background-white;
+	color: black;
+	width: 100%;
 }
 .skills-group-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
-  padding-top: 1%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-items: center;
+	padding-top: 1%;
 }
 .skills-group {
-  align-content: start;
-  display: grid;
-  // height: auto;
-  justify-items: center;
-  padding: 2% 3% 0 3%;
-  // width: 75%;
-  height: calc(1/3 * 90vw);
-  width: calc(1/3 * 90vw);
-  z-index: $above-confetti-layer;
+	align-content: start;
+	display: grid;
+	// height: auto;
+	height: calc(1/3 * 90vw);
+	justify-items: center;
+	padding: 2% 3% 0 3%;
+	// width: 75%;
+	width: calc(1/3 * 90vw);
+	z-index: $above-confetti-layer;
 }
 .skills-group-wrapper--large {
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
 }
 .skills-group-wrapper--small {
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
 }
 .skills-text {
-  @include fluid-type(font-size, $min-width, $max-width, 12px, 16px);
-  color: $gray-text;
-  padding-top: 2vh;
-  text-align: justify;
+	@include fluid-type(font-size, $min-width, $max-width, 12px, 16px);
+	color: $gray-text;
+	padding-top: 2vh;
+	text-align: justify;
 }
 .skills-graphic {
-  position: relative;
-  z-index: $above-confetti-layer;
+	position: relative;
+	z-index: $above-confetti-layer;
 }
 #chart {
-  display: block;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10%;
-  padding-bottom: 5%;
-  width: 70%;
-  z-index: $above-confetti-layer;
+	display: block;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10%;
+	padding-bottom: 5%;
+	width: 70%;
+	z-index: $above-confetti-layer;
 }
 .fa-icon {
-  color: #28424e; //TEMP - to be defined in Variables
-  font-size: 3.5rem;
-  padding: 40px 0 40px 0;
+	color: #28424e; //TEMP - to be defined in Variables
+	font-size: 3.5rem;
+	padding: 40px 0 40px 0;
+}
+.skills {
+	opacity: 0;
+}
+/* --- Slide Class for slide animation --- */
+.skills.slide-skills {
+	animation: slideFromBottom .75s .2s forwards;
 }

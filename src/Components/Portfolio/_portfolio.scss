@@ -1,20 +1,20 @@
 .portfolio-wrapper {
-  // background-color: $background-white;
-  background-color: rgb(222, 222, 222);
-  height: 100%;
-  width: 100%;
+	// background-color: $background-white;
+	background-color: rgb(222, 222, 222);
+	height: 100%;
+	width: 100%;
 }
 .card-wrapper {
-  // align-items: baseline;
-  color: black;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  margin-top: 4vw;
+	// align-items: baseline;
+	color: black;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin-top: 4vw;
 
-  a:link,
-  a:visited {
-    color: black;
-    text-decoration: none;
-  }
+	a:link,
+	a:visited {
+		color: black;
+		text-decoration: none;
+	}
 }

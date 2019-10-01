@@ -1,31 +1,41 @@
 .contact-wrapper {
-  background-color: $background-gray;
-  color: $white-text;
-  // height: auto;
-  padding-bottom: 7vh;
-  padding-top: 18vh;
-  width: 100%;
+	background-color: $background-gray;
+	color: $white-text;
+	// height: auto;
+	padding-bottom: 7vh;
+	padding-top: 18vh;
+	width: 100%;
 }
 .logo-icon {
-  font-size: 5rem;
-  padding: 10px;
-  z-index: $above-confetti-layer;
+	font-size: 5rem;
+	padding: 10px;
+	z-index: $above-confetti-layer;
 }
 #contactSection {
-  display: flex;
-  justify-content: space-evenly;
-  margin: auto;
-  width: 50%;
+	display: flex;
+	justify-content: space-evenly;
+	margin: auto;
+	width: 50%;
 }
 #contactForm {
-  display: flex;
-  justify-content: center;
-  margin: auto;
-  padding: 20px;
-  width: 50%;
-  button,
-  input,
-  span {
-    z-index: $above-confetti-layer;
-  }
+	display: flex;
+	justify-content: center;
+	margin: auto;
+	padding: 20px;
+	width: 50%;
+	button,
+	input,
+	span {
+		z-index: $above-confetti-layer;
+	}
+}
+.contact {
+	opacity: 0;
+}
+/* --- Slide Class for slide animation --- */
+.contact.slide-contact.slide-contact-right {
+	animation: slideFromRight .75s .2s forwards;
+}
+.contact.slide-contact.slide-contact-left {
+	animation: slideFromLeft .75s .2s forwards;
 }

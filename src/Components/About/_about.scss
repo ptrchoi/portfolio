@@ -7,7 +7,7 @@
 }
 
 /* --- Grid-template-area Items --- */
-.item {
+.about {
 	opacity: 0;
 }
 .item-a {
@@ -90,13 +90,13 @@
 }
 
 /* --- Slide Class for slide animation --- */
-.item.slide-transition.item-a,
-.item.slide-transition.item-c {
+.about.slide-about.item-a,
+.about.slide-about.item-c {
 	animation: slideFromLeft .75s .1s forwards;
 }
-.item.slide-transition.item-b,
-.item.slide-transition.item-d,
-.item.slide-transition.item-e {
+.about.slide-about.item-b,
+.about.slide-about.item-d,
+.about.slide-about.item-e {
 	animation: slideFromRight .75s .1s forwards;
 }
 
