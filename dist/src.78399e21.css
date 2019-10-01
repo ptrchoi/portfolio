@@ -180,11 +180,13 @@ body {
   text-decoration: none;
 }
 .links-wrapper :active {
-  color: #f4511e;
+  color: #fbe345;
+  text-shadow: 1px 1px black;
 }
 
 .active-link a {
-  color: #f4511e;
+  color: #fbe345;
+  text-shadow: 1px 1px black;
 }
 
 .links-wrapper--large {

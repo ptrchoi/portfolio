@@ -9,11 +9,15 @@
 		text-decoration: none;
 	}
 	:active {
-		color: #f4511e; //TEMP - to be defined in Variables
+		// color: #f4511e; //TEMP - to be defined in Variables
+		color: rgb(251, 227, 69);
+		text-shadow: 1px 1px rgb(0, 0, 0);
 	}
 }
 .active-link a {
-	color: #f4511e; //TEMP - to be defined in Variables
+	// color: #f4511e; //TEMP - to be defined in Variables
+	color: rgb(251, 227, 69);
+	text-shadow: 1px 1px rgb(0, 0, 0);
 }
 
 //Horizontal menu

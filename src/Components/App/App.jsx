@@ -87,7 +87,7 @@ class App extends Component {
 		$(slideElement).removeClass(slideClass);
 		setTimeout(function() {
 			$(slideElement).addClass(slideClass);
-		}, 100);
+		}, 400);
 	}
 	updateActiveLink(newLink) {
 		$('.menu-link').removeClass('active-link'); //clear prev active link
@@ -95,11 +95,11 @@ class App extends Component {
 		//Necessary delay to allow Navbar to render before setting active-link when scrolling from Home to About
 		setTimeout(function() {
 			$(newLink).addClass('active-link');
-		}, 100);
+		}, 1000);
 	}
 	sectionScrolled(destination) {
 		let sectionName,
-			altActiveLinkName = false;
+			activeLinkName = false;
 
 		switch (destination) {
 			case 1:
@@ -110,7 +110,7 @@ class App extends Component {
 				break;
 			case 3:
 				sectionName = 'card';
-				altActiveLinkName = 'portfolio';
+				activeLinkName = 'portfolio';
 				break;
 			case 4:
 				sectionName = 'contact';
@@ -120,20 +120,18 @@ class App extends Component {
 				break;
 		}
 
+		if (!activeLinkName) {
+			activeLinkName = sectionName;
+		}
 		/* Set slide anims per section */
 		if (sectionName !== 'home') {
 			this.slideInSection('.' + sectionName, 'slide-' + sectionName);
+			this.updateActiveLink('#' + activeLinkName + '-link');
 		}
-
 		this.slideInHeader();
 		this.setState({
 			currentSection: sectionName
 		});
-
-		if (altActiveLinkName) {
-			sectionName = altActiveLinkName;
-		}
-		this.updateActiveLink('#' + sectionName + '-link');
 	}
 	renderNav() {
 		const { currentSection, viewHeight, screenSize } = this.state;
