@@ -453,21 +453,31 @@ button:focus {
   transition: 1s ease;
 }
 .item-b .grid-text {
-  font-size: 12px;
+  padding-left: 5%;
+  padding-right: 5%;
   color: #1b4664;
   font-weight: normal;
-  padding: 12% 8% 0 8%;
   transition: 1s ease;
   width: 100%;
 }
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 992px) {
   .item-b .grid-text {
-    font-size: calc( 				12px + 6 * (100vw - 320px) / 880 			);
+    padding-left: calc( 				5% + 3 * (100vw - 992px) / 508 			);
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1500px) {
   .item-b .grid-text {
-    font-size: 18px;
+    padding-left: 8%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .item-b .grid-text {
+    padding-right: calc( 				5% + 3 * (100vw - 992px) / 508 			);
+  }
+}
+@media screen and (min-width: 1500px) {
+  .item-b .grid-text {
+    padding-right: 8%;
   }
 }
 
@@ -500,29 +510,80 @@ button:focus {
 .about-grid {
   display: grid;
   margin-top: 3vh;
-  width: 72vw;
   max-width: calc(1200px - 4vw);
   z-index: 9;
 }
 
-.about-grid--large {
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: "profilePic profileText profileText" "logo1 logo2 logo3";
-}
-.about-grid--large .about {
-  height: calc(1/3 * 72vw);
-  max-height: calc(1/3 * 1200px);
-}
-
+/* --- Screen size 320px - 992px --- */
 .about-grid--small {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas: "profileText profileText" "logo2 logo3" "logo1 profilePic";
+  width: 85vw;
 }
 .about-grid--small .about {
-  height: calc(1/2 * 72vw);
+  height: calc(1/2 * 85vw);
   max-height: calc(1/2 * 1200px);
+}
+.about-grid--small .grid-text {
+  font-size: 9px;
+  padding-top: 8%;
+}
+@media screen and (min-width: 320px) {
+  .about-grid--small .grid-text {
+    font-size: calc( 				9px + 19 * (100vw - 320px) / 672 			);
+  }
+}
+@media screen and (min-width: 992px) {
+  .about-grid--small .grid-text {
+    font-size: 28px;
+  }
+}
+@media screen and (min-width: 320px) {
+  .about-grid--small .grid-text {
+    padding-top: calc( 				8% + 8 * (100vw - 320px) / 672 			);
+  }
+}
+@media screen and (min-width: 992px) {
+  .about-grid--small .grid-text {
+    padding-top: 16%;
+  }
+}
+
+/* --- Screen size 992px - 1200px --- */
+.about-grid--large {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "profilePic profileText profileText" "logo1 logo2 logo3";
+  width: 80vw;
+}
+.about-grid--large .about {
+  height: calc(1/3 * 80vw);
+  max-height: calc(1/3 * 1200px);
+}
+.about-grid--large .grid-text {
+  font-size: 18px;
+  padding-top: 7%;
+}
+@media screen and (min-width: 992px) {
+  .about-grid--large .grid-text {
+    font-size: calc( 				18px + 10 * (100vw - 992px) / 508 			);
+  }
+}
+@media screen and (min-width: 1500px) {
+  .about-grid--large .grid-text {
+    font-size: 28px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .about-grid--large .grid-text {
+    padding-top: calc( 				7% + -2 * (100vw - 992px) / 508 			);
+  }
+}
+@media screen and (min-width: 1500px) {
+  .about-grid--large .grid-text {
+    padding-top: 5%;
+  }
 }
 
 /* --- Logo Styling --- */
