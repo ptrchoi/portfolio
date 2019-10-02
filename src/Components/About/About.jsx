@@ -21,13 +21,14 @@ import eaLogo from '../../assets/eaLogo_1280_505.png';
 class About extends Component {
 	render(props) {
 		let { size, height } = this.props;
+		const classList = 'about-grid about-grid--' + size;
 
 		return (
 			<div style={{ height: height }} className="section-wrapper about-wrapper">
 				<div className="section-header">
 					<h1>About</h1>
 				</div>
-				<div className="about-grid">
+				<div className={classList}>
 					<div className="about item-a">
 						<img className="first-pic" src={profilePic1} alt="profile pic" />
 						<img className="second-pic" src={profilePic2} alt="profile pic" />

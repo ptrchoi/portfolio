@@ -1,3 +1,9 @@
+/* --- About Variables --- */
+$about-grid-width: 72vw;
+$about-hover-fade-anim-duration: 1s;
+$about-anim-duration: .75s;
+$about-anim-delay: .1s;
+
 /* --- About Wrapper --- */
 .about-wrapper {
 	align-content: start;
@@ -14,7 +20,6 @@
 	background-color: rgba(118, 118, 118, 0.796);
 	display: flex;
 	grid-area: profilePic;
-
 	img {
 		object-fit: cover;
 		width: 100%;
@@ -30,14 +35,14 @@
 .item-b {
 	background-color: rgb(255, 255, 255);
 	grid-area: profileText;
-	transition: 1s ease;
+	transition: $about-hover-fade-anim-duration ease;
 
 	.grid-text {
 		@include fluid-type(font-size, $min-width, $max-width, 12px, 18px);
 		color: $gap-blue;
 		font-weight: normal;
 		padding: 12% 8% 0 8%;
-		transition: 1s ease;
+		transition: $about-hover-fade-anim-duration ease;
 		width: 100%;
 	}
 }
@@ -45,35 +50,54 @@
 	background-color: rgb(193, 193, 193);
 	grid-area: logo1;
 	position: relative;
-	transition: 1s ease;
+	transition: $about-hover-fade-anim-duration ease;
 }
 .item-d {
 	background-color: rgb(0, 0, 0);
 	grid-area: logo2;
 	position: relative;
-	transition: 1s ease;
+	transition: $about-hover-fade-anim-duration ease;
 	.logo-on-hover {
 		opacity: 0;
-		transition: 1s ease;
+		transition: $about-hover-fade-anim-duration ease;
 	}
 }
 .item-e {
 	background-color: rgb(174, 211, 222);
 	grid-area: logo3;
 	position: relative;
-	transition: 1s ease;
+	transition: $about-hover-fade-anim-duration ease;
 }
 
 /* --- Grid --- */
 .about-grid {
 	display: grid;
-	height: calc(2/3 * 80vw);
+	// height: calc(2/3 * 80vw);
+	// grid-template-columns: 1fr 1fr 1fr;
+	// grid-template-rows: 1fr 1fr;
+	// grid-template-areas: "profilePic profileText profileText" "logo1 logo2 logo3";
+	margin-top: 3vh;
+	width: $about-grid-width;
+	max-width: calc(#{$max-width} - 4vw); //Leave some side padding on the grid
+	z-index: $above-confetti-layer;
+}
+.about-grid--large {
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 1fr 1fr;
 	grid-template-areas: "profilePic profileText profileText" "logo1 logo2 logo3";
-	margin-top: 5vh;
-	width: 80vw;
-	z-index: $above-confetti-layer;
+	.about {
+		height: calc(1/3 * #{$about-grid-width});
+		max-height: calc(1/3 * #{$max-width});
+	}
+}
+.about-grid--small {
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-areas: "profileText profileText" "logo2 logo3" "logo1 profilePic";
+	.about {
+		height: calc(1/2 * #{$about-grid-width});
+		max-height: calc(1/2 * #{$max-width});
+	}
 }
 
 /* --- Logo Styling --- */
@@ -92,12 +116,12 @@
 /* --- Slide Class for slide animation --- */
 .about.slide-about.item-a,
 .about.slide-about.item-c {
-	animation: slideFromLeft .75s .1s forwards;
+	animation: slideFromLeft $about-anim-duration $about-anim-delay forwards;
 }
 .about.slide-about.item-b,
 .about.slide-about.item-d,
 .about.slide-about.item-e {
-	animation: slideFromRight .75s .1s forwards;
+	animation: slideFromRight $about-anim-duration $about-anim-delay forwards;
 }
 
 /* --- If hover-capable device, hover styling --- */
