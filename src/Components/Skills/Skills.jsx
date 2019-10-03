@@ -31,34 +31,97 @@ class Skills extends Component {
 				<div className={classList}>
 					<div className="skills-group skills">
 						<i className="fas fa-cubes fa-icon" />
-						<h3>Skilled Developer</h3>
+						<h3>Front-end Developer</h3>
 						<p className="skills-text">
-							Analytical developer focused on modularity, efficiency and functional programming. Certified
-							in several languages and libraries, with numerous modern web apps developed utilizing
-							cutting-edge frontend technologies.
+							Front-end Javascript | React | CSS developer, an advocate of modular, efficient, and
+							functional programming.
 						</p>
 					</div>
 					<div className="skills-group skills">
 						<i className="far fa-compass fa-icon" />
 						<h3>User-centered Thinker</h3>
 						<p className="skills-text">
-							Experienced UX and Design professional, well-versed on modern trends and strategies.
-							Continually focused on the user's journey and end user experience.
+							Experienced UX professional, well-versed on modern design trends and UX strategies.
 						</p>
 					</div>
 					<div className="skills-group skills">
 						<i className="fas fa-people-carry fa-icon" />
 						<h3>Team Player</h3>
 						<p className="skills-text">
-							Extensive background in software production and deployment, an expert working in agile
-							environments. Proven communication and soft skills, collaborating with large distributed
-							teams across diverse disciplines, time zones, and cultures.
+							Proven communication, soft skills, and collaboration with large distributed teams across
+							diverse disciplines, time zones, and cultures.
 						</p>
 					</div>
 				</div>
-				<div className="skills-graphic skills">
-					<img id="chart" src={chart} alt="chart" />
+
+				<div className="skills-chart">
+					<ul className="lines">
+						<li className="line line-0" />
+						<li className="line line-30">
+							<span className="line-label">Adept</span>
+						</li>
+						<li className="line line-60">
+							<span className="line-label">Skilled</span>
+						</li>
+						<li className="line line-90">
+							<span className="line-label">Advanced</span>
+						</li>
+					</ul>
+					<div className="charts">
+						<div className="chart chart-tech">
+							<span className="chart-title">Front End Technologies</span>
+							<ul className="chart-horizontal">
+								<li className="chart-bar bar-30">
+									<span className="bar-label">Javascript</span>
+								</li>
+								<li className="chart-bar bar-60">
+									<span className="bar-label">React</span>
+								</li>
+								<li className="chart-bar bar-90">
+									<span className="bar-label">CSS</span>
+								</li>
+								<li className="chart-bar bar-30">
+									<span className="bar-label">Javascript</span>
+								</li>
+								<li className="chart-bar bar-60">
+									<span className="bar-label">React</span>
+								</li>
+								<li className="chart-bar bar-90">
+									<span className="bar-label">CSS</span>
+								</li>
+							</ul>
+						</div>
+						<div className="chart chart-ux">
+							<span className="chart-title">UX & Production</span>
+							<ul className="chart-horizontal">
+								<li className="chart-bar bar-30">
+									<span className="bar-label">Sketch</span>
+								</li>
+								<li className="chart-bar bar-60">
+									<span className="bar-label">Trello</span>
+								</li>
+								<li className="chart-bar bar-90">
+									<span className="bar-label">Photoshop</span>
+								</li>
+							</ul>
+						</div>
+						<div className="chart chart-soft">
+							<span className="chart-title">Soft Skills</span>
+							<ul className="chart-horizontal">
+								<li className="chart-bar bar-30">
+									<span className="bar-label">Communication</span>
+								</li>
+								<li className="chart-bar bar-60">
+									<span className="bar-label">Collaboration</span>
+								</li>
+								<li className="chart-bar bar-90">
+									<span className="bar-label">Teamwork</span>
+								</li>
+							</ul>
+						</div>
+					</div>
 				</div>
+
 				<div className="confetti blur">
 					<Confetti
 						data={{

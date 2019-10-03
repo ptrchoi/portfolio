@@ -665,7 +665,6 @@ button:focus {
 /* --- Skills Group --- */
 .skills-group-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
   padding-top: 1%;
 }
@@ -712,16 +711,6 @@ button:focus {
   z-index: 9;
 }
 
-#chart {
-  display: block;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10%;
-  padding-bottom: 5%;
-  width: 70%;
-}
-
 .fa-icon {
   color: #28424e;
   font-size: 3.5rem;
@@ -732,6 +721,160 @@ button:focus {
   opacity: 0;
 }
 
+/* --- Skills Chart --- */
+.skills-chart {
+  height: calc(2/3 * 70vw);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+  position: relative;
+  width: 70vw;
+  z-index: 9;
+}
+.skills-chart ul {
+  list-style-type: none;
+}
+
+/* --- chart lines --- */
+.lines {
+  height: 100%;
+  position: relative;
+}
+
+.line {
+  background: rgba(198, 198, 198, 0.6);
+  height: inherit;
+  position: absolute;
+  width: 2px;
+}
+.line.line-0 {
+  left: 0;
+}
+.line.line-30 {
+  left: 33%;
+}
+.line.line-60 {
+  left: 66%;
+}
+.line.line-90 {
+  left: 99%;
+}
+
+.line-label {
+  display: block;
+  position: absolute;
+  right: 4vw;
+  text-align: center;
+  top: -3vw;
+  width: 100%;
+}
+
+/* --- chart bars --- */
+.charts {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.chart {
+  margin-bottom: 2vw;
+}
+
+.chart-title {
+  animation: 1s anim-lightspeed-in ease forwards;
+  display: block;
+  margin: 0 0 1vw 1vw;
+  opacity: 0;
+}
+.chart-tech .chart-title {
+  animation-delay: 0.5s;
+}
+.chart-ux .chart-title {
+  animation-delay: 1.5s;
+}
+.chart-soft .chart-title {
+  animation-delay: 2.5s;
+}
+
+.chart-horizontal {
+  overflow: hidden;
+}
+
+.chart-bar {
+  animation: 1s anim-lightspeed-in ease forwards;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background: linear-gradient(to left, #4cb8c4, #3cd3ad);
+  height: 2vw;
+  margin-bottom: 0.5vw;
+  opacity: 0;
+}
+.chart-tech .chart-bar:nth-of-type(6) {
+  animation-delay: 1.7s;
+}
+.chart-tech .chart-bar:nth-of-type(5) {
+  animation-delay: 1.5s;
+}
+.chart-tech .chart-bar:nth-of-type(4) {
+  animation-delay: 1.3s;
+}
+.chart-tech .chart-bar:nth-of-type(3) {
+  animation-delay: 1.1s;
+}
+.chart-tech .chart-bar:nth-of-type(2) {
+  animation-delay: 0.9s;
+}
+.chart-tech .chart-bar:nth-of-type(1) {
+  animation-delay: 0.7s;
+}
+.chart-ux .chart-bar:nth-of-type(3) {
+  animation-delay: 2.1s;
+}
+.chart-ux .chart-bar:nth-of-type(2) {
+  animation-delay: 1.9s;
+}
+.chart-ux .chart-bar:nth-of-type(1) {
+  animation-delay: 1.7s;
+}
+.chart-soft .chart-bar:nth-of-type(3) {
+  animation-delay: 3.1s;
+}
+.chart-soft .chart-bar:nth-of-type(2) {
+  animation-delay: 2.9s;
+}
+.chart-soft .chart-bar:nth-of-type(1) {
+  animation-delay: 2.7s;
+}
+
+.bar-label {
+  color: white;
+  padding-left: 1vw;
+}
+
+.bar-30 {
+  width: 33%;
+}
+
+.bar-60 {
+  width: 66%;
+}
+
+.bar-90 {
+  width: 99%;
+}
+
+@keyframes anim-lightspeed-in {
+  0% {
+    transform: translateX(-200%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 /* --- Slide Class for slide animation --- */
 .skills.slide-skills {
   animation: slideFromBottom 0.75s 0.2s forwards;
