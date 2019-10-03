@@ -1,5 +1,5 @@
 /* --- About Variables --- */
-$about-narrow-grid-width: 85vw;
+$about-narrow-grid-width: 66vw;
 $about-wide-grid-width: 80vw;
 $about-hover-fade-anim-duration: 1s;
 $about-anim-duration: .75s;
@@ -89,8 +89,8 @@ $about-text-responsive-max: 1500px;
 		max-height: calc(1/2 * #{$max-width});
 	}
 	.grid-text {
-		@include fluid-type(font-size, $min-width, $large-screen-breakpoint, 9px, 28px);
-		@include fluid-type(padding-top, $min-width, $large-screen-breakpoint, 8%, 16%);
+		@include fluid-type(font-size, $min-width, $large-screen-breakpoint, 7.5px, 24px);
+		@include fluid-type(padding-top, $min-width, $large-screen-breakpoint, 6%, 8%);
 	}
 }
 /* --- Screen size 992px - 1200px --- */
@@ -105,7 +105,7 @@ $about-text-responsive-max: 1500px;
 	}
 	.grid-text {
 		@include fluid-type(font-size, $large-screen-breakpoint, $about-text-responsive-max, 18px, 28px);
-		@include fluid-type(padding-top, $large-screen-breakpoint, $about-text-responsive-max, 7%, 5%);
+		@include fluid-type(padding-top, $large-screen-breakpoint, $about-text-responsive-max, 8%, 5%);
 	}
 }
 

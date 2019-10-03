@@ -519,34 +519,34 @@ button:focus {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas: "profileText profileText" "logo2 logo3" "logo1 profilePic";
-  width: 85vw;
+  width: 66vw;
 }
 .about-grid--small .about {
-  height: calc(1/2 * 85vw);
+  height: calc(1/2 * 66vw);
   max-height: calc(1/2 * 1200px);
 }
 .about-grid--small .grid-text {
-  font-size: 9px;
-  padding-top: 8%;
+  font-size: 7.5px;
+  padding-top: 6%;
 }
 @media screen and (min-width: 320px) {
   .about-grid--small .grid-text {
-    font-size: calc( 				9px + 19 * (100vw - 320px) / 672 			);
+    font-size: calc( 				7.5px + 16.5 * (100vw - 320px) / 672 			);
   }
 }
 @media screen and (min-width: 992px) {
   .about-grid--small .grid-text {
-    font-size: 28px;
+    font-size: 24px;
   }
 }
 @media screen and (min-width: 320px) {
   .about-grid--small .grid-text {
-    padding-top: calc( 				8% + 8 * (100vw - 320px) / 672 			);
+    padding-top: calc( 				6% + 2 * (100vw - 320px) / 672 			);
   }
 }
 @media screen and (min-width: 992px) {
   .about-grid--small .grid-text {
-    padding-top: 16%;
+    padding-top: 8%;
   }
 }
 
@@ -563,7 +563,7 @@ button:focus {
 }
 .about-grid--large .grid-text {
   font-size: 18px;
-  padding-top: 7%;
+  padding-top: 8%;
 }
 @media screen and (min-width: 992px) {
   .about-grid--large .grid-text {
@@ -577,7 +577,7 @@ button:focus {
 }
 @media screen and (min-width: 992px) {
   .about-grid--large .grid-text {
-    padding-top: calc( 				7% + -2 * (100vw - 992px) / 508 			);
+    padding-top: calc( 				8% + -3 * (100vw - 992px) / 508 			);
   }
 }
 @media screen and (min-width: 1500px) {
