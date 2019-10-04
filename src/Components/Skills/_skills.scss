@@ -1,3 +1,21 @@
+/* --- Skills Variables & Mixins --- */
+$first-chart-bars: 6;
+$second-chart-bars: 3;
+$third-chart-bars: 3;
+$chart-1-delay: .5s;
+$chart-2-delay: 1s;
+$chart-3-delay: 1.5s;
+$chart-stagger-delay: .1s;
+
+@mixin stagger-anim-delay($i, $initial-delay, $stagger-delay) {
+	@while $i > 0 {
+		&:nth-of-type(#{$i}) {
+			animation-delay: $initial-delay + $stagger-delay * $i;
+		}
+		$i: $i - 1;
+	}
+}
+
 /* --- Skills Wrapper --- */
 .skills-wrapper {
 	background-color: $background-white;
@@ -41,43 +59,22 @@
 	position: relative;
 	z-index: $above-confetti-layer;
 }
-// #chart {
-// 	display: block;
-// 	height: auto;
-// 	margin-left: auto;
-// 	margin-right: auto;
-// 	margin-top: 10%;
-// 	padding-bottom: 5%;
-// 	width: 70%;
-// }
+.skills {
+	opacity: 0;
+}
 .fa-icon {
 	color: #28424e; //TEMP - to be defined in Variables
 	font-size: 3.5rem;
 	padding: 40px 0 40px 0;
 }
-.skills {
-	opacity: 0;
-}
 
 /* --- Skills Chart --- */
-$chart-1-delay: .5s;
-$chart-2-delay: 1.5s;
-$chart-3-delay: 2.5s;
-@mixin stagger-anim-delay($i, $initial-delay, $stagger-delay) {
-	@while $i > 0 {
-		&:nth-of-type(#{$i}) {
-			animation-delay: $initial-delay + $stagger-delay * $i;
-		}
-		$i: $i - 1;
-	}
-}
 .skills-chart {
 	$chart-width: 70vw;
 	height: calc(2/3 * #{$chart-width});
-	margin-left: auto;
-	margin-right: auto;
+	// margin-left: auto;
+	// margin-right: auto;
 	max-width: 1000px;
-	// padding-bottom: 5%;
 	position: relative;
 	width: $chart-width;
 	z-index: $above-confetti-layer;
@@ -85,7 +82,7 @@ $chart-3-delay: 2.5s;
 		list-style-type: none;
 	}
 }
-/* --- chart lines --- */
+/* --- Chart lines --- */
 .lines {
 	height: 100%;
 	position: relative;
@@ -109,14 +106,13 @@ $chart-3-delay: 2.5s;
 	}
 }
 .line-label {
+	bottom: -3vw;
 	display: block;
 	position: absolute;
 	right: 4vw;
-	text-align: center;
-	top: -3vw;
 	width: 100%;
 }
-/* --- chart bars --- */
+/* --- Chart bars --- */
 .charts {
 	height: 100%;
 	left: 0;
@@ -128,45 +124,22 @@ $chart-3-delay: 2.5s;
 	margin-bottom: 2vw;
 }
 .chart-title {
-	animation: 1s anim-lightspeed-in ease forwards;
 	display: block;
 	margin: 0 0 1vw 1vw;
-	opacity: 0;
-	.chart-tech & {
-		animation-delay: $chart-1-delay;
-	}
-	.chart-ux & {
-		animation-delay: $chart-2-delay;
-	}
-	.chart-soft & {
-		animation-delay: $chart-3-delay;
-	}
 }
 .chart-horizontal {
 	overflow: hidden;
 }
 .chart-bar {
 	$border-rad: 8px;
-	animation: 1s anim-lightspeed-in ease forwards;
 	border-top-right-radius: $border-rad;
 	border-bottom-right-radius: $border-rad;
 	background: linear-gradient(to left, #4cb8c4, #3cd3ad);
 	height: 2vw;
 	margin-bottom: .5vw;
-	opacity: 0;
-	.chart-tech & {
-		@include stagger-anim-delay(6, $chart-1-delay, 0.2s);
-	}
-	.chart-ux & {
-		@include stagger-anim-delay(3, $chart-2-delay, 0.2s);
-	}
-	.chart-soft & {
-		@include stagger-anim-delay(3, $chart-3-delay, 0.2s);
-	}
 }
 .bar-label {
 	color: white;
-	// line-height: 30px;
 	padding-left: 1vw;
 }
 .bar-30 {
@@ -178,7 +151,45 @@ $chart-3-delay: 2.5s;
 .bar-90 {
 	width: 99%;
 }
-@keyframes anim-lightspeed-in {
+
+/* --- Animations --- */
+/* --- Slide-in on scroll animation --- */
+.skills.slide-skills {
+	animation: slideFromBottom .75s .2s forwards;
+}
+.skills.slide-skills.skills-chart {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* --- Bars & Titles growing anim --- */
+.chart-title.chart-grow {
+	animation: .4s chart-bar-grow ease forwards;
+	opacity: 0;
+	.chart-tech & {
+		animation-delay: $chart-1-delay;
+	}
+	.chart-ux & {
+		animation-delay: $chart-2-delay;
+	}
+	.chart-soft & {
+		animation-delay: $chart-3-delay;
+	}
+}
+.chart-bar.chart-grow {
+	animation: .4s chart-bar-grow ease forwards;
+	opacity: 0;
+	.chart-tech & {
+		@include stagger-anim-delay($first-chart-bars, $chart-1-delay, $chart-stagger-delay);
+	}
+	.chart-ux & {
+		@include stagger-anim-delay($second-chart-bars, $chart-2-delay, $chart-stagger-delay);
+	}
+	.chart-soft & {
+		@include stagger-anim-delay($third-chart-bars, $chart-3-delay, $chart-stagger-delay);
+	}
+}
+@keyframes chart-bar-grow {
 	0% {
 		transform: translateX(-200%);
 		opacity: 1;
@@ -187,9 +198,4 @@ $chart-3-delay: 2.5s;
 		transform: translateX(0);
 		opacity: 1;
 	}
-}
-
-/* --- Slide Class for slide animation --- */
-.skills.slide-skills {
-	animation: slideFromBottom .75s .2s forwards;
 }

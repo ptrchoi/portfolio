@@ -54,7 +54,7 @@ class Skills extends Component {
 					</div>
 				</div>
 
-				<div className="skills-chart">
+				<div className="skills-chart skills">
 					<ul className="lines">
 						<li className="line line-0" />
 						<li className="line line-30">

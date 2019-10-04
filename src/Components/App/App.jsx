@@ -107,6 +107,10 @@ class App extends Component {
 				break;
 			case 2:
 				sectionName = 'skills';
+				$('.chart-bar').removeClass('chart-grow');
+				setTimeout(function() {
+					$('.chart-bar').addClass('chart-grow');
+				}, 400);
 				break;
 			case 3:
 				sectionName = 'card';
