@@ -107,6 +107,7 @@ class App extends Component {
 				break;
 			case 2:
 				sectionName = 'skills';
+				//Add anim class for .chart-bar on scroll
 				$('.chart-bar').removeClass('chart-grow');
 				setTimeout(function() {
 					$('.chart-bar').addClass('chart-grow');
