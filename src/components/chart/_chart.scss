@@ -1,0 +1,126 @@
+.skills-chart {
+	// align-self: start;
+	height: calc(2/3 * #{$chart-width});
+	// margin-left: auto;
+	// margin-right: auto;
+	max-width: 1000px;
+	position: relative;
+	width: $chart-width;
+	z-index: $above-confetti-layer;
+	ul {
+		list-style-type: none;
+	}
+}
+/* --- Chart lines --- */
+.lines {
+	height: 100%;
+	position: relative;
+}
+.line {
+	background: rgba(rgb(198, 198, 198), 0.6);
+	height: inherit;
+	position: absolute;
+	width: 2px;
+	&.line-0 {
+		left: 0;
+	}
+	&.line-30 {
+		left: 33%;
+	}
+	&.line-60 {
+		left: 66%;
+	}
+	&.line-90 {
+		left: 99%;
+	}
+}
+.line-label {
+	@include fluid-type(font-size, $min-width, $max-width, 8px, 16px);
+	bottom: -3vw;
+	color: $gray-text;
+	font-style: italic;
+	position: absolute;
+	right: 0;
+}
+/* --- Chart bars --- */
+.charts {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+.chart {
+	margin-bottom: 2vw;
+}
+.chart-title {
+	@include fluid-type(font-size, $min-width, $max-width, 12px, 18px);
+	color: #28424e;
+	display: block;
+	margin: 0 0 1vw 1vw;
+}
+.chart-horizontal {
+	overflow: hidden;
+}
+.chart-bar {
+	$border-rad: 8px;
+	border-top-right-radius: $border-rad;
+	border-bottom-right-radius: $border-rad;
+	background: linear-gradient(to left, #4cb8c4, #3cd3ad);
+	// background: linear-gradient(to left, rgb(45, 126, 154), #3cc4d3);
+	// background: linear-gradient(to left, $secondary-orange, $secondary-orange-dark);
+	// background: linear-gradient(to left, $secondary-orange-dark, $secondary-orange);
+	height: 2vw;
+	margin-bottom: .5vw;
+}
+.bar-label {
+	color: white;
+	padding-left: 1vw;
+}
+.bar-30 {
+	width: 33%;
+}
+.bar-60 {
+	width: 66%;
+}
+.bar-90 {
+	width: 99%;
+}
+
+/* --- Bars & Titles growing anim --- */
+.chart-title.chart-grow {
+	animation: .4s chart-bar-grow ease forwards;
+	opacity: 0;
+	.chart-tech & {
+		animation-delay: $chart-1-delay;
+	}
+	.chart-ux & {
+		animation-delay: $chart-2-delay;
+	}
+	.chart-soft & {
+		animation-delay: $chart-3-delay;
+	}
+}
+.chart-bar.chart-grow {
+	animation: .4s chart-bar-grow ease forwards;
+	opacity: 0;
+	.chart-tech & {
+		@include stagger-anim-delay($first-chart-bars, $chart-1-delay, $chart-stagger-delay);
+	}
+	.chart-ux & {
+		@include stagger-anim-delay($second-chart-bars, $chart-2-delay, $chart-stagger-delay);
+	}
+	.chart-soft & {
+		@include stagger-anim-delay($third-chart-bars, $chart-3-delay, $chart-stagger-delay);
+	}
+}
+@keyframes chart-bar-grow {
+	0% {
+		transform: translateX(-200%);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}

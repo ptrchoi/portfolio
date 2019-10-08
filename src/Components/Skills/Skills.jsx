@@ -3,9 +3,10 @@ import React, { Component } from 'react';
 
 //Components
 import Confetti from '../confetti/Confetti';
+import Chart from '../chart/Chart';
 
 //Assets
-import chart from '../../assets/skills_chart_v6.png';
+// import chart from '../../assets/skills_chart_v6.png';
 
 /**
  * React Class Component, renders a responsive content section.
@@ -15,16 +16,10 @@ import chart from '../../assets/skills_chart_v6.png';
  */
 class Skills extends Component {
 	render(props) {
-		let { size, height } = this.props;
-		let responsiveHeight = height;
-
+		let { size } = this.props;
 		const classList = 'skills-grid skills-grid--' + size;
-		if (size === 'small') {
-			responsiveHeight = 'auto';
-		}
 
 		return (
-			// <div style={{ height: responsiveHeight }} className="section-wrapper skills-wrapper">
 			<div className="section-wrapper skills-wrapper">
 				<div className="section-header">
 					<h1>Skills</h1>
@@ -55,73 +50,7 @@ class Skills extends Component {
 					</div>
 				</div>
 				<div className="skills-chart-wrapper">
-					<div className="skills-chart skills">
-						<ul className="lines">
-							<li className="line line-0" />
-							<li className="line line-30">
-								<span className="line-label">Adept</span>
-							</li>
-							<li className="line line-60">
-								<span className="line-label">Skilled</span>
-							</li>
-							<li className="line line-90">
-								<span className="line-label">Advanced</span>
-							</li>
-						</ul>
-						<div className="charts">
-							<div className="chart chart-tech">
-								<span className="chart-title">Front End Technologies</span>
-								<ul className="chart-horizontal">
-									<li className="chart-bar bar-30">
-										<span className="bar-label">Javascript</span>
-									</li>
-									<li className="chart-bar bar-60">
-										<span className="bar-label">React</span>
-									</li>
-									<li className="chart-bar bar-90">
-										<span className="bar-label">CSS</span>
-									</li>
-									<li className="chart-bar bar-30">
-										<span className="bar-label">Javascript</span>
-									</li>
-									<li className="chart-bar bar-60">
-										<span className="bar-label">React</span>
-									</li>
-									<li className="chart-bar bar-90">
-										<span className="bar-label">CSS</span>
-									</li>
-								</ul>
-							</div>
-							<div className="chart chart-ux">
-								<span className="chart-title">UX & Production</span>
-								<ul className="chart-horizontal">
-									<li className="chart-bar bar-30">
-										<span className="bar-label">Sketch</span>
-									</li>
-									<li className="chart-bar bar-60">
-										<span className="bar-label">Trello</span>
-									</li>
-									<li className="chart-bar bar-90">
-										<span className="bar-label">Photoshop</span>
-									</li>
-								</ul>
-							</div>
-							<div className="chart chart-soft">
-								<span className="chart-title">Soft Skills</span>
-								<ul className="chart-horizontal">
-									<li className="chart-bar bar-30">
-										<span className="bar-label">Communication</span>
-									</li>
-									<li className="chart-bar bar-60">
-										<span className="bar-label">Collaboration</span>
-									</li>
-									<li className="chart-bar bar-90">
-										<span className="bar-label">Teamwork</span>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
+					<Chart />
 				</div>
 				<div className="confetti blur">
 					<Confetti

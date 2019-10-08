@@ -817,6 +817,17 @@ button:focus {
   padding: 10vh 0 20vh 0;
 }
 
+/* --- Animations --- */
+/* --- Slide-in on scroll animation --- */
+.skills.slide-skills {
+  animation: slideFromBottom 0.75s 0.2s forwards;
+}
+
+.skills.slide-skills.skills-chart {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .skills-chart {
   height: calc(2/3 * 70vw);
   max-width: 1000px;
@@ -929,17 +940,6 @@ button:focus {
 
 .bar-90 {
   width: 99%;
-}
-
-/* --- Animations --- */
-/* --- Slide-in on scroll animation --- */
-.skills.slide-skills {
-  animation: slideFromBottom 0.75s 0.2s forwards;
-}
-
-.skills.slide-skills.skills-chart {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* --- Bars & Titles growing anim --- */
