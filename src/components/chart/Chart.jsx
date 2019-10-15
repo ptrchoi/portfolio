@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 class Chart extends Component {
 	render() {
 		return (
-			<div className="skills-chart skills">
+			<div className="skills-chart">
 				<ul className="lines">
 					<li className="line line-0" />
 					<li className="line line-30">

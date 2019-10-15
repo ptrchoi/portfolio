@@ -5,13 +5,10 @@ import React, { Component } from 'react';
 import Confetti from '../confetti/Confetti';
 import Chart from '../chart/Chart';
 
-//Assets
-// import chart from '../../assets/skills_chart_v6.png';
-
 /**
  * React Class Component, renders a responsive content section.
  * @function
- * @param {object} props { size, height }
+ * @param {object} props { size }
  * @return {JSX.Element} - Rendered component.
  */
 class Skills extends Component {
@@ -25,31 +22,31 @@ class Skills extends Component {
 					<h1>Skills</h1>
 				</div>
 				<div className={classList}>
-					<div className="skills-group skills skills-item-1">
+					<div className="skills-group skills">
 						<i className="fas fa-cubes fa-icon skill-group-item-1" />
 						<h3 className="skill-group-item-2">Front-end Developer</h3>
-						<p className="skills-text skill-group-item-3">
+						<p className="skill-group-item-3">
 							Front-end Javascript | React | CSS developer, an advocate of modular, efficient, and
 							functional programming.
 						</p>
 					</div>
-					<div className="skills-group skills skills-item-2">
+					<div className="skills-group skills">
 						<i className="far fa-compass fa-icon skill-group-item-1" />
 						<h3 className="skill-group-item-2">User-centered Thinker</h3>
-						<p className="skills-text skill-group-item-3">
+						<p className="skill-group-item-3">
 							Experienced UX professional, well-versed on modern design trends and UX strategies.
 						</p>
 					</div>
-					<div className="skills-group skills skills-item-3">
+					<div className="skills-group skills">
 						<i className="fas fa-people-carry fa-icon skill-group-item-1" />
 						<h3 className="skill-group-item-2">Team Player</h3>
-						<p className="skills-text skill-group-item-3">
+						<p className="skill-group-item-3">
 							Proven communication, soft skills, and collaboration with large distributed teams across
 							diverse disciplines, time zones, and cultures.
 						</p>
 					</div>
 				</div>
-				<div className="skills-chart-wrapper">
+				<div className="skills-chart-wrapper skills">
 					<Chart />
 				</div>
 				<div className="confetti blur">

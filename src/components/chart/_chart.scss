@@ -1,12 +1,26 @@
+$first-chart-bars: 6;
+$second-chart-bars: 3;
+$third-chart-bars: 3;
+$chart-1-delay: .4s;
+$chart-2-delay: .8s;
+$chart-3-delay: 1.2s;
+$chart-stagger-delay: .1s;
+$chart-width: 70vw;
+
+@mixin stagger-anim-delay($i, $initial-delay, $stagger-delay) {
+	@while $i > 0 {
+		&:nth-of-type(#{$i}) {
+			animation-delay: $initial-delay + $stagger-delay * $i;
+		}
+		$i: $i - 1;
+	}
+}
+
 .skills-chart {
-	// align-self: start;
 	height: calc(2/3 * #{$chart-width});
-	// margin-left: auto;
-	// margin-right: auto;
 	max-width: 1000px;
 	position: relative;
 	width: $chart-width;
-	z-index: $above-confetti-layer;
 	ul {
 		list-style-type: none;
 	}
@@ -67,9 +81,6 @@
 	border-top-right-radius: $border-rad;
 	border-bottom-right-radius: $border-rad;
 	background: linear-gradient(to left, #4cb8c4, #3cd3ad);
-	// background: linear-gradient(to left, rgb(45, 126, 154), #3cc4d3);
-	// background: linear-gradient(to left, $secondary-orange, $secondary-orange-dark);
-	// background: linear-gradient(to left, $secondary-orange-dark, $secondary-orange);
 	height: 2vw;
 	margin-bottom: .5vw;
 }
