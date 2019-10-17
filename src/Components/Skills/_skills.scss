@@ -35,6 +35,11 @@ $max-skill-grid-width: 1000px;
 	color: #28424e;
 }
 .skill-group-item-3 {
+	grid-area: expandIcon;
+	color: #339da9;
+	font-size: 3.5rem;
+}
+.skill-group-item-4 {
 	@include fluid-type(font-size, $min-width, $max-width, 12px, 15px);
 	grid-area: skillText;
 	color: $gray-text;
@@ -44,22 +49,31 @@ $max-skill-grid-width: 1000px;
 /* --- Skills Grid --- */
 .skills-grid {
 	display: grid;
-	margin-top: 10%;
+	position: absolute;
+}
+.skill-expand-icon {
+	align-self: center;
+	justify-self: center;
+	color: #339da9;
+	opacity: 0;
 }
 .skills-grid--large {
-	// border: solid 5px orange;
+	left: calc(.5 * #{$tenth-of-width});
+	top: calc(2 * #{$tenth-of-height});
+	border: solid 5px orange;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 1fr;
-	height: calc(1/3 * #{$skill-box-side-3-across});
-	width: $skill-box-side-3-across;
+	height: calc(3 * #{$tenth-of-width});
+	width: calc(9 * #{$tenth-of-width});
 	// max-height: calc(1/3 * #{$max-skill-grid-width});
 	// max-width: calc(1/3 * #{$max-skill-grid-width});
 	.skills-group {
+		border: solid 5px purple;
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr .75fr 2fr;
 		grid-template-areas: "skillIcon" "skillHeader" "skillText";
-		height: calc(1/3 * #{$skill-box-side-3-across}); //Set box height to 1/3 of grid width
-		width: calc(1/3 * #{$skill-box-side-3-across});
+		height: calc(3 * #{$tenth-of-width}); //Set box height to 1/3 of grid width
+		width: calc(3 * #{$tenth-of-width});
 		// max-height: calc(1/3 * #{$max-skill-grid-width});
 		// max-width: calc(1/3 * #{$max-skill-grid-width});
 	}
@@ -68,38 +82,75 @@ $max-skill-grid-width: 1000px;
 	}
 }
 .skills-grid--small {
-	// border: solid 5px pink;
+	left: calc(1.5 * #{$tenth-of-width});
+	top: calc(1.75 * #{$tenth-of-height});
+	border: solid 5px pink;
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr 1fr 1fr;
-	height: calc(6 * #{$skill-box-side});
-	width: calc(3 * #{$skill-box-side});
+	height: calc(3.5 * #{$tenth-of-height});
+	width: calc(7 * #{$tenth-of-width});
+	// height: calc(4 * #{$skill-box-side});
+	// width: calc(3.25 * #{$skill-box-side});
+
+	.skill-expand-icon {
+		opacity: 1;
+		// transition: opacity .5s ease-in;
+	}
 	.skills-group {
-		grid-template-columns: .5fr 1.5fr;
+		border: solid 1px red;
+		grid-template-columns: .5fr 1.4fr .1fr;
 		grid-template-rows: .5fr 1.5fr;
-		grid-template-areas: "skillIcon skillHeader" "skillText skillText";
-		height: calc(2 * #{$skill-box-side});
-		width: calc(3 * #{$skill-box-side});
+		grid-template-areas: "skillIcon skillHeader expandIcon" "skillText skillText skillText";
+		height: calc(1 * #{$tenth-of-height});
+		width: calc(7 * #{$tenth-of-width});
+		// 	height: calc(1 * #{$skill-box-side});
+		// width: calc(3.25 * #{$skill-box-side});
+		transition: height .5s ease-in;
 		// max-height: calc(1/3 * #{$max-skill-grid-width});
 		// max-width: calc(1/3 * #{$max-skill-grid-width});
+
+		.skill-group-item-1 {
+			@include fluid-type(font-size, $min-width, $max-width, 30px, 74px);
+			justify-self: start;
+		}
+		.skill-group-item-2 {
+			@include fluid-type(font-size, $min-width, $max-width, 11px, 38px);
+			align-self: center;
+			justify-self: start;
+		}
+		.skill-group-item-3 {
+			@include fluid-type(font-size, $min-width, $max-width, 16px, 38px);
+			justify-self: end;
+		}
+		.skill-group-item-4 {
+			@include fluid-type(font-size, $min-width, $max-width, 9px, 32px);
+			padding-top: 2vw;
+			// display: none;
+			opacity: 0;
+			transition: all .5s ease-in;
+		}
+		.skills-text--show {
+			// display: inline-block;
+			opacity: 1;
+		}
 	}
-	.skill-group-item-1 {
-		@include fluid-type(font-size, $min-width, $max-width, 30px, 74px);
-		justify-self: start;
-	}
-	.skill-group-item-2 {
-		@include fluid-type(font-size, $min-width, $max-width, 11px, 38px);
-		align-self: center;
-		justify-self: start;
-	}
-	.skill-group-item-3 {
-		@include fluid-type(font-size, $min-width, $max-width, 9px, 32px);
-		padding-top: 2vw;
+	.skills-group--expand {
+		height: calc(2 * #{$tenth-of-height});
+		// height: calc(2 * #{$skill-box-side});
+		.skill-expand-icon {
+			// opacity: 0;
+		}
 	}
 }
 
 /* --- Skills Chart --- */
 .skills-chart-wrapper {
-	padding: 10vh 0 20vh 0;
+	left: calc(1.5 * #{$tenth-of-width});
+	top: calc(6 * #{$tenth-of-height});
+	// left: 10%;
+	// padding: 5vh 0 20vh 0;
+	position: absolute;
+	// top: 60%;
 	z-index: $above-confetti-layer;
 }
 

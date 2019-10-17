@@ -699,18 +699,24 @@ button:focus {
 }
 
 .skill-group-item-3 {
+  grid-area: expandIcon;
+  color: #339da9;
+  font-size: 3.5rem;
+}
+
+.skill-group-item-4 {
   font-size: 12px;
   grid-area: skillText;
   color: gray;
   text-align: justify;
 }
 @media screen and (min-width: 320px) {
-  .skill-group-item-3 {
+  .skill-group-item-4 {
     font-size: calc( 				12px + 3 * (100vw - 320px) / 880 			);
   }
 }
 @media screen and (min-width: 1200px) {
-  .skill-group-item-3 {
+  .skill-group-item-4 {
     font-size: 15px;
   }
 }
@@ -718,21 +724,32 @@ button:focus {
 /* --- Skills Grid --- */
 .skills-grid {
   display: grid;
-  margin-top: 10%;
+  position: absolute;
+}
+
+.skill-expand-icon {
+  align-self: center;
+  justify-self: center;
+  color: #339da9;
+  opacity: 0;
 }
 
 .skills-grid--large {
+  left: calc(.5 * 10vw);
+  top: calc(2 * 10vh);
+  border: solid 5px orange;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  height: calc(1/3 * 90vw);
-  width: 90vw;
+  height: calc(3 * 10vw);
+  width: calc(9 * 10vw);
 }
 .skills-grid--large .skills-group {
+  border: solid 5px purple;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 0.75fr 2fr;
   grid-template-areas: "skillIcon" "skillHeader" "skillText";
-  height: calc(1/3 * 90vw);
-  width: calc(1/3 * 90vw);
+  height: calc(3 * 10vw);
+  width: calc(3 * 10vw);
 }
 .skills-grid--large .skill-group-item-3 {
   font-size: 20px;
@@ -749,65 +766,96 @@ button:focus {
 }
 
 .skills-grid--small {
+  left: calc(1.5 * 10vw);
+  top: calc(1.75 * 10vh);
+  border: solid 5px pink;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  height: calc(6 * 18vw);
-  width: calc(3 * 18vw);
+  height: calc(3.5 * 10vh);
+  width: calc(7 * 10vw);
+}
+.skills-grid--small .skill-expand-icon {
+  opacity: 1;
 }
 .skills-grid--small .skills-group {
-  grid-template-columns: 0.5fr 1.5fr;
+  border: solid 1px red;
+  grid-template-columns: 0.5fr 1.4fr 0.1fr;
   grid-template-rows: 0.5fr 1.5fr;
-  grid-template-areas: "skillIcon skillHeader" "skillText skillText";
-  height: calc(2 * 18vw);
-  width: calc(3 * 18vw);
+  grid-template-areas: "skillIcon skillHeader expandIcon" "skillText skillText skillText";
+  height: calc(1 * 10vh);
+  width: calc(7 * 10vw);
+  transition: height 0.5s ease-in;
 }
-.skills-grid--small .skill-group-item-1 {
+.skills-grid--small .skills-group .skill-group-item-1 {
   font-size: 30px;
   justify-self: start;
 }
 @media screen and (min-width: 320px) {
-  .skills-grid--small .skill-group-item-1 {
+  .skills-grid--small .skills-group .skill-group-item-1 {
     font-size: calc( 				30px + 44 * (100vw - 320px) / 880 			);
   }
 }
 @media screen and (min-width: 1200px) {
-  .skills-grid--small .skill-group-item-1 {
+  .skills-grid--small .skills-group .skill-group-item-1 {
     font-size: 74px;
   }
 }
-.skills-grid--small .skill-group-item-2 {
+.skills-grid--small .skills-group .skill-group-item-2 {
   font-size: 11px;
   align-self: center;
   justify-self: start;
 }
 @media screen and (min-width: 320px) {
-  .skills-grid--small .skill-group-item-2 {
+  .skills-grid--small .skills-group .skill-group-item-2 {
     font-size: calc( 				11px + 27 * (100vw - 320px) / 880 			);
   }
 }
 @media screen and (min-width: 1200px) {
-  .skills-grid--small .skill-group-item-2 {
+  .skills-grid--small .skills-group .skill-group-item-2 {
     font-size: 38px;
   }
 }
-.skills-grid--small .skill-group-item-3 {
-  font-size: 9px;
-  padding-top: 2vw;
+.skills-grid--small .skills-group .skill-group-item-3 {
+  font-size: 16px;
+  justify-self: end;
 }
 @media screen and (min-width: 320px) {
-  .skills-grid--small .skill-group-item-3 {
+  .skills-grid--small .skills-group .skill-group-item-3 {
+    font-size: calc( 				16px + 22 * (100vw - 320px) / 880 			);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .skills-grid--small .skills-group .skill-group-item-3 {
+    font-size: 38px;
+  }
+}
+.skills-grid--small .skills-group .skill-group-item-4 {
+  font-size: 9px;
+  padding-top: 2vw;
+  opacity: 0;
+  transition: all 0.5s ease-in;
+}
+@media screen and (min-width: 320px) {
+  .skills-grid--small .skills-group .skill-group-item-4 {
     font-size: calc( 				9px + 23 * (100vw - 320px) / 880 			);
   }
 }
 @media screen and (min-width: 1200px) {
-  .skills-grid--small .skill-group-item-3 {
+  .skills-grid--small .skills-group .skill-group-item-4 {
     font-size: 32px;
   }
 }
-
+.skills-grid--small .skills-group .skills-text--show {
+  opacity: 1;
+}
+.skills-grid--small .skills-group--expand {
+  height: calc(2 * 10vh);
+}
 /* --- Skills Chart --- */
 .skills-chart-wrapper {
-  padding: 10vh 0 20vh 0;
+  left: calc(1.5 * 10vw);
+  top: calc(6 * 10vh);
+  position: absolute;
   z-index: 9;
 }
 
@@ -823,9 +871,9 @@ button:focus {
 }
 
 .skills-chart {
+  border: solid 1px blue;
   height: calc(2/3 * 70vw);
   max-width: 1000px;
-  position: relative;
   width: 70vw;
 }
 .skills-chart ul {

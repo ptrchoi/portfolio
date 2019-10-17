@@ -17,9 +17,11 @@ $chart-width: 70vw;
 }
 
 .skills-chart {
+	border: solid 1px blue;
 	height: calc(2/3 * #{$chart-width});
+	// left: 0;
 	max-width: 1000px;
-	position: relative;
+	// position: absolute;
 	width: $chart-width;
 	ul {
 		list-style-type: none;
