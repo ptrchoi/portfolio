@@ -5,7 +5,7 @@ $chart-1-delay: .4s;
 $chart-2-delay: .8s;
 $chart-3-delay: 1.2s;
 $chart-stagger-delay: .1s;
-$chart-width: 70vw;
+// $chart-width: 70vw;
 
 @mixin stagger-anim-delay($i, $initial-delay, $stagger-delay) {
 	@while $i > 0 {
@@ -17,12 +17,12 @@ $chart-width: 70vw;
 }
 
 .skills-chart {
-	border: solid 1px blue;
-	height: calc(2/3 * #{$chart-width});
+	// border: solid 1px blue;
+	height: calc(3 * #{$tenth-of-height});
 	// left: 0;
 	max-width: 1000px;
 	// position: absolute;
-	width: $chart-width;
+	width: calc(7 * #{$tenth-of-width});
 	ul {
 		list-style-type: none;
 	}
@@ -51,7 +51,7 @@ $chart-width: 70vw;
 	}
 }
 .line-label {
-	@include fluid-type(font-size, $min-width, $max-width, 8px, 16px);
+	@include fluid-type(font-size, $min-width, $max-width, 9px, 16px);
 	bottom: -3vw;
 	color: $gray-text;
 	font-style: italic;
@@ -67,10 +67,10 @@ $chart-width: 70vw;
 	width: 100%;
 }
 .chart {
-	margin-bottom: 2vw;
+	// margin-bottom: 2vw;
 }
 .chart-title {
-	@include fluid-type(font-size, $min-width, $max-width, 12px, 18px);
+	@include fluid-type(font-size, $min-width, $max-width, 10px, 18px);
 	color: #28424e;
 	display: block;
 	margin: 0 0 1vw 1vw;
@@ -87,6 +87,7 @@ $chart-width: 70vw;
 	margin-bottom: .5vw;
 }
 .bar-label {
+	@include fluid-type(font-size, $min-width, $max-width, 10px, 16px);
 	color: white;
 	padding-left: 1vw;
 }

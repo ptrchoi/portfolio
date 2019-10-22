@@ -737,14 +737,12 @@ button:focus {
 .skills-grid--large {
   left: calc(.5 * 10vw);
   top: calc(2 * 10vh);
-  border: solid 5px orange;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   height: calc(3 * 10vw);
   width: calc(9 * 10vw);
 }
 .skills-grid--large .skills-group {
-  border: solid 5px purple;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 0.75fr 2fr;
   grid-template-areas: "skillIcon" "skillHeader" "skillText";
@@ -768,7 +766,6 @@ button:focus {
 .skills-grid--small {
   left: calc(1.5 * 10vw);
   top: calc(1.75 * 10vh);
-  border: solid 5px pink;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   height: calc(3.5 * 10vh);
@@ -778,13 +775,12 @@ button:focus {
   opacity: 1;
 }
 .skills-grid--small .skills-group {
-  border: solid 1px red;
   grid-template-columns: 0.5fr 1.4fr 0.1fr;
   grid-template-rows: 0.5fr 1.5fr;
   grid-template-areas: "skillIcon skillHeader expandIcon" "skillText skillText skillText";
   height: calc(1 * 10vh);
   width: calc(7 * 10vw);
-  transition: height 0.5s ease-in;
+  transition: height 0.25s ease-in;
 }
 .skills-grid--small .skills-group .skill-group-item-1 {
   font-size: 30px;
@@ -833,7 +829,7 @@ button:focus {
   font-size: 9px;
   padding-top: 2vw;
   opacity: 0;
-  transition: all 0.5s ease-in;
+  transition: all 0.25s ease-in;
 }
 @media screen and (min-width: 320px) {
   .skills-grid--small .skills-group .skill-group-item-4 {
@@ -871,10 +867,9 @@ button:focus {
 }
 
 .skills-chart {
-  border: solid 1px blue;
-  height: calc(2/3 * 70vw);
+  height: calc(3 * 10vh);
   max-width: 1000px;
-  width: 70vw;
+  width: calc(7 * 10vw);
 }
 .skills-chart ul {
   list-style-type: none;
@@ -906,7 +901,7 @@ button:focus {
 }
 
 .line-label {
-  font-size: 8px;
+  font-size: 9px;
   bottom: -3vw;
   color: gray;
   font-style: italic;
@@ -915,7 +910,7 @@ button:focus {
 }
 @media screen and (min-width: 320px) {
   .line-label {
-    font-size: calc( 				8px + 8 * (100vw - 320px) / 880 			);
+    font-size: calc( 				9px + 7 * (100vw - 320px) / 880 			);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -933,19 +928,15 @@ button:focus {
   width: 100%;
 }
 
-.chart {
-  margin-bottom: 2vw;
-}
-
 .chart-title {
-  font-size: 12px;
+  font-size: 10px;
   color: #28424e;
   display: block;
   margin: 0 0 1vw 1vw;
 }
 @media screen and (min-width: 320px) {
   .chart-title {
-    font-size: calc( 				12px + 6 * (100vw - 320px) / 880 			);
+    font-size: calc( 				10px + 8 * (100vw - 320px) / 880 			);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -967,8 +958,19 @@ button:focus {
 }
 
 .bar-label {
+  font-size: 10px;
   color: white;
   padding-left: 1vw;
+}
+@media screen and (min-width: 320px) {
+  .bar-label {
+    font-size: calc( 				10px + 6 * (100vw - 320px) / 880 			);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .bar-label {
+    font-size: 16px;
+  }
 }
 
 .bar-30 {

@@ -1,5 +1,5 @@
 //Libraries
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { uid } from 'react-uid';
 
 //CONSTANTS
@@ -36,7 +36,7 @@ function getRandFixed(min, max) {
 	return (Math.random() * (max - min) + min).toFixed(2);
 }
 //Component
-class Confetti extends Component {
+class Confetti extends PureComponent {
 	constructor(props) {
 		super(props);
 
