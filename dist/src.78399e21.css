@@ -664,6 +664,25 @@ button:focus {
   justify-items: center;
 }
 
+/* --- Skills Chart --- */
+.skills-chart-wrapper {
+  left: calc(1.5 * 10vw);
+  top: calc(6 * 10vh);
+  position: absolute;
+  z-index: 9;
+}
+
+/* --- Animations --- */
+/* --- Slide-in on scroll animation --- */
+.skills.slide-skills {
+  animation: slideFromBottom 0.75s 0.2s forwards;
+}
+
+.skills.slide-skills.skills-chart-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* --- Skills Group --- */
 .skills {
   opacity: 0;
@@ -847,25 +866,6 @@ button:focus {
 .skills-grid--small .skills-group--expand {
   height: calc(2 * 10vh);
 }
-/* --- Skills Chart --- */
-.skills-chart-wrapper {
-  left: calc(1.5 * 10vw);
-  top: calc(6 * 10vh);
-  position: absolute;
-  z-index: 9;
-}
-
-/* --- Animations --- */
-/* --- Slide-in on scroll animation --- */
-.skills.slide-skills {
-  animation: slideFromBottom 0.75s 0.2s forwards;
-}
-
-.skills.slide-skills.skills-chart-wrapper {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .skills-chart {
   height: calc(3 * 10vh);
   max-width: 1000px;
