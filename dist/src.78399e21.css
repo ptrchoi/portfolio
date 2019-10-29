@@ -950,21 +950,24 @@ button:focus {
 }
 
 .chart-bar {
+  align-items: center;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
   background: linear-gradient(to left, #4cb8c4, #3cd3ad);
-  height: 2vw;
+  display: flex;
+  height: 4vw;
+  justify-content: flex-start;
   margin-bottom: 0.5vw;
 }
 
 .bar-label {
-  font-size: 10px;
+  font-size: 8px;
   color: white;
   padding-left: 1vw;
 }
 @media screen and (min-width: 320px) {
   .bar-label {
-    font-size: calc( 				10px + 6 * (100vw - 320px) / 880 			);
+    font-size: calc( 				8px + 8 * (100vw - 320px) / 880 			);
   }
 }
 @media screen and (min-width: 1200px) {

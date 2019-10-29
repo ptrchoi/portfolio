@@ -80,14 +80,18 @@ $chart-stagger-delay: .1s;
 }
 .chart-bar {
 	$border-rad: 8px;
+
+	align-items: center;
 	border-top-right-radius: $border-rad;
 	border-bottom-right-radius: $border-rad;
 	background: linear-gradient(to left, #4cb8c4, #3cd3ad);
-	height: 2vw;
+	display: flex;
+	height: 4vw;
+	justify-content: flex-start;
 	margin-bottom: .5vw;
 }
 .bar-label {
-	@include fluid-type(font-size, $min-width, $max-width, 10px, 16px);
+	@include fluid-type(font-size, $min-width, $max-width, 8px, 16px);
 	color: white;
 	padding-left: 1vw;
 }
