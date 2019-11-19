@@ -5,15 +5,26 @@ $max-skill-grid-width: 1000px;
 
 /* --- Skills Wrapper --- */
 .skills-wrapper {
+	align-content: start;
 	background-color: $background-white;
 	color: black;
 	display: grid;
 	height: 100%;
-	justify-items: center;
+	justify-content: center;
 }
+
+// .skills-content {
+// 	border: solid 1px red;
+// 	display: grid;
+// 	height: 100%;
+// 	justify-content: center; //Justify/center the grid in the middle of the page
+// 	width: 100%;
+// 	max-width: $max-skill-grid-width;
+// }
 
 /* --- Skills Chart --- */
 .skills-chart-wrapper {
+	border: solid 1px green;
 	left: calc(1.5 * #{$tenth-of-width});
 	top: calc(6 * #{$tenth-of-height});
 	// left: 10%;

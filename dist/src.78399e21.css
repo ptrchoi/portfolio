@@ -657,15 +657,17 @@ button:focus {
 /* --- Skills Variables & Mixins --- */
 /* --- Skills Wrapper --- */
 .skills-wrapper {
+  align-content: start;
   background-color: whitesmoke;
   color: black;
   display: grid;
   height: 100%;
-  justify-items: center;
+  justify-content: center;
 }
 
 /* --- Skills Chart --- */
 .skills-chart-wrapper {
+  border: solid 1px green;
   left: calc(1.5 * 10vw);
   top: calc(6 * 10vh);
   position: absolute;
@@ -742,8 +744,9 @@ button:focus {
 
 /* --- Skills Grid --- */
 .skills-grid {
+  border: solid 1px purple;
   display: grid;
-  position: absolute;
+  padding-top: 5%;
 }
 
 .skill-expand-icon {
@@ -754,19 +757,20 @@ button:focus {
 }
 
 .skills-grid--large {
-  left: calc(.5 * 10vw);
   top: calc(2 * 10vh);
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  height: calc(3 * 10vw);
-  width: calc(9 * 10vw);
+  height: calc(1200px * .45);
+  width: 952px;
 }
 .skills-grid--large .skills-group {
+  align-self: center;
+  justify-self: center;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 0.75fr 2fr;
   grid-template-areas: "skillIcon" "skillHeader" "skillText";
-  height: calc(3 * 10vw);
-  width: calc(3 * 10vw);
+  height: calc(1200px * .45);
+  width: 330px;
 }
 .skills-grid--large .skill-group-item-3 {
   font-size: 20px;
@@ -783,7 +787,6 @@ button:focus {
 }
 
 .skills-grid--small {
-  left: calc(1.5 * 10vw);
   top: calc(1.75 * 10vh);
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -867,7 +870,7 @@ button:focus {
   height: calc(2 * 10vh);
 }
 .skills-chart {
-  height: calc(3 * 10vh);
+  height: calc(3.5 * 10vh);
   max-width: 1000px;
   width: calc(7 * 10vw);
 }
@@ -955,7 +958,7 @@ button:focus {
   border-bottom-right-radius: 8px;
   background: linear-gradient(to left, #4cb8c4, #3cd3ad);
   display: flex;
-  height: 4vw;
+  height: calc(0.175 * 10vh);
   justify-content: flex-start;
   margin-bottom: 0.5vw;
 }

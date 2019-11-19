@@ -34,8 +34,10 @@
 
 /* --- Skills Grid --- */
 .skills-grid {
+	border: solid 1px purple;
 	display: grid;
-	position: absolute;
+	padding-top: 5%;
+	// position: absolute;
 }
 .skill-expand-icon {
 	align-self: center;
@@ -44,31 +46,42 @@
 	opacity: 0;
 }
 .skills-grid--large {
-	left: calc(.5 * #{$tenth-of-width});
+	$grid-width: 952px;
+	$width-offset-half: 20px; //Diff of one side between $max-width & $large-screen-breakpoint
+	$width-offset-full: 40px;
+	// border: solid 1px red;
+	// left: calc(.3 * #{$tenth-of-width});
+	// left: $width-offset-half;
+	// left: 0;
 	top: calc(2 * #{$tenth-of-height});
 	// border: solid 5px orange;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 1fr;
-	height: calc(3 * #{$tenth-of-width});
-	width: calc(9 * #{$tenth-of-width});
-	// max-height: calc(1/3 * #{$max-skill-grid-width});
-	// max-width: calc(1/3 * #{$max-skill-grid-width});
+	// height: calc(3 * #{$tenth-of-width});
+	// width: calc(7 * #{$tenth-of-width});
+	height: calc(#{$max-width} * .45);
+	width: $grid-width;
+	// max-width: $max-width;
 	.skills-group {
 		// border: solid 5px purple;
+		align-self: center;
+		justify-self: center;
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr .75fr 2fr;
 		grid-template-areas: "skillIcon" "skillHeader" "skillText";
-		height: calc(3 * #{$tenth-of-width}); //Set box height to 1/3 of grid width
-		width: calc(3 * #{$tenth-of-width});
+		// height: calc(3 * #{$tenth-of-width}); //Set box height to 1/3 of grid width
+		height: calc(#{$max-width} * .45);
+		width: 330px;
+		// width: calc(3 * #{$tenth-of-width});
 		// max-height: calc(1/3 * #{$max-skill-grid-width});
-		// max-width: calc(1/3 * #{$max-skill-grid-width});
+		// max-width: calc(#{$max-width} * 1/3);
 	}
 	.skill-group-item-3 {
 		@include fluid-type(font-size, $large-screen-breakpoint, $about-text-responsive-max, 20px, 28px);
 	}
 }
 .skills-grid--small {
-	left: calc(1.5 * #{$tenth-of-width});
+	// left: calc(1.5 * #{$tenth-of-width});
 	top: calc(1.75 * #{$tenth-of-height});
 	// border: solid 5px pink;
 	grid-template-columns: 1fr;

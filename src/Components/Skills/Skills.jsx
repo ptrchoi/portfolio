@@ -21,12 +21,12 @@ class Skills extends Component {
 				<div className="section-header">
 					<h1>Skills</h1>
 				</div>
-				<div className="content">
-					<SkillGroup classes={classList} />
-					<div className="skills-chart-wrapper skills">
-						<Chart />
-					</div>
+				{/* <div className="skills-content"> */}
+				<SkillGroup classes={classList} />
+				<div className="skills-chart-wrapper skills">
+					<Chart />
 				</div>
+				{/* </div> */}
 				<div className="confetti blur">
 					<Confetti
 						data={{
