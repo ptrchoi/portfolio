@@ -668,9 +668,14 @@ button:focus {
 /* --- Skills Chart --- */
 .skills-chart-wrapper {
   border: solid 1px green;
-  left: calc(1.5 * 10vw);
-  top: calc(6 * 10vh);
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   position: absolute;
+  top: calc(6 * 10vh);
+  height: 35%;
+  width: 80%;
   z-index: 9;
 }
 
@@ -751,17 +756,17 @@ button:focus {
 
 .skill-expand-icon {
   align-self: center;
-  justify-self: center;
   color: #339da9;
+  justify-self: center;
   opacity: 0;
 }
 
 .skills-grid--large {
-  top: calc(2 * 10vh);
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  height: calc(1200px * .45);
+  height: calc(.35 * 1200px);
   width: 952px;
+  max-width: 1200px;
 }
 .skills-grid--large .skills-group {
   align-self: center;
@@ -770,7 +775,7 @@ button:focus {
   grid-template-rows: 1fr 0.75fr 2fr;
   grid-template-areas: "skillIcon" "skillHeader" "skillText";
   height: calc(1200px * .45);
-  width: 330px;
+  width: calc(1/3 * 952px);
 }
 .skills-grid--large .skill-group-item-3 {
   font-size: 20px;
@@ -792,6 +797,7 @@ button:focus {
   grid-template-rows: 1fr 1fr 1fr;
   height: calc(3.5 * 10vh);
   width: calc(7 * 10vw);
+  max-width: 1000px;
 }
 .skills-grid--small .skill-expand-icon {
   opacity: 1;
@@ -905,7 +911,7 @@ button:focus {
 
 .line-label {
   font-size: 9px;
-  bottom: -3vw;
+  bottom: -3vh;
   color: gray;
   font-style: italic;
   position: absolute;
@@ -935,7 +941,7 @@ button:focus {
   font-size: 10px;
   color: #28424e;
   display: block;
-  margin: 0 0 1vw 1vw;
+  margin: 0 0 1vh 1vw;
 }
 @media screen and (min-width: 320px) {
   .chart-title {
@@ -960,7 +966,7 @@ button:focus {
   display: flex;
   height: calc(0.175 * 10vh);
   justify-content: flex-start;
-  margin-bottom: 0.5vw;
+  margin-bottom: 0.5vh;
 }
 
 .bar-label {

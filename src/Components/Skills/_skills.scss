@@ -1,6 +1,4 @@
 /* --- Skills Variables & Mixins --- */
-// $skill-box-side-3-across: 90vw;
-// $skill-box-side: 18vw;
 $max-skill-grid-width: 1000px;
 
 /* --- Skills Wrapper --- */
@@ -13,24 +11,18 @@ $max-skill-grid-width: 1000px;
 	justify-content: center;
 }
 
-// .skills-content {
-// 	border: solid 1px red;
-// 	display: grid;
-// 	height: 100%;
-// 	justify-content: center; //Justify/center the grid in the middle of the page
-// 	width: 100%;
-// 	max-width: $max-skill-grid-width;
-// }
-
 /* --- Skills Chart --- */
 .skills-chart-wrapper {
 	border: solid 1px green;
-	left: calc(1.5 * #{$tenth-of-width});
-	top: calc(6 * #{$tenth-of-height});
-	// left: 10%;
-	// padding: 5vh 0 20vh 0;
+	// left: calc(1.5 * #{$tenth-of-width}); //Chart width = calc(7 * #{$tenth-of-width})
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
 	position: absolute;
-	// top: 60%;
+	top: calc(6 * #{$tenth-of-height}); //Chart height = calc(3.5 * #{$tenth-of-height})
+	height: 35%;
+	width: 80%;
 	z-index: $above-confetti-layer;
 }
 

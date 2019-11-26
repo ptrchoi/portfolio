@@ -6,7 +6,6 @@
 .skills-group {
 	display: grid;
 	justify-items: center;
-	// margin-top: 20%;
 	padding: 0 5% 0 5%;
 	z-index: $above-confetti-layer;
 }
@@ -37,76 +36,52 @@
 	border: solid 1px purple;
 	display: grid;
 	padding-top: 5%;
-	// position: absolute;
 }
 .skill-expand-icon {
 	align-self: center;
-	justify-self: center;
 	color: #339da9;
+	justify-self: center;
 	opacity: 0;
 }
 .skills-grid--large {
 	$grid-width: 952px;
-	$width-offset-half: 20px; //Diff of one side between $max-width & $large-screen-breakpoint
-	$width-offset-full: 40px;
-	// border: solid 1px red;
-	// left: calc(.3 * #{$tenth-of-width});
-	// left: $width-offset-half;
-	// left: 0;
-	top: calc(2 * #{$tenth-of-height});
-	// border: solid 5px orange;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 1fr;
-	// height: calc(3 * #{$tenth-of-width});
-	// width: calc(7 * #{$tenth-of-width});
-	height: calc(#{$max-width} * .45);
+	height: calc(.35 * #{$max-width}); //Chart height = calc(3.5 * #{$tenth-of-height})
 	width: $grid-width;
-	// max-width: $max-width;
+	max-width: $max-width;
+
 	.skills-group {
-		// border: solid 5px purple;
 		align-self: center;
 		justify-self: center;
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr .75fr 2fr;
 		grid-template-areas: "skillIcon" "skillHeader" "skillText";
-		// height: calc(3 * #{$tenth-of-width}); //Set box height to 1/3 of grid width
 		height: calc(#{$max-width} * .45);
-		width: 330px;
-		// width: calc(3 * #{$tenth-of-width});
-		// max-height: calc(1/3 * #{$max-skill-grid-width});
-		// max-width: calc(#{$max-width} * 1/3);
+		width: calc(1/3 * #{$grid-width});
 	}
 	.skill-group-item-3 {
 		@include fluid-type(font-size, $large-screen-breakpoint, $about-text-responsive-max, 20px, 28px);
 	}
 }
 .skills-grid--small {
-	// left: calc(1.5 * #{$tenth-of-width});
 	top: calc(1.75 * #{$tenth-of-height});
-	// border: solid 5px pink;
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr 1fr 1fr;
 	height: calc(3.5 * #{$tenth-of-height});
 	width: calc(7 * #{$tenth-of-width});
-	// height: calc(4 * #{$skill-box-side});
-	// width: calc(3.25 * #{$skill-box-side});
+	max-width: $max-skill-grid-width;
 
 	.skill-expand-icon {
 		opacity: 1;
-		// transition: opacity .5s ease-in;
 	}
 	.skills-group {
-		// border: solid 1px red;
 		grid-template-columns: .5fr 1.4fr .1fr;
 		grid-template-rows: .5fr 1.5fr;
 		grid-template-areas: "skillIcon skillHeader expandIcon" "skillText skillText skillText";
 		height: calc(1 * #{$tenth-of-height});
 		width: calc(7 * #{$tenth-of-width});
-		// 	height: calc(1 * #{$skill-box-side});
-		// width: calc(3.25 * #{$skill-box-side});
 		transition: height .25s ease-in;
-		// max-height: calc(1/3 * #{$max-skill-grid-width});
-		// max-width: calc(1/3 * #{$max-skill-grid-width});
 
 		.skill-group-item-1 {
 			@include fluid-type(font-size, $min-width, $max-width, 30px, 74px);
@@ -124,18 +99,15 @@
 		.skill-group-item-4 {
 			@include fluid-type(font-size, $min-width, $max-width, 9px, 32px);
 			padding-top: 2vw;
-			// display: none;
 			opacity: 0;
 			transition: all .25s ease-in;
 		}
 		.skills-text--show {
-			// display: inline-block;
 			opacity: 1;
 		}
 	}
 	.skills-group--expand {
 		height: calc(2 * #{$tenth-of-height});
-		// height: calc(2 * #{$skill-box-side});
 		.skill-expand-icon {
 			// opacity: 0;
 		}
