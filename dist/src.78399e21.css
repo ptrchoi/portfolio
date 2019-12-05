@@ -667,7 +667,6 @@ button:focus {
 
 /* --- Skills Chart --- */
 .skills-chart-wrapper {
-  border: solid 1px green;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -749,7 +748,6 @@ button:focus {
 
 /* --- Skills Grid --- */
 .skills-grid {
-  border: solid 1px purple;
   display: grid;
   padding-top: 5%;
 }
@@ -1101,6 +1099,8 @@ button:focus {
   position: relative;
   width: calc(1/2 * 84vw);
   z-index: 9;
+  max-height: calc(.6 * 1200px);
+  max-width: calc(.7 * 1200px);
 }
 
 .card-front {
