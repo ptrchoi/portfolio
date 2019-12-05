@@ -1185,9 +1185,9 @@ button:focus {
 
 .contact-wrapper {
   background-color: #6a6a6a;
+  align-content: start;
   color: white;
   display: grid;
-  padding-bottom: 7vh;
   padding-top: 18vh;
   width: 100%;
 }
@@ -1202,6 +1202,7 @@ button:focus {
   display: flex;
   justify-content: space-evenly;
   margin: auto;
+  padding-top: 6vh;
   width: 50%;
 }
 
@@ -1209,7 +1210,7 @@ button:focus {
   display: flex;
   justify-content: center;
   margin: auto;
-  padding: 20px;
+  padding: 3vh 20px 20px 20px;
   width: 50%;
 }
 #contactForm button,
