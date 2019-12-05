@@ -1135,27 +1135,22 @@ button:focus {
   width: 100%;
 }
 
+.card:hover .card-front,
+.card:focus .card-front,
+.card:active .card-front {
+  filter: blur(3px);
+}
+.card:hover .card-back,
+.card:focus .card-back,
+.card:active .card-back {
+  height: 100%;
+}
+
 /* --- Slide Class for slide animation --- */
 .card.slide-card {
   animation: slideFromBottom 0.75s 0.2s forwards;
 }
 
-@media (hover: hover) {
-  .card:hover .card-front {
-    filter: blur(3px);
-  }
-  .card:hover .card-back {
-    height: 100%;
-  }
-}
-@media (any-pointer: coarse) {
-  .card-flipped .card-front {
-    filter: blur(3px);
-  }
-  .card-flipped .card-back {
-    height: 100%;
-  }
-}
 .cardinfo {
   color: black;
   height: 100%;

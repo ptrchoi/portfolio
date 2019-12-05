@@ -31,31 +31,18 @@
 	transition: height .5s ease;
 	width: 100%;
 }
+.card:hover,
+.card:focus,
+.card:active {
+	.card-front {
+		filter: blur(3px);
+	}
+	.card-back {
+		height: 100%;
+	}
+}
 
 /* --- Slide Class for slide animation --- */
 .card.slide-card {
 	animation: slideFromBottom .75s .2s forwards;
-}
-
-//If hover-capable device, do overlay on hover
-@media (hover: hover) {
-	.card:hover {
-		.card-front {
-			filter: blur(3px);
-		}
-		.card-back {
-			height: 100%;
-		}
-	}
-}
-//If touch-capable device, do overlay on touch/click
-@media (any-pointer: coarse) {
-	.card-flipped {
-		.card-front {
-			filter: blur(3px);
-		}
-		.card-back {
-			height: 100%;
-		}
-	}
 }

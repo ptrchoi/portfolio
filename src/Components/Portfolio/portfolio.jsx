@@ -79,48 +79,8 @@ class Portfolio extends Component {
 		this.state = {
 			cards: CARDS
 		};
-
-		this.updateCards = this.updateCards.bind(this);
 	}
-	updateCards(e) {
-		let { cards } = this.state;
-		let index = cards.findIndex((i) => i.projectId === e.currentTarget.id);
-		let isFlipped = cards[index].flipped; //Flipped state of currently clicked card
 
-		this.setState({
-			cards: cards
-		});
-
-		let alreadyFlippedIndex = cards.findIndex((i) => i.flipped === true); //Check for already flipped cards
-
-		//Flip any already flipped card first
-		if (alreadyFlippedIndex > -1 && alreadyFlippedIndex !== index) {
-			cards = this.toggleCard(cards, alreadyFlippedIndex, true);
-		}
-
-		//Toggle current card
-		cards = this.toggleCard(cards, index, isFlipped);
-
-		this.setState({
-			cards: cards
-		});
-	}
-	toggleCard(cards, i, flipped) {
-		let card = cards[i];
-
-		if (flipped) {
-			// .addClass & .removeClass not working ('not a function') - NEED TO FIX!
-			// document.getElementById(card.projectId).removeClass('card-flipped');
-			document.getElementById(card.projectId).className = 'card';
-		} else {
-			// document.getElementById(card.projectId).addClass('card-flipped');
-			document.getElementById(card.projectId).className = 'card card-flipped';
-		}
-		card.flipped = !flipped;
-		cards[i] = card;
-
-		return cards;
-	}
 	render(props) {
 		let { size } = this.props;
 		const card = this.state.cards;
@@ -132,12 +92,12 @@ class Portfolio extends Component {
 					<h1>Portfolio</h1>
 				</div>
 				<div className={classList}>
-					<Card card={card[0]} handleClick={this.updateCards} />
-					<Card card={card[1]} handleClick={this.updateCards} />
-					<Card card={card[2]} handleClick={this.updateCards} />
-					<Card card={card[3]} handleClick={this.updateCards} />
-					<Card card={card[4]} handleClick={this.updateCards} />
-					<Card card={card[5]} handleClick={this.updateCards} />
+					<Card card={card[0]} />
+					<Card card={card[1]} />
+					<Card card={card[2]} />
+					<Card card={card[3]} />
+					<Card card={card[4]} />
+					<Card card={card[5]} />
 					<div className="confetti blur">
 						<Confetti
 							data={{
