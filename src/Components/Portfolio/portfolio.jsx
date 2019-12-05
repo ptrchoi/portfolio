@@ -124,12 +124,14 @@ class Portfolio extends Component {
 	render(props) {
 		let { size } = this.props;
 		const card = this.state.cards;
+		const classList = 'card-grid card-grid--' + size;
+
 		return (
 			<div className="section-wrapper portfolio-wrapper">
 				<div className="section-header">
 					<h1>Portfolio</h1>
 				</div>
-				<div className="card-wrapper">
+				<div className={classList}>
 					<Card card={card[0]} handleClick={this.updateCards} />
 					<Card card={card[1]} handleClick={this.updateCards} />
 					<Card card={card[2]} handleClick={this.updateCards} />

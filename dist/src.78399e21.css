@@ -1064,32 +1064,42 @@ button:focus {
   }
 }
 .portfolio-wrapper {
+  align-content: start;
   background-color: #dedede;
   display: grid;
   height: 100%;
   width: 100%;
 }
 
-.card-wrapper {
+.card-grid {
+  align-items: center;
   color: black;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  margin-top: 4vw;
+  display: grid;
+  grid-gap: 8px 8px;
+  justify-items: center;
+  margin-top: 4vh;
 }
-.card-wrapper a:link,
-.card-wrapper a:visited {
+.card-grid a:link,
+.card-grid a:visited {
   color: black;
   text-decoration: none;
+}
+
+.card-grid--large {
+  grid-template-columns: 1fr;
+}
+
+.card-grid--small {
+  grid-template-columns: 1fr 1fr;
 }
 
 .card {
   background-color: whitesmoke;
   font-family: "Livvic", sans-serif;
-  height: calc(.4 * 80vw);
+  height: calc(.4 * 84vw);
   opacity: 0;
   position: relative;
-  width: calc(1/2 * 80vw);
+  width: calc(1/2 * 84vw);
   z-index: 9;
 }
 
