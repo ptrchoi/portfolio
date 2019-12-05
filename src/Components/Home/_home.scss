@@ -63,3 +63,12 @@ button:focus {
 		color: black;
 	}
 }
+
+/* --- Animations --- */
+/* --- Slide-in on scroll animation --- */
+.home {
+	opacity: 0;
+}
+.home.slide-home {
+	animation: slideFromBottom .75s .2s forwards;
+}

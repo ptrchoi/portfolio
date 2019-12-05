@@ -359,6 +359,16 @@ button:focus {
     color: black;
   }
 }
+/* --- Animations --- */
+/* --- Slide-in on scroll animation --- */
+.home {
+  opacity: 0;
+}
+
+.home.slide-home {
+  animation: slideFromBottom 0.75s 0.2s forwards;
+}
+
 .confetti {
   font-family: "Inconsolata", monospace;
   position: absolute;

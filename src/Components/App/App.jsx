@@ -129,10 +129,10 @@ class App extends Component {
 			activeLinkName = sectionName;
 		}
 		/* Set slide anims per section */
-		if (sectionName !== 'home') {
-			this.slideInSection('.' + sectionName, 'slide-' + sectionName);
-			this.updateActiveLink('#' + activeLinkName + '-link');
-		}
+		// if (sectionName !== 'home') {
+		this.slideInSection('.' + sectionName, 'slide-' + sectionName);
+		this.updateActiveLink('#' + activeLinkName + '-link');
+		// }
 		this.slideInHeader();
 		this.setState({
 			currentSection: sectionName
