@@ -1085,7 +1085,7 @@ button:focus {
   display: grid;
   grid-gap: 8px 8px;
   justify-items: center;
-  margin-top: 4vh;
+  margin-top: 8vh;
 }
 .card-grid a:link,
 .card-grid a:visited {
@@ -1094,7 +1094,7 @@ button:focus {
 }
 
 .card-grid--large {
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 .card-grid--small {
@@ -1135,20 +1135,25 @@ button:focus {
   width: 100%;
 }
 
-.card:hover .card-front,
-.card:focus .card-front,
-.card:active .card-front {
-  filter: blur(3px);
+@media (hover: hover) {
+  .card:hover .card-back {
+    height: 100%;
+  }
+  .card:hover .card-front {
+    filter: blur(3px);
+  }
 }
-.card:hover .card-back,
-.card:focus .card-back,
-.card:active .card-back {
-  height: 100%;
+@media (hover: none), (hover: on-demand) {
+  .card:hover .card-back {
+    height: 100%;
+  }
+  .card:hover .card-front {
+    filter: blur(3px);
+  }
 }
-
 /* --- Slide Class for slide animation --- */
 .card.slide-card {
-  animation: slideFromBottom 0.75s 0.2s forwards;
+  animation: slideFromBottom 0.55s 0s forwards;
 }
 
 .cardinfo {

@@ -31,18 +31,27 @@
 	transition: height .5s ease;
 	width: 100%;
 }
-.card:hover,
-.card:focus,
-.card:active {
-	.card-front {
-		filter: blur(3px);
-	}
-	.card-back {
-		height: 100%;
+@media (hover: hover) {
+	.card:hover {
+		.card-back {
+			height: 100%;
+		}
+		.card-front {
+			filter: blur(3px);
+		}
 	}
 }
-
+@media (hover: none), (hover: on-demand) {
+	.card:hover {
+		.card-back {
+			height: 100%;
+		}
+		.card-front {
+			filter: blur(3px);
+		}
+	}
+}
 /* --- Slide Class for slide animation --- */
 .card.slide-card {
-	animation: slideFromBottom .75s .2s forwards;
+	animation: slideFromBottom .55s 0s forwards;
 }
