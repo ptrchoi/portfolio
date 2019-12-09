@@ -50,25 +50,26 @@ class SkillGroup extends Component {
 					<h3 className="skill-group-item-2">Front-end Developer</h3>
 					<i id="skillsExpandIcon1" className="fas fa-caret-down skill-expand-icon skill-group-item-3" />
 					<p id="skillsText1" className="skill-group-item-4">
-						Front-end Javascript | React | CSS developer, an advocate of modular, efficient, and functional
-						programming.
+						Adaptable problem-solver who adheres to writing fast, efficient code leveraging the power of
+						functional programming in Javascript and the modularity of React.
 					</p>
 				</div>
 				<div id="skillsGroup2" className="skills-group skills" onClick={this.clickHandler}>
 					<i className="far fa-compass skill-group-item-1" />
-					<h3 className="skill-group-item-2">User-centered Thinker</h3>
+					<h3 className="skill-group-item-2">User-centered Designer</h3>
 					<i id="skillsExpandIcon2" className="fas fa-caret-down skill-expand-icon skill-group-item-3" />
 					<p id="skillsText2" className="skill-group-item-4">
-						Experienced UX professional, well-versed on modern design trends and UX strategies.
+						Experienced UX professional, well-versed on modern design trends and UX strategies that focus on
+						the user journey and intuitive design.
 					</p>
 				</div>
 				<div id="skillsGroup3" className="skills-group skills" onClick={this.clickHandler}>
 					<i className="fas fa-people-carry skill-group-item-1" />
-					<h3 className="skill-group-item-2">Team Player</h3>
+					<h3 className="skill-group-item-2">Collaborator</h3>
 					<i id="skillsExpandIcon3" className="fas fa-caret-down skill-expand-icon skill-group-item-3" />
 					<p id="skillsText3" className="skill-group-item-4">
-						Proven communication, soft skills, and collaboration with large distributed teams across diverse
-						disciplines, time zones, and cultures.
+						Proven communication and soft skills in collaborating with large distributed teams across
+						diverse disciplines, time zones, and cultures.
 					</p>
 				</div>
 			</div>

@@ -39,8 +39,8 @@ class About extends Component {
 							experiences and solutions.
 							<br />
 							<br />
-							Over 15 years of entertainment and business software development experience at leading
-							Fortune 500 companies, including Microsoft and Electronic Arts.
+							Over 15 years of interactive and business software development experience at leading Fortune
+							500 companies, including Microsoft and Electronic Arts.
 						</p>
 					</div>
 					<div className="about item-c">
