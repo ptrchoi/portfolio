@@ -56,7 +56,7 @@ class SkillGroup extends Component {
 				</div>
 				<div id="skillsGroup2" className="skills-group skills" onClick={this.clickHandler}>
 					<i className="far fa-compass skill-group-item-1" />
-					<h3 className="skill-group-item-2">User-centered Designer</h3>
+					<h3 className="skill-group-item-2">UX Designer</h3>
 					<i id="skillsExpandIcon2" className="fas fa-caret-down skill-expand-icon skill-group-item-3" />
 					<p id="skillsText2" className="skill-group-item-4">
 						Experienced UX professional, well-versed on modern design trends and UX strategies that focus on
@@ -68,8 +68,9 @@ class SkillGroup extends Component {
 					<h3 className="skill-group-item-2">Collaborator</h3>
 					<i id="skillsExpandIcon3" className="fas fa-caret-down skill-expand-icon skill-group-item-3" />
 					<p id="skillsText3" className="skill-group-item-4">
-						Proven communication and soft skills in collaborating with large distributed teams across
-						diverse disciplines, time zones, and cultures.
+						Proven communication and soft skills in collaborating with large, distributed teams across
+						diverse disciplines, time zones, and cultures, with expertise in agile development methodologies
+						and toolsets.
 					</p>
 				</div>
 			</div>

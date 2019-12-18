@@ -635,11 +635,6 @@ button:focus {
   .item-b:hover {
     background-color: transparent;
   }
-  .item-b:hover .grid-text {
-    color: black;
-    font-weight: bold;
-  }
-
   .item-c:hover {
     background-color: transparent;
   }
@@ -682,7 +677,7 @@ button:focus {
   margin-left: auto;
   margin-right: auto;
   position: absolute;
-  top: calc(6 * 10vh);
+  top: calc(5.2 * 10vh);
   height: 35%;
   width: 80%;
   z-index: 9;
@@ -747,12 +742,12 @@ button:focus {
 }
 @media screen and (min-width: 320px) {
   .skill-group-item-4 {
-    font-size: calc( 				12px + 3 * (100vw - 320px) / 880 			);
+    font-size: calc( 				12px + 2 * (100vw - 320px) / 880 			);
   }
 }
 @media screen and (min-width: 1200px) {
   .skill-group-item-4 {
-    font-size: 15px;
+    font-size: 14px;
   }
 }
 
@@ -772,7 +767,6 @@ button:focus {
 .skills-grid--large {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  height: calc(.35 * 1200px);
   width: 952px;
   max-width: 1200px;
 }
@@ -782,7 +776,7 @@ button:focus {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 0.75fr 2fr;
   grid-template-areas: "skillIcon" "skillHeader" "skillText";
-  height: calc(1200px * .45);
+  height: calc(3 * 10vh);
   width: calc(1/3 * 952px);
 }
 .skills-grid--large .skill-group-item-3 {
@@ -802,9 +796,8 @@ button:focus {
 .skills-grid--small {
   top: calc(1.75 * 10vh);
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  height: calc(3.5 * 10vh);
-  width: calc(7 * 10vw);
+  grid-template-rows: 1fr 1fr;
+  max-height: calc(1 * 10vh);
   max-width: 1000px;
 }
 .skills-grid--small .skill-expand-icon {
@@ -814,7 +807,7 @@ button:focus {
   grid-template-columns: 0.5fr 1.4fr 0.1fr;
   grid-template-rows: 0.5fr 1.5fr;
   grid-template-areas: "skillIcon skillHeader expandIcon" "skillText skillText skillText";
-  height: calc(1 * 10vh);
+  height: calc(.8 * 10vh);
   width: calc(7 * 10vw);
   transition: height 0.25s ease-in;
 }
@@ -839,12 +832,12 @@ button:focus {
 }
 @media screen and (min-width: 320px) {
   .skills-grid--small .skills-group .skill-group-item-2 {
-    font-size: calc( 				11px + 27 * (100vw - 320px) / 880 			);
+    font-size: calc( 				11px + 23 * (100vw - 320px) / 880 			);
   }
 }
 @media screen and (min-width: 1200px) {
   .skills-grid--small .skills-group .skill-group-item-2 {
-    font-size: 38px;
+    font-size: 34px;
   }
 }
 .skills-grid--small .skills-group .skill-group-item-3 {
@@ -863,28 +856,29 @@ button:focus {
 }
 .skills-grid--small .skills-group .skill-group-item-4 {
   font-size: 9px;
-  padding-top: 2vw;
+  padding-top: 2%;
   opacity: 0;
   transition: all 0.25s ease-in;
 }
 @media screen and (min-width: 320px) {
   .skills-grid--small .skills-group .skill-group-item-4 {
-    font-size: calc( 				9px + 23 * (100vw - 320px) / 880 			);
+    font-size: calc( 				9px + 17 * (100vw - 320px) / 880 			);
   }
 }
 @media screen and (min-width: 1200px) {
   .skills-grid--small .skills-group .skill-group-item-4 {
-    font-size: 32px;
+    font-size: 26px;
   }
 }
 .skills-grid--small .skills-group .skills-text--show {
   opacity: 1;
 }
 .skills-grid--small .skills-group--expand {
-  height: calc(2 * 10vh);
+  height: calc(1.5 * 10vh);
 }
+
 .skills-chart {
-  height: calc(3.5 * 10vh);
+  height: calc(4.2 * 10vh);
   max-width: 1000px;
   width: calc(7 * 10vw);
 }
@@ -908,22 +902,22 @@ button:focus {
   left: 0;
 }
 .line.line-30 {
-  left: 33%;
+  left: 37%;
 }
 .line.line-60 {
-  left: 66%;
+  left: 74%;
 }
 .line.line-90 {
-  left: 99%;
+  left: 110%;
 }
 
 .line-label {
   font-size: 9px;
-  bottom: -3vh;
+  bottom: -2vh;
   color: gray;
   font-style: italic;
   position: absolute;
-  right: 0;
+  right: -0.5vw;
 }
 @media screen and (min-width: 320px) {
   .line-label {
@@ -994,15 +988,15 @@ button:focus {
 }
 
 .bar-30 {
-  width: 33%;
+  width: 31%;
 }
 
 .bar-60 {
-  width: 66%;
+  width: 63%;
 }
 
 .bar-90 {
-  width: 99%;
+  width: 95%;
 }
 
 /* --- Bars & Titles growing anim --- */
@@ -1050,6 +1044,12 @@ button:focus {
 }
 .chart-ux .chart-bar.chart-grow:nth-of-type(1) {
   animation-delay: 0.9s;
+}
+.chart-soft .chart-bar.chart-grow:nth-of-type(5) {
+  animation-delay: 1.7s;
+}
+.chart-soft .chart-bar.chart-grow:nth-of-type(4) {
+  animation-delay: 1.6s;
 }
 .chart-soft .chart-bar.chart-grow:nth-of-type(3) {
   animation-delay: 1.5s;

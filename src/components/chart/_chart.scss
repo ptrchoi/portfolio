@@ -1,7 +1,7 @@
 $first-chart-bars: 6;
 $second-chart-bars: 3;
-$third-chart-bars: 3;
-$total-chart-bars: 12;
+$third-chart-bars: 5;
+$total-chart-bars: 14;
 $chart-1-delay: .4s;
 $chart-2-delay: .8s;
 $chart-3-delay: 1.2s;
@@ -17,7 +17,7 @@ $chart-stagger-delay: .1s;
 }
 
 .skills-chart {
-	height: calc(3.5 * #{$tenth-of-height});
+	height: calc(4.2 * #{$tenth-of-height});
 	max-width: $max-skill-grid-width;
 	width: calc(7 * #{$tenth-of-width});
 	ul {
@@ -38,22 +38,22 @@ $chart-stagger-delay: .1s;
 		left: 0;
 	}
 	&.line-30 {
-		left: 33%;
+		left: 37%;
 	}
 	&.line-60 {
-		left: 66%;
+		left: 74%;
 	}
 	&.line-90 {
-		left: 99%;
+		left: 110%;
 	}
 }
 .line-label {
 	@include fluid-type(font-size, $min-width, $max-width, 9px, 16px);
-	bottom: -3vh;
+	bottom: -2vh;
 	color: $gray-text;
 	font-style: italic;
 	position: absolute;
-	right: 0;
+	right: -.5vw;
 }
 /* --- Chart bars --- */
 .charts {
@@ -94,13 +94,13 @@ $chart-stagger-delay: .1s;
 	padding-left: 1vw;
 }
 .bar-30 {
-	width: 33%;
+	width: 31%;
 }
 .bar-60 {
-	width: 66%;
+	width: 63%;
 }
 .bar-90 {
-	width: 99%;
+	width: 95%;
 }
 
 /* --- Bars & Titles growing anim --- */

@@ -32,7 +32,7 @@ class Home extends Component {
 					<p>
 						Hi, I'm <span id="name">Peter Choi</span>,
 					</p>
-					<p>web developer & designer.</p>
+					<p>UX developer & designer.</p>
 					<button id="welcomeBtn" className="home slide-home" onClick={() => fullpageApi.moveSectionDown()}>
 						Learn More
 					</button>
