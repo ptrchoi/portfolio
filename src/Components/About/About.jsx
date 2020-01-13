@@ -39,9 +39,9 @@ class About extends Component {
 							delightful user experiences and solutions.
 							<br />
 							<br />
-							Over 15 years of interactive and business software development experience, synergizing{' '}
-							<b>Content, Design, and Technology</b> with leading Fortune 500 companies, including
-							Microsoft and Electronic Arts.
+							Over 15 years of interactive media and business software development experience, synergizing{' '}
+							<b>Content, Design, and Technology</b> at leading Fortune 500 companies, including Microsoft
+							and Electronic Arts.
 						</p>
 					</div>
 					<div className="about item-c">

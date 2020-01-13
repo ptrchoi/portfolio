@@ -1080,11 +1080,10 @@ button:focus {
 }
 
 .card-grid {
-  align-items: center;
   color: black;
   display: grid;
   grid-gap: 8px 8px;
-  justify-items: center;
+  justify-content: center;
   margin-top: 8vh;
 }
 .card-grid a:link,
@@ -1094,11 +1093,11 @@ button:focus {
 }
 
 .card-grid--large {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto;
 }
 
 .card-grid--small {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto;
 }
 
 .card {
@@ -1107,10 +1106,8 @@ button:focus {
   height: calc(.4 * 84vw);
   opacity: 0;
   position: relative;
-  width: calc(1/2 * 84vw);
+  width: calc(.5 * 84vw);
   z-index: 9;
-  max-height: calc(.6 * 1200px);
-  max-width: calc(.7 * 1200px);
 }
 
 .card-front {

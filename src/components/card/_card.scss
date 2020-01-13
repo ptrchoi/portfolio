@@ -1,15 +1,14 @@
 //SHOULD MAKE CARD HEIGHT & WIDTH SCALE RESPONSIVELY
 .card {
-	// border: solid green 1px;
 	background-color: $background-white;
 	font-family: 'Livvic', sans-serif;
 	height: calc(.4 * 84vw); //Intentionally basing card height relative to width, to maintain porportions
 	opacity: 0;
 	position: relative;
-	width: calc(1/2 * 84vw);
+	width: calc(.5 * 84vw);
 	z-index: $above-confetti-layer;
-	max-height: calc(.6 * #{$max-width});
-	max-width: calc(.7 * #{$max-width});
+	// max-height: calc(.6 * #{$max-width});
+	// max-width: calc(.7 * #{$max-width});
 }
 .card-front {
 	height: 100%;
