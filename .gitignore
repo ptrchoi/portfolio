@@ -25,5 +25,4 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-dist/src.78399e21.css
-dist/src.78399e21.css.map
+dist/src.*

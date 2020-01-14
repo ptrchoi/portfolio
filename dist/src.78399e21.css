@@ -1082,7 +1082,7 @@ button:focus {
 .card-grid {
   color: black;
   display: grid;
-  grid-gap: 8px 8px;
+  grid-gap: 4px 4px;
   justify-content: center;
   margin-top: 8vh;
 }
@@ -1108,6 +1108,8 @@ button:focus {
   position: relative;
   width: calc(.5 * 84vw);
   z-index: 9;
+  max-height: calc(.6 * 1200px);
+  max-width: calc(.7 * 1200px);
 }
 
 .card-front {
