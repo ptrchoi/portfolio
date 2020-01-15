@@ -7,8 +7,8 @@
 	position: relative;
 	width: calc(.5 * 84vw);
 	z-index: $above-confetti-layer;
-	max-height: calc(.6 * #{$max-width});
-	max-width: calc(.7 * #{$max-width});
+	max-height: calc(.3 * #{$max-width});
+	max-width: calc(.4 * #{$max-width});
 }
 .card-front {
 	height: 100%;
