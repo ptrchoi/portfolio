@@ -9,6 +9,9 @@
 	padding: 0 5% 0 5%;
 	z-index: $above-confetti-layer;
 }
+.skill-group-item-0 {
+	grid-area: spacer;
+}
 .skill-group-item-1 {
 	grid-area: skillIcon;
 	color: #339da9;
@@ -35,7 +38,7 @@
 .skills-grid {
 	// border: solid 1px purple;
 	display: grid;
-	padding-top: 5%;
+	padding-top: 4%;
 }
 .skill-expand-icon {
 	align-self: center;
@@ -63,7 +66,7 @@
 		width: calc(1/3 * #{$grid-width});
 	}
 	.skill-group-item-3 {
-		@include fluid-type(font-size, $large-screen-breakpoint, $about-text-responsive-max, 20px, 28px);
+		@include fluid-type(font-size, $large-screen-breakpoint, $max-width, 20px, 28px);
 	}
 }
 .skills-grid--small {
@@ -78,28 +81,29 @@
 		opacity: 1;
 	}
 	.skills-group {
-		grid-template-columns: .5fr 1.4fr .1fr;
+		grid-template-columns: .5fr 1.1fr 3fr 1fr;
 		grid-template-rows: .5fr 1.5fr;
-		grid-template-areas: "skillIcon skillHeader expandIcon" "skillText skillText skillText";
+		grid-template-areas: "spacer skillIcon skillHeader expandIcon" "skillText skillText skillText skillText";
+		grid-gap: 1vw;
 		height: calc(.8 * #{$tenth-of-height});
 		width: calc(7 * #{$tenth-of-width});
 		transition: height .25s ease-in;
 
 		.skill-group-item-1 {
-			@include fluid-type(font-size, $min-width, $max-width, 30px, 74px);
+			@include fluid-type(font-size, $min-width, $max-width, 22px, 62px);
 			justify-self: start;
 		}
 		.skill-group-item-2 {
-			@include fluid-type(font-size, $min-width, $max-width, 11px, 34px);
+			@include fluid-type(font-size, $min-width, $max-width, 9.5px, 28px);
 			align-self: center;
 			justify-self: start;
 		}
 		.skill-group-item-3 {
-			@include fluid-type(font-size, $min-width, $max-width, 16px, 38px);
-			justify-self: end;
+			@include fluid-type(font-size, $min-width, $max-width, 16px, 34px);
+			justify-self: start;
 		}
 		.skill-group-item-4 {
-			@include fluid-type(font-size, $min-width, $max-width, 9px, 26px);
+			@include fluid-type(font-size, $min-width, $max-width, 7.5px, 18px);
 			padding-top: 2%;
 			opacity: 0;
 			transition: all .25s ease-in;

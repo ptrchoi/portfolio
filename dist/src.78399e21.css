@@ -459,6 +459,9 @@ button:focus {
 
 .item-b {
   background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   grid-area: profileText;
   transition: 1s ease;
 }
@@ -472,20 +475,20 @@ button:focus {
 }
 @media screen and (min-width: 992px) {
   .item-b .grid-text {
-    padding-left: calc( 				5% + 3 * (100vw - 992px) / 508 			);
+    padding-left: calc( 				5% + 3 * (100vw - 992px) / 208 			);
   }
 }
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1200px) {
   .item-b .grid-text {
     padding-left: 8%;
   }
 }
 @media screen and (min-width: 992px) {
   .item-b .grid-text {
-    padding-right: calc( 				5% + 3 * (100vw - 992px) / 508 			);
+    padding-right: calc( 				5% + 3 * (100vw - 992px) / 208 			);
   }
 }
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1200px) {
   .item-b .grid-text {
     padding-right: 8%;
   }
@@ -529,34 +532,24 @@ button:focus {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas: "profileText profileText" "logo2 logo3" "logo1 profilePic";
-  width: 66vw;
+  width: 75vw;
+  max-width: calc(.35 * 1200px);
 }
 .about-grid--small .about {
-  height: calc(1/2 * 66vw);
-  max-height: calc(1/2 * 1200px);
+  height: calc(1/2 * 75vw);
+  max-height: calc(.18 * 1200px);
 }
 .about-grid--small .grid-text {
-  font-size: 7.5px;
-  padding-top: 6%;
+  font-size: 8px;
 }
 @media screen and (min-width: 320px) {
   .about-grid--small .grid-text {
-    font-size: calc( 				7.5px + 16.5 * (100vw - 320px) / 672 			);
+    font-size: calc( 				8px + 7 * (100vw - 320px) / 672 			);
   }
 }
 @media screen and (min-width: 992px) {
   .about-grid--small .grid-text {
-    font-size: 24px;
-  }
-}
-@media screen and (min-width: 320px) {
-  .about-grid--small .grid-text {
-    padding-top: calc( 				6% + 2 * (100vw - 320px) / 672 			);
-  }
-}
-@media screen and (min-width: 992px) {
-  .about-grid--small .grid-text {
-    padding-top: 8%;
+    font-size: 15px;
   }
 }
 
@@ -566,7 +559,6 @@ button:focus {
   grid-template-rows: 1fr 1fr;
   grid-template-areas: "profilePic profileText profileText" "logo1 logo2 logo3";
   width: 80vw;
-  border: solid 2px red;
   max-width: calc(.75 * 1200px);
 }
 .about-grid--large .about {
@@ -575,26 +567,15 @@ button:focus {
 }
 .about-grid--large .grid-text {
   font-size: 18px;
-  padding-top: 8%;
 }
 @media screen and (min-width: 992px) {
   .about-grid--large .grid-text {
-    font-size: calc( 				18px + 10 * (100vw - 992px) / 508 			);
+    font-size: calc( 				18px + 1 * (100vw - 992px) / 208 			);
   }
 }
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1200px) {
   .about-grid--large .grid-text {
-    font-size: 28px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .about-grid--large .grid-text {
-    padding-top: calc( 				8% + -3 * (100vw - 992px) / 508 			);
-  }
-}
-@media screen and (min-width: 1500px) {
-  .about-grid--large .grid-text {
-    padding-top: 5%;
+    font-size: 19px;
   }
 }
 
@@ -708,6 +689,10 @@ button:focus {
   z-index: 9;
 }
 
+.skill-group-item-0 {
+  grid-area: spacer;
+}
+
 .skill-group-item-1 {
   grid-area: skillIcon;
   color: #339da9;
@@ -756,7 +741,7 @@ button:focus {
 /* --- Skills Grid --- */
 .skills-grid {
   display: grid;
-  padding-top: 5%;
+  padding-top: 4%;
 }
 
 .skill-expand-icon {
@@ -786,10 +771,10 @@ button:focus {
 }
 @media screen and (min-width: 992px) {
   .skills-grid--large .skill-group-item-3 {
-    font-size: calc( 				20px + 8 * (100vw - 992px) / 508 			);
+    font-size: calc( 				20px + 8 * (100vw - 992px) / 208 			);
   }
 }
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1200px) {
   .skills-grid--large .skill-group-item-3 {
     font-size: 28px;
   }
@@ -806,70 +791,71 @@ button:focus {
   opacity: 1;
 }
 .skills-grid--small .skills-group {
-  grid-template-columns: 0.5fr 1.4fr 0.1fr;
+  grid-template-columns: 0.5fr 1.1fr 3fr 1fr;
   grid-template-rows: 0.5fr 1.5fr;
-  grid-template-areas: "skillIcon skillHeader expandIcon" "skillText skillText skillText";
+  grid-template-areas: "spacer skillIcon skillHeader expandIcon" "skillText skillText skillText skillText";
+  grid-gap: 1vw;
   height: calc(.8 * 10vh);
   width: calc(7 * 10vw);
   transition: height 0.25s ease-in;
 }
 .skills-grid--small .skills-group .skill-group-item-1 {
-  font-size: 30px;
+  font-size: 22px;
   justify-self: start;
 }
 @media screen and (min-width: 320px) {
   .skills-grid--small .skills-group .skill-group-item-1 {
-    font-size: calc( 				30px + 44 * (100vw - 320px) / 880 			);
+    font-size: calc( 				22px + 40 * (100vw - 320px) / 880 			);
   }
 }
 @media screen and (min-width: 1200px) {
   .skills-grid--small .skills-group .skill-group-item-1 {
-    font-size: 74px;
+    font-size: 62px;
   }
 }
 .skills-grid--small .skills-group .skill-group-item-2 {
-  font-size: 11px;
+  font-size: 9.5px;
   align-self: center;
   justify-self: start;
 }
 @media screen and (min-width: 320px) {
   .skills-grid--small .skills-group .skill-group-item-2 {
-    font-size: calc( 				11px + 23 * (100vw - 320px) / 880 			);
+    font-size: calc( 				9.5px + 18.5 * (100vw - 320px) / 880 			);
   }
 }
 @media screen and (min-width: 1200px) {
   .skills-grid--small .skills-group .skill-group-item-2 {
-    font-size: 34px;
+    font-size: 28px;
   }
 }
 .skills-grid--small .skills-group .skill-group-item-3 {
   font-size: 16px;
-  justify-self: end;
+  justify-self: start;
 }
 @media screen and (min-width: 320px) {
   .skills-grid--small .skills-group .skill-group-item-3 {
-    font-size: calc( 				16px + 22 * (100vw - 320px) / 880 			);
+    font-size: calc( 				16px + 18 * (100vw - 320px) / 880 			);
   }
 }
 @media screen and (min-width: 1200px) {
   .skills-grid--small .skills-group .skill-group-item-3 {
-    font-size: 38px;
+    font-size: 34px;
   }
 }
 .skills-grid--small .skills-group .skill-group-item-4 {
-  font-size: 9px;
+  font-size: 7.5px;
   padding-top: 2%;
   opacity: 0;
   transition: all 0.25s ease-in;
 }
 @media screen and (min-width: 320px) {
   .skills-grid--small .skills-group .skill-group-item-4 {
-    font-size: calc( 				9px + 17 * (100vw - 320px) / 880 			);
+    font-size: calc( 				7.5px + 10.5 * (100vw - 320px) / 880 			);
   }
 }
 @media screen and (min-width: 1200px) {
   .skills-grid--small .skills-group .skill-group-item-4 {
-    font-size: 26px;
+    font-size: 18px;
   }
 }
 .skills-grid--small .skills-group .skills-text--show {
@@ -1168,7 +1154,50 @@ button:focus {
   width: 100%;
 }
 .cardinfo p {
-  padding: 2vh 1vw 2vh 1vw;
+  padding-top: 6px;
+  padding-right: 3px;
+  padding-bottom: 6px;
+  padding-left: 3px;
+}
+@media screen and (min-width: 320px) {
+  .cardinfo p {
+    padding-top: calc( 				6px + 12 * (100vw - 320px) / 880 			);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .cardinfo p {
+    padding-top: 18px;
+  }
+}
+@media screen and (min-width: 320px) {
+  .cardinfo p {
+    padding-right: calc( 				3px + 6 * (100vw - 320px) / 880 			);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .cardinfo p {
+    padding-right: 9px;
+  }
+}
+@media screen and (min-width: 320px) {
+  .cardinfo p {
+    padding-bottom: calc( 				6px + 12 * (100vw - 320px) / 880 			);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .cardinfo p {
+    padding-bottom: 18px;
+  }
+}
+@media screen and (min-width: 320px) {
+  .cardinfo p {
+    padding-left: calc( 				3px + 6 * (100vw - 320px) / 880 			);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .cardinfo p {
+    padding-left: 9px;
+  }
 }
 .cardinfo a:link,
 .cardinfo a:visited {
@@ -1181,11 +1210,47 @@ button:focus {
   border-bottom: 1.5px solid #ff844b;
   color: #1b4664;
   font-weight: bold;
+  font-size: 7px;
+}
+@media screen and (min-width: 320px) {
+  .card-title {
+    font-size: calc( 				7px + 11 * (100vw - 320px) / 880 			);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card-title {
+    font-size: 18px;
+  }
 }
 
 .card-text {
   color: #1b4664;
   text-shadow: 1px 1px white;
+  font-size: 5px;
+}
+@media screen and (min-width: 320px) {
+  .card-text {
+    font-size: calc( 				5px + 11 * (100vw - 320px) / 880 			);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card-text {
+    font-size: 16px;
+  }
+}
+
+.card-link {
+  font-size: 8px;
+}
+@media screen and (min-width: 320px) {
+  .card-link {
+    font-size: calc( 				8px + 10 * (100vw - 320px) / 880 			);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card-link {
+    font-size: 18px;
+  }
 }
 
 .link-icon {

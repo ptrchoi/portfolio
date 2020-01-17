@@ -1,33 +1,43 @@
 .cardinfo {
-  color: black;
-  height: 100%;
-  left: 50%;
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  transform: translate(-50%, -50%);    
-  width: 100%;
-  p {
-    padding: 2vh 1vw 2vh 1vw;
-  }
-  a:link,
-  a:visited {
-    color: $secondary-orange-light;
-    cursor: pointer;
-    text-decoration: none;
-  }
+	color: black;
+	height: 100%;
+	left: 50%;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	p {
+		// padding: 6px 3px 6px 3px;
+		// padding: 2vh 1vw 2vh 1vw;
+		@include fluid-type(padding-top, $min-width, $max-width, 6px, 18px);
+		@include fluid-type(padding-right, $min-width, $max-width, 3px, 9px);
+		@include fluid-type(padding-bottom, $min-width, $max-width, 6px, 18px);
+		@include fluid-type(padding-left, $min-width, $max-width, 3px, 9px);
+	}
+	a:link,
+	a:visited {
+		color: $secondary-orange-light;
+		cursor: pointer;
+		text-decoration: none;
+	}
 }
 .card-title {
-  border-bottom: 1.5px solid $secondary-orange-light;
-  color: $gap-blue;
-  font-weight: bold;
+	border-bottom: 1.5px solid $secondary-orange-light;
+	color: $gap-blue;
+	font-weight: bold;
+	@include fluid-type(font-size, $min-width, $max-width, 7px, 18px);
 }
 .card-text {
-  color: $gap-blue;
-  text-shadow: 1px 1px rgb(255, 255, 255);  
+	color: $gap-blue;
+	text-shadow: 1px 1px rgb(255, 255, 255);
+	@include fluid-type(font-size, $min-width, $max-width, 5px, 16px);
+}
+.card-link {
+	@include fluid-type(font-size, $min-width, $max-width, 8px, 18px);
 }
 .link-icon {
-  color: $secondary-orange-light;
-  font-size: 0.9rem;
-  padding: 0 0.5vw 0 0.5vw;
+	color: $secondary-orange-light;
+	font-size: 0.9rem;
+	padding: 0 0.5vw 0 0.5vw;
 }
