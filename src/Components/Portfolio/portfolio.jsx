@@ -89,7 +89,7 @@ class Portfolio extends Component {
 		return (
 			<div className="section-wrapper portfolio-wrapper">
 				<div className="section-header">
-					<h1>Portfolio</h1>
+					<h1>Web Portfolio</h1>
 				</div>
 				<div className={classList}>
 					<Card card={card[0]} />

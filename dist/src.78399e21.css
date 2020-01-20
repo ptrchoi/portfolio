@@ -741,7 +741,7 @@ button:focus {
 /* --- Skills Grid --- */
 .skills-grid {
   display: grid;
-  padding-top: 4%;
+  padding-top: 5%;
 }
 
 .skill-expand-icon {

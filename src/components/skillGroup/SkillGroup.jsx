@@ -47,30 +47,31 @@ class SkillGroup extends Component {
 			<div className={classes}>
 				<div id="skillsGroup1" className="skills-group skills" onClick={this.clickHandler}>
 					<i className="fas fa-cubes skill-group-item-1" />
-					<h3 className="skill-group-item-2">Front-end Developer</h3>
+					<h3 className="skill-group-item-2">Front-end Development</h3>
 					<i id="skillsExpandIcon1" className="fas fa-caret-down skill-expand-icon skill-group-item-3" />
 					<p id="skillsText1" className="skill-group-item-4">
-						Adaptable problem-solver who adheres to writing fast, efficient code leveraging the power of
-						functional programming in Javascript and the modularity of React.
+						Specializing in building dynamic, fluid front end experiences that engage users, while
+						constantly learning, leveraging, and innovating with the latest technologies and advanced
+						techniques.
 					</p>
 				</div>
 				<div id="skillsGroup2" className="skills-group skills" onClick={this.clickHandler}>
 					<i className="far fa-compass skill-group-item-1" />
-					<h3 className="skill-group-item-2">UX Designer</h3>
+					<h3 className="skill-group-item-2">User Experience</h3>
 					<i id="skillsExpandIcon2" className="fas fa-caret-down skill-expand-icon skill-group-item-3" />
 					<p id="skillsText2" className="skill-group-item-4">
-						Experienced UX professional, well-versed on modern design trends and UX strategies that focus on
-						the user journey and intuitive design.
+						Creative problem-solver, well-versed on modern design trends and UX strategies, consistently
+						focused on the user journey, aesthetics, and intuitive design.
 					</p>
 				</div>
 				<div id="skillsGroup3" className="skills-group skills" onClick={this.clickHandler}>
 					<i className="fas fa-people-carry skill-group-item-1" />
-					<h3 className="skill-group-item-2">Collaborator</h3>
+					<h3 className="skill-group-item-2">Collaboration</h3>
 					<i id="skillsExpandIcon3" className="fas fa-caret-down skill-expand-icon skill-group-item-3" />
 					<p id="skillsText3" className="skill-group-item-4">
 						Proven communication and soft skills in collaborating with large, distributed teams across
-						diverse disciplines, time zones, and cultures, with expertise in agile development methodologies
-						and toolsets.
+						diverse disciplines, time zones, and cultures, with expertise in agile methodologies and
+						toolsets.
 					</p>
 				</div>
 			</div>

@@ -8,10 +8,10 @@ class Chart extends Component {
 				<ul className="lines">
 					<li className="line line-0" />
 					<li className="line line-30">
-						<span className="line-label">Adept</span>
+						<span className="line-label">Skilled</span>
 					</li>
 					<li className="line line-60">
-						<span className="line-label">Skilled</span>
+						<span className="line-label">Experienced</span>
 					</li>
 					<li className="line line-90">
 						<span className="line-label">Advanced</span>
