@@ -1073,6 +1073,8 @@ button:focus {
   grid-gap: 4px 4px;
   justify-content: center;
   margin-top: 8vh;
+  max-width: 1200px;
+  padding-bottom: 12vh;
 }
 .card-grid a:link,
 .card-grid a:visited {
@@ -1081,23 +1083,23 @@ button:focus {
 }
 
 .card-grid--large {
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
 }
 
 .card-grid--small {
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
 }
 
 .card {
   background-color: whitesmoke;
   font-family: "Livvic", sans-serif;
-  height: calc(.4 * 84vw);
+  height: calc(.24 * 84vw);
   opacity: 0;
   position: relative;
-  width: calc(.5 * 84vw);
+  width: calc(.3 * 84vw);
   z-index: 9;
-  max-height: calc(.3 * 1200px);
-  max-width: calc(.4 * 1200px);
+  max-height: calc(.18 * 1200px);
+  max-width: calc(.24 * 1200px);
 }
 
 .card-front {
@@ -1214,12 +1216,12 @@ button:focus {
 }
 @media screen and (min-width: 320px) {
   .card-title {
-    font-size: calc( 				7px + 11 * (100vw - 320px) / 880 			);
+    font-size: calc( 				7px + 7 * (100vw - 320px) / 880 			);
   }
 }
 @media screen and (min-width: 1200px) {
   .card-title {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 
@@ -1230,12 +1232,12 @@ button:focus {
 }
 @media screen and (min-width: 320px) {
   .card-text {
-    font-size: calc( 				5px + 11 * (100vw - 320px) / 880 			);
+    font-size: calc( 				5px + 7 * (100vw - 320px) / 880 			);
   }
 }
 @media screen and (min-width: 1200px) {
   .card-text {
-    font-size: 16px;
+    font-size: 12px;
   }
 }
 
@@ -1244,12 +1246,12 @@ button:focus {
 }
 @media screen and (min-width: 320px) {
   .card-link {
-    font-size: calc( 				8px + 10 * (100vw - 320px) / 880 			);
+    font-size: calc( 				8px + 6 * (100vw - 320px) / 880 			);
   }
 }
 @media screen and (min-width: 1200px) {
   .card-link {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 
