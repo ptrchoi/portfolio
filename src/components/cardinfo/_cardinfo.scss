@@ -31,9 +31,11 @@
 }
 .card-text {
 	color: $gap-blue;
+	display: inline-block;
+	margin: 1vw 1vw;
 	text-shadow: 1px 1px rgb(255, 255, 255);
-	text-align: start;
-	white-space: pre-wrap;
+	text-align: left;
+	white-space: pre-line;
 	// @include fluid-type(font-size, $min-width, $max-width, 5px, 16px);
 	@include fluid-type(font-size, $min-width, $max-width, 5px, 12px);
 }

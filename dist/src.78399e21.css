@@ -1219,9 +1219,11 @@ button:focus {
 
 .card-text {
   color: #1b4664;
+  display: inline-block;
+  margin: 1vw 1vw;
   text-shadow: 1px 1px white;
-  text-align: start;
-  white-space: pre-wrap;
+  text-align: left;
+  white-space: pre-line;
   font-size: 5px;
 }
 @media screen and (min-width: 320px) {
