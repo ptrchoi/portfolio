@@ -1069,8 +1069,8 @@ button:focus {
 
 .card-grid {
   color: black;
-  display: grid;
-  grid-gap: 4px 4px;
+  display: flex;
+  flex-flow: row wrap;
   justify-content: center;
   margin-top: 8vh;
   max-width: 1200px;
@@ -1082,24 +1082,16 @@ button:focus {
   text-decoration: none;
 }
 
-.card-grid--large {
-  grid-template-columns: auto auto auto;
-}
-
-.card-grid--small {
-  grid-template-columns: auto auto auto;
-}
-
 .card {
   background-color: whitesmoke;
   font-family: "Livvic", sans-serif;
-  height: calc(.24 * 84vw);
+  height: 100vw;
   opacity: 0;
   position: relative;
-  width: calc(.3 * 84vw);
+  width: 100vw;
   z-index: 9;
-  max-height: calc(.18 * 1200px);
-  max-width: calc(.24 * 1200px);
+  max-height: calc(.27 * 1200px);
+  max-width: calc(.36 * 1200px);
 }
 
 .card-front {
@@ -1228,6 +1220,8 @@ button:focus {
 .card-text {
   color: #1b4664;
   text-shadow: 1px 1px white;
+  text-align: start;
+  white-space: pre-wrap;
   font-size: 5px;
 }
 @media screen and (min-width: 320px) {

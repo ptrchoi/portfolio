@@ -6,6 +6,7 @@ import Card from '../card/Card';
 import Confetti from '../confetti/Confetti';
 
 //Assets
+import screenPortfolio from '../../assets/project_portfolio.png';
 import screenSpa from '../../assets/project_spa.png';
 import screenCalc from '../../assets/project_calc.png';
 import screenTech from '../../assets/project_tech.png';
@@ -24,71 +25,111 @@ import screenWiki from '../../assets/project_wiki.png';
  * @function
  * @return {JSX.Element} - Rendered component.
  */
-
 const CARDS = [
 	{
 		projectId: 'project-1',
-		title: 'Single-page Application (SPA) - Product Page',
-		image: screenSpa,
+		title: 'Responsive Single-page Application (SPA)',
+		image: screenPortfolio,
 		link: 'https://codepen.io/ptrchoi/pen/JayyOP',
-		description:
-			'A pure JS & CSS demo of a single-page application (SPA), fully responsive product page. Nested Flex-Box & CSS Grid layouts, scaling video background, nav-menu & image gallery modals, and user-centered design elements throughout.',
+		description: `This site is a fully responsive Single-page Application with full-screen scrolling and dynamic elements throughout.
+		
+		Features include:
+		- REACT | ES6 | SCSS | HTML5 | fullpage.js
+		- Full-screen page scrolling using fullpage.js
+		- Animated CSS backgrounds, chart, and transitions throughout
+		- Responsive scaling layouts, fonts, and page elements
+		- Modal mobile Nav-menu with persistent active selection
+		- Custom created assets`,
 		flipped: false
 	},
 	{
 		projectId: 'project-2',
-		title: 'REACT Drum Machine',
-		image: screenDrum,
-		link: 'https://codepen.io/ptrchoi/pen/Xyrppy',
-		description:
-			'A REACT Drum Machine app, responsive with touch and keyboard inputs, demonstrating functional programming  with higher-order functions, advanced ES6 features, and modular programming with React and SCSS components.',
+		title: 'Responsive Single-page Application (SPA)',
+		image: screenSpa,
+		link: 'https://codepen.io/ptrchoi/pen/JayyOP',
+		description: `An example of complex layouts and features using only vanilla JS and pure CSS on a fully responsive Single-page Application Product Page.
+		
+		Features include:
+		- Vanilla JavaScript | Pure CSS | HTML5
+		- Nested CSS Grid + Flex-box layouts
+		- Responsive scaling layouts, video, & fonts
+		- Modal image gallery and mobile Nav-menu
+		- Custom created assets`,
 		flipped: false
 	},
 	{
 		projectId: 'project-3',
-		title: 'Weather App',
-		image: screenWeather,
-		link: 'https://codepen.io/ptrchoi/pen/grwMJv',
-		description: 'Weather App',
-		flipped: false
-	},
-	{
-		projectId: 'project-4',
-		title: 'Pomodoro Clock App',
-		image: screenPomodoro,
-		link: 'https://codepen.io/ptrchoi/pen/RaQdya',
-		description: 'POMODORO CLOCK APP',
-		flipped: false
-	},
-	{
-		projectId: 'project-5',
 		title: 'Markdown Editor with Live Preview',
 		image: screenMarkdown,
 		link: 'https://codepen.io/ptrchoi/pen/rqPKJV',
 		description:
-			'A Live Markdown Editor Preview App, built in REACT. Adhering to GIT Markdown rules, the Editor window displays the resulting Markdown in real-time.',
+			`A Live Markdown Editor Preview App allowing users to enter Github flavored Markdown into the Editor window, with real-time HTML rendering in the Live Previewer.
+			
+			Features include:
+			- REACT | ES6 | SCSS | HTML5`,
+		flipped: false
+	},
+	{
+		projectId: 'project-4',
+		title: 'REACT Drum Machine',
+		image: screenDrum,
+		link: 'https://codepen.io/ptrchoi/pen/Xyrppy',
+		description:
+			`A virtual Drum Machine app with touch and keyboard inputs and multiple sound banks.
+			
+			Features include:
+			- REACT ES6 | SCSS | HTML5
+			- Functional programming with higher-order functions
+			- Advanced ES6 features
+			- Fully responsive with both touch and keyboard input support
+			- Multiple drum kit sound banks
+			- Modular programming with React and SCSS components.`,
+		flipped: false
+	},
+	{
+		projectId: 'project-5',
+		title: 'Technical Documentation Page',
+		image: screenTech,
+		link: 'https://codepen.io/ptrchoi/pen/jvLoOQ',
+		description:
+			`A pure JS & CSS demo of a responsive technical document, recreating a page from VS Code's site from scratch. Featuring active menu scrolling, persistent modal nav-menu, and modern Code Element styling.`,
 		flipped: false
 	},
 	{
 		projectId: 'project-6',
-		title: 'REACT Calculator',
-		image: screenCalc,
-		link: 'https://codepen.io/ptrchoi/pen/QJRpvQ',
-		description:
-			'A simple REACT Calculator app with a clean, modern Material theme, responsive with touch and keyboard inputs, demonstrating functional programming with higher-order functions, advanced ES6 features, and modular programming with React and SCSS components.',
+		title: 'Wikipedia Reader App',
+		image: screenWiki,
+		link: 'https://codepen.io/ptrchoi/pen/ZWLMzq',
+		description: `Wikipedia Reader App`,
 		flipped: false
 	},
 	{
 		projectId: 'project-7',
-		title: 'Random Quote Generator',
-		image: screenQuote,
-		link: 'https://codepen.io/ptrchoi/pen/mQEMXv',
-		description:
-			'A simple REACT Web App which generates randomized quotes and backgrounds, integrating with the Forismatic API. Fully responsive and designed to have a calming effect.',
+		title: 'Twitch TV App',
+		image: screenTwitch,
+		link: 'https://codepen.io/ptrchoi/pen/JXWOdL',
+		description: `Twitch TV App`,
 		flipped: false
 	},
 	{
 		projectId: 'project-8',
+		title: 'REACT Calculator',
+		image: screenCalc,
+		link: 'https://codepen.io/ptrchoi/pen/QJRpvQ',
+		description:
+			`A simple REACT Calculator app with a clean, modern Material theme, responsive with touch and keyboard inputs, demonstrating functional programming with higher-order functions, advanced ES6 features, and modular programming with React and SCSS components.`,
+		flipped: false
+	},
+	{
+		projectId: 'project-9',
+		title: 'Pomodoro Clock App',
+		image: screenPomodoro,
+		link: 'https://codepen.io/ptrchoi/pen/RaQdya',
+		description: `POMODORO CLOCK APP`,
+		flipped: false
+	},
+	{
+		projectId: 'project-10',
 		title: 'Simon Game',
 		image: screenSimon,
 		link: 'https://codepen.io/ptrchoi/pen/wGXNKm',
@@ -97,37 +138,21 @@ const CARDS = [
 		flipped: false
 	},
 	{
-		projectId: 'project-9',
-		title: 'Wikipedia Reader App',
-		image: screenWiki,
-		link: 'https://codepen.io/ptrchoi/pen/ZWLMzq',
-		description: 'Wikipedia Reader App',
-		flipped: false
-	},
-	{
-		projectId: 'project-10',
+		projectId: 'project-11',
 		title: 'Tic-Tac-Toe Game',
 		image: screenTictac,
 		link: 'https://codepen.io/ptrchoi/pen/zqjzaL',
 		description:
-			'A classic Tic-Tac-Toe game app built with pure JS & CSS. Features Game AI with text feedback on two difficulty level settings, score tracking, piece selection, and reset.',
-		flipped: false
-	},
-	{
-		projectId: 'project-11',
-		title: 'Twitch TV App',
-		image: screenTwitch,
-		link: 'https://codepen.io/ptrchoi/pen/JXWOdL',
-		description: 'Twitch TV App',
+			`A classic Tic-Tac-Toe game app built with pure JS & CSS. Features Game AI with text feedback on two difficulty level settings, score tracking, piece selection, and reset.`,
 		flipped: false
 	},
 	{
 		projectId: 'project-12',
-		title: 'Technical Documentation Page',
-		image: screenTech,
-		link: 'https://codepen.io/ptrchoi/pen/jvLoOQ',
+		title: 'Random Quote Generator',
+		image: screenQuote,
+		link: 'https://codepen.io/ptrchoi/pen/mQEMXv',
 		description:
-			"A pure JS & CSS demo of a responsive technical document, recreating a page from VS Code's site from scratch. Featuring active menu scrolling, persistent modal nav-menu, and modern Code Element styling.",
+			`A simple REACT Web App which generates randomized quotes and backgrounds, integrating with the Forismatic API. Fully responsive and designed to have a calming effect.`,
 		flipped: false
 	}
 ];
