@@ -5,7 +5,7 @@
 	position: absolute;
 	text-align: center;
 	top: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%); //for positioning not animation
 	width: 100%;
 	p {
 		// padding: 6px 3px 6px 3px;
@@ -23,6 +23,8 @@
 	}
 }
 .card-title {
+	animation: slideFromTop .55s 0s forwards;
+
 	border-bottom: 1.5px solid $secondary-orange-light;
 	color: $gap-blue;
 	font-weight: bold;
@@ -30,6 +32,9 @@
 	@include fluid-type(font-size, $min-width, $max-width, 7px, 14px);
 }
 .card-text {
+	animation: slideFromBottom .55s 0s forwards;
+	border: solid 1px green;
+
 	color: $gap-blue;
 	display: inline-block;
 	margin: 1vw 1vw;

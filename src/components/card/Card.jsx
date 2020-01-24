@@ -2,7 +2,7 @@
 import React from 'react';
 
 //Components
-import Cardinfo from '../cardinfo/Cardinfo';
+// import Cardinfo from '../cardinfo/Cardinfo';
 
 const Card = (props) => {
 	const { projectId, title, image, link, description } = props.card;
@@ -12,7 +12,15 @@ const Card = (props) => {
 				<img src={image} alt="thumbnail" />
 			</div>
 			<div className="card-back">
-				<Cardinfo title={title} link={link} info={description} />
+				<p className="card-title"> {title} </p>
+				<div className="card-divider" />
+				<p className="card-text">{description}</p>
+				<a href={link} target="_blank">
+					<p className="card-link">
+						CodePen Demo
+						<i className="link-icon fas fa-external-link-square-alt" />
+					</p>
+				</a>
 			</div>
 		</div>
 	);

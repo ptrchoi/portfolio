@@ -69,6 +69,16 @@ body {
     transform: translateY(0%);
   }
 }
+@keyframes slideFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-200%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
 .nav-wrapper {
   display: grid;
   grid-template-columns: auto;
@@ -1105,119 +1115,94 @@ button:focus {
 }
 
 .card-back {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: white;
   bottom: 0;
-  height: 0;
+  height: 100%;
   left: 0;
+  opacity: 0;
   overflow: hidden;
   position: absolute;
   right: 0;
-  transition: height 0.5s ease;
+  transition: opacity 0.5s ease;
   width: 100%;
-}
-
-@media (hover: hover) {
-  .card:hover .card-back {
-    height: 100%;
-  }
-  .card:hover .card-front {
-    filter: blur(3px);
-  }
-}
-@media (hover: none), (hover: on-demand) {
-  .card:hover .card-back {
-    height: 100%;
-  }
-  .card:hover .card-front {
-    filter: blur(3px);
-  }
-}
-/* --- Slide Class for slide animation --- */
-.card.slide-card {
-  animation: slideFromBottom 0.55s 0s forwards;
-}
-
-.cardinfo {
   color: black;
-  height: 100%;
-  left: 50%;
-  position: absolute;
   text-align: center;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
 }
-.cardinfo p {
+.card-back p {
   padding-top: 6px;
   padding-right: 3px;
   padding-bottom: 6px;
   padding-left: 3px;
 }
 @media screen and (min-width: 320px) {
-  .cardinfo p {
+  .card-back p {
     padding-top: calc( 				6px + 12 * (100vw - 320px) / 880 			);
   }
 }
 @media screen and (min-width: 1200px) {
-  .cardinfo p {
+  .card-back p {
     padding-top: 18px;
   }
 }
 @media screen and (min-width: 320px) {
-  .cardinfo p {
+  .card-back p {
     padding-right: calc( 				3px + 6 * (100vw - 320px) / 880 			);
   }
 }
 @media screen and (min-width: 1200px) {
-  .cardinfo p {
+  .card-back p {
     padding-right: 9px;
   }
 }
 @media screen and (min-width: 320px) {
-  .cardinfo p {
+  .card-back p {
     padding-bottom: calc( 				6px + 12 * (100vw - 320px) / 880 			);
   }
 }
 @media screen and (min-width: 1200px) {
-  .cardinfo p {
+  .card-back p {
     padding-bottom: 18px;
   }
 }
 @media screen and (min-width: 320px) {
-  .cardinfo p {
+  .card-back p {
     padding-left: calc( 				3px + 6 * (100vw - 320px) / 880 			);
   }
 }
 @media screen and (min-width: 1200px) {
-  .cardinfo p {
+  .card-back p {
     padding-left: 9px;
   }
 }
-.cardinfo a:link,
-.cardinfo a:visited {
+.card-back a:link,
+.card-back a:visited {
   color: #ff844b;
   cursor: pointer;
   text-decoration: none;
 }
-
-.card-title {
-  border-bottom: 1.5px solid #ff844b;
+.card-back .card-title {
   color: #1b4664;
   font-weight: bold;
   font-size: 7px;
 }
 @media screen and (min-width: 320px) {
-  .card-title {
+  .card-back .card-title {
     font-size: calc( 				7px + 7 * (100vw - 320px) / 880 			);
   }
 }
 @media screen and (min-width: 1200px) {
-  .card-title {
+  .card-back .card-title {
     font-size: 14px;
   }
 }
-
-.card-text {
+.card-back .card-divider {
+  background-color: #ff844b;
+  height: 1.5px;
+  opacity: 0;
+  transition: opacity 2s ease 0.3s;
+  width: 100%;
+}
+.card-back .card-text {
   color: #1b4664;
   display: inline-block;
   margin: 1vw 1vw;
@@ -1227,36 +1212,91 @@ button:focus {
   font-size: 5px;
 }
 @media screen and (min-width: 320px) {
-  .card-text {
+  .card-back .card-text {
     font-size: calc( 				5px + 7 * (100vw - 320px) / 880 			);
   }
 }
 @media screen and (min-width: 1200px) {
-  .card-text {
+  .card-back .card-text {
     font-size: 12px;
   }
 }
-
-.card-link {
+.card-back .card-link {
   font-size: 8px;
 }
 @media screen and (min-width: 320px) {
-  .card-link {
+  .card-back .card-link {
     font-size: calc( 				8px + 6 * (100vw - 320px) / 880 			);
   }
 }
 @media screen and (min-width: 1200px) {
-  .card-link {
+  .card-back .card-link {
     font-size: 14px;
   }
 }
-
-.link-icon {
+.card-back .link-icon {
   color: #ff844b;
   font-size: 0.9rem;
   padding: 0 0.5vw 0 0.5vw;
 }
 
+@media (hover: hover) {
+  .card:hover .card-back {
+    opacity: 1;
+  }
+  .card:hover .card-back .card-title {
+    animation: slideFromMidTop 0.55s 0s forwards;
+  }
+  .card:hover .card-back .card-text,
+.card:hover .card-back .card-link {
+    animation: slideFromMidBottom 0.55s 0s forwards;
+  }
+  .card:hover .card-back .card-divider {
+    animation: slideFromLeft 0.55s 0.3s forwards;
+    opacity: 1;
+  }
+}
+@media (hover: none), (hover: on-demand) {
+  .card:hover .card-back {
+    opacity: 1;
+  }
+  .card:hover .card-back .card-title {
+    animation: slideFromMidTop 0.55s 0s forwards;
+  }
+  .card:hover .card-back .card-text,
+.card:hover .card-back .card-link {
+    animation: slideFromMidBottom 0.55s 0s forwards;
+  }
+  .card:hover .card-divider {
+    animation: slideFromLeft 0.55s 0.3s forwards;
+    opacity: 1;
+  }
+}
+/* --- Slide Class for slide animation --- */
+.card.slide-card {
+  animation: slideFromBottom 0.55s 0s forwards;
+}
+
+@keyframes slideFromMidBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes slideFromMidTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
 .contact-wrapper {
   background-color: #6a6a6a;
   align-content: start;

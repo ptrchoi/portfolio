@@ -40,8 +40,7 @@ const CARDS = [
 		- Animated CSS backgrounds, chart, and transitions throughout
 		- Responsive scaling layouts, fonts, and page elements
 		- Modal mobile Nav-menu with persistent active selection
-		- Custom created assets`,
-		flipped: false
+		- Custom created assets`
 	},
 	{
 		projectId: 'project-2',
@@ -55,8 +54,7 @@ const CARDS = [
 		- Payment, Calendar, FAQ, About, Video & Photo Library, Speaker/images/bios
 		- Database, site hosting, site staging, remote team, forms, backups
 		- Envato Market - Jupiter 5 Theme by Artbees, Visual Composer by WPBakery
-		- *NOTE: the site has changed since 2017, particularly the content, but the overall design and structure retains most of the work I did in 2017`,
-		flipped: false
+		- *NOTE: the site has changed since 2017, particularly the content, but the overall design and structure retains most of the work I did in 2017`
 	},
 	{
 		projectId: 'project-3',
@@ -70,8 +68,7 @@ const CARDS = [
 		- Nested CSS Grid + Flex-box layouts
 		- Responsive scaling layouts, video, & fonts
 		- Modal image gallery and mobile Nav-menu
-		- Custom created assets`,
-		flipped: false
+		- Custom created assets`
 	},
 	{
 		projectId: 'project-4',
@@ -81,8 +78,7 @@ const CARDS = [
 		description: `A Live Markdown Editor Preview App allowing users to enter Github flavored Markdown into the Editor window, with real-time HTML rendering in the Live Previewer.
 			
 			Features include:
-			- REACT | ES6 | SCSS | HTML5`,
-		flipped: false
+			- REACT | ES6 | SCSS | HTML5`
 	},
 	{
 		projectId: 'project-5',
@@ -97,48 +93,42 @@ const CARDS = [
 			- Advanced ES6 features
 			- Fully responsive with both touch and keyboard input support
 			- Multiple drum kit sound banks
-			- Modular programming with React and SCSS components.`,
-		flipped: false
+			- Modular programming with React and SCSS components.`
 	},
 	{
 		projectId: 'project-6',
 		title: 'Technical Documentation Page',
 		image: screenTech,
 		link: 'https://codepen.io/ptrchoi/pen/jvLoOQ',
-		description: `A pure JS & CSS demo of a responsive technical document, recreating a page from VS Code's site from scratch. Featuring active menu scrolling, persistent modal nav-menu, and modern Code Element styling.`,
-		flipped: false
+		description: `A pure JS & CSS demo of a responsive technical document, recreating a page from VS Code's site from scratch. Featuring active menu scrolling, persistent modal nav-menu, and modern Code Element styling.`
 	},
 	{
 		projectId: 'project-7',
 		title: 'Wikipedia Reader App',
 		image: screenWiki,
 		link: 'https://codepen.io/ptrchoi/pen/ZWLMzq',
-		description: `Wikipedia Reader App`,
-		flipped: false
+		description: `Wikipedia Reader App`
 	},
 	{
 		projectId: 'project-8',
 		title: 'Twitch TV App',
 		image: screenTwitch,
 		link: 'https://codepen.io/ptrchoi/pen/JXWOdL',
-		description: `Twitch TV App`,
-		flipped: false
+		description: `Twitch TV App`
 	},
 	{
 		projectId: 'project-9',
 		title: 'REACT Calculator',
 		image: screenCalc,
 		link: 'https://codepen.io/ptrchoi/pen/QJRpvQ',
-		description: `A simple REACT Calculator app with a clean, modern Material theme, responsive with touch and keyboard inputs, demonstrating functional programming with higher-order functions, advanced ES6 features, and modular programming with React and SCSS components.`,
-		flipped: false
+		description: `A simple REACT Calculator app with a clean, modern Material theme, responsive with touch and keyboard inputs, demonstrating functional programming with higher-order functions, advanced ES6 features, and modular programming with React and SCSS components.`
 	},
 	{
 		projectId: 'project-10',
 		title: 'Pomodoro Clock App',
 		image: screenPomodoro,
 		link: 'https://codepen.io/ptrchoi/pen/RaQdya',
-		description: `POMODORO CLOCK APP`,
-		flipped: false
+		description: `POMODORO CLOCK APP`
 	},
 	{
 		projectId: 'project-11',
@@ -146,32 +136,28 @@ const CARDS = [
 		image: screenSimon,
 		link: 'https://codepen.io/ptrchoi/pen/wGXNKm',
 		description:
-			'The classic game of Simon, app built with pure JS & CSS. Features custom assets, animations, audio, Start and Strict game features.',
-		flipped: false
+			'The classic game of Simon, app built with pure JS & CSS. Features custom assets, animations, audio, Start and Strict game features.'
 	},
 	{
 		projectId: 'project-12',
 		title: 'Tic-Tac-Toe Game',
 		image: screenTictac,
 		link: 'https://codepen.io/ptrchoi/pen/zqjzaL',
-		description: `A classic Tic-Tac-Toe game app built with pure JS & CSS. Features Game AI with text feedback on two difficulty level settings, score tracking, piece selection, and reset.`,
-		flipped: false
+		description: `A classic Tic-Tac-Toe game app built with pure JS & CSS. Features Game AI with text feedback on two difficulty level settings, score tracking, piece selection, and reset.`
 	},
 	{
 		projectId: 'project-13',
 		title: 'Random Quote Generator',
 		image: screenQuote,
 		link: 'https://codepen.io/ptrchoi/pen/mQEMXv',
-		description: `A simple REACT Web App which generates randomized quotes and backgrounds, integrating with the Forismatic API. Fully responsive and designed to have a calming effect.`,
-		flipped: false
+		description: `A simple REACT Web App which generates randomized quotes and backgrounds, integrating with the Forismatic API. Fully responsive and designed to have a calming effect.`
 	},
 	{
 		projectId: 'project-14',
 		title: 'Weather App',
 		image: screenWeather,
 		link: 'https://codepen.io/ptrchoi/pen/grwMJv',
-		description: `Weather App`,
-		flipped: false
+		description: `Weather App`
 	}
 ];
 
