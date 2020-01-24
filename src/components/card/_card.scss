@@ -92,6 +92,8 @@
 	.card-link {
 		// transition: animation;
 		// @include fluid-type(font-size, $min-width, $max-width, 8px, 18px);
+		opacity: 0;
+		transition: opacity 2s ease 0.3s; //Needs to be synced with slideIn animation
 		@include fluid-type(font-size, $min-width, $max-width, 8px, 14px);
 	}
 	.link-icon {
@@ -109,14 +111,17 @@
 				animation: slideFromMidTop .55s 0s forwards;
 				// border-bottom: 1.5px solid $secondary-orange-light;
 			}
-			.card-text,
-			.card-link {
+			.card-text {
 				animation: slideFromMidBottom .55s 0s forwards;
 			}
-			.card-divider {
-				animation: slideFromLeft .55s 0.3s forwards;
-				opacity: 1;
-			}
+		}
+		.card-divider {
+			animation: slideFromLeft .55s 0.3s forwards;
+			opacity: 1;
+		}
+		.card-link {
+			animation: slideFromRight .55s 0.3s forwards;
+			opacity: 1;
 		}
 	}
 }
@@ -128,13 +133,16 @@
 				animation: slideFromMidTop .55s 0s forwards;
 				// border-bottom: 1.5px solid $secondary-orange-light;
 			}
-			.card-text,
-			.card-link {
+			.card-text {
 				animation: slideFromMidBottom .55s 0s forwards;
 			}
 		}
 		.card-divider {
 			animation: slideFromLeft .55s 0.3s forwards;
+			opacity: 1;
+		}
+		.card-link {
+			animation: slideFromRight .55s 0.3s forwards;
 			opacity: 1;
 		}
 	}
@@ -146,7 +154,7 @@
 @keyframes slideFromMidBottom {
 	0% {
 		opacity: 0;
-		transform: translateY(50%);
+		transform: translateY(75%);
 	}
 	100% {
 		opacity: 1;
@@ -156,7 +164,7 @@
 @keyframes slideFromMidTop {
 	0% {
 		opacity: 0;
-		transform: translateY(-50%);
+		transform: translateY(-75%);
 	}
 	100% {
 		opacity: 1;

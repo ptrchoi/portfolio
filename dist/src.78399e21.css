@@ -1222,6 +1222,8 @@ button:focus {
   }
 }
 .card-back .card-link {
+  opacity: 0;
+  transition: opacity 2s ease 0.3s;
   font-size: 8px;
 }
 @media screen and (min-width: 320px) {
@@ -1247,12 +1249,15 @@ button:focus {
   .card:hover .card-back .card-title {
     animation: slideFromMidTop 0.55s 0s forwards;
   }
-  .card:hover .card-back .card-text,
-.card:hover .card-back .card-link {
+  .card:hover .card-back .card-text {
     animation: slideFromMidBottom 0.55s 0s forwards;
   }
-  .card:hover .card-back .card-divider {
+  .card:hover .card-divider {
     animation: slideFromLeft 0.55s 0.3s forwards;
+    opacity: 1;
+  }
+  .card:hover .card-link {
+    animation: slideFromRight 0.55s 0.3s forwards;
     opacity: 1;
   }
 }
@@ -1263,12 +1268,15 @@ button:focus {
   .card:hover .card-back .card-title {
     animation: slideFromMidTop 0.55s 0s forwards;
   }
-  .card:hover .card-back .card-text,
-.card:hover .card-back .card-link {
+  .card:hover .card-back .card-text {
     animation: slideFromMidBottom 0.55s 0s forwards;
   }
   .card:hover .card-divider {
     animation: slideFromLeft 0.55s 0.3s forwards;
+    opacity: 1;
+  }
+  .card:hover .card-link {
+    animation: slideFromRight 0.55s 0.3s forwards;
     opacity: 1;
   }
 }
@@ -1280,7 +1288,7 @@ button:focus {
 @keyframes slideFromMidBottom {
   0% {
     opacity: 0;
-    transform: translateY(50%);
+    transform: translateY(75%);
   }
   100% {
     opacity: 1;
@@ -1290,7 +1298,7 @@ button:focus {
 @keyframes slideFromMidTop {
   0% {
     opacity: 0;
-    transform: translateY(-50%);
+    transform: translateY(-75%);
   }
   100% {
     opacity: 1;
