@@ -1241,6 +1241,9 @@ button:focus {
     font-size: 12px;
   }
 }
+.card-back .disabled-link {
+  pointer-events: none;
+}
 .card-back .link-title {
   opacity: 0;
   transition: opacity 2s ease 0.3s;

@@ -89,10 +89,10 @@
 		// @include fluid-type(font-size, $min-width, $max-width, 5px, 16px);
 		@include fluid-type(font-size, $min-width, $max-width, 5px, 12px);
 	}
-	// .disabled-link {
-	// 	pointer-events: none;
-	// 	// transition: pointer-events 2s ease 0.3s; //Needs to be synced with slideIn animation
-	// }
+	.disabled-link {
+		pointer-events: none;
+		// transition: pointer-events 2s ease 0.3s; //Needs to be synced with slideIn animation
+	}
 	.link-title {
 		// transition: animation;
 		// @include fluid-type(font-size, $min-width, $max-width, 8px, 18px);
