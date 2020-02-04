@@ -89,7 +89,11 @@
 		// @include fluid-type(font-size, $min-width, $max-width, 5px, 16px);
 		@include fluid-type(font-size, $min-width, $max-width, 5px, 12px);
 	}
-	.card-link {
+	// .disabled-link {
+	// 	pointer-events: none;
+	// 	// transition: pointer-events 2s ease 0.3s; //Needs to be synced with slideIn animation
+	// }
+	.link-title {
 		// transition: animation;
 		// @include fluid-type(font-size, $min-width, $max-width, 8px, 18px);
 		opacity: 0;
@@ -119,9 +123,10 @@
 			animation: slideFromLeft .55s 0.3s forwards;
 			opacity: 1;
 		}
-		.card-link {
+		.link-title {
 			animation: slideFromRight .55s 0.3s forwards;
 			opacity: 1;
+			// pointer-events: auto;
 		}
 	}
 }
@@ -141,33 +146,14 @@
 			animation: slideFromLeft .55s 0.3s forwards;
 			opacity: 1;
 		}
-		.card-link {
+		.link-title {
 			animation: slideFromRight .55s 0.3s forwards;
 			opacity: 1;
+			// pointer-events: auto;
 		}
 	}
 }
 /* --- Slide Class for slide animation --- */
 .card.slide-card {
 	animation: slideFromBottom .55s 0s forwards;
-}
-@keyframes slideFromMidBottom {
-	0% {
-		opacity: 0;
-		transform: translateY(75%);
-	}
-	100% {
-		opacity: 1;
-		transform: translateY(0%);
-	}
-}
-@keyframes slideFromMidTop {
-	0% {
-		opacity: 0;
-		transform: translateY(-75%);
-	}
-	100% {
-		opacity: 1;
-		transform: translateY(0%);
-	}
 }

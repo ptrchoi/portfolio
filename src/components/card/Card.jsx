@@ -15,8 +15,8 @@ const Card = (props) => {
 				<p className="card-title"> {title} </p>
 				<div className="card-divider" />
 				<p className="card-text">{description}</p>
-				<a href={link} target="_blank">
-					<p className="card-link">
+				<a href={link} target="_blank" className="disabled-link">
+					<p className="link-title">
 						CodePen Demo
 						<i className="link-icon fas fa-external-link-square-alt" />
 					</p>
