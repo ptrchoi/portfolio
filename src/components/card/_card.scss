@@ -112,19 +112,19 @@
 		.card-back {
 			opacity: 1;
 			.card-title {
-				animation: slideFromMidTop .55s 0s forwards;
+				animation: slideFromMidTop .6s 0s forwards;
 				// border-bottom: 1.5px solid $secondary-orange-light;
 			}
 			.card-text {
-				animation: slideFromMidBottom .55s 0s forwards;
+				animation: slideFromMidBottom .6s 0s forwards;
 			}
 		}
 		.card-divider {
-			animation: slideFromLeft .55s 0.3s forwards;
+			animation: slideFromLeft .8s 0.1s forwards;
 			opacity: 1;
 		}
 		.link-title {
-			animation: slideFromRight .55s 0.3s forwards;
+			animation: slideFromBottom .7s 0.1s forwards;
 			opacity: 1;
 			// pointer-events: auto;
 		}
@@ -135,19 +135,19 @@
 		.card-back {
 			opacity: 1;
 			.card-title {
-				animation: slideFromMidTop .55s 0s forwards;
+				animation: slideFromMidTop .7s 0s forwards;
 				// border-bottom: 1.5px solid $secondary-orange-light;
 			}
 			.card-text {
-				animation: slideFromMidBottom .55s 0s forwards;
+				animation: slideFromMidBottom .7s 0s forwards;
 			}
 		}
 		.card-divider {
-			animation: slideFromLeft .55s 0.3s forwards;
+			animation: slideFromLeft .9s 0.25s forwards;
 			opacity: 1;
 		}
 		.link-title {
-			animation: slideFromRight .55s 0.3s forwards;
+			animation: slideFromRight .8s 0.25s forwards;
 			opacity: 1;
 			// pointer-events: auto;
 		}
