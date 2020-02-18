@@ -1146,6 +1146,7 @@ button:focus {
   right: 0;
   transition: opacity 0.5s ease;
   width: 100%;
+  visibility: hidden;
   color: black;
   text-align: center;
 }
@@ -1241,12 +1242,10 @@ button:focus {
     font-size: 12px;
   }
 }
-.card-back .disabled-link {
-  pointer-events: none;
-}
 .card-back .link-title {
   opacity: 0;
   transition: opacity 2s ease 0.3s;
+  visibility: hidden;
   font-size: 16px;
 }
 @media screen and (min-width: 320px) {
@@ -1268,6 +1267,7 @@ button:focus {
 @media (hover: hover) {
   .card:hover .card-back {
     opacity: 1;
+    visibility: visible;
   }
   .card:hover .card-back .card-title {
     animation: slideFromMidTop 0.6s 0s forwards;
@@ -1282,11 +1282,13 @@ button:focus {
   .card:hover .link-title {
     animation: slideFromBottom 0.7s 0.1s forwards;
     opacity: 1;
+    visibility: visible;
   }
 }
 @media (hover: none), (hover: on-demand) {
   .card:hover .card-back {
     opacity: 1;
+    visibility: visible;
   }
   .card:hover .card-back .card-title {
     animation: slideFromMidTop 0.6s 0s forwards;
@@ -1301,6 +1303,7 @@ button:focus {
   .card:hover .link-title {
     animation: slideFromBottom 0.7s 0.1s forwards;
     opacity: 1;
+    visibility: visible;
   }
 }
 /* --- Slide Class for slide animation --- */

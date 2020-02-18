@@ -1,9 +1,6 @@
 //Libraries
 import React, { Component } from 'react';
 
-//Components
-// import Cardinfo from '../cardinfo/Cardinfo';
-
 class Card extends Component {
 	constructor(props) {
 		super(props);
@@ -11,9 +8,11 @@ class Card extends Component {
 		this.renderLink = this.renderLink.bind(this);
 	}
 	renderLink(link) {
-		if (link.length > 0)
+		if (
+			link.length > 0 //Check for valid link
+		)
 			return (
-				<a href={link} target="_blank" className="disabled-link">
+				<a href={link} target="_blank">
 					<p className="link-title">
 						CodePen Demo
 						<i className="link-icon fas fa-external-link-square-alt" />

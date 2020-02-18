@@ -38,6 +38,7 @@
 	// transition: height .5s ease;
 	transition: opacity .5s ease;
 	width: 100%;
+	visibility: hidden; //Disable links until hovered/clicked
 
 	color: black;
 	text-align: center;
@@ -82,7 +83,7 @@
 	.card-divider {
 		background-color: $secondary-orange-light;
 		height: 1.5px;
-		opacity: 0;
+		opacity: 0; //For transition fading
 		transition: opacity 2s ease 0.3s; //Needs to be synced with slideIn animation
 		width: 100%;
 	}
@@ -98,13 +99,10 @@
 		// @include fluid-type(margin-left, $min-width, $max-width, 5vw, 1vw);
 		// @include fluid-type(margin-right, $min-width, $max-width, 5vw, 1vw);
 	}
-	.disabled-link {
-		pointer-events: none;
-		// transition: pointer-events 2s ease 0.3s; //Needs to be synced with slideIn animation
-	}
 	.link-title {
 		opacity: 0;
 		transition: opacity 2s ease 0.3s; //Needs to be synced with slideIn animation
+		visibility: hidden; //Disable links until hovered/clicked
 		@include fluid-type(font-size, $min-width, $max-width, 16px, 16px);
 	}
 	.link-icon {
@@ -117,7 +115,8 @@
 @media (hover: hover) {
 	.card:hover {
 		.card-back {
-			opacity: 1;
+			opacity: 1; //For transition fading
+			visibility: visible; //Enable links
 			.card-title {
 				animation: slideFromMidTop .6s 0s forwards;
 			}
@@ -127,19 +126,20 @@
 		}
 		.card-divider {
 			animation: slideFromLeft .8s 0.1s forwards;
-			opacity: 1;
+			opacity: 1; //For transition fading
 		}
 		.link-title {
 			animation: slideFromBottom .7s 0.1s forwards;
-			opacity: 1;
-			// pointer-events: auto;
+			opacity: 1; //For transition fading
+			visibility: visible; //Enable links
 		}
 	}
 }
 @media (hover: none), (hover: on-demand) {
 	.card:hover {
 		.card-back {
-			opacity: 1;
+			opacity: 1; //For transition fading
+			visibility: visible; //Enable links
 			.card-title {
 				animation: slideFromMidTop .6s 0s forwards;
 			}
@@ -149,12 +149,12 @@
 		}
 		.card-divider {
 			animation: slideFromLeft .8s 0.1s forwards;
-			opacity: 1;
+			opacity: 1; //For transition fading
 		}
 		.link-title {
 			animation: slideFromBottom .7s 0.1s forwards;
-			opacity: 1;
-			// pointer-events: auto;
+			opacity: 1; //For transition fading
+			visibility: visible; //Enable links
 		}
 	}
 }
