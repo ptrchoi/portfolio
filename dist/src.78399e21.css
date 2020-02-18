@@ -1138,6 +1138,7 @@ button:focus {
   background-color: white;
   bottom: 0;
   height: 100%;
+  max-height: calc(.27 * 1200px);
   left: 0;
   opacity: 0;
   overflow: hidden;
@@ -1149,49 +1150,49 @@ button:focus {
   text-align: center;
 }
 .card-back p {
-  padding-top: 6px;
-  padding-right: 3px;
-  padding-bottom: 6px;
-  padding-left: 3px;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
 }
 @media screen and (min-width: 320px) {
   .card-back p {
-    padding-top: calc( 				6px + 12 * (100vw - 320px) / 880 			);
+    padding-top: calc( 				1rem + 0 * (100vw - 320px) / 672 			);
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 992px) {
   .card-back p {
-    padding-top: 18px;
-  }
-}
-@media screen and (min-width: 320px) {
-  .card-back p {
-    padding-right: calc( 				3px + 6 * (100vw - 320px) / 880 			);
-  }
-}
-@media screen and (min-width: 1200px) {
-  .card-back p {
-    padding-right: 9px;
+    padding-top: 1rem;
   }
 }
 @media screen and (min-width: 320px) {
   .card-back p {
-    padding-bottom: calc( 				6px + 12 * (100vw - 320px) / 880 			);
+    padding-right: calc( 				1rem + 0.5 * (100vw - 320px) / 672 			);
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 992px) {
   .card-back p {
-    padding-bottom: 18px;
+    padding-right: 1.5rem;
   }
 }
 @media screen and (min-width: 320px) {
   .card-back p {
-    padding-left: calc( 				3px + 6 * (100vw - 320px) / 880 			);
+    padding-bottom: calc( 				1rem + 0 * (100vw - 320px) / 672 			);
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 992px) {
   .card-back p {
-    padding-left: 9px;
+    padding-bottom: 1rem;
+  }
+}
+@media screen and (min-width: 320px) {
+  .card-back p {
+    padding-left: calc( 				1rem + 0.5 * (100vw - 320px) / 672 			);
+  }
+}
+@media screen and (min-width: 992px) {
+  .card-back p {
+    padding-left: 1.5rem;
   }
 }
 .card-back a:link,
@@ -1203,16 +1204,16 @@ button:focus {
 .card-back .card-title {
   color: #1b4664;
   font-weight: bold;
-  font-size: 7px;
+  font-size: 19px;
 }
 @media screen and (min-width: 320px) {
   .card-back .card-title {
-    font-size: calc( 				7px + 7 * (100vw - 320px) / 880 			);
+    font-size: calc( 				19px + -3 * (100vw - 320px) / 880 			);
   }
 }
 @media screen and (min-width: 1200px) {
   .card-back .card-title {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 .card-back .card-divider {
@@ -1225,15 +1226,14 @@ button:focus {
 .card-back .card-text {
   color: #1b4664;
   display: inline-block;
-  margin: 1vw 1vw;
   text-shadow: 1px 1px white;
   text-align: left;
   white-space: pre-line;
-  font-size: 5px;
+  font-size: 10.5px;
 }
 @media screen and (min-width: 320px) {
   .card-back .card-text {
-    font-size: calc( 				5px + 7 * (100vw - 320px) / 880 			);
+    font-size: calc( 				10.5px + 1.5 * (100vw - 320px) / 880 			);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1247,16 +1247,16 @@ button:focus {
 .card-back .link-title {
   opacity: 0;
   transition: opacity 2s ease 0.3s;
-  font-size: 8px;
+  font-size: 16px;
 }
 @media screen and (min-width: 320px) {
   .card-back .link-title {
-    font-size: calc( 				8px + 6 * (100vw - 320px) / 880 			);
+    font-size: calc( 				16px + 0 * (100vw - 320px) / 880 			);
   }
 }
 @media screen and (min-width: 1200px) {
   .card-back .link-title {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 .card-back .link-icon {

@@ -29,50 +29,51 @@ import screenWiki from '../../assets/project_wiki.png';
 const CARDS = [
 	{
 		projectId: 'project-1',
-		title: 'Single-page Application (SPA) Web Portfolio',
+		title: 'Single-page Application - Developer Portfolio (REACT)',
 		image: screenPortfolio,
 		link: '',
-		description: `A fully responsive, Single-page Application web portfolio with full-screen scrolling and dynamic elements throughout.
+		description: `A fully responsive, REACT Single-page Application (SPA) with full-screen scrolling and dynamic elements throughout.
 		
 		Features:
 		- REACT | ES6 | SCSS | CSS3 | HTML5
-		- Full-screen page scrolling (fullpage.js REACT library)
 		- CSS animated backgrounds, charts, and transitions
-		- Responsive scaling layouts, fonts, and page elements
-		- Persistent active-selection Nav-menu and modal mobile menu`
+		- Full-screen page scrolling (fullpage.js lib)
+		- Responsive scaling layouts, text, and page elements
+		- Active-selection Nav-menu and modal mobile menu`
 	},
 	{
 		projectId: 'project-2',
-		title: 'The 2017 Refresh Conference Website',
+		title: 'The 2017 Refresh Conference Website (Wordpress)',
 		image: screenRefresh,
 		link: 'https://codepen.io/ptrchoi/pen/JayyOP',
-		description: `A redesign and rebuild of the Refresh Conference Website for the 2017 annual conference.
+		description: `As part of a distributed remote team, I redesigned, rebuilt, and managed the Refresh Conference Website for the 2017 annual conference.
 		
-		Features:
-		- Wordpress | Jupiter 5 Theme | Visual Composer | HTML5
-		- Payment flow, Video & Photo Library, Speaker/images/bios, Interactive Calendar, Collapsing FAQ
-		- Database, site hosting, site staging, remote team, forms, backups
-		*	NOTE: the Refresh site has changed since 2017, particularly the content, but the site retains the overall 2017 design and structure`
+		Features & Responsibilities:
+
+		- Redesign and rebuild of the site from scratch, using Wordpress as the CMS to support frequent client content updates
+		- Design and flows that balanced the needs of new users (ie. About/FAQ/Media/Marketing/CTA’s) with users attending the conference (ie. Payment flow/Events Calendar/Speaker Bios/Sponsors)
+		- Note that the Refresh site has since changed, particularly the content, but the site retains the overall design from 2017`
 	},
 	{
 		projectId: 'project-3',
-		title: 'Single-page Application (SPA) Product Page',
+		title: 'Single-Page Application - Product Page (JS)',
 		image: screenSpa,
 		link: 'https://codepen.io/ptrchoi/pen/JayyOP',
-		description: `A Single Page Application product page, fully responsive, dynamic, and interactive with fluid transitions and animations.
+		description: `A Single Page Application (SPA) product page, fully responsive, dynamic, and interactive with fluid transitions and animations, built in pure Javascript.
 		
 		Features:
 		- vanilla JS | pure CSS | HTML5
+		- Responsive, scaling background video, text, and page elements
+		- Modal image gallery and Nav-menu
 		- Nested CSS Grid & Flex-box layouts
-		- Responsive, scaling background video, fonts, and page elements
-		- Modal image gallery and Nav-menu`
+		- Fictional product page based on content from guitarsalon.com`
 	},
 	{
 		projectId: 'project-4',
-		title: 'REACT Markdown Editor with Live Preview',
+		title: 'Markdown Editor with Live Preview (REACT)',
 		image: screenMarkdown,
 		link: 'https://codepen.io/ptrchoi/pen/rqPKJV',
-		description: `A real-time Markdown Previewer web app with a GitHub-flavored Markdown Editor, which renders HTML in a real-time Previewer.
+		description: `A GitHub-flavored Markdown Editor which renders HTML in a real-time, live Previewer.
 		
 		Features:
 		- REACT | ES6 | SCSS | CSS3 | HTML5
@@ -82,34 +83,34 @@ const CARDS = [
 	},
 	{
 		projectId: 'project-5',
-		title: 'Virtual REACT Drum Machine',
+		title: 'Virtual Drum Machine (REACT)',
 		image: screenDrum,
 		link: 'https://codepen.io/ptrchoi/pen/Xyrppy',
-		description: `A virtual Drum Machine app with touch and keyboard inputs, and multiple themed sound banks.
+		description: `A responsive REACT Drum Machine app that supports touch, mouse, and keyboard inputs, and features multiple sound banks themes.
 		
 		Features:
 		- REACT ES6 | SCSS | CSS3 | HTML5
 		- Functional programming, higher-order functions
 		- Advanced ES6 features
-		- Fully responsive with both touch and keyboard input support
-		- Multiple drum kit sound banks
+		- Fully responsive, supporting all input types
+		- Standard and Jazz drum kit sound banks
 		- Modular programming with React and SCSS components.`
 	},
 	{
 		projectId: 'project-6',
-		title: 'Technical Document',
+		title: 'Technical Document (JS)',
 		image: screenTech,
 		link: 'https://codepen.io/ptrchoi/pen/jvLoOQ',
-		description: `An example of a modern Technical Document page which adheres to Code Element Styling using VS Code’s site and content as a reference/mockup, this page was built from scratch ultilizing pure JS and CSS.
+		description: `An example of a modern Technical Document page which adheres to Code Element Styling. This page was built from scratch with pure JS and CSS, using VS Code’s site and content as a reference/mockup.
 		
 		Features:
 		- vanilla JS | pure CSS | HTML5
-		- Fully responsive with scaling fonts and page elements
+		- Fully responsive with scaling text and page elements
 		- Persistent active-selection Nav-menu and modal mobile menu`
 	},
 	{
 		projectId: 'project-7',
-		title: 'Wikipedia Viewer',
+		title: 'Wikipedia Viewer (JS + Bootstrap)',
 		image: screenWiki,
 		link: 'https://codepen.io/ptrchoi/pen/ZWLMzq',
 		description: `A Wikipedia Viewer app that displays Wikipedia search results in a dynamic masonry card layout.
@@ -117,47 +118,34 @@ const CARDS = [
 		Features:
 		- JS | jQuery | CSS3 | Bootstrap | HTML5
 		- Wikipedia API
-		- Masonry card grid layout (masonry-layout)
-		- Search and Randomized results`
+		- Masonry card grid layout (masonry-layout)`
 	},
 	{
 		projectId: 'project-8',
-		title: 'Twitch.tv Stream Tracker',
-		image: screenTwitch,
-		link: 'https://codepen.io/ptrchoi/pen/JXWOdL',
-		description: `A Twitch.tv stream tracking app that displays the live status of followed channel streams, which can be clicked to view the live streams.
-		
-		Features:
-		- vanilla JS | pure CSS | HTML5
-		- Twitch.tv API
-		- Fully responsive with scaling fonts and page elements
-		`
-	},
-	{
-		projectId: 'project-9',
-		title: 'Material REACT Calculator',
+		title: 'Materal Design Calculator (REACT)',
 		image: screenCalc,
 		link: 'https://codepen.io/ptrchoi/pen/QJRpvQ',
-		description: `A REACT Calculator app with a clean, responsive, Material design theme, supporting touch and keyboard inputs.
+		description: `A Material-themed REACT Calculator app that is fully responsive and supports touch and keyboard inputs.
 		
 		Features:
-		- JS | ES6 | REACT | jQuery | SCSS | CSS3 | Node.js | Webpack
+		- JS | ES6 | REACT | jQuery | SCSS | CSS3
 		- Mobile-first, responsive design with font-size scaling
 		- Touch as well as mouse and keyboard input
 		- Functional programming, higher-order functions, advanced ES6 features`
 	},
 	{
-		projectId: 'project-10',
-		title: 'Pomodoro Clock',
+		projectId: 'project-9',
+		title: 'Pomodoro Clock (JS + Bootstrap)',
 		image: screenPomodoro,
 		link: 'https://codepen.io/ptrchoi/pen/RaQdya',
-		description: `A modern Pomodoro Clock app for time management/timeboxing, with customizable work and rest session times.
+		description: `A customizable Pomodoro Clock app for time management/time-boxing.
 		
 		Features:
-		- vanilla JS | pure CSS | HTML5`
+		- JS | jQuery | CSS3 | Bootstrap | HTML5
+		- Customizable work and rest session times`
 	},
 	{
-		projectId: 'project-11',
+		projectId: 'project-10',
 		title: 'Classic Simon Game',
 		image: screenSimon,
 		link: 'https://codepen.io/ptrchoi/pen/wGXNKm',
@@ -169,11 +157,11 @@ const CARDS = [
 		- Custom assets`
 	},
 	{
-		projectId: 'project-12',
+		projectId: 'project-11',
 		title: 'Tic-Tac-Toe Game',
 		image: screenTictac,
 		link: 'https://codepen.io/ptrchoi/pen/zqjzaL',
-		description: `A fun twist on the classic game of Tic-Tac-Toe played against computer AI that responds dynamically to game results.
+		description: `A fully interactive version of the classic game of Tic-Tac-Toe, played against computer AI that responds dynamically to game results.
 		
 		Features:
 		- vanilla JS | pure CSS | HTML5
@@ -181,32 +169,43 @@ const CARDS = [
 		- Custom assets`
 	},
 	{
-		projectId: 'project-13',
+		projectId: 'project-12',
 		title: 'REACT Quote Generator',
 		image: screenQuote,
 		link: 'https://codepen.io/ptrchoi/pen/mQEMXv',
-		description: `A Quote Generator app that displays inspirational-themed quotes and full-screen, responsive photography.
+		description: `A Quote Generator app that displays inspirational-themed quotes with full-screen, responsive hi-res images.
 		
 		Features:
-		- JS | ES6 | REACT | jQuery | SCSS | CSS3 | Node.js | Webpack
+		- REACT | jQuery | SCSS | CSS3
 		- Forismatic and Unsplash API’s
-		- Responsive design with full-screen scaling background images and responsive font-size scaling, with transitional animation.
-		- Theme-filtered background images, randomly generated from Unsplash's image collections.
-		- Controls for manual or auto-looping viewing, quote-sharing via tweet and application information modal overlay`
+		- Responsive design with full-screen scaling background images and responsive font-size scaling
+		- Theme-filtered background images, randomly generated from Unsplash's image collections
+		- Controls for manual or auto-looping and sharing via tweet button`
 	},
 	{
-		projectId: 'project-14',
-		title: 'Dynamic Weather App',
+		projectId: 'project-13',
+		title: 'Dynamic Weather App (JS + Bootstrap)',
 		image: screenWeather,
 		link: 'https://codepen.io/ptrchoi/pen/grwMJv',
-		description: `A Weather app that leverages a device’s HTML5 Geolocation to generate and display real-time local weather conditions with corresponding full-screen, responsive scaling background weather photography.
+		description: `A Weather app that leverages a device’s HTML5 Geolocation to generate and display real-time local weather conditions with corresponding full-screen, responsive scaling background weather images.
 		
 		Features:
 		- vanilla JS | CSS3 | Bootstrap | HTML5
 		- OpenWeatherMap API
 		- HTML5 device geolocation
-		- Dynamic weather and time-of-day background images
-		- Random Major City generation`
+		- Full-screen dynamic weather and time-of-day background images
+		- Current weather from major cities around the world`
+	},
+	{
+		projectId: 'project-14',
+		title: 'Twitch.tv Stream Tracker (JS)',
+		image: screenTwitch,
+		link: 'https://codepen.io/ptrchoi/pen/JXWOdL',
+		description: `A Twitch.tv stream tracking app that displays the live status of followed channels, which can be selected to view live streams.
+		
+		Features:
+		- JS | jQuery | pure CSS | HTML5
+		- Twitch.tv API`
 	}
 ];
 
