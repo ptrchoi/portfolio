@@ -29,7 +29,8 @@ class Card extends Component {
 				</div>
 				<div className="card-back">
 					<p className="card-title"> {title} </p>
-					<div className="card-divider" />
+					{/* <div className="card-divider" /> */}
+					<hr className="card-divider" />
 					<p className="card-text">{description}</p>
 					{this.renderLink(link)}
 				</div>

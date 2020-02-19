@@ -1217,9 +1217,8 @@ button:focus {
     font-size: 16px;
   }
 }
-.card-back .card-divider {
-  background-color: #ff844b;
-  height: 1.5px;
+.card-back hr.card-divider {
+  border-top: 1px solid #ff844b;
   opacity: 0;
   transition: opacity 2s ease 0.3s;
   width: 100%;

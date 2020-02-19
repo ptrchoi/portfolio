@@ -80,9 +80,8 @@
 		// @include fluid-type(font-size, $min-width, $max-width, 7px, 18px);
 		@include fluid-type(font-size, $min-width, $max-width, 19px, 16px);
 	}
-	.card-divider {
-		background-color: $secondary-orange-light;
-		height: 1.5px;
+	hr.card-divider {
+		border-top: 1px solid $secondary-orange-light;
 		opacity: 0; //For transition fading
 		transition: opacity 2s ease 0.3s; //Needs to be synced with slideIn animation
 		width: 100%;
