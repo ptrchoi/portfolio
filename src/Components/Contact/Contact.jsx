@@ -15,19 +15,23 @@ class Contact extends Component {
 		let { size, height } = this.props;
 		return (
 			<div style={{ height: height }} className="section-wrapper contact-wrapper">
-				<div className="section-header">
-					<h1>Contact</h1>
-				</div>
-				<div id="contactSection" className="contact slide-contact-right">
-					<i className="fab fa-codepen logo-icon" />
-					<i className="fab fa-github logo-icon" />
-					<i className="fab fa-free-code-camp logo-icon" />
-					<i className="fab fa-linkedin logo-icon" />
-				</div>
-				<div id="contactForm" className="contact slide-contact-left">
-					<span>CONTACT</span>
-					<input type="text" />
-					<button>SUBMIT</button>
+				<div className="content-layer">
+					<div className="section-header">
+						<h1>Contact</h1>
+					</div>
+					<div id="contactIcons" className="contact slide-contact-right">
+						<i className="fab fa-codepen logo-icon" />
+						<i className="fab fa-github logo-icon" />
+						<i className="fab fa-free-code-camp logo-icon" />
+						<i className="fab fa-linkedin logo-icon" />
+					</div>
+					<form id="contactForm" action="" className="contact slide-contact-left">
+						<label id="emailLabel" for="userEmail">
+							CONTACT
+						</label>
+						<input id="userEmail" type="email" placeholder="Enter your email" />
+						<input id="submitButton" type="submit" value="Submit" />
+					</form>
 				</div>
 				<div className="confetti blur">
 					<Confetti

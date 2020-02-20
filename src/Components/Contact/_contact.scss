@@ -7,12 +7,10 @@
 	width: 100%;
 }
 .logo-icon {
-	@include fluid-type(font-size, $min-width, $max-width, 40px, 84px);
-	// font-size: 5rem;
+	@include fluid-type(font-size, $min-width, $max-width, 40px, 72px);
 	padding: 10px;
-	z-index: $above-confetti-layer;
 }
-#contactSection {
+#contactIcons {
 	display: flex;
 	justify-content: space-evenly;
 	margin: auto;
@@ -20,15 +18,28 @@
 	width: 50%;
 }
 #contactForm {
-	display: flex;
-	justify-content: center;
-	margin: auto;
-	padding: 3vh 20px 20px 20px;
-	width: 50%;
-	button,
-	input,
-	span {
-		z-index: $above-confetti-layer;
+	display: grid;
+	// justify-content: center;
+	justify-items: center;
+	padding-top: 3vh;
+
+	#emailLabel {
+		@include fluid-type(font-size, $min-width, $max-width, 16px, 26px);
+		margin-top: 12px;
+	}
+	#userEmail {
+		@include fluid-type(font-size, $min-width, $max-width, 12px, 18px);
+		margin-top: 30px;
+		padding: 5px 15px 5px 15px;
+
+		width: 12rem;
+		max-width: 300px;
+	}
+	#submitButton {
+		@include fluid-type(font-size, $min-width, $max-width, 14px, 22px);
+		background-color: #fff;
+		margin-top: 16px;
+		padding: 5px 15px 5px 15px;
 	}
 }
 .contact {

@@ -22,6 +22,9 @@ body {
 	text-align: center;
 	z-index: $above-confetti-layer;
 }
+.content-layer {
+	z-index: $above-confetti-layer;
+}
 .section-header.slide-in-from-left {
 	animation: slideFromLeft .75s .1s forwards;
 }

@@ -2,17 +2,11 @@
 .card {
 	background-color: $background-white;
 	font-family: 'Livvic', sans-serif;
-	// height: calc(.4 * 84vw); //Intentionally basing card height relative to width, to maintain porportions
-	// height: calc(.24 * 84vw); //Intentionally basing card height relative to width, to maintain porportions
 	height: 100vw; //Intentionally basing card height relative to width, to maintain porportions
 	opacity: 0;
 	position: relative;
-	// width: calc(.5 * 84vw);
-	// width: calc(.3 * 84vw);
 	width: 100vw;
 	z-index: $above-confetti-layer;
-	// max-height: calc(.3 * #{$max-width});
-	// max-width: calc(.4 * #{$max-width});
 	max-height: calc(.27 * #{$max-width});
 	max-width: calc(.36 * #{$max-width});
 }
@@ -35,28 +29,13 @@
 	overflow: hidden;
 	position: absolute;
 	right: 0;
-	// transition: height .5s ease;
 	transition: opacity .5s ease;
 	width: 100%;
 	visibility: hidden; //Disable links until hovered/clicked
 
 	color: black;
 	text-align: center;
-	// top: 50%;
-	// transform: translate(-50%, -50%); //for positioning not animation
-	// width: 100%;
 	p {
-		// border: solid 1px red;
-		// padding: 6px 3px 6px 3px;
-		// padding: 2vh 1vw 2vh 1vw;
-		// @include fluid-type(padding-top, $min-width, $max-width, 6px, 18px);
-		// @include fluid-type(padding-right, $min-width, $max-width, 3px, 9px);
-		// @include fluid-type(padding-bottom, $min-width, $max-width, 6px, 18px);
-		// @include fluid-type(padding-left, $min-width, $max-width, 3px, 9px);
-		// @include fluid-type(padding-top, $min-width, $large-screen-breakpoint, 4vw, -18vw);
-		// @include fluid-type(padding-right, $min-width, $large-screen-breakpoint, 6vw, -26vw);
-		// @include fluid-type(padding-bottom, $min-width, $large-screen-breakpoint, 4vw, -14vw);
-		// @include fluid-type(padding-left, $min-width, $large-screen-breakpoint, 6vw, -26vw);
 		@include fluid-type(padding-top, $min-width, $large-screen-breakpoint, 1rem, 1rem);
 		@include fluid-type(padding-right, $min-width, $large-screen-breakpoint, 1rem, 1.5rem);
 		@include fluid-type(padding-bottom, $min-width, $large-screen-breakpoint, 1rem, 1rem);
@@ -69,15 +48,8 @@
 		text-decoration: none;
 	}
 	.card-title {
-		// animation: slideFromTop .55s 0s forwards;
-		// transition: animation;
-		// transition: border-bottom 2s ease;
-
-		// border-bottom: 1.5px solid $secondary-orange-light;
-		// border-bottom: none;
 		color: $gap-blue;
 		font-weight: bold;
-		// @include fluid-type(font-size, $min-width, $max-width, 7px, 18px);
 		@include fluid-type(font-size, $min-width, $max-width, 19px, 16px);
 	}
 	hr.card-divider {
@@ -89,14 +61,10 @@
 	.card-text {
 		color: $gap-blue;
 		display: inline-block;
-		// margin: 4vw 4vw;
 		text-shadow: 1px 1px rgb(255, 255, 255);
 		text-align: left;
 		white-space: pre-line;
-		// @include fluid-type(font-size, $min-width, $max-width, 5px, 16px);
 		@include fluid-type(font-size, $min-width, $max-width, 10.5px, 12px);
-		// @include fluid-type(margin-left, $min-width, $max-width, 5vw, 1vw);
-		// @include fluid-type(margin-right, $min-width, $max-width, 5vw, 1vw);
 	}
 	.link-title {
 		opacity: 0;
