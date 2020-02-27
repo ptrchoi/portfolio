@@ -5,6 +5,7 @@
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.16",
     "braces": "^2.3.2",
+    "firebase": "^7.9.1",
     "jquery": "^3.4.1",
     "node-pre-gyp": "^0.13.0",
     "react": "^16.10.2",
