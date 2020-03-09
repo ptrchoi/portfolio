@@ -4,19 +4,16 @@
 		list-style-type: none;
 	}
 	a {
-		color: white; //TEMP - to be defined in Variables
-		// font-weight: bold;
+		color: $white-text;
 		text-decoration: none;
 	}
 	:active {
-		// color: #f4511e; //TEMP - to be defined in Variables
-		color: rgb(251, 227, 69);
+		color: $highlight-yellow;
 		text-shadow: 1px 1px rgb(0, 0, 0);
 	}
 }
 .active-link a {
-	// color: #f4511e; //TEMP - to be defined in Variables
-	color: rgb(251, 227, 69);
+	color: $highlight-yellow;
 	text-shadow: 1px 1px rgb(0, 0, 0);
 }
 

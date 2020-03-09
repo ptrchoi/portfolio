@@ -11,6 +11,7 @@ class Contact extends Component {
 		super();
 
 		this.state = {
+			savedEmail: '',
 			comments: '',
 			email: ''
 		};
@@ -27,6 +28,7 @@ class Contact extends Component {
 	handleSubmit(e) {
 		e.preventDefault();
 
+		// Test for successful save to Firebase db
 		let dataStored = new Promise((resolve, reject) => {
 			firebase.firestore().collection('visitors').add({
 				comments: this.state.comments,
@@ -48,6 +50,7 @@ class Contact extends Component {
 
 		// Reset state
 		this.setState({
+			savedEmail: this.state.email,
 			comments: '',
 			email: ''
 		});
@@ -67,7 +70,9 @@ class Contact extends Component {
 						<i className="fab fa-linkedin logo-icon" />
 					</div>
 					<div id="notificationMsg" className="element-off">
-						<span>Thank you {this.state.email} for visiting!</span>
+						<span>
+							Thanks for visiting <span id="savedEmail">{this.state.savedEmail}</span>!
+						</span>
 					</div>
 					<form id="contactForm" onSubmit={this.handleSubmit} className="contact slide-contact-left">
 						<label id="emailLabel" for="userEmail">

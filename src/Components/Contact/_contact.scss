@@ -59,6 +59,9 @@
 	text-align: center;
 	z-index: $above-confetti-layer;
 }
+#savedEmail {
+	color: $highlight-yellow;
+}
 .element-off {
 	display: none;
 	visibility: hidden;
