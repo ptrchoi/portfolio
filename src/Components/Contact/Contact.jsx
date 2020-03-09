@@ -1,16 +1,10 @@
 //Libraries
 import React, { Component } from 'react';
 import firebase from '/firebase';
+import $ from 'jquery';
 
 //Components
 import Confetti from '../confetti/Confetti';
-
-/**
- * React Class Component, renders a content section.
- * @function
- * @param {object} props - { height }.
- * @return {JSX.Element} - Rendered component.
- */
 
 class Contact extends Component {
 	constructor() {
@@ -20,8 +14,8 @@ class Contact extends Component {
 			comments: '',
 			email: ''
 		};
-		this.handleSubmit = this.handleSubmit.bind(this);
 		this.updateInput = this.updateInput.bind(this);
+		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 	updateInput(e) {
 		e.preventDefault();
@@ -33,10 +27,24 @@ class Contact extends Component {
 	handleSubmit(e) {
 		e.preventDefault();
 
-		firebase.firestore().collection('visitors').add({
-			comments: this.state.comments,
-			email: this.state.email
+		let dataStored = new Promise((resolve, reject) => {
+			firebase.firestore().collection('visitors').add({
+				comments: this.state.comments,
+				email: this.state.email
+			});
+			resolve(this.state.email);
 		});
+
+		dataStored
+			.then(function() {
+				$('#notificationMsg').removeClass('element-off');
+				$('#notificationMsg').addClass('element-on');
+				$('#contactForm').addClass('element-off');
+			})
+			.catch((reason) => {
+				// State will be reset below
+				console.log('Data storage rejected promise because: ' + reason);
+			});
 
 		// Reset state
 		this.setState({
@@ -58,9 +66,12 @@ class Contact extends Component {
 						<i className="fab fa-free-code-camp logo-icon" />
 						<i className="fab fa-linkedin logo-icon" />
 					</div>
+					<div id="notificationMsg" className="element-off">
+						<span>Thank you {this.state.email} for visiting!</span>
+					</div>
 					<form id="contactForm" onSubmit={this.handleSubmit} className="contact slide-contact-left">
 						<label id="emailLabel" for="userEmail">
-							CONTACT
+							LET'S CONNECT
 						</label>
 						<textarea
 							id="userComments"
@@ -68,7 +79,7 @@ class Contact extends Component {
 							type="text"
 							value={this.state.comments}
 							onChange={this.updateInput}
-							placeholder="Enter a brief message"
+							placeholder="Your message"
 						/>
 						<input
 							id="userEmail"
@@ -76,7 +87,7 @@ class Contact extends Component {
 							type="email"
 							value={this.state.email}
 							onChange={this.updateInput}
-							placeholder="Enter your email"
+							placeholder="Your email"
 						/>
 						<input id="submitButton" type="submit" value="Submit" />
 					</form>
