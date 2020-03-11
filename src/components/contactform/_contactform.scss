@@ -1,0 +1,61 @@
+#contactForm {
+	display: grid;
+	justify-items: center;
+	padding-top: 3vh;
+
+	#emailLabel {
+		@include fluid-type(font-size, $min-width, $max-width, 16px, 26px);
+		margin-top: 12px;
+	}
+	#userComments {
+		@include fluid-type(font-size, $min-width, $max-width, 12px, 18px);
+		margin-top: 30px;
+		padding: 5px 15px 5px 15px;
+
+		height: 8rem;
+		width: 20rem;
+		max-height: 300px;
+		max-width: 380px;
+	}
+	#userEmail {
+		@include fluid-type(font-size, $min-width, $max-width, 12px, 18px);
+		margin-top: 10px;
+		padding: 5px 15px 5px 15px;
+
+		width: 20rem;
+		max-width: 380px;
+	}
+	#submitButton {
+		@include fluid-type(font-size, $min-width, $max-width, 14px, 22px);
+		background-color: rgba(27, 70, 100, .6);
+		border: solid 0.05vw rgb(152, 217, 238);
+		color: rgb(152, 217, 238);
+		cursor: pointer;
+		height: 2.8rem;
+		margin-top: 18px;
+		text-shadow: 1px 1px rgb(0, 0, 0);
+		width: 10rem;
+		max-width: 380px;
+		z-index: 100;
+	}
+}
+
+/* --- If hover-capable device, do overlay on hover --- */
+@media (hover: hover) {
+	#contactForm {
+		#submitButton:hover {
+			background-color: rgba(152, 217, 238, .7);
+			border: solid 0.2vw white;
+			color: white;
+		}
+	}
+}
+//If touch-capable device, do overlay on touch/click
+@media (any-pointer: coarse) {
+	#contactForm {
+		#submitButton:active {
+			background-color: rgba(238, 238, 238, 0.324); //TEMP - to be defined in Variables
+			color: black;
+		}
+	}
+}

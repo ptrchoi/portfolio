@@ -47,13 +47,8 @@ button:focus {
 @media (hover: hover) {
 	#welcomeBtn:hover {
 		background-color: rgba(152, 217, 238, .7);
-		// background-color: rgba(140, 140, 140, 0.7);
-		// background-color: rgba(27,70,100,.6);
-		// border: solid 0.4vw rgb(27,70,100);
 		border: solid 0.2vw white;
-		// color: rgb(251,227,69);
 		color: white;
-		// color: rgb(152, 217, 238);
 	}
 }
 //If touch-capable device, do overlay on touch/click

@@ -5,36 +5,25 @@ import $ from 'jquery';
 
 //Components
 import Confetti from '../confetti/Confetti';
+import Contactform from '../contactform/Contactform';
 
 class Contact extends Component {
 	constructor() {
 		super();
 
 		this.state = {
-			savedEmail: '',
-			comments: '',
-			email: ''
+			savedEmail: ''
 		};
-		this.updateInput = this.updateInput.bind(this);
-		this.handleSubmit = this.handleSubmit.bind(this);
+		this.handleForm = this.handleForm.bind(this);
 	}
-	updateInput(e) {
-		e.preventDefault();
-
-		this.setState({
-			[e.target.name]: e.target.value
-		});
-	}
-	handleSubmit(e) {
-		e.preventDefault();
-
+	handleForm(comments, email) {
 		// Test for successful save to Firebase db
 		let dataStored = new Promise((resolve, reject) => {
 			firebase.firestore().collection('visitors').add({
-				comments: this.state.comments,
-				email: this.state.email
+				comments: comments,
+				email: email
 			});
-			resolve(this.state.email);
+			resolve(email);
 		});
 
 		dataStored
@@ -48,11 +37,8 @@ class Contact extends Component {
 				console.log('Data storage rejected promise because: ' + reason);
 			});
 
-		// Reset state
 		this.setState({
-			savedEmail: this.state.email,
-			comments: '',
-			email: ''
+			savedEmail: email
 		});
 	}
 	render(props) {
@@ -74,7 +60,10 @@ class Contact extends Component {
 							Thanks for visiting <span id="savedEmail">{this.state.savedEmail}</span>!
 						</span>
 					</div>
-					<form id="contactForm" onSubmit={this.handleSubmit} className="contact slide-contact-left">
+					<div id="contactForm" className="contact slide-contact-left">
+						<Contactform submitForm={this.handleForm} />
+					</div>
+					{/* <form id="contactForm" onSubmit={this.handleSubmit}>
 						<label id="emailLabel" for="userEmail">
 							LET'S CONNECT
 						</label>
@@ -82,9 +71,12 @@ class Contact extends Component {
 							id="userComments"
 							name="comments"
 							type="text"
+							resize="none"
+							wrap="hard"
+							maxlength="240"
 							value={this.state.comments}
 							onChange={this.updateInput}
-							placeholder="Your message"
+							placeholder="Your message (240 max chars)"
 						/>
 						<input
 							id="userEmail"
@@ -93,9 +85,12 @@ class Contact extends Component {
 							value={this.state.email}
 							onChange={this.updateInput}
 							placeholder="Your email"
+							required
 						/>
-						<input id="submitButton" type="submit" value="Submit" />
-					</form>
+						<button id="submitButton" type="submit" value="Submit">
+							submit
+						</button>
+					</form> */}
 				</div>
 				<div className="confetti blur">
 					<Confetti
