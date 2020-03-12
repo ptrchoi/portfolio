@@ -27,9 +27,9 @@
 }
 #welcomeBtn {
 	@include fluid-type(font-size, $min-width, $max-width, 12px, 32px);
-	background-color: rgba(27, 70, 100, .6);
-	border: solid 0.05vw rgb(152, 217, 238);
-	color: rgb(152, 217, 238);
+	background-color: $button-bg-blue;
+	border: solid 0.05vw $button-border;
+	color: $button-text-color;
 	cursor: pointer;
 	height: 6vh;
 	margin-top: 5vh;
@@ -46,16 +46,16 @@ button:focus {
 //If hover-capable device, do overlay on hover
 @media (hover: hover) {
 	#welcomeBtn:hover {
-		background-color: rgba(152, 217, 238, .7);
-		border: solid 0.2vw white;
-		color: white;
+		background-color: $button-hover-bg-blue;
+		border: solid 0.2vw $button-hover-border;
+		color: $button-hover-text-color;
 	}
 }
 //If touch-capable device, do overlay on touch/click
 @media (any-pointer: coarse) {
 	#welcomeBtn:active {
-		background-color: rgba(238, 238, 238, 0.324); //TEMP - to be defined in Variables
-		color: black;
+		background-color: $button-active-bg-gray;
+		color: $button-active-text-color;
 	}
 }
 

@@ -47,10 +47,10 @@ class Contactform extends Component {
 						type="text"
 						resize="none"
 						wrap="hard"
-						maxlength="240"
+						maxlength="220"
 						value={this.state.comments}
 						onChange={this.updateInput}
-						placeholder="Your message (240 max chars)"
+						placeholder="Your message"
 					/>
 					<input
 						id="userEmail"
