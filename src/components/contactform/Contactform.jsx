@@ -63,7 +63,7 @@ class Contactform extends Component {
 						required
 					/>
 					<button id="submitButton" type="submit" value="Submit">
-						submit
+						Submit
 					</button>
 				</form>
 			</div>

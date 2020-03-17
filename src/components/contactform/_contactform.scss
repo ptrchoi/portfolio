@@ -10,7 +10,7 @@
 	#userComments {
 		@include fluid-type(font-size, $min-width, $max-width, 12px, 18px);
 		height: 8rem;
-		margin-top: 30px;
+		margin-top: 10px;
 		padding: 5px 15px 5px 15px;
 		width: 20rem;
 		max-height: 300px;
@@ -18,7 +18,7 @@
 	}
 	#userEmail {
 		@include fluid-type(font-size, $min-width, $max-width, 12px, 18px);
-		margin-top: 10px;
+		margin-top: 2px;
 		padding: 5px 15px 5px 15px;
 		width: 20rem;
 		max-width: 380px;
@@ -29,10 +29,10 @@
 		border: solid 0.05vw $button-border;
 		color: $button-text-color;
 		cursor: pointer;
-		height: 2.8rem;
-		margin-top: 18px;
+		height: 2.4rem;
+		margin-top: 4px;
 		text-shadow: 1px 1px rgb(0, 0, 0);
-		width: 10rem;
+		width: 20rem;
 		max-width: 380px;
 		z-index: 100;
 	}
