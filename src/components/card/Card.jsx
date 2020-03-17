@@ -2,26 +2,8 @@
 import React, { Component } from 'react';
 
 class Card extends Component {
-	constructor(props) {
-		super(props);
-
-		this.renderLink = this.renderLink.bind(this);
-	}
-	renderLink(link) {
-		if (
-			link.length > 0 //Check for valid link
-		)
-			return (
-				<a href={link} target="_blank">
-					<p className="link-title">
-						CodePen Demo
-						<i className="link-icon fas fa-external-link-square-alt" />
-					</p>
-				</a>
-			);
-	}
 	render() {
-		const { projectId, title, image, link, description } = this.props.card;
+		const { projectId, title, image, website, firebase, codepen, description } = this.props.card;
 		return (
 			<div id={projectId} className="card">
 				<div className="card-front">
@@ -31,7 +13,32 @@ class Card extends Component {
 					<p className="card-title"> {title} </p>
 					<hr className="card-divider" />
 					<p className="card-text">{description}</p>
-					{this.renderLink(link)}
+					<div className="card-links">
+						{website.length > 0 && (
+							<a href={website} target="_blank">
+								<p className="link-title">
+									Visit Website
+									<i className="link-icon fas fa-external-link-square-alt" />
+								</p>
+							</a>
+						)}
+						{firebase.length > 0 && (
+							<a href={website} target="_blank">
+								<p className="link-title">
+									Firebase Demo
+									<i className="link-icon fas fa-external-link-square-alt" />
+								</p>
+							</a>
+						)}
+						{codepen.length > 0 && (
+							<a href={codepen} target="_blank">
+								<p className="link-title">
+									CodePen Demo
+									<i className="link-icon fas fa-external-link-square-alt" />
+								</p>
+							</a>
+						)}
+					</div>
 				</div>
 			</div>
 		);

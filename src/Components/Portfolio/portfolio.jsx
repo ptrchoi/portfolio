@@ -31,7 +31,9 @@ const CARDS = [
 		projectId: 'project-1',
 		title: 'Single-page Application - Developer Portfolio (REACT)',
 		image: screenPortfolio,
-		link: '',
+		website: '',
+		firebase: '',
+		codepen: '',
 		description: `A fully responsive, REACT Single-page Application (SPA) with full-screen scrolling and dynamic elements throughout.
 		
 		Features:
@@ -45,7 +47,9 @@ const CARDS = [
 		projectId: 'project-2',
 		title: 'The 2017 Refresh Conference Website (Wordpress)',
 		image: screenRefresh,
-		link: 'https://codepen.io/ptrchoi/pen/JayyOP',
+		website: 'https://therefreshconference.org/',
+		firebase: '',
+		codepen: '',
 		description: `As part of a distributed remote team, I redesigned, rebuilt, and managed the Refresh Conference Website for the 2017 annual conference.
 		
 		Features & Responsibilities:
@@ -58,7 +62,9 @@ const CARDS = [
 		projectId: 'project-3',
 		title: 'Single-Page Application - Product Page (JS)',
 		image: screenSpa,
-		link: 'https://codepen.io/ptrchoi/pen/JayyOP',
+		website: '',
+		firebase: '',
+		codepen: 'https://codepen.io/ptrchoi/pen/JayyOP',
 		description: `A Single Page Application (SPA) product page, fully responsive, dynamic, and interactive with fluid transitions and animations, built in pure Javascript.
 		
 		Features:
@@ -72,7 +78,9 @@ const CARDS = [
 		projectId: 'project-4',
 		title: 'Markdown Editor with Live Preview (REACT)',
 		image: screenMarkdown,
-		link: 'https://codepen.io/ptrchoi/pen/rqPKJV',
+		website: '',
+		firebase: '',
+		codepen: 'https://codepen.io/ptrchoi/pen/rqPKJV',
 		description: `A GitHub-flavored Markdown Editor which renders HTML in a real-time, live Previewer.
 		
 		Features:
@@ -85,7 +93,9 @@ const CARDS = [
 		projectId: 'project-5',
 		title: 'Virtual Drum Machine (REACT)',
 		image: screenDrum,
-		link: 'https://codepen.io/ptrchoi/pen/Xyrppy',
+		website: '',
+		firebase: '',
+		codepen: 'https://codepen.io/ptrchoi/pen/Xyrppy',
 		description: `A responsive REACT Drum Machine app that supports touch, mouse, and keyboard inputs, and features multiple sound banks themes.
 		
 		Features:
@@ -100,7 +110,9 @@ const CARDS = [
 		projectId: 'project-6',
 		title: 'Technical Document (JS)',
 		image: screenTech,
-		link: 'https://codepen.io/ptrchoi/pen/jvLoOQ',
+		website: '',
+		firebase: '',
+		codepen: 'https://codepen.io/ptrchoi/pen/jvLoOQ',
 		description: `An example of a modern Technical Document page which adheres to Code Element Styling. This page was built from scratch with pure JS and CSS, using VS Code’s site and content as a reference/mockup.
 		
 		Features:
@@ -112,7 +124,9 @@ const CARDS = [
 		projectId: 'project-7',
 		title: 'Wikipedia Viewer (JS + Bootstrap)',
 		image: screenWiki,
-		link: 'https://codepen.io/ptrchoi/pen/ZWLMzq',
+		website: '',
+		firebase: '',
+		codepen: 'https://codepen.io/ptrchoi/pen/ZWLMzq',
 		description: `A Wikipedia Viewer app that displays Wikipedia search results in a dynamic masonry card layout.
 		
 		Features:
@@ -124,7 +138,9 @@ const CARDS = [
 		projectId: 'project-8',
 		title: 'Materal Design Calculator (REACT)',
 		image: screenCalc,
-		link: 'https://codepen.io/ptrchoi/pen/QJRpvQ',
+		website: '',
+		firebase: '',
+		codepen: 'https://codepen.io/ptrchoi/pen/QJRpvQ',
 		description: `A Material-themed REACT Calculator app that is fully responsive and supports touch and keyboard inputs.
 		
 		Features:
@@ -137,7 +153,9 @@ const CARDS = [
 		projectId: 'project-9',
 		title: 'Pomodoro Clock (JS + Bootstrap)',
 		image: screenPomodoro,
-		link: 'https://codepen.io/ptrchoi/pen/RaQdya',
+		website: '',
+		firebase: '',
+		codepen: 'https://codepen.io/ptrchoi/pen/RaQdya',
 		description: `A customizable Pomodoro Clock app for time management/time-boxing.
 		
 		Features:
@@ -148,7 +166,9 @@ const CARDS = [
 		projectId: 'project-10',
 		title: 'Classic Simon Game',
 		image: screenSimon,
-		link: 'https://codepen.io/ptrchoi/pen/wGXNKm',
+		website: '',
+		firebase: '',
+		codepen: 'https://codepen.io/ptrchoi/pen/wGXNKm',
 		description: `A fully functional version of the classic game of Simon with authentic aesthetics, sound effects, and features.
 		
 		Features:
@@ -160,7 +180,9 @@ const CARDS = [
 		projectId: 'project-11',
 		title: 'Tic-Tac-Toe Game',
 		image: screenTictac,
-		link: 'https://codepen.io/ptrchoi/pen/zqjzaL',
+		website: '',
+		firebase: '',
+		codepen: 'https://codepen.io/ptrchoi/pen/zqjzaL',
 		description: `A fully interactive version of the classic game of Tic-Tac-Toe, played against computer AI that responds dynamically to game results.
 		
 		Features:
@@ -172,7 +194,9 @@ const CARDS = [
 		projectId: 'project-12',
 		title: 'REACT Quote Generator',
 		image: screenQuote,
-		link: 'https://codepen.io/ptrchoi/pen/mQEMXv',
+		website: '',
+		firebase: '',
+		codepen: 'https://codepen.io/ptrchoi/pen/mQEMXv',
 		description: `A Quote Generator app that displays inspirational-themed quotes with full-screen, responsive hi-res images.
 		
 		Features:
@@ -186,7 +210,9 @@ const CARDS = [
 		projectId: 'project-13',
 		title: 'Dynamic Weather App (JS + Bootstrap)',
 		image: screenWeather,
-		link: 'https://codepen.io/ptrchoi/pen/grwMJv',
+		website: '',
+		firebase: '',
+		codepen: 'https://codepen.io/ptrchoi/pen/grwMJv',
 		description: `A Weather app that leverages a device’s HTML5 Geolocation to generate and display real-time local weather conditions with corresponding full-screen, responsive scaling background weather images.
 		
 		Features:
@@ -200,7 +226,9 @@ const CARDS = [
 		projectId: 'project-14',
 		title: 'Twitch.tv Stream Tracker (JS)',
 		image: screenTwitch,
-		link: 'https://codepen.io/ptrchoi/pen/JXWOdL',
+		website: '',
+		firebase: '',
+		codepen: 'https://codepen.io/ptrchoi/pen/JXWOdL',
 		description: `A Twitch.tv stream tracking app that displays the live status of followed channels, which can be selected to view live streams.
 		
 		Features:

@@ -46,10 +46,10 @@
 }
 .card-link {
 	// @include fluid-type(font-size, $min-width, $max-width, 8px, 18px);
-	@include fluid-type(font-size, $min-width, $max-width, 8px, 14px);
+	@include fluid-type(font-size, $min-width, $max-width, 8px, 12px);
 }
 .link-icon {
 	color: $secondary-orange-light;
-	font-size: 0.9rem;
+	font-size: 0.8rem;
 	padding: 0 0.5vw 0 0.5vw;
 }
