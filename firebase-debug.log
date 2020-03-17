@@ -1,25 +1,29 @@
-[debug] [2020-03-17T18:44:15.868Z] ----------------------------------------------------------------------
-[debug] [2020-03-17T18:44:15.871Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
-[debug] [2020-03-17T18:44:15.871Z] CLI Version:   7.14.0
-[debug] [2020-03-17T18:44:15.871Z] Platform:      darwin
-[debug] [2020-03-17T18:44:15.871Z] Node Version:  v10.15.1
-[debug] [2020-03-17T18:44:15.872Z] Time:          Tue Mar 17 2020 13:44:15 GMT-0500 (Central Daylight Time)
-[debug] [2020-03-17T18:44:15.872Z] ----------------------------------------------------------------------
-[debug] [2020-03-17T18:44:15.872Z] 
-[debug] [2020-03-17T18:44:15.884Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2020-03-17T18:44:15.885Z] > authorizing via signed-in user
-[debug] [2020-03-17T18:44:15.885Z] [iam] checking project ptrchoi-email-database for permissions ["firebase.projects.get"]
-[debug] [2020-03-17T18:44:15.887Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/ptrchoi-email-database:testIamPermissions  
+[debug] [2020-03-17T19:17:13.349Z] ----------------------------------------------------------------------
+[debug] [2020-03-17T19:17:13.351Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2020-03-17T19:17:13.351Z] CLI Version:   7.14.0
+[debug] [2020-03-17T19:17:13.351Z] Platform:      darwin
+[debug] [2020-03-17T19:17:13.351Z] Node Version:  v10.15.1
+[debug] [2020-03-17T19:17:13.352Z] Time:          Tue Mar 17 2020 14:17:13 GMT-0500 (Central Daylight Time)
+[debug] [2020-03-17T19:17:13.352Z] ----------------------------------------------------------------------
+[debug] [2020-03-17T19:17:13.352Z] 
+[debug] [2020-03-17T19:17:13.362Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-03-17T19:17:13.362Z] > authorizing via signed-in user
+[debug] [2020-03-17T19:17:13.363Z] [iam] checking project ptrchoi-email-database for permissions ["firebase.projects.get"]
+[debug] [2020-03-17T19:17:13.364Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-03-17T19:17:13.365Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-03-17T19:17:13.613Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-17T19:17:13.626Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/ptrchoi-email-database:testIamPermissions  
 
-[debug] [2020-03-17T18:44:16.135Z] <<< HTTP RESPONSE 200
-[debug] [2020-03-17T18:44:16.136Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/ptrchoi-email-database  
+[debug] [2020-03-17T19:17:13.831Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-17T19:17:13.833Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/ptrchoi-email-database  
  
-[debug] [2020-03-17T18:44:16.393Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-17T19:17:14.058Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from '/Users/mbp2016/Desktop/Work/portfolio-website/ptrchoi/portfolio'...
 [info] 
-[debug] [2020-03-17T18:44:16.397Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/ptrchoi-email-database/webApps/-/config  
+[debug] [2020-03-17T19:17:14.060Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/ptrchoi-email-database/webApps/-/config  
  
-[debug] [2020-03-17T18:44:16.670Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-17T19:17:14.378Z] <<< HTTP RESPONSE 200
 [info] i  hosting[ptrchoi]: Serving hosting files from: build
 [info] ✔  hosting[ptrchoi]: Local server: http://localhost:5000

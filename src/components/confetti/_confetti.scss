@@ -1,59 +1,59 @@
 .confetti {
-  font-family: 'Inconsolata', monospace;
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: $confetti-layer;
+	font-family: 'Inconsolata', monospace;
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: $confetti-layer;
 
-  span {
-    bottom: -60vh;
-    display: block;
-    position: absolute;
-    transition-timing-function: linear;
-  }
+	span {
+		bottom: -60vh;
+		display: block;
+		position: absolute;
+		transition-timing-function: linear;
+	}
 }
 
 // *the y-translation value of -550vh allows for narrow long scrolling sections
 @keyframes float1 {
-  0% {
-    transform: translateY(0) translateX(0);
-  }
-  100% {
-    transform: translateY(-250vh) translateX(80vw) rotate(880deg);
-  }
+	0% {
+		transform: translateY(0) translateX(0);
+	}
+	100% {
+		transform: translateY(-500vh) translateX(80vw) rotate(880deg);
+	}
 }
 @keyframes float2 {
-  0% {
-    transform: translateY(0) translateX(0);
-  }
-  100% {
-    transform: translateY(-250vh) translateX(40vw) rotate(-780deg);
-  }
+	0% {
+		transform: translateY(0) translateX(0);
+	}
+	100% {
+		transform: translateY(-500vh) translateX(40vw) rotate(-780deg);
+	}
 }
 @keyframes float3 {
-  0% {
-    transform: translateY(0) translateX(0);
-  }
-  100% {
-    transform: translateY(-250vh) translateX(-80vw) rotate(480deg);
-  }
+	0% {
+		transform: translateY(0) translateX(0);
+	}
+	100% {
+		transform: translateY(-500vh) translateX(-80vw) rotate(480deg);
+	}
 }
 @keyframes float4 {
-  0% {
-    transform: translateY(0) translateX(0);
-  }
-  100% {
-    transform: translateY(-250vh) translateX(-40vw) rotate(400deg);
-  }
+	0% {
+		transform: translateY(0) translateX(0);
+	}
+	100% {
+		transform: translateY(-500vh) translateX(-40vw) rotate(400deg);
+	}
 }
 @keyframes float5 {
-  0% {
-    transform: translateY(0) translateX(0);
-  }
-  100% {
-    transform: translateY(-250vh) translateX(40vw) rotate(-380deg);
-  }
+	0% {
+		transform: translateY(0) translateX(0);
+	}
+	100% {
+		transform: translateY(-500vh) translateX(40vw) rotate(-380deg);
+	}
 }

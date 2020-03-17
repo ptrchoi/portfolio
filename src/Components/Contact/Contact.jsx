@@ -70,7 +70,7 @@ class Contact extends Component {
 					<Confetti
 						data={{
 							confettiType: 'circle',
-							number: 50,
+							number: 130,
 							color: 'contact'
 						}}
 					/>
