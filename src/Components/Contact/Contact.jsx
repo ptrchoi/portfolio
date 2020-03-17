@@ -28,9 +28,11 @@ class Contact extends Component {
 
 		dataStored
 			.then(function() {
-				$('#notificationMsg').removeClass('element-off');
-				$('#notificationMsg').addClass('element-on');
-				$('#contactForm').addClass('element-off');
+				$('formWrapper').addClass('element-off');
+				setTimeout(() => {
+					$('#notificationMsg').removeClass('element-off');
+					$('#notificationMsg').addClass('element-on');
+				}, 350); // Sync with Contactform fade-out anim (.25s)
 			})
 			.catch((reason) => {
 				// State will be reset below
@@ -60,37 +62,9 @@ class Contact extends Component {
 							Thanks for visiting <span id="savedEmail">{this.state.savedEmail}</span>!
 						</span>
 					</div>
-					<div id="contactForm" className="contact slide-contact-left">
+					<div id="formWrapper" className="contact slide-contact-left">
 						<Contactform submitForm={this.handleForm} />
 					</div>
-					{/* <form id="contactForm" onSubmit={this.handleSubmit}>
-						<label id="emailLabel" for="userEmail">
-							LET'S CONNECT
-						</label>
-						<textarea
-							id="userComments"
-							name="comments"
-							type="text"
-							resize="none"
-							wrap="hard"
-							maxlength="240"
-							value={this.state.comments}
-							onChange={this.updateInput}
-							placeholder="Your message (240 max chars)"
-						/>
-						<input
-							id="userEmail"
-							name="email"
-							type="email"
-							value={this.state.email}
-							onChange={this.updateInput}
-							placeholder="Your email"
-							required
-						/>
-						<button id="submitButton" type="submit" value="Submit">
-							submit
-						</button>
-					</form> */}
 				</div>
 				<div className="confetti blur">
 					<Confetti

@@ -123,3 +123,15 @@ body {
 		transform: translateY(0%);
 	}
 }
+@keyframes fadeAway {
+	0% {
+		display: block;
+		opacity: 1;
+		visibility: visible;
+	}
+	100% {
+		display: none;
+		opacity: 0;
+		visibility: hidden;
+	}
+}

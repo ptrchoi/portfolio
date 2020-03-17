@@ -24,6 +24,7 @@ class Contactform extends Component {
 		e.preventDefault();
 
 		let { comments, email } = this.state;
+		$('#contactForm').addClass('fade-out');
 
 		// Pass data back to Contacts component
 		this.props.submitForm(comments, email);
