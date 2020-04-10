@@ -5,7 +5,7 @@ const firebaseConfig = {
 	apiKey: '***REMOVED***',
 	authDomain: '***REMOVED***',
 	databaseURL: '***REMOVED***',
-	projectId: 'ptrchoi-email-database',
+	projectId: 'ptrchoi-portfolio',
 	storageBucket: '***REMOVED***',
 	messagingSenderId: '***REMOVED***',
 	appId: '1:***REMOVED***:web:***REMOVED***',
