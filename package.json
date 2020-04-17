@@ -20,24 +20,17 @@
 	},
 	"scripts": {
 		"start": "parcel src/index.html --open",
-		"build": "parcel build src/index.html --out-dir dist",
+		"build": "parcel build src/index.html --out-dir dist --public-url ./",
 		"test": "jest --watch",
 		"coverage": "jest --coverage"
 	},
 	"jest": {
-		"setupFiles": [
-			"./src/setupTests.js"
-		]
+		"setupFiles": [ "./src/setupTests.js" ]
 	},
 	"eslintConfig": {
 		"extends": "react-app"
 	},
-	"browserslist": [
-		">0.2%",
-		"not dead",
-		"not ie <= 11",
-		"not op_mini all"
-	],
+	"browserslist": [ ">0.2%", "not dead", "not ie <= 11", "not op_mini all" ],
 	"devDependencies": {
 		"@babel/core": "^7.6.2",
 		"@babel/preset-env": "^7.6.2",

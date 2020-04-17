@@ -63,8 +63,8 @@ const CARDS = [
 		title: 'Single-Page Application - Product Page (JS)',
 		image: screenSpa,
 		website: '',
-		firebase: '',
-		codepen: 'https://codepen.io/ptrchoi/pen/JayyOP',
+		firebase: 'https://product-spa.ptrchoi.com',
+		codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/JayyOP',
 		description: `A Single Page Application (SPA) product page, fully responsive, dynamic, and interactive with fluid transitions and animations, built in pure Javascript.
 		
 		Features:
@@ -79,8 +79,8 @@ const CARDS = [
 		title: 'Markdown Editor with Live Preview (REACT)',
 		image: screenMarkdown,
 		website: '',
-		firebase: '',
-		codepen: 'https://codepen.io/ptrchoi/pen/rqPKJV',
+		firebase: 'https://markdown-previewer.ptrchoi.com',
+		codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/rqPKJV',
 		description: `A GitHub-flavored Markdown Editor which renders HTML in a real-time, live Previewer.
 		
 		Features:
@@ -94,8 +94,8 @@ const CARDS = [
 		title: 'Virtual Drum Machine (REACT)',
 		image: screenDrum,
 		website: '',
-		firebase: '',
-		codepen: 'https://codepen.io/ptrchoi/pen/Xyrppy',
+		firebase: 'https://drum-machine.ptrchoi.com',
+		codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/Xyrppy',
 		description: `A responsive REACT Drum Machine app that supports touch, mouse, and keyboard inputs, and features multiple sound banks themes.
 		
 		Features:
@@ -111,8 +111,8 @@ const CARDS = [
 		title: 'Technical Document (JS)',
 		image: screenTech,
 		website: '',
-		firebase: '',
-		codepen: 'https://codepen.io/ptrchoi/pen/jvLoOQ',
+		firebase: 'https://technical-doc.ptrchoi.com',
+		codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/jvLoOQ',
 		description: `An example of a modern Technical Document page which adheres to Code Element Styling. This page was built from scratch with pure JS and CSS, using VS Code’s site and content as a reference/mockup.
 		
 		Features:
@@ -125,8 +125,8 @@ const CARDS = [
 		title: 'Wikipedia Viewer (JS + Bootstrap)',
 		image: screenWiki,
 		website: '',
-		firebase: '',
-		codepen: 'https://codepen.io/ptrchoi/pen/ZWLMzq',
+		firebase: 'https://qwik-wiki.ptrchoi.com',
+		codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/ZWLMzq',
 		description: `A Wikipedia Viewer app that displays Wikipedia search results in a dynamic masonry card layout.
 		
 		Features:
@@ -139,8 +139,8 @@ const CARDS = [
 		title: 'Materal Design Calculator (REACT)',
 		image: screenCalc,
 		website: '',
-		firebase: '',
-		codepen: 'https://codepen.io/ptrchoi/pen/QJRpvQ',
+		firebase: 'https://calculator.ptrchoi.com',
+		codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/QJRpvQ',
 		description: `A Material-themed REACT Calculator app that is fully responsive and supports touch and keyboard inputs.
 		
 		Features:
@@ -154,8 +154,8 @@ const CARDS = [
 		title: 'Pomodoro Clock (JS + Bootstrap)',
 		image: screenPomodoro,
 		website: '',
-		firebase: '',
-		codepen: 'https://codepen.io/ptrchoi/pen/RaQdya',
+		firebase: 'https://pomodoro.ptrchoi.com',
+		codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/RaQdya',
 		description: `A customizable Pomodoro Clock app for time management/time-boxing.
 		
 		Features:
@@ -167,8 +167,8 @@ const CARDS = [
 		title: 'Classic Simon Game',
 		image: screenSimon,
 		website: '',
-		firebase: '',
-		codepen: 'https://codepen.io/ptrchoi/pen/wGXNKm',
+		firebase: 'https://simon.ptrchoi.com',
+		codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/wGXNKm',
 		description: `A fully functional version of the classic game of Simon with authentic aesthetics, sound effects, and features.
 		
 		Features:
@@ -181,8 +181,8 @@ const CARDS = [
 		title: 'Tic-Tac-Toe Game',
 		image: screenTictac,
 		website: '',
-		firebase: '',
-		codepen: 'https://codepen.io/ptrchoi/pen/zqjzaL',
+		firebase: 'https://tic-tac-toe.ptrchoi.com',
+		codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/zqjzaL',
 		description: `A fully interactive version of the classic game of Tic-Tac-Toe, played against computer AI that responds dynamically to game results.
 		
 		Features:
@@ -195,8 +195,8 @@ const CARDS = [
 		title: 'REACT Quote Generator',
 		image: screenQuote,
 		website: '',
-		firebase: '',
-		codepen: 'https://codepen.io/ptrchoi/pen/mQEMXv',
+		firebase: 'https://quotes.ptrchoi.com',
+		codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/mQEMXv',
 		description: `A Quote Generator app that displays inspirational-themed quotes with full-screen, responsive hi-res images.
 		
 		Features:
@@ -211,8 +211,8 @@ const CARDS = [
 		title: 'Dynamic Weather App (JS + Bootstrap)',
 		image: screenWeather,
 		website: '',
-		firebase: '',
-		codepen: 'https://codepen.io/ptrchoi/pen/grwMJv',
+		firebase: 'https://weather.ptrchoi.com',
+		codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/grwMJv',
 		description: `A Weather app that leverages a device’s HTML5 Geolocation to generate and display real-time local weather conditions with corresponding full-screen, responsive scaling background weather images.
 		
 		Features:
@@ -227,8 +227,8 @@ const CARDS = [
 		title: 'Twitch.tv Stream Tracker (JS)',
 		image: screenTwitch,
 		website: '',
-		firebase: '',
-		codepen: 'https://codepen.io/ptrchoi/pen/JXWOdL',
+		firebase: 'https://twitch-tv.ptrchoi.com',
+		codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/JXWOdL',
 		description: `A Twitch.tv stream tracking app that displays the live status of followed channels, which can be selected to view live streams.
 		
 		Features:

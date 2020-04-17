@@ -23,9 +23,9 @@ class Card extends Component {
 							</a>
 						)}
 						{firebase.length > 0 && (
-							<a href={website} target="_blank">
+							<a href={firebase} target="_blank">
 								<p className="link-title">
-									Firebase Demo
+									Demo
 									<i className="link-icon fas fa-external-link-square-alt" />
 								</p>
 							</a>
@@ -33,7 +33,7 @@ class Card extends Component {
 						{codepen.length > 0 && (
 							<a href={codepen} target="_blank">
 								<p className="link-title">
-									CodePen Demo
+									CodePen
 									<i className="link-icon fas fa-external-link-square-alt" />
 								</p>
 							</a>
