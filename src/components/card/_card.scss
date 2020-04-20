@@ -22,6 +22,7 @@
 .card-back {
 	background-color: rgba(255, 255, 255, 1);
 	bottom: 0;
+	display: none;
 	height: 100%;
 	max-height: calc(.27 * #{$max-width});
 	left: 0;
@@ -29,7 +30,7 @@
 	overflow: hidden;
 	position: absolute;
 	right: 0;
-	transition: opacity .5s ease;
+	transition: all .5s ease;
 	width: 100%;
 	visibility: hidden; //Disable links until hovered/clicked
 
@@ -67,14 +68,11 @@
 		@include fluid-type(font-size, $min-width, $max-width, 10.5px, 12px);
 	}
 	.card-links {
-		display: flex;
 		align-content: center;
 		justify-content: center;
 	}
 	.link-title {
-		opacity: 0;
-		transition: opacity 2s ease 0.3s; //Needs to be synced with slideIn animation
-		visibility: hidden; //Disable links until hovered/clicked
+		transition: all 2s ease 0.3s; //Needs to be synced with slideIn animation
 		@include fluid-type(font-size, $min-width, $max-width, 10.5px, 12px);
 	}
 	.link-icon {
@@ -87,12 +85,16 @@
 @media (hover: hover) {
 	.card:hover {
 		.card-back {
+			display: inline-block;
 			opacity: 1; //For transition fading
 			visibility: visible; //Enable links
 			.card-title {
 				animation: slideFromMidTop .6s 0s forwards;
 			}
 			.card-text {
+				animation: slideFromMidBottom .6s 0s forwards;
+			}
+			.card-links {
 				animation: slideFromMidBottom .6s 0s forwards;
 			}
 		}
@@ -110,12 +112,16 @@
 @media (hover: none), (hover: on-demand) {
 	.card:hover {
 		.card-back {
+			display: inline-block;
 			opacity: 1; //For transition fading
 			visibility: visible; //Enable links
 			.card-title {
 				animation: slideFromMidTop .6s 0s forwards;
 			}
 			.card-text {
+				animation: slideFromMidBottom .6s 0s forwards;
+			}
+			.card-links {
 				animation: slideFromMidBottom .6s 0s forwards;
 			}
 		}

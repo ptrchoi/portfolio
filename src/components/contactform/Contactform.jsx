@@ -39,16 +39,14 @@ class Contactform extends Component {
 		return (
 			<div>
 				<form id="contactForm" onSubmit={this.handleSubmit}>
-					<label id="emailLabel" for="userEmail">
-						LET'S CONNECT
-					</label>
+					<label id="emailLabel">LET'S CONNECT</label>
 					<textarea
 						id="userComments"
 						name="comments"
 						type="text"
 						resize="none"
 						wrap="hard"
-						maxlength="220"
+						maxLength="220"
 						value={this.state.comments}
 						onChange={this.updateInput}
 						placeholder="Your message"
