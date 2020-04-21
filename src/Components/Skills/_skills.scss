@@ -13,15 +13,14 @@ $max-skill-grid-width: 1000px;
 
 /* --- Skills Chart --- */
 .skills-chart-wrapper {
-	// border: solid 1px green;
-	// left: calc(1.5 * #{$tenth-of-width}); //Chart width = calc(7 * #{$tenth-of-width})
+	// border: solid 1px green; // TEMP
+	height: auto;
 	left: 0;
 	right: 0;
 	margin-left: auto;
 	margin-right: auto;
 	position: absolute;
-	top: calc(5.2 * #{$tenth-of-height}); //Chart height = calc(3.5 * #{$tenth-of-height})
-	height: 35%;
+	top: 50%;
 	width: 80%;
 	z-index: $above-confetti-layer;
 }
