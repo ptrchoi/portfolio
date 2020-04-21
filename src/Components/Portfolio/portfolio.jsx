@@ -249,7 +249,7 @@ class Portfolio extends Component {
 	render(props) {
 		let { size } = this.props;
 		const card = this.state.cards;
-		const classList = 'card-grid card-grid--' + size;
+		const classList = 'card-container card-container--' + size;
 
 		return (
 			<div className="section-wrapper portfolio-wrapper">

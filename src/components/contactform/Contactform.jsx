@@ -39,7 +39,7 @@ class Contactform extends Component {
 		return (
 			<div>
 				<form id="contactForm" onSubmit={this.handleSubmit}>
-					<label id="emailLabel">LET'S CONNECT</label>
+					<label id="emailLabel">Connect</label>
 					<textarea
 						id="userComments"
 						name="comments"

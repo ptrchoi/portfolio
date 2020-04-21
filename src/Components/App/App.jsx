@@ -17,7 +17,8 @@ import Portfolio from '../portfolio/Portfolio';
 import Contact from '../contact/Contact';
 
 //Constants
-const SIZE_LARGE = 992;
+import constants from '../../constants';
+// const SIZE_LARGE = 992;
 
 //DEV ONLY *************REMOVE**************
 //Debucsser CSS Debugger settings
@@ -67,9 +68,9 @@ class App extends Component {
 		let { screenSize } = this.state;
 
 		//Check for changes to screenSize
-		if (screenSize === 'small' && width > SIZE_LARGE) {
+		if (screenSize === 'small' && width > constants.LARGE_SCREEN) {
 			screenSize = 'large';
-		} else if (screenSize === 'large' && width < SIZE_LARGE) {
+		} else if (screenSize === 'large' && width < constants.LARGE_SCREEN) {
 			screenSize = 'small';
 		}
 		this.setState({

@@ -1,3 +1,20 @@
+//LAYOUT Variables:
+$app-margin-LR: 2%;
+$max-width: 1200px;
+$min-width: 320px;
+$tenth-of-width: 10vw;
+$tenth-of-height: 10vh;
+$large-screen-breakpoint: 992px; //Need to match constants.js - LARGE_SCREEN
+
+//Z-INDEX Variables:
+$confetti-layer: 0;
+$above-confetti-layer: 9;
+$nav-wrapper-layer: 10;
+$overlay-layer: 20;
+$sidebar-layer: 30;
+$navbar-layer: 40;
+$icon-layer: 50;
+
 //Themed colors:
 $gap-blue: #1b4664;
 // $primary-blue: #546e7a;
@@ -12,6 +29,10 @@ $gray-med: #e1e2e1;
 $gray-light: #f5f5f6;
 $highlight-yellow: rgb(251, 227, 69);
 
+//Navbar color:
+$background-blue-light: rgb(45, 126, 154);
+$border-blue-dark: rgb(6, 18, 104);
+
 //Button Color Variables:
 $button-bg-blue: rgba(27, 70, 100, .6);
 $button-border: rgb(152, 217, 238);
@@ -22,29 +43,12 @@ $button-hover-text-color: white;
 $button-active-bg-gray: rgba(238, 238, 238, 0.324);
 $button-active-text-color: black;
 
-//TEMP color vars:
+//MISC color vars:
 $background-gray: rgb(106, 106, 106);
 $background-white: whitesmoke;
 $menu-icon-color: #333;
 $gray-text: gray;
 $white-text: white;
-
-//LAYOUT Variables:
-$app-margin-LR: 2%;
-$max-width: 1200px;
-$min-width: 320px;
-$tenth-of-width: 10vw;
-$tenth-of-height: 10vh;
-$large-screen-breakpoint: 992px;
-
-//Z-INDEX Variables:
-$confetti-layer: 0;
-$above-confetti-layer: 9;
-$nav-wrapper-layer: 10;
-$overlay-layer: 20;
-$sidebar-layer: 30;
-$navbar-layer: 40;
-$icon-layer: 50;
 
 //ANIMATION Variables:
 $fade-transition-time: 1s;
