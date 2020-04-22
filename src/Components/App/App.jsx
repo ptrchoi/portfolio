@@ -48,24 +48,45 @@ class App extends Component {
 		this.state = {
 			currentSection: 'home',
 			viewHeight: 600, //default height
-			screenSize: 'small' //default size
+			viewWidth: 0, //default width
+			screenSize: 'small', //default size
+			orientation: 'portrait', //default
+			landscapeHeight: 0 //default '0' for fullpage.js's autoscroll=true
 		};
 
-		this.updateSize = this.updateSize.bind(this);
+		this.updateScreenSpec = this.updateScreenSpec.bind(this);
 		this.renderNav = this.renderNav.bind(this);
 		this.renderContent = this.renderContent.bind(this);
 	}
 	componentDidMount() {
-		this.updateSize();
-		window.addEventListener('resize', this.updateSize);
+		this.updateScreenSpec();
+		window.addEventListener('resize', this.updateScreenSpec);
 	}
 	componentWillUnmount() {
-		window.removeEventListener('resize', this.updateSize);
+		window.removeEventListener('resize', this.updateScreenSpec);
 	}
-	updateSize() {
+	updateScreenSpec() {
 		let height = window.innerHeight;
 		let width = window.innerWidth;
-		let { screenSize } = this.state;
+		let { screenSize, orientation, landscapeHeight } = this.state;
+
+		if (width > height) {
+			console.log('============================================');
+			let aspectRatio = height / width; // w & h have already been rotated/switched
+			console.log('width: ', width);
+			console.log('height: ', height);
+			console.log('aspectRatio: ', aspectRatio);
+			height = width / aspectRatio;
+			console.log('calculated height: ', height);
+			landscapeHeight = height + 1; // DO THIS BEFORE calculating new height; for fullpage.js prop 'responsiveHeight={landscapeHeight}' sets 'autoscroll=false'
+			console.log('landscapeHeight: ', landscapeHeight);
+
+			console.log('============================================');
+
+			orientation = 'landscape';
+		} else {
+			orientation = 'portrait';
+		}
 
 		//Check for changes to screenSize
 		if (screenSize === 'small' && width > constants.LARGE_SCREEN) {
@@ -73,9 +94,17 @@ class App extends Component {
 		} else if (screenSize === 'large' && width < constants.LARGE_SCREEN) {
 			screenSize = 'small';
 		}
+		console.log('orientation: ', orientation);
+		console.log('height: ', height);
+		console.log('width: ', width);
+		console.log('screenSize: ', screenSize);
+
 		this.setState({
 			viewHeight: height,
-			screenSize: screenSize
+			viewWidth: width,
+			screenSize: screenSize,
+			orientation: orientation,
+			landscapeHeight: landscapeHeight
 		});
 	}
 	slideInHeader() {
@@ -148,9 +177,10 @@ class App extends Component {
 		}
 	}
 	renderContent() {
-		const { viewHeight, screenSize } = this.state;
+		const { viewHeight, viewWidth, screenSize, landscapeHeight } = this.state;
 		const that = this;
 
+		console.log('renderContent() landscapeHeight: ', landscapeHeight, ', viewHeight: ', viewHeight);
 		return (
 			//Set options for fullpage.js
 			<ReactFullPage
@@ -161,11 +191,17 @@ class App extends Component {
 				onLeave={function(origin, destination, direction) {
 					that.sectionScrolled(destination.index);
 				}}
+				responsiveHeight={landscapeHeight}
 				render={({ state, fullpageApi }) => {
 					return (
 						<ReactFullPage.Wrapper>
 							<div id="home" className="section">
-								<Home size={screenSize} height={viewHeight} fullpageApi={fullpageApi} />
+								<Home
+									size={screenSize}
+									height={viewHeight}
+									width={viewWidth}
+									fullpageApi={fullpageApi}
+								/>
 							</div>
 							<div id="about" className="section">
 								<About size={screenSize} height={viewHeight} />
