@@ -9,7 +9,7 @@
 	// left: 0;
 }
 #navbar {
-	@include fluid-type(height, $min-width, $max-width, 48px, 60px);
+	@include fluid-type(height, $min-width, $max-width, $navbar-min-height, $navbar-max-height);
 	// background-color: $gap-blue;
 	background-color: $background-blue-light;
 	// border-bottom: 1.5px solid $secondary-orange-light;

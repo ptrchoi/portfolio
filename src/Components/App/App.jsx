@@ -69,6 +69,9 @@ class App extends Component {
 		let height = window.innerHeight;
 		let width = window.innerWidth;
 		let { screenSize, orientation, landscapeHeight } = this.state;
+
+		$('.section-wrapper').removeClass('section-wrapper--landscape'); // Clear any previous landscape styles
+
 		console.log('============================================');
 		console.log('updateScreenSpec()');
 		console.log('innerWidth: ', width);
@@ -100,6 +103,8 @@ class App extends Component {
 				console.log('landscapeHeight: ', landscapeHeight);
 
 				orientation = 'landscape';
+
+				$('.section-wrapper').addClass('section-wrapper--landscape'); // Add landscape specific styling
 			} else {
 				landscapeHeight = 0; // Set fullpage.js to 'autoscroll=true'
 				orientation = 'portrait';
@@ -216,7 +221,7 @@ class App extends Component {
 								/>
 							</div>
 							<div id="about" className="section">
-								<About size={screenSize} height={viewHeight} />
+								<About size={screenSize} height={viewHeight} width={viewWidth} />
 							</div>
 							<div id="skills" className="section">
 								<Skills size={screenSize} height={viewHeight} />

@@ -84,7 +84,8 @@ $about-anim-delay: .1s;
 .about-grid--small {
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr 1fr 1fr;
-	grid-template-areas: "profileText profileText" "logo2 logo3" "logo1 profilePic";
+	// grid-template-areas: "profileText profileText" "logo2 logo3" "logo1 profilePic";
+	grid-template-areas: "profilePic logo1" "logo3 logo2" "profileText profileText";
 	width: $about-narrow-grid-width;
 	max-width: calc(.35 * #{$max-width});
 	.about {

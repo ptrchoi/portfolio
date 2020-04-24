@@ -1,37 +1,3 @@
-/* Ensure pure, inclusive box sizing across browsers. */
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-/* Set the page's max-width within the viewport */
-body {
-	// height: 100vh;
-	max-width: $max-width;
-	min-width: $min-width;
-	margin: 0 auto !important;
-	background-color: white;
-	font-family: 'Open Sans', sans-serif;
-}
-.section-wrapper {
-	padding-top: 10vh;
-}
-.section-header {
-	color: $gap-blue;
-	opacity: 0;
-	text-align: center;
-	z-index: $above-confetti-layer;
-}
-.content-layer {
-	z-index: $above-confetti-layer;
-}
-.section-header.slide-in-from-left {
-	animation: slideFromLeft .75s .1s forwards;
-}
-.blur {
-	filter: blur(0.25vw);
-}
-
 /* Mixins
 ------------------------------------ */
 //Fluid-type Mixin based on https://github.com/robertraichle/fluid-type-mixin
@@ -59,6 +25,47 @@ body {
 }
 @function strip-unit($value) {
 	@return $value / ($value * 0 + 1);
+}
+
+/* Ensure pure, inclusive box sizing across browsers. */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/* Set the page's max-width within the viewport */
+body {
+	// height: 100vh;
+	max-width: $max-width;
+	min-width: $min-width;
+	margin: 0 auto !important;
+	background-color: white;
+	font-family: 'Open Sans', sans-serif;
+}
+.section-wrapper {
+	@include fluid-type(font-size, $min-width, $max-width, 12px, 26px);
+	padding-top: 10vh;
+}
+// custom "landscape" styling for mobile screens with width < $large-screen-breakpoint ONLY
+.section-wrapper--landscape {
+	@include fluid-type(font-size, $min-width, $large-screen-breakpoint, 12px, 18px);
+	@include fluid-type(padding-top, $min-width, $large-screen-breakpoint, 20vh, 10vh);
+}
+
+.section-header {
+	color: $gap-blue;
+	opacity: 0;
+	text-align: center;
+	z-index: $above-confetti-layer;
+}
+.content-layer {
+	z-index: $above-confetti-layer;
+}
+.section-header.slide-in-from-left {
+	animation: slideFromLeft .75s .1s forwards;
+}
+.blur {
+	filter: blur(0.25vw);
 }
 
 /* Shared Keyfram anims
@@ -135,3 +142,6 @@ body {
 		visibility: hidden;
 	}
 }
+
+/* Media Queries
+------------------------------------ */
