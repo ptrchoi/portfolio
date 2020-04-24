@@ -69,35 +69,47 @@ class App extends Component {
 		let height = window.innerHeight;
 		let width = window.innerWidth;
 		let { screenSize, orientation, landscapeHeight } = this.state;
-
-		if (width > height) {
-			console.log('============================================');
-			let aspectRatio = height / width; // w & h have already been rotated/switched
-			console.log('width: ', width);
-			console.log('height: ', height);
-			console.log('aspectRatio: ', aspectRatio);
-			height = width / aspectRatio;
-			console.log('calculated height: ', height);
-			landscapeHeight = height + 1; // DO THIS BEFORE calculating new height; for fullpage.js prop 'responsiveHeight={landscapeHeight}' sets 'autoscroll=false'
-			console.log('landscapeHeight: ', landscapeHeight);
-
-			console.log('============================================');
-
-			orientation = 'landscape';
-		} else {
-			orientation = 'portrait';
-		}
+		console.log('============================================');
+		console.log('updateScreenSpec()');
+		console.log('innerWidth: ', width);
+		console.log('innHeight: ', height);
 
 		//Check for changes to screenSize
-		if (screenSize === 'small' && width > constants.LARGE_SCREEN) {
+		if (width > constants.LARGE_SCREEN_BREAKPOINT) {
+			// Ensure width used doesn't exceed MAX_WIDTH
+			if (width > constants.MAX_WIDTH) width = constants.MAX_WIDTH;
+
+			console.log('setting to "Large"');
 			screenSize = 'large';
-		} else if (screenSize === 'large' && width < constants.LARGE_SCREEN) {
+
+			landscapeHeight = 0; // Set fullpage.js to 'autoscroll=true'
+			orientation = 'portrait'; // If large screen, ignore landscape orientation flag, keep default of portrait
+		} else {
 			screenSize = 'small';
+
+			// On Small screen width, update orientation
+			if (width > height) {
+				console.log('setting to "Small"');
+				let aspectRatio = height / width;
+				console.log('width: ', width);
+				console.log('height: ', height);
+				console.log('aspectRatio: ', aspectRatio);
+				height = width / aspectRatio;
+				console.log('calculated height: ', height);
+				landscapeHeight = height + 1; // DO THIS BEFORE calculating new height; for fullpage.js prop 'responsiveHeight={landscapeHeight}' sets 'autoscroll=false'
+				console.log('landscapeHeight: ', landscapeHeight);
+
+				orientation = 'landscape';
+			} else {
+				landscapeHeight = 0; // Set fullpage.js to 'autoscroll=true'
+				orientation = 'portrait';
+			}
 		}
 		console.log('orientation: ', orientation);
 		console.log('height: ', height);
 		console.log('width: ', width);
 		console.log('screenSize: ', screenSize);
+		console.log('============================================');
 
 		this.setState({
 			viewHeight: height,
@@ -180,7 +192,7 @@ class App extends Component {
 		const { viewHeight, viewWidth, screenSize, landscapeHeight } = this.state;
 		const that = this;
 
-		console.log('renderContent() landscapeHeight: ', landscapeHeight, ', viewHeight: ', viewHeight);
+		// console.log('renderContent() landscapeHeight: ', landscapeHeight, ', viewHeight: ', viewHeight);
 		return (
 			//Set options for fullpage.js
 			<ReactFullPage

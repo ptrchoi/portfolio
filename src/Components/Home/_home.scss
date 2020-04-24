@@ -1,10 +1,4 @@
 .home-wrapper {
-	background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.85)),
-		url('https://source.unsplash.com/user/buitor/lQzyD1ndek8');
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
-
 	align-items: center;
 	display: flex;
 	flex-direction: column;
@@ -19,7 +13,7 @@
 	z-index: $above-confetti-layer;
 
 	p {
-		padding-top: .8vh;
+		padding-top: .8%;
 	}
 	#name {
 		color: $highlight-yellow;
@@ -44,6 +38,16 @@ button:focus {
 	outline: none;
 }
 
+/* --- Animations --- */
+/* --- Slide-in on scroll animation --- */
+.home {
+	opacity: 0;
+}
+.home.slide-home {
+	animation: slideFromBottom .75s .2s forwards;
+}
+
+/* --- Input Media Queries --- */
 //If hover-capable device, do overlay on hover
 @media (hover: hover) {
 	#welcomeBtn:hover {
@@ -60,11 +64,40 @@ button:focus {
 	}
 }
 
-/* --- Animations --- */
-/* --- Slide-in on scroll animation --- */
-.home {
-	opacity: 0;
+/* --- Responsive Media Queries --- */
+/* Small (sm) */
+@media (min-width: 320px) {
+	.home-wrapper {
+		background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.85)), url(../assets/bg-sm.jpg);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+	}
 }
-.home.slide-home {
-	animation: slideFromBottom .75s .2s forwards;
+/* Medium (md) */
+@media (min-width: 768px) {
+	.home-wrapper {
+		background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.85)), url(../assets/bg-med.jpg);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+	}
+}
+/* Large (lg) */
+@media (min-width: 1024px) {
+	.home-wrapper {
+		background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.85)), url(../assets/bg-lrg.jpg);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+	}
+}
+/* Extra Large (xl) */
+@media (min-width: 1280px) {
+	.home-wrapper {
+		background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.85)), url(../assets/bg-xlrg.jpg);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+	}
 }
