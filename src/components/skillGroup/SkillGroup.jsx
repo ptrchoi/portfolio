@@ -47,11 +47,23 @@ class SkillGroup extends Component {
 			expandedTextID: groupID
 		});
 	}
+	updateOrientation(orientation) {
+		if (orientation === 'landscape') {
+			$('#skillsGroup1').addClass('skills-group--landscape');
+			$('#skillsGroup2').addClass('skills-group--landscape');
+			$('#skillsGroup3').addClass('skills-group--landscape');
+		} else {
+			$('#skillsGroup1').removeClass('skills-group--landscape');
+			$('#skillsGroup2').removeClass('skills-group--landscape');
+			$('#skillsGroup3').removeClass('skills-group--landscape');
+		}
+	}
 	render(props) {
-		let { classes, orientation } = this.props;
+		let { gridClassList, orientation } = this.props;
+		this.updateOrientation(orientation);
 
 		return (
-			<div className={classes}>
+			<div className={gridClassList}>
 				<div
 					id="skillsGroup1"
 					className="skills-group skills"

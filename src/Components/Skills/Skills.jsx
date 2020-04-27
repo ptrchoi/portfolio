@@ -15,13 +15,14 @@ import Chart from '../chart/Chart';
 class Skills extends Component {
 	render(props) {
 		let { size, height, width, orientation } = this.props;
-		const classList = 'skills-grid skills-grid--' + size;
+		const gridClassList = 'skills-grid skills-grid--' + size;
+
 		return (
 			<div className="section-wrapper skills-wrapper" style={{ height: height, width: width }}>
 				<div className="section-header">
 					<h1>Skills</h1>
 				</div>
-				<SkillGroup classes={classList} orientation={orientation} />
+				<SkillGroup gridClassList={gridClassList} orientation={orientation} />
 				<div className="skills-chart-wrapper skills">
 					<Chart />
 				</div>
