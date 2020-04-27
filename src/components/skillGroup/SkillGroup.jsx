@@ -11,7 +11,7 @@ class SkillGroup extends Component {
 			expandedTextID: ''
 		};
 	}
-	clickHandler(e) {
+	clickHandler(e, orientation) {
 		e.preventDefault();
 
 		let { expandedTextID } = this.state;
@@ -20,19 +20,25 @@ class SkillGroup extends Component {
 		let icon = $('#' + e.currentTarget.children[2].id); //Get the icon element by ID
 		let p = $('#' + e.currentTarget.children[3].id); //Get the paragraph element by ID
 
+		let classList = 'skills-group--expand';
+
+		if (orientation === 'landscape') {
+			classList = 'skills-group--expand--landscape';
+		}
+
 		//IF click is on an already expanded group, close it;
 		//ELSE close any expanded groups and open the clicked one.
 		if (groupID === expandedTextID) {
-			group.removeClass('skills-group--expand');
+			group.removeClass(classList);
 			icon.removeClass('fa-caret-left');
 			icon.addClass('fa-caret-down');
 			p.removeClass('skills-text--show');
 			groupID = '';
 		} else {
-			$('.skills-group').removeClass('skills-group--expand');
+			$('.skills-group').removeClass(classList);
 			$('.skill-group-item-3').removeClass('fa-caret-left');
 			$('.skill-group-item-4').removeClass('skills-text--show');
-			group.addClass('skills-group--expand');
+			group.addClass(classList);
 			icon.addClass('fa-caret-left');
 			p.addClass('skills-text--show');
 		}
@@ -42,10 +48,17 @@ class SkillGroup extends Component {
 		});
 	}
 	render(props) {
-		let { classes } = this.props;
+		let { classes, orientation } = this.props;
+
 		return (
 			<div className={classes}>
-				<div id="skillsGroup1" className="skills-group skills" onClick={this.clickHandler}>
+				<div
+					id="skillsGroup1"
+					className="skills-group skills"
+					onClick={(e) => {
+						this.clickHandler(e, orientation);
+					}}
+				>
 					<i className="fas fa-cubes skill-group-item-1" />
 					<h3 className="skill-group-item-2">Front-end Development</h3>
 					<i id="skillsExpandIcon1" className="fas fa-caret-down skill-expand-icon skill-group-item-3" />
@@ -55,7 +68,13 @@ class SkillGroup extends Component {
 						techniques.
 					</p>
 				</div>
-				<div id="skillsGroup2" className="skills-group skills" onClick={this.clickHandler}>
+				<div
+					id="skillsGroup2"
+					className="skills-group skills"
+					onClick={(e) => {
+						this.clickHandler(e, orientation);
+					}}
+				>
 					<i className="far fa-compass skill-group-item-1" />
 					<h3 className="skill-group-item-2">User Experience</h3>
 					<i id="skillsExpandIcon2" className="fas fa-caret-down skill-expand-icon skill-group-item-3" />
@@ -64,7 +83,13 @@ class SkillGroup extends Component {
 						focused on the user journey, aesthetics, and intuitive design.
 					</p>
 				</div>
-				<div id="skillsGroup3" className="skills-group skills" onClick={this.clickHandler}>
+				<div
+					id="skillsGroup3"
+					className="skills-group skills"
+					onClick={(e) => {
+						this.clickHandler(e, orientation);
+					}}
+				>
 					<i className="fas fa-people-carry skill-group-item-1" />
 					<h3 className="skill-group-item-2">Collaboration</h3>
 					<i id="skillsExpandIcon3" className="fas fa-caret-down skill-expand-icon skill-group-item-3" />

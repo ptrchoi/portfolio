@@ -194,7 +194,7 @@ class App extends Component {
 		}
 	}
 	renderContent() {
-		const { viewHeight, viewWidth, screenSize, landscapeHeight } = this.state;
+		const { viewHeight, viewWidth, screenSize, landscapeHeight, orientation } = this.state;
 		const that = this;
 
 		// console.log('renderContent() landscapeHeight: ', landscapeHeight, ', viewHeight: ', viewHeight);
@@ -224,7 +224,12 @@ class App extends Component {
 								<About size={screenSize} height={viewHeight} width={viewWidth} />
 							</div>
 							<div id="skills" className="section">
-								<Skills size={screenSize} height={viewHeight} />
+								<Skills
+									size={screenSize}
+									height={viewHeight}
+									width={viewWidth}
+									orientation={orientation}
+								/>
 							</div>
 							<div id="portfolio" className="section">
 								<Portfolio size={screenSize} />

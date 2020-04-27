@@ -36,7 +36,6 @@
 
 /* --- Skills Grid --- */
 .skills-grid {
-	// border: solid 1px purple;
 	display: grid;
 	padding-top: 5%;
 }
@@ -50,8 +49,6 @@
 	$grid-width: 952px;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 1fr;
-	// height: calc(3 * #{$tenth-of-height}); //Chart height = calc(3.5 * #{$tenth-of-height})
-	// height: calc(.3 * #{$max-width}); //Chart height = calc(3.5 * #{$tenth-of-height})
 	width: $grid-width;
 	max-width: $max-width;
 
@@ -62,7 +59,6 @@
 		grid-template-rows: 1fr .75fr 2fr;
 		grid-template-areas: "skillIcon" "skillHeader" "skillText";
 		height: calc(3 * #{$tenth-of-height}); //Chart height = calc(3.5 * #{$tenth-of-height})
-		// height: calc(#{$max-width} * .3);
 		width: calc(1/3 * #{$grid-width});
 	}
 	.skill-group-item-3 {
@@ -70,11 +66,9 @@
 	}
 }
 .skills-grid--small {
-	top: calc(1.75 * #{$tenth-of-height});
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr 1fr;
-	max-height: calc(1 * #{$tenth-of-height});
-	// width: calc(7 * #{$tenth-of-width});
+	max-height: 70%;
 	max-width: $max-skill-grid-width;
 
 	.skill-expand-icon {
@@ -85,7 +79,7 @@
 		grid-template-rows: .5fr 1.5fr;
 		grid-template-areas: "spacer skillIcon skillHeader expandIcon" "skillText skillText skillText skillText";
 		grid-gap: 1vw;
-		height: calc(.8 * #{$tenth-of-height});
+		height: 8vh;
 		width: calc(7 * #{$tenth-of-width});
 		transition: height .25s ease-in;
 
@@ -113,6 +107,10 @@
 		}
 	}
 	.skills-group--expand {
-		height: calc(1.5 * #{$tenth-of-height});
+		height: 15vh;
+	}
+	// In Landscape orientation, adjust height for reduced vh
+	.skills-group--expand--landscape {
+		height: 30vh;
 	}
 }
