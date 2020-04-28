@@ -1,10 +1,20 @@
 //Libraries
 import React, { Component } from 'react';
+import $ from 'jquery';
 
 class Chart extends Component {
-	render() {
+	updateOrientation(orientation) {
+		if (orientation === 'landscape') {
+			$('#skillsChart').addClass('skills-chart--landscape');
+		} else {
+			$('#skillsChart').removeClass('skills-chart--landscape');
+		}
+	}
+	render(props) {
+		let { orientation } = this.props;
+		this.updateOrientation(orientation);
 		return (
-			<div className="skills-chart">
+			<div id="skillsChart" className="skills-chart">
 				<ul className="lines">
 					<li className="line line-0" />
 					<li className="line line-30">

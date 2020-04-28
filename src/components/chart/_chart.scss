@@ -17,7 +17,7 @@ $chart-stagger-delay: .1s;
 }
 
 .skills-chart {
-	height: calc(4.2 * #{$tenth-of-height});
+	height: 45vh;
 	max-width: $max-skill-grid-width;
 	width: calc(7 * #{$tenth-of-width});
 	ul {
@@ -63,9 +63,6 @@ $chart-stagger-delay: .1s;
 	top: 0;
 	width: 100%;
 }
-.chart {
-	// margin-bottom: 2vw;
-}
 .chart-title {
 	@include fluid-type(font-size, $min-width, $max-width, 10px, 18px);
 	color: #28424e;
@@ -77,14 +74,13 @@ $chart-stagger-delay: .1s;
 }
 .chart-bar {
 	$border-rad: 8px;
-	$chart-bar-height-factor: .175;
 
 	align-items: center;
 	border-top-right-radius: $border-rad;
 	border-bottom-right-radius: $border-rad;
 	background: linear-gradient(to left, #4cb8c4, #3cd3ad);
 	display: flex;
-	height: calc(#{$chart-bar-height-factor} * #{$tenth-of-height});
+	height: 1.8vh;
 	justify-content: flex-start;
 	margin-bottom: .5vh;
 }
@@ -101,6 +97,22 @@ $chart-stagger-delay: .1s;
 }
 .bar-90 {
 	width: 95%;
+}
+
+/* --- Landscape orientation height adjustments (vh) --- */
+.skills-chart--landscape {
+	height: 90vh;
+
+	.line-label {
+		bottom: -4vh;
+	}
+	.chart-title {
+		margin: 0 0 2vh 1vw;
+	}
+	.chart-bar {
+		height: 3vh;
+		margin-bottom: 2vh;
+	}
 }
 
 /* --- Bars & Titles growing anim --- */

@@ -1,5 +1,6 @@
 //Libraries
 import React, { Component } from 'react';
+import $ from 'jquery';
 
 //Components
 import Confetti from '../confetti/Confetti';
@@ -13,9 +14,17 @@ import Chart from '../chart/Chart';
  * @return {JSX.Element} - Rendered component.
  */
 class Skills extends Component {
+	updateOrientation(orientation) {
+		if (orientation === 'landscape') {
+			$('#skillsChartWrapper').addClass('skills-chart-wrapper--landscape');
+		} else {
+			$('#skillsChartWrapper').removeClass('skills-chart-wrapper--landscape');
+		}
+	}
 	render(props) {
 		let { size, height, width, orientation } = this.props;
 		const gridClassList = 'skills-grid skills-grid--' + size;
+		this.updateOrientation(orientation);
 
 		return (
 			<div className="section-wrapper skills-wrapper" style={{ height: height, width: width }}>
@@ -23,8 +32,8 @@ class Skills extends Component {
 					<h1>Skills</h1>
 				</div>
 				<SkillGroup gridClassList={gridClassList} orientation={orientation} />
-				<div className="skills-chart-wrapper skills">
-					<Chart />
+				<div id="skillsChartWrapper" className="skills-chart-wrapper skills">
+					<Chart orientation={orientation} />
 				</div>
 				<div className="confetti blur">
 					<Confetti

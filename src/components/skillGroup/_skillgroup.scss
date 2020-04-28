@@ -58,7 +58,7 @@
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr .75fr 2fr;
 		grid-template-areas: "skillIcon" "skillHeader" "skillText";
-		height: calc(3 * #{$tenth-of-height}); //Chart height = calc(3.5 * #{$tenth-of-height})
+		// height: calc(3 * 30%); //Chart height = calc(3.5 * #{$tenth-of-height})
 		width: calc(1/3 * #{$grid-width});
 	}
 	.skill-group-item-3 {
@@ -79,7 +79,7 @@
 		grid-template-rows: .5fr 1.5fr;
 		grid-template-areas: "spacer skillIcon skillHeader expandIcon" "skillText skillText skillText skillText";
 		grid-gap: 1vw;
-		height: 8vh;
+		height: 7vh;
 		width: calc(7 * #{$tenth-of-width});
 		transition: height .25s ease-in;
 
@@ -107,11 +107,11 @@
 		}
 	}
 	.skills-group--expand {
-		height: 15vh;
+		height: 14vh;
 	}
 	// In Landscape orientation, adjust height for reduced vh
 	.skills-group--landscape {
-		height: 16vh;
+		height: 15vh;
 	}
 	// In Landscape orientation, adjust height for reduced vh
 	.skills-group--expand--landscape {
