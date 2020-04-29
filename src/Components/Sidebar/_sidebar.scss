@@ -1,23 +1,26 @@
 .sidebar-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  transform: translateX(100%);
-  transition: transform $sidebar-trans-time ease-in-out;
-  width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	transform: translateX(100%);
+	transition: transform $sidebar-trans-time ease-in-out;
+	width: 100%;
 }
 .sidebar-wrapper--open {
-  animation: slideIn $sidebar-trans-time;
-  transform: translateX(0%);
+	animation: slideIn $sidebar-trans-time;
+	transform: translateX(0%);
 }
 .sidebar {
-  background-color: rgba(129, 156, 169, 0.9);
-  padding-top: 25vh;
+	background-color: rgba(129, 156, 169, 0.9);
+	padding-top: 25vh;
+}
+.sidebar--landscape {
+	padding-top: 6vh;
 }
 @keyframes slideIn {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
 }

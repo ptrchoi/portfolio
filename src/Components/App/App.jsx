@@ -72,17 +72,11 @@ class App extends Component {
 
 		$('.section-wrapper').removeClass('section-wrapper--landscape'); // Clear any previous landscape styles
 
-		console.log('============================================');
-		console.log('updateScreenSpec()');
-		console.log('innerWidth: ', width);
-		console.log('innHeight: ', height);
-
 		//Check for changes to screenSize
 		if (width > constants.LARGE_SCREEN_BREAKPOINT) {
 			// Ensure width used doesn't exceed MAX_WIDTH
 			if (width > constants.MAX_WIDTH) width = constants.MAX_WIDTH;
 
-			console.log('setting to "Large"');
 			screenSize = 'large';
 
 			landscapeHeight = 0; // Set fullpage.js to 'autoscroll=true'
@@ -92,15 +86,9 @@ class App extends Component {
 
 			// On Small screen width, update orientation
 			if (width > height) {
-				console.log('setting to "Small"');
 				let aspectRatio = height / width;
-				console.log('width: ', width);
-				console.log('height: ', height);
-				console.log('aspectRatio: ', aspectRatio);
 				height = width / aspectRatio;
-				console.log('calculated height: ', height);
 				landscapeHeight = height + 1; // DO THIS BEFORE calculating new height; for fullpage.js prop 'responsiveHeight={landscapeHeight}' sets 'autoscroll=false'
-				console.log('landscapeHeight: ', landscapeHeight);
 
 				orientation = 'landscape';
 
@@ -110,11 +98,6 @@ class App extends Component {
 				orientation = 'portrait';
 			}
 		}
-		console.log('orientation: ', orientation);
-		console.log('height: ', height);
-		console.log('width: ', width);
-		console.log('screenSize: ', screenSize);
-		console.log('============================================');
 
 		this.setState({
 			viewHeight: height,
@@ -186,18 +169,24 @@ class App extends Component {
 		});
 	}
 	renderNav() {
-		const { currentSection, viewHeight, screenSize } = this.state;
+		const { currentSection, viewHeight, screenSize, orientation } = this.state;
 
 		//Do not render nav on landing page
 		if (currentSection !== 'home') {
-			return <Navbar height={viewHeight} size={screenSize} links={<Links size={screenSize} />} />;
+			return (
+				<Navbar
+					height={viewHeight}
+					size={screenSize}
+					orientation={orientation}
+					links={<Links size={screenSize} />}
+				/>
+			);
 		}
 	}
 	renderContent() {
 		const { viewHeight, viewWidth, screenSize, landscapeHeight, orientation } = this.state;
 		const that = this;
 
-		// console.log('renderContent() landscapeHeight: ', landscapeHeight, ', viewHeight: ', viewHeight);
 		return (
 			//Set options for fullpage.js
 			<ReactFullPage
