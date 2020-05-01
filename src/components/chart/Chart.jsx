@@ -43,6 +43,9 @@ class Chart extends Component {
 							<li className="chart-bar bar-60">
 								<span className="bar-label">jQuery</span>
 							</li>
+							<li className="chart-bar bar-60">
+								<span className="bar-label">Firebase</span>
+							</li>
 							<li className="chart-bar bar-90">
 								<span className="bar-label">CSS3 | SASS | SCSS</span>
 							</li>
@@ -60,7 +63,7 @@ class Chart extends Component {
 							<li className="chart-bar bar-60">
 								<span className="bar-label">Wireframes | Mockups | Prototypes</span>
 							</li>
-							<li className="chart-bar bar-30">
+							<li className="chart-bar bar-60">
 								<span className="bar-label">Sketch | Photoshop</span>
 							</li>
 						</ul>

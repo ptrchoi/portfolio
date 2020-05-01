@@ -4,12 +4,15 @@ import React, { Component } from 'react';
 class Card extends Component {
 	render() {
 		const { projectId, title, image, website, firebase, codepen, description } = this.props.card;
+		const { size } = this.props;
+		const classList = 'card-back card-back--' + size;
+
 		return (
 			<div id={projectId} className="card">
 				<div className="card-front">
 					<img src={image} alt="thumbnail" />
 				</div>
-				<div className="card-back">
+				<div className={classList}>
 					<p className="card-title"> {title} </p>
 					<hr className="card-divider" />
 					<p className="card-text">{description}</p>

@@ -50,10 +50,8 @@ const CARDS = [
 		website: 'https://therefreshconference.org/',
 		firebase: '',
 		codepen: '',
-		description: `As part of a distributed remote team, I redesigned, rebuilt, and managed the Refresh Conference Website for the 2017 annual conference.
+		description: `Responsible for redesigning, rebuilding, and managing the Refresh Conference Website for the 2017 annual conference.
 		
-		Features & Responsibilities:
-
 		- Redesign and rebuild of the site from scratch, using Wordpress as the CMS to support frequent client content updates
 		- Design and flows that balanced the needs of new users (ie. About/FAQ/Media/Marketing/CTA’s) with users attending the conference (ie. Payment flow/Events Calendar/Speaker Bios/Sponsors)
 		- Note that the Refresh site has since changed, particularly the content, but the site retains the overall design from 2017`
@@ -65,7 +63,7 @@ const CARDS = [
 		website: '',
 		firebase: 'https://product-spa.ptrchoi.com',
 		codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/JayyOP',
-		description: `A Single Page Application (SPA) product page, fully responsive, dynamic, and interactive with fluid transitions and animations, built in pure Javascript.
+		description: `A pure Javascript & CSS Single Page Application (SPA) product page, fully responsive, dynamic, and interactive with fluid transitions and animations.
 		
 		Features:
 		- vanilla JS | pure CSS | HTML5
@@ -96,7 +94,7 @@ const CARDS = [
 		website: '',
 		firebase: 'https://drum-machine.ptrchoi.com',
 		codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/Xyrppy',
-		description: `A responsive REACT Drum Machine app that supports touch, mouse, and keyboard inputs, and features multiple sound banks themes.
+		description: `A responsive REACT Drum Machine app that supports touch, mouse, and keyboard inputs; features multiple sound banks themes.
 		
 		Features:
 		- REACT ES6 | SCSS | CSS3 | HTML5
@@ -202,9 +200,8 @@ const CARDS = [
 		Features:
 		- REACT | jQuery | SCSS | CSS3
 		- Forismatic and Unsplash API’s
-		- Responsive design with full-screen scaling background images and responsive font-size scaling
-		- Theme-filtered background images, randomly generated from Unsplash's image collections
-		- Controls for manual or auto-looping and sharing via tweet button`
+		- Responsive design with full-screen scaling background images and  scaling font-size
+		- Theme-filtered background images, randomly generated from Unsplash's image collections`
 	},
 	{
 		projectId: 'project-13',
@@ -213,27 +210,13 @@ const CARDS = [
 		website: '',
 		firebase: 'https://weather.ptrchoi.com',
 		codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/grwMJv',
-		description: `A Weather app that leverages a device’s HTML5 Geolocation to generate and display real-time local weather conditions with corresponding full-screen, responsive scaling background weather images.
+		description: `A Weather app that leverages a device’s HTML5 Geolocation to generate and display real-time local weather conditions.
 		
 		Features:
 		- vanilla JS | CSS3 | Bootstrap | HTML5
 		- OpenWeatherMap API
 		- HTML5 device geolocation
-		- Full-screen dynamic weather and time-of-day background images
-		- Current weather from major cities around the world`
-	},
-	{
-		projectId: 'project-14',
-		title: 'Twitch.tv Stream Tracker (JS)',
-		image: screenTwitch,
-		website: '',
-		firebase: 'https://twitch-tv.ptrchoi.com',
-		codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/JXWOdL',
-		description: `A Twitch.tv stream tracking app that displays the live status of followed channels, which can be selected to view live streams.
-		
-		Features:
-		- JS | jQuery | pure CSS | HTML5
-		- Twitch.tv API`
+		- Current weather from major international locales`
 	}
 ];
 
@@ -249,28 +232,26 @@ class Portfolio extends Component {
 	render(props) {
 		let { size } = this.props;
 		const card = this.state.cards;
-		const classList = 'card-container card-container--' + size;
 
 		return (
 			<div className="section-wrapper portfolio-wrapper">
 				<div className="section-header">
 					<h1>Web Portfolio</h1>
 				</div>
-				<div className={classList}>
-					<Card card={card[0]} />
-					<Card card={card[1]} />
-					<Card card={card[2]} />
-					<Card card={card[3]} />
-					<Card card={card[4]} />
-					<Card card={card[5]} />
-					<Card card={card[6]} />
-					<Card card={card[7]} />
-					<Card card={card[8]} />
-					<Card card={card[9]} />
-					<Card card={card[10]} />
-					<Card card={card[11]} />
-					<Card card={card[12]} />
-					<Card card={card[13]} />
+				<div className="card-container">
+					<Card card={card[0]} size={size} />
+					<Card card={card[1]} size={size} />
+					<Card card={card[2]} size={size} />
+					<Card card={card[3]} size={size} />
+					<Card card={card[4]} size={size} />
+					<Card card={card[5]} size={size} />
+					<Card card={card[6]} size={size} />
+					<Card card={card[7]} size={size} />
+					<Card card={card[8]} size={size} />
+					<Card card={card[9]} size={size} />
+					<Card card={card[10]} size={size} />
+					<Card card={card[11]} size={size} />
+					<Card card={card[12]} size={size} />
 					<div className="confetti blur">
 						<Confetti
 							data={{

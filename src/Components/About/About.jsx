@@ -40,8 +40,8 @@ class About extends Component {
 							leading Fortune 500 companies, including Microsoft and Electronic Arts.
 							<br />
 							<br />
-							Pursuing my passion for creating elegant, intuitive, and delightful user experiences and
-							solutions, as a remote-based User Experience/Front-end Developer and Designer.
+							Remote-based User Experience/Front-end Developer and Designer with a passion for creating
+							elegant, intuitive, and delightful user experiences and solutions.
 						</p>
 					</div>
 					<div className="about item-c">
