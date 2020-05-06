@@ -15,19 +15,19 @@ class Chart extends Component {
 		this.updateOrientation(orientation);
 		return (
 			<div id="skillsChart" className="skills-chart">
-				<ul className="lines">
-					<li className="line line-0" />
-					<li className="line line-30">
-						<span className="line-label">Adept</span>
-					</li>
-					<li className="line line-60">
-						<span className="line-label">Skilled</span>
-					</li>
-					<li className="line line-90">
-						<span className="line-label">Advanced</span>
-					</li>
-				</ul>
 				<div className="charts">
+					<ul className="lines">
+						<li className="line line-0" />
+						<li className="line line-30">
+							<span className="line-label">Adept</span>
+						</li>
+						<li className="line line-60">
+							<span className="line-label">Skilled</span>
+						</li>
+						<li className="line line-90">
+							<span className="line-label">Advanced</span>
+						</li>
+					</ul>
 					<div className="chart chart-tech">
 						<span className="chart-title">Front End Technologies</span>
 						<ul className="chart-horizontal">

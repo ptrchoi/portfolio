@@ -75,9 +75,8 @@ class SkillGroup extends Component {
 					<h3 className="skill-group-item-2">Front-end Development</h3>
 					<i id="skillsExpandIcon1" className="fas fa-caret-down skill-expand-icon skill-group-item-3" />
 					<p id="skillsText1" className="skill-group-item-4">
-						Specializing in building dynamic, fluid front end experiences that engage users, while
-						constantly learning, leveraging, and innovating with the latest technologies and advanced
-						techniques.
+						Specializing in building dynamic, innovative solutions and experiences that engage users, while
+						constantly learning and leveraging the latest technologies and advanced techniques.
 					</p>
 				</div>
 				<div
@@ -106,9 +105,9 @@ class SkillGroup extends Component {
 					<h3 className="skill-group-item-2">Collaboration</h3>
 					<i id="skillsExpandIcon3" className="fas fa-caret-down skill-expand-icon skill-group-item-3" />
 					<p id="skillsText3" className="skill-group-item-4">
-						Proven communication and soft skills in collaborating with large, distributed teams across
-						diverse disciplines, time zones, and cultures, with expertise in agile methodologies and
-						toolsets.
+						Proven communication, adaptability, and soft skills in collaborating with large, distributed
+						teams across diverse disciplines, time zones, and team cultures, with expertise in agile
+						methodologies and toolsets.
 					</p>
 				</div>
 			</div>

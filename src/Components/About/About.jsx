@@ -35,13 +35,13 @@ class About extends Component {
 					</div>
 					<div className="about item-b">
 						<p className="grid-text">
-							Over 15 years of interactive consumer and B2B software development experience, as a
+							Over 20 years of interactive consumer and B2B software development experience, as a
 							Producer, Designer, and Developer, synergizing <b>Content, Design, and Technology</b> at
 							leading Fortune 500 companies, including Microsoft and Electronic Arts.
 							<br />
 							<br />
-							Remote-based User Experience/Front-end Developer and Designer with a passion for creating
-							elegant, intuitive, and delightful user experiences and solutions.
+							User Experience/Front-end Developer and Designer with a passion for creating elegant,
+							intuitive, and delightful user experiences and solutions.
 						</p>
 					</div>
 					<div className="about item-c">

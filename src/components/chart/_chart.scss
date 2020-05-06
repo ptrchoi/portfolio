@@ -1,11 +1,14 @@
-$first-chart-bars: 6;
+$first-chart-bars: 7;
 $second-chart-bars: 3;
 $third-chart-bars: 5;
-$total-chart-bars: 14;
+$total-chart-bars: 15;
 $chart-1-delay: .4s;
 $chart-2-delay: .8s;
 $chart-3-delay: 1.2s;
 $chart-stagger-delay: .1s;
+
+$chart-bar-height: 10%;
+$max-bar-height: 20px;
 
 @mixin stagger-anim-delay($i, $initial-delay, $stagger-delay) {
 	@while $i > 0 {
@@ -17,57 +20,64 @@ $chart-stagger-delay: .1s;
 }
 
 .skills-chart {
-	height: 45vh;
-	max-width: $max-skill-grid-width;
-	width: calc(7 * #{$tenth-of-width});
+	// height: 70%;
+	// display: grid;
+	// max-height: calc($total-chart-bars*$max-bar-height);
+	// max-width: $max-skill-grid-width;
+	// width: 100%;
+	// border: solid 3px green;
 	ul {
 		list-style-type: none;
 	}
 }
 /* --- Chart lines --- */
 .lines {
-	height: 100%;
-	position: relative;
+	// height: ;
+	// position: relative;
 }
 .line {
+	// border: solid 3px purple;
 	background: rgba(rgb(198, 198, 198), 0.6);
-	height: inherit;
+	height: 103%;
 	position: absolute;
+	// bottom: 0;
 	width: 2px;
 	&.line-0 {
-		left: 0;
+		left: -1%;
 	}
 	&.line-30 {
-		left: 37%;
+		left: 33%;
 	}
 	&.line-60 {
-		left: 74%;
+		left: 66%;
 	}
 	&.line-90 {
-		left: 110%;
+		left: 100%;
 	}
 }
 .line-label {
 	@include fluid-type(font-size, $min-width, $max-width, 9px, 16px);
-	bottom: -2vh;
+	bottom: -5%;
 	color: $gray-text;
 	font-style: italic;
 	position: absolute;
-	right: -.5vw;
+	right: -5%;
 }
 /* --- Chart bars --- */
 .charts {
-	height: 100%;
+	// height: 90%;
 	left: 0;
 	position: absolute;
 	top: 0;
+	// max-width: $max-skill-grid-width;
 	width: 100%;
+	// border: solid 1px red;
 }
 .chart-title {
 	@include fluid-type(font-size, $min-width, $max-width, 10px, 18px);
 	color: #28424e;
 	display: block;
-	margin: 0 0 1vh 1vw;
+	margin: 0 0 1% 1%;
 }
 .chart-horizontal {
 	overflow: hidden;
@@ -80,9 +90,12 @@ $chart-stagger-delay: .1s;
 	border-bottom-right-radius: $border-rad;
 	background: linear-gradient(to left, #4cb8c4, #3cd3ad);
 	display: flex;
-	height: 1.8vh;
+	// height: 1.8vh;
 	justify-content: flex-start;
-	margin-bottom: .5vh;
+	// margin-bottom: .4vh;
+	height: $chart-bar-height;
+	max-height: $max-bar-height;
+	margin-bottom: .8%;
 }
 .bar-label {
 	@include fluid-type(font-size, $min-width, $max-width, 8px, 16px);
@@ -101,17 +114,20 @@ $chart-stagger-delay: .1s;
 
 /* --- Landscape orientation height adjustments (vh) --- */
 .skills-chart--landscape {
-	height: 90vh;
+	height: 100vh;
 
 	.line-label {
-		bottom: -4vh;
+		// bottom: -4vh;
 	}
 	.chart-title {
-		margin: 0 0 2vh 1vw;
+		// margin: 0 0 2vh 1vw;
+		margin: 0 0 1% 1%;
 	}
 	.chart-bar {
-		height: 3vh;
-		margin-bottom: 2vh;
+		// height: 3vh;
+		// margin-bottom: 2vh;
+		height: 10%;
+		margin-bottom: .8%;
 	}
 }
 

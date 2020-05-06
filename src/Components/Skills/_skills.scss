@@ -3,22 +3,24 @@ $max-skill-grid-width: 1000px;
 
 /* --- Skills Wrapper --- */
 .skills-wrapper {
+	// align-items: center;
 	align-content: start;
 	background-color: $background-white;
 	color: black;
+	// display: flex;
 	display: grid;
-	height: 100%;
+	flex-direction: column;
 	justify-content: center;
 }
 
 /* --- Skills Chart --- */
 .skills-chart-wrapper {
-	// border: solid 1px green; // TEMP
-	height: auto;
+	height: 45%;
 	left: 0;
 	right: 0;
 	margin-left: auto;
 	margin-right: auto;
+	// margin-top: 10%;
 	position: absolute;
 	top: 50%;
 	width: 80%;

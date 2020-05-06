@@ -15,20 +15,16 @@
 .skill-group-item-1 {
 	grid-area: skillIcon;
 	color: #339da9;
-	font-size: 3.5rem;
 }
 .skill-group-item-2 {
-	@include fluid-type(font-size, $min-width, $max-width, 12px, 20px);
 	grid-area: skillHeader;
 	color: #28424e;
 }
 .skill-group-item-3 {
 	grid-area: expandIcon;
 	color: #339da9;
-	font-size: 3.5rem;
 }
 .skill-group-item-4 {
-	@include fluid-type(font-size, $min-width, $max-width, 12px, 14px);
 	grid-area: skillText;
 	color: $gray-text;
 	text-align: justify;
@@ -37,7 +33,6 @@
 /* --- Skills Grid --- */
 .skills-grid {
 	display: grid;
-	padding-top: 5%;
 }
 .skill-expand-icon {
 	align-self: center;
@@ -46,23 +41,34 @@
 	opacity: 0;
 }
 .skills-grid--large {
-	$grid-width: 952px;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 1fr;
-	width: $grid-width;
+	padding-top: 4%;
+	width: $large-screen-breakpoint;
 	max-width: $max-width;
 
 	.skills-group {
-		align-self: center;
+		align-self: stretch;
 		justify-self: center;
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr .75fr 2fr;
 		grid-template-areas: "skillIcon" "skillHeader" "skillText";
-		// height: calc(3 * 30%); //Chart height = calc(3.5 * #{$tenth-of-height})
-		width: calc(1/3 * #{$grid-width});
+		width: calc(1/3 * #{$large-screen-breakpoint});
+	}
+	.skill-group-item-1 {
+		@include fluid-type(font-size, $large-screen-breakpoint, $max-width, 42px, 50px);
+		align-self: center;
+	}
+	.skill-group-item-2 {
+		@include fluid-type(font-size, $large-screen-breakpoint, $max-width, 18px, 20px);
+		align-self: center;
 	}
 	.skill-group-item-3 {
 		@include fluid-type(font-size, $large-screen-breakpoint, $max-width, 20px, 28px);
+	}
+	.skill-group-item-4 {
+		@include fluid-type(font-size, $large-screen-breakpoint, $max-width, 12px, 16px);
+		padding-top: 2%;
 	}
 }
 .skills-grid--small {
@@ -70,6 +76,7 @@
 	grid-template-rows: 1fr 1fr;
 	max-height: 70%;
 	max-width: $max-skill-grid-width;
+	padding-top: 8%;
 
 	.skill-expand-icon {
 		opacity: 1;
@@ -84,20 +91,20 @@
 		transition: height .25s ease-in;
 
 		.skill-group-item-1 {
-			@include fluid-type(font-size, $min-width, $max-width, 22px, 62px);
+			@include fluid-type(font-size, $min-width, $large-screen-breakpoint, 22px, 42px);
 			justify-self: start;
 		}
 		.skill-group-item-2 {
-			@include fluid-type(font-size, $min-width, $max-width, 9.5px, 28px);
+			@include fluid-type(font-size, $min-width, $large-screen-breakpoint, 9.5px, 20px);
 			align-self: center;
 			justify-self: start;
 		}
 		.skill-group-item-3 {
-			@include fluid-type(font-size, $min-width, $max-width, 16px, 34px);
+			@include fluid-type(font-size, $min-width, $large-screen-breakpoint, 16px, 34px);
 			justify-self: start;
 		}
 		.skill-group-item-4 {
-			@include fluid-type(font-size, $min-width, $max-width, 7.5px, 18px);
+			@include fluid-type(font-size, $min-width, $large-screen-breakpoint, 7.5px, 12px);
 			padding-top: 2%;
 			opacity: 0;
 			transition: all .25s ease-in;
