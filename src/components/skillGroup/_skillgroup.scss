@@ -63,17 +63,17 @@
 	.skill-group-item-2 {
 		@include fluid-type(font-size, $large-screen-breakpoint, $max-width, 14px, 19px);
 		align-self: center;
+		padding-top: 2%;
 	}
 	.skill-group-item-3 {
 		@include fluid-type(font-size, $large-screen-breakpoint, $max-width, 20px, 24px);
 	}
 	.skill-group-item-4 {
 		@include fluid-type(font-size, $large-screen-breakpoint, $max-width, 10px, 14px);
-		padding-top: 2%;
+		padding-top: 4%;
 	}
 	// In Landscape orientation, adjust height for reduced vh
 	.skills-group--landscape {
-		// border: solid 1px red;
 		margin-top: -13%;
 		height: 15vh;
 	}
@@ -129,7 +129,6 @@
 	}
 	// In Landscape orientation, adjust height for reduced vh
 	.skills-group--landscape {
-		border: solid 1px red;
 		height: 15vh;
 	}
 	// In Landscape orientation, adjust height for reduced vh
