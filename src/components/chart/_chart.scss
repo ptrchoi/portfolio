@@ -84,6 +84,9 @@ $chart-bar-height-large: 1%;
 		height: 1.75vh;
 		max-height: 14px;
 	}
+	// .charts--landscape {
+	// 	border: solid 3px purple;
+	// }
 }
 .bar-label {
 	@include fluid-type(font-size, $min-width, $max-width, 8px, 16px);

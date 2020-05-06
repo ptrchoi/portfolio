@@ -3,23 +3,21 @@ import React, { Component } from 'react';
 import $ from 'jquery';
 
 class Chart extends Component {
-	// updateOrientation(orientation) {
-	// 	if (orientation === 'landscape') {
-	// 		$('#skillsChart').addClass('skills-chart--landscape');
-	// 		console.log('orientation === landscape');
-	// 	} else {
-	// 		$('#skillsChart').removeClass('skills-chart--landscape');
-	// 		console.log('orientation === portrait');
-	// 	}
-	// }
+	updateOrientation(orientation) {
+		if (orientation === 'landscape') {
+			$('#charts').addClass('charts--landscape');
+		} else {
+			$('#charts').removeClass('charts--landscape');
+		}
+	}
 	render(props) {
-		let { size } = this.props;
-		// console.log('this.props.orientation: ', orientation);
-		// this.updateOrientation(orientation);
+		let { size, orientation } = this.props;
+		this.updateOrientation(orientation);
 		const chartClassList = 'skills-chart skills-chart--' + size;
+
 		return (
 			<div id="skillsChart" className={chartClassList}>
-				<div className="charts">
+				<div id="charts" className="charts">
 					<ul className="lines">
 						<li className="line line-0" />
 						<li className="line line-30">

@@ -70,33 +70,35 @@ class App extends Component {
 		let width = window.innerWidth;
 		let { screenSize, orientation, landscapeHeight } = this.state;
 
-		$('.section-wrapper').removeClass('section-wrapper--landscape'); // Clear any previous landscape styles
+		// Clear any previous landscape styles
+		$('.section-wrapper').removeClass('section-wrapper--landscape');
 
-		//Check for changes to screenSize
+		// Ensure width used doesn't exceed MAX_WIDTH
+		if (width > constants.MAX_WIDTH) width = constants.MAX_WIDTH;
+
+		// Update screenSize
 		if (width > constants.LARGE_SCREEN_BREAKPOINT) {
-			// Ensure width used doesn't exceed MAX_WIDTH
-			if (width > constants.MAX_WIDTH) width = constants.MAX_WIDTH;
-
 			screenSize = 'large';
-
-			landscapeHeight = 0; // Set fullpage.js to 'autoscroll=true'
-			orientation = 'portrait'; // If large screen, ignore landscape orientation flag, keep default of portrait
 		} else {
 			screenSize = 'small';
+		}
 
-			// On Small screen width, update orientation
-			if (width > height) {
+		// Update orientation & landscapeHeight
+		if (width > height) {
+			// For small screen landscape - set height to longer aspect ratio for scrolling; otherwise keep fullpage autoscroll
+			if (screenSize === 'small') {
 				let aspectRatio = height / width;
 				height = width / aspectRatio;
 				landscapeHeight = height + 1; // DO THIS BEFORE calculating new height; for fullpage.js prop 'responsiveHeight={landscapeHeight}' sets 'autoscroll=false'
-
-				orientation = 'landscape';
-
-				$('.section-wrapper').addClass('section-wrapper--landscape'); // Add landscape specific styling
 			} else {
 				landscapeHeight = 0; // Set fullpage.js to 'autoscroll=true'
-				orientation = 'portrait';
 			}
+			orientation = 'landscape';
+
+			$('.section-wrapper').addClass('section-wrapper--landscape'); // Add landscape specific styling
+		} else {
+			landscapeHeight = 0; // Set fullpage.js to 'autoscroll=true'
+			orientation = 'portrait';
 		}
 
 		this.setState({

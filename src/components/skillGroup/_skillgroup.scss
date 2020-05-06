@@ -33,6 +33,7 @@
 /* --- Skills Grid --- */
 .skills-grid {
 	display: grid;
+	margin-top: 5%;
 }
 .skill-expand-icon {
 	align-self: center;
@@ -69,6 +70,16 @@
 	.skill-group-item-4 {
 		@include fluid-type(font-size, $large-screen-breakpoint, $max-width, 10px, 14px);
 		padding-top: 2%;
+	}
+	// In Landscape orientation, adjust height for reduced vh
+	.skills-group--landscape {
+		// border: solid 1px red;
+		margin-top: -13%;
+		height: 15vh;
+	}
+	// In Landscape orientation, adjust height for reduced vh
+	.skills-group--expand--landscape {
+		height: 30vh;
 	}
 }
 .skills-grid--small {
@@ -118,6 +129,7 @@
 	}
 	// In Landscape orientation, adjust height for reduced vh
 	.skills-group--landscape {
+		border: solid 1px red;
 		height: 15vh;
 	}
 	// In Landscape orientation, adjust height for reduced vh

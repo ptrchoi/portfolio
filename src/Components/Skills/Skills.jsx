@@ -34,7 +34,7 @@ class Skills extends Component {
 				</div>
 				<SkillGroup gridClassList={gridClassList} orientation={orientation} />
 				<div id="skillsChartWrapper" className={chartClassList}>
-					<Chart size={size} />
+					<Chart size={size} orientation={orientation} />
 				</div>
 				<div className="confetti blur">
 					<Confetti
