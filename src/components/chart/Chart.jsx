@@ -1,23 +1,16 @@
 //Libraries
 import React, { Component } from 'react';
-import $ from 'jquery';
+// import $ from 'jquery';
 
 class Chart extends Component {
-	updateOrientation(orientation) {
-		if (orientation === 'landscape') {
-			$('#charts').addClass('charts--landscape');
-		} else {
-			$('#charts').removeClass('charts--landscape');
-		}
-	}
 	render(props) {
 		let { size, orientation } = this.props;
-		this.updateOrientation(orientation);
-		const chartClassList = 'skills-chart skills-chart--' + size;
+		const wrapperClassList = 'chart-wrapper chart-wrapper--' + size + ' chart-wrapper--' + orientation;
+		const contentClassList = 'chart-content chart-content--' + size;
 
 		return (
-			<div id="skillsChart" className={chartClassList}>
-				<div id="charts" className="charts">
+			<div className={wrapperClassList}>
+				<div className="chart-group">
 					<ul className="lines">
 						<li className="line line-0" />
 						<li className="line line-30">
@@ -32,7 +25,7 @@ class Chart extends Component {
 					</ul>
 					<div className="chart chart-tech">
 						<span className="chart-title">Front End Technologies</span>
-						<ul className="chart-horizontal">
+						<ul className={contentClassList}>
 							<li className="chart-bar bar-90">
 								<span className="bar-label">Javascript | ES6</span>
 							</li>
@@ -58,7 +51,7 @@ class Chart extends Component {
 					</div>
 					<div className="chart chart-ux">
 						<span className="chart-title">UX & Design</span>
-						<ul className="chart-horizontal">
+						<ul className={contentClassList}>
 							<li className="chart-bar bar-90">
 								<span className="bar-label">Design Strategy | User Research</span>
 							</li>
@@ -72,7 +65,7 @@ class Chart extends Component {
 					</div>
 					<div className="chart chart-soft">
 						<span className="chart-title">Production & Collaboration</span>
-						<ul className="chart-horizontal">
+						<ul className={contentClassList}>
 							<li className="chart-bar bar-90">
 								<span className="bar-label">Jira | Trello | Confluence | Slack</span>
 							</li>
