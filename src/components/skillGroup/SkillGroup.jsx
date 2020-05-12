@@ -62,6 +62,8 @@ class SkillGroup extends Component {
 		let { gridClassList, orientation } = this.props;
 		this.updateOrientation(orientation);
 
+		// NEED TO CLOSE EXPANDED GROUPS IF ORIENTATION IS CHANGED
+
 		return (
 			<div className={gridClassList}>
 				<div

@@ -84,10 +84,10 @@
 }
 .skills-grid--small {
 	grid-template-columns: 1fr;
-	grid-template-rows: 1fr 1fr;
-	max-height: 70%;
+	grid-template-rows: 1fr 1fr 1fr;
+	max-height: 30%;
 	max-width: $max-skill-grid-width;
-	padding-top: 8%;
+	padding-top: 5%;
 
 	.skill-expand-icon {
 		opacity: 1;
@@ -98,7 +98,8 @@
 		grid-template-areas: "spacer skillIcon skillHeader expandIcon" "skillText skillText skillText skillText";
 		grid-gap: 1vw;
 		height: 7vh;
-		width: calc(7 * #{$tenth-of-width});
+		max-height: 70%;
+		width: 70vw;
 		transition: height .25s ease-in;
 
 		.skill-group-item-1 {

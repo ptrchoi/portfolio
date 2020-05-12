@@ -7,9 +7,9 @@ $chart-2-delay: .8s;
 $chart-3-delay: 1.2s;
 $chart-stagger-delay: .1s;
 
-$chart-bar-height: 5%;
-$max-bar-height: 20px;
-$chart-bar-height-large: 1%;
+// $chart-bar-height: 5%;
+// $max-bar-height: 20px;
+// $chart-bar-height-large: 1%;
 
 @mixin stagger-anim-delay($i, $initial-delay, $stagger-delay) {
 	@while $i > 0 {
@@ -22,21 +22,22 @@ $chart-bar-height-large: 1%;
 
 /* --- Chart Wrapper --- */
 .chart-wrapper {
-	height: 45%;
+	// height: 42%;
 	left: 0;
 	right: 0;
 	margin-left: auto;
 	margin-right: auto;
 	position: absolute;
-	top: 50%;
-	width: 80%;
+	top: 52%;
+	width: 72%;
 	z-index: $above-confetti-layer;
 }
 .chart-wrapper--large {
 	top: 44%;
 }
 .chart-wrapper--landscape {
-	top: 43%;
+	top: 48%;
+	width: 65%;
 }
 
 /* --- Chart --- */
@@ -73,19 +74,29 @@ $chart-bar-height-large: 1%;
 	border-bottom-right-radius: $border-rad;
 	background: linear-gradient(to left, #4cb8c4, #3cd3ad);
 	display: flex;
+	height: 1.4vh;
+	max-height: 12px;
 	justify-content: flex-start;
 	margin-bottom: .8%;
 }
-.chart-content--large {
-	.chart-bar {
-		height: 1.75vh;
-		max-height: 14px;
-	}
-}
 .bar-label {
-	@include fluid-type(font-size, $min-width, $max-width, 8px, 16px);
+	@include fluid-type(font-size, $min-width, $large-screen-breakpoint, 7px, 12px);
 	color: white;
 	padding-left: 1vw;
+}
+.chart-wrapper--landscape {
+	.chart-bar {
+		height: 3vh;
+	}
+}
+.chart-content--large {
+	.chart-bar {
+		height: 1.2vh;
+		max-height: 16px;
+	}
+	.bar-label {
+		@include fluid-type(font-size, $large-screen-breakpoint, $max-width, 9px, 12px);
+	}
 }
 .bar-30 {
 	width: 31%;
