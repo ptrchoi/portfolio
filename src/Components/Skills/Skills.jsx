@@ -17,7 +17,6 @@ class Skills extends Component {
 	render(props) {
 		let { size, height, width, orientation } = this.props;
 		const gridClassList = 'skills-grid skills-grid--' + size;
-
 		return (
 			<div className="section-wrapper skills-wrapper" style={{ height: height, width: width }}>
 				<div className="section-header">
@@ -25,9 +24,6 @@ class Skills extends Component {
 				</div>
 				<SkillGroup gridClassList={gridClassList} orientation={orientation} />
 				<Chart size={size} orientation={orientation} />
-				{/* <div id="skillsChartWrapper" className={chartClassList}>
-					<Chart size={size} orientation={orientation} />
-				</div> */}
 				<div className="confetti blur">
 					<Confetti
 						data={{

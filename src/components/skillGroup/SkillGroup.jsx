@@ -6,10 +6,30 @@ class SkillGroup extends Component {
 	constructor(props) {
 		super(props);
 
+		this.clearExpandedGroups = this.clearExpandedGroups.bind(this);
 		this.clickHandler = this.clickHandler.bind(this);
+		this.updateOrientation = this.updateOrientation.bind(this);
+
 		this.state = {
-			expandedTextID: ''
+			expandedTextID: '',
+			prevOrientation: 'landscape',
+			currentOrientation: 'portrait'
 		};
+	}
+	static getDerivedStateFromProps(nextProps, prevState) {
+		if (prevState.prevOrientation !== nextProps.orientation) {
+			return {
+				prevOrientation: prevState.prevOrientation,
+				currentOrientation: nextProps.orientation
+			};
+		} else {
+			return null;
+		}
+	}
+	clearExpandedGroups() {
+		$('.skills-group').removeClass('skills-group--expand skills-group--expand--landscape');
+		$('.skill-group-item-3').removeClass('fa-caret-left');
+		$('.skill-group-item-4').removeClass('skills-text--show');
 	}
 	clickHandler(e, orientation) {
 		e.preventDefault();
@@ -35,16 +55,16 @@ class SkillGroup extends Component {
 			p.removeClass('skills-text--show');
 			groupID = '';
 		} else {
-			$('.skills-group').removeClass(classList);
-			$('.skill-group-item-3').removeClass('fa-caret-left');
-			$('.skill-group-item-4').removeClass('skills-text--show');
+			this.clearExpandedGroups();
 			group.addClass(classList);
 			icon.addClass('fa-caret-left');
 			p.addClass('skills-text--show');
 		}
 
 		this.setState({
-			expandedTextID: groupID
+			expandedTextID: groupID,
+			prevOrientation: orientation,
+			currentOrientation: orientation
 		});
 	}
 	updateOrientation(orientation) {
@@ -59,10 +79,14 @@ class SkillGroup extends Component {
 		}
 	}
 	render(props) {
+		let { prevOrientation } = this.state;
 		let { gridClassList, orientation } = this.props;
-		this.updateOrientation(orientation);
 
-		// NEED TO CLOSE EXPANDED GROUPS IF ORIENTATION IS CHANGED
+		// Check for change in orientation to reset expanded groups
+		if (orientation !== prevOrientation) {
+			this.clearExpandedGroups();
+			this.updateOrientation(orientation);
+		}
 
 		return (
 			<div className={gridClassList}>
