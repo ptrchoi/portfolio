@@ -80,12 +80,15 @@ class SkillGroup extends Component {
 	}
 	render(props) {
 		let { prevOrientation } = this.state;
-		let { gridClassList, orientation } = this.props;
+		let { size, orientation } = this.props;
+		const gridClassList = 'skills-grid skills-grid--' + size;
+
+		// Apply orienation classes
+		this.updateOrientation(orientation);
 
 		// Check for change in orientation to reset expanded groups
 		if (orientation !== prevOrientation) {
 			this.clearExpandedGroups();
-			this.updateOrientation(orientation);
 		}
 
 		return (

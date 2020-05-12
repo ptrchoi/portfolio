@@ -16,13 +16,14 @@ import Chart from '../chart/Chart';
 class Skills extends Component {
 	render(props) {
 		let { size, height, width, orientation } = this.props;
-		const gridClassList = 'skills-grid skills-grid--' + size;
+		// const gridClassList = 'skills-grid skills-grid--' + size;
 		return (
 			<div className="section-wrapper skills-wrapper" style={{ height: height, width: width }}>
 				<div className="section-header">
 					<h1>Skills</h1>
 				</div>
-				<SkillGroup gridClassList={gridClassList} orientation={orientation} />
+				{/* <SkillGroup gridClassList={gridClassList} orientation={orientation} /> */}
+				<SkillGroup size={size} orientation={orientation} />
 				<Chart size={size} orientation={orientation} />
 				<div className="confetti blur">
 					<Confetti
