@@ -14,17 +14,29 @@ import Chart from '../chart/Chart';
  * @return {JSX.Element} - Rendered component.
  */
 class Skills extends Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			skillsOrientation: 'portrait'
+		};
+	}
+	static getDerivedStateFromProps(nextProps, prevState) {
+		return {
+			skillsOrientation: nextProps.orientation
+		};
+	}
 	render(props) {
+		let { skillsOrientation } = this.state;
 		let { size, height, width, orientation } = this.props;
-		// const gridClassList = 'skills-grid skills-grid--' + size;
+
 		return (
 			<div className="section-wrapper skills-wrapper" style={{ height: height, width: width }}>
 				<div className="section-header">
 					<h1>Skills</h1>
 				</div>
-				{/* <SkillGroup gridClassList={gridClassList} orientation={orientation} /> */}
-				<SkillGroup size={size} orientation={orientation} />
-				<Chart size={size} orientation={orientation} />
+				<SkillGroup size={size} orientation={skillsOrientation} />
+				<Chart size={size} orientation={skillsOrientation} />
 				<div className="confetti blur">
 					<Confetti
 						data={{
