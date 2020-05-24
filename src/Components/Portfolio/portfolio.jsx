@@ -27,37 +27,39 @@ import screenWiki from '../../assets/project_wiki.png';
  * @return {JSX.Element} - Rendered component.
  */
 const CARDS = [
+	// {
+	// 	projectId: 'project-1',
+	// 	title: 'Single-page Application - Developer Portfolio (REACT)',
+	// 	image: screenPortfolio,
+	// 	website: '',
+	// 	firebase: '',
+	// 	codepen: '',
+	// 	description: `A fully responsive, REACT Single-page Application (SPA) with full-screen scrolling and dynamic elements throughout.
+
+	// 	Features:
+	// 	- REACT | ES6 | SCSS | CSS3 | HTML5
+	// 	- CSS animated backgrounds, charts, and transitions
+	// 	- Full-screen page scrolling (fullpage.js lib)
+	// 	- Responsive scaling layouts, text, and page elements
+	// 	- Active-selection Nav-menu and modal mobile menu`
+	// },
 	{
 		projectId: 'project-1',
-		title: 'Single-page Application - Developer Portfolio (REACT)',
-		image: screenPortfolio,
+		title: 'Inspiration App',
+		image: screenQuote,
 		website: '',
-		firebase: '',
-		codepen: '',
-		description: `A fully responsive, REACT Single-page Application (SPA) with full-screen scrolling and dynamic elements throughout.
+		firebase: 'https://quotes.ptrchoi.com',
+		codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/mQEMXv',
+		description: `A React app that generates inspirational quotes over fullscreen, high-resolution images. Fully responsive, fluidly scaling images and text, with content pulling from several popular API's.
 		
 		Features:
-		- REACT | ES6 | SCSS | CSS3 | HTML5
-		- CSS animated backgrounds, charts, and transitions
-		- Full-screen page scrolling (fullpage.js lib)
-		- Responsive scaling layouts, text, and page elements
-		- Active-selection Nav-menu and modal mobile menu`
+		- REACT | jQuery | SCSS | CSS3
+		- Forismatic, Unsplash, and Twitter API’s
+		- Responsive design with full-screen fluidly scaling background images and text, with transition animations
+		- Selectable image themes, about modal overlay`
 	},
 	{
 		projectId: 'project-2',
-		title: 'The 2017 Refresh Conference Website (Wordpress)',
-		image: screenRefresh,
-		website: 'https://therefreshconference.org/',
-		firebase: '',
-		codepen: '',
-		description: `Responsible for redesigning, rebuilding, and managing the Refresh Conference Website for the 2017 annual conference.
-		
-		- Redesign and rebuild of the site from scratch, using Wordpress as the CMS to support frequent client content updates
-		- Design and flows that balanced the needs of new users (ie. About/FAQ/Media/Marketing/CTA’s) with users attending the conference (ie. Payment flow/Events Calendar/Speaker Bios/Sponsors)
-		- Note that the Refresh site has since changed, particularly the content, but the site retains the overall design from 2017`
-	},
-	{
-		projectId: 'project-3',
 		title: 'Single-Page Application - Product Page (JS)',
 		image: screenSpa,
 		website: '',
@@ -71,6 +73,23 @@ const CARDS = [
 		- Modal image gallery and Nav-menu
 		- Nested CSS Grid & Flex-box layouts
 		- Fictional product page based on content from guitarsalon.com`
+	},
+	{
+		projectId: 'project-3',
+		title: 'Virtual Drum Machine (REACT)',
+		image: screenDrum,
+		website: '',
+		firebase: 'https://drum-machine.ptrchoi.com',
+		codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/Xyrppy',
+		description: `A responsive REACT Drum Machine app that supports touch, mouse, and keyboard inputs; features multiple sound banks themes.
+		
+		Features:
+		- REACT ES6 | SCSS | CSS3 | HTML5
+		- Functional programming, higher-order functions
+		- Advanced ES6 features
+		- Fully responsive, supporting all input types
+		- Standard and Jazz drum kit sound banks
+		- Modular programming with React and SCSS components.`
 	},
 	{
 		projectId: 'project-4',
@@ -89,23 +108,6 @@ const CARDS = [
 	},
 	{
 		projectId: 'project-5',
-		title: 'Virtual Drum Machine (REACT)',
-		image: screenDrum,
-		website: '',
-		firebase: 'https://drum-machine.ptrchoi.com',
-		codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/Xyrppy',
-		description: `A responsive REACT Drum Machine app that supports touch, mouse, and keyboard inputs; features multiple sound banks themes.
-		
-		Features:
-		- REACT ES6 | SCSS | CSS3 | HTML5
-		- Functional programming, higher-order functions
-		- Advanced ES6 features
-		- Fully responsive, supporting all input types
-		- Standard and Jazz drum kit sound banks
-		- Modular programming with React and SCSS components.`
-	},
-	{
-		projectId: 'project-6',
 		title: 'Technical Document (JS)',
 		image: screenTech,
 		website: '',
@@ -119,7 +121,7 @@ const CARDS = [
 		- Persistent active-selection Nav-menu and modal mobile menu`
 	},
 	{
-		projectId: 'project-7',
+		projectId: 'project-6',
 		title: 'Wikipedia Viewer (JS + Bootstrap)',
 		image: screenWiki,
 		website: '',
@@ -133,7 +135,7 @@ const CARDS = [
 		- Masonry card grid layout (masonry-layout)`
 	},
 	{
-		projectId: 'project-8',
+		projectId: 'project-7',
 		title: 'Materal Design Calculator (REACT)',
 		image: screenCalc,
 		website: '',
@@ -148,7 +150,7 @@ const CARDS = [
 		- Functional programming, higher-order functions, advanced ES6 features`
 	},
 	{
-		projectId: 'project-9',
+		projectId: 'project-8',
 		title: 'Pomodoro Clock (JS + Bootstrap)',
 		image: screenPomodoro,
 		website: '',
@@ -161,7 +163,7 @@ const CARDS = [
 		- Customizable work and rest session times`
 	},
 	{
-		projectId: 'project-10',
+		projectId: 'project-9',
 		title: 'Classic Simon Game',
 		image: screenSimon,
 		website: '',
@@ -175,7 +177,7 @@ const CARDS = [
 		- Custom assets`
 	},
 	{
-		projectId: 'project-11',
+		projectId: 'project-10',
 		title: 'Tic-Tac-Toe Game',
 		image: screenTictac,
 		website: '',
@@ -189,22 +191,7 @@ const CARDS = [
 		- Custom assets`
 	},
 	{
-		projectId: 'project-12',
-		title: 'REACT Quote Generator',
-		image: screenQuote,
-		website: '',
-		firebase: 'https://quotes.ptrchoi.com',
-		codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/mQEMXv',
-		description: `A Quote Generator app that displays inspirational-themed quotes with full-screen, responsive hi-res images.
-		
-		Features:
-		- REACT | jQuery | SCSS | CSS3
-		- Forismatic and Unsplash API’s
-		- Responsive design with full-screen scaling background images and  scaling font-size
-		- Theme-filtered background images, randomly generated from Unsplash's image collections`
-	},
-	{
-		projectId: 'project-13',
+		projectId: 'project-11',
 		title: 'Dynamic Weather App (JS + Bootstrap)',
 		image: screenWeather,
 		website: '',
@@ -217,6 +204,19 @@ const CARDS = [
 		- OpenWeatherMap API
 		- HTML5 device geolocation
 		- Current weather from major international locales`
+	},
+	{
+		projectId: 'project-12',
+		title: 'The 2017 Refresh Conference Website (Wordpress)',
+		image: screenRefresh,
+		website: 'https://therefreshconference.org/',
+		firebase: '',
+		codepen: '',
+		description: `Responsible for redesigning, rebuilding, and managing the Refresh Conference Website for the 2017 annual conference.
+		
+		- Redesign and rebuild of the site from scratch, using Wordpress as the CMS to support frequent client content updates
+		- Design and flows that balanced the needs of new users (ie. About/FAQ/Media/Marketing/CTA’s) with users attending the conference (ie. Payment flow/Events Calendar/Speaker Bios/Sponsors)
+		- Note that the Refresh site has since changed, particularly the content, but the site retains the overall design from 2017`
 	}
 ];
 
@@ -251,7 +251,6 @@ class Portfolio extends Component {
 					<Card card={card[9]} size={size} />
 					<Card card={card[10]} size={size} />
 					<Card card={card[11]} size={size} />
-					<Card card={card[12]} size={size} />
 					<div className="confetti blur">
 						<Confetti
 							data={{
