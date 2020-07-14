@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "ptrchoi-portfolio"
+    "default": "ptrchoi-portfolio",
+    "staging": "portfolio-staging-1b8ac"
   }
 }

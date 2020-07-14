@@ -6,7 +6,6 @@ import Card from '../card/Card';
 import Confetti from '../confetti/Confetti';
 
 //Assets
-import screenPortfolio from '../../assets/project_portfolio.png';
 import screenRefresh from '../../assets/project_refresh.png';
 import screenSpa from '../../assets/project_spa.png';
 import screenCalc from '../../assets/project_calc.png';
@@ -16,7 +15,6 @@ import screenQuote from '../../assets/project_quote.png';
 import screenSimon from '../../assets/project_simon.png';
 import screenTictac from '../../assets/project_tictac.png';
 import screenMarkdown from '../../assets/project_markdown.png';
-import screenTwitch from '../../assets/project_twitch.png';
 import screenPomodoro from '../../assets/project_pomodoro.png';
 import screenWeather from '../../assets/project_weather.png';
 import screenWiki from '../../assets/project_wiki.png';
