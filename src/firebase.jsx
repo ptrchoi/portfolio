@@ -1,6 +1,6 @@
 import firebase from 'firebase/app';
 
-// App's Firebase configuration
+// App's Firebase configuration (apiKey is domain restricted/secure)
 const firebaseConfig = {
 	apiKey: '***REMOVED***',
 	authDomain: '***REMOVED***',
