@@ -5,7 +5,7 @@ import $ from 'jquery';
 import 'fullpage.js/vendors/scrolloverflow'; // must be loaded after jQuery and before ReactFullPage
 import ReactFullPage from '@fullpage/react-fullpage';
 
-import Debucsser from 'debucsser';
+// import Debucsser from 'debucsser'; // Debug overlays
 
 //Components
 import Navbar from '../navbar/Navbar';
@@ -18,17 +18,6 @@ import Contact from '../contact/Contact';
 
 //Constants
 import constants from '../../constants';
-// const SIZE_LARGE = 992;
-
-//DEV ONLY *************REMOVE**************
-//Debucsser CSS Debugger settings
-const config = {
-	color: 'red',
-	width: '4px',
-	grayscaleOnDebugAll: true
-};
-const debug = new Debucsser(config).init();
-//DEV ONLY *************REMOVE**************
 
 /**
  * App Class Component handles:
@@ -192,7 +181,7 @@ class App extends Component {
 		return (
 			//Set options for fullpage.js
 			<ReactFullPage
-				licenseKey={'***REMOVED***'}
+				licenseKey={process.env.REACT_FULL_PAGE_KEY}
 				anchors={[ 'anchor-1', 'anchor-2', 'anchor-3', 'anchor-4', 'anchor-5' ]}
 				menu={true}
 				scrollOverflow={true}
