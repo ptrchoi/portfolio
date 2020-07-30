@@ -36,9 +36,6 @@ class Chart extends Component {
 								<span className="bar-label">Redux</span>
 							</li>
 							<li className="chart-bar bar-60">
-								<span className="bar-label">jQuery</span>
-							</li>
-							<li className="chart-bar bar-60">
 								<span className="bar-label">Firebase</span>
 							</li>
 							<li className="chart-bar bar-90">
@@ -53,7 +50,7 @@ class Chart extends Component {
 						<span className="chart-title">UX & Design</span>
 						<ul className={contentClassList}>
 							<li className="chart-bar bar-90">
-								<span className="bar-label">Design Strategy | User Research</span>
+								<span className="bar-label">Design Strategy</span>
 							</li>
 							<li className="chart-bar bar-60">
 								<span className="bar-label">Wireframes | Mockups | Prototypes</span>

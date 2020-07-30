@@ -25,24 +25,24 @@ import screenWiki from '../../assets/project_wiki.png';
  * @return {JSX.Element} - Rendered component.
  */
 const CARDS = [
-	// {
-	// 	projectId: 'project-1',
-	// 	title: 'Single-page Application - Developer Portfolio (REACT)',
-	// 	image: screenPortfolio,
-	// 	website: '',
-	// 	firebase: '',
-	// 	codepen: '',
-	// 	description: `A fully responsive, REACT Single-page Application (SPA) with full-screen scrolling and dynamic elements throughout.
-
-	// 	Features:
-	// 	- REACT | ES6 | SCSS | CSS3 | HTML5
-	// 	- CSS animated backgrounds, charts, and transitions
-	// 	- Full-screen page scrolling (fullpage.js lib)
-	// 	- Responsive scaling layouts, text, and page elements
-	// 	- Active-selection Nav-menu and modal mobile menu`
-	// },
 	{
 		projectId: 'project-1',
+		title: 'Top Tweets & Wikis (REACT)',
+		image: screenWiki,
+		website: '',
+		firebase: 'https://top-tweet-wiki.ptrchoi.com',
+		codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/ZWLMzq',
+		description: `Finds top trending tweets by location and related Wikipedia articles, displayed in a dynamic masonry card layout.
+		
+		Features:
+		- REACT | JS | jQuery | SCSS | CSS3 | HTML5
+		- Twitter & Wikipedia API integration
+		- Functional programming, higher-order functions
+		- Advanced ES6 features	- Masonry card grid layout
+		- Neumorphic design and styling`
+	},
+	{
+		projectId: 'project-2',
 		title: 'Inspiration App',
 		image: screenQuote,
 		website: '',
@@ -55,22 +55,6 @@ const CARDS = [
 		- Forismatic, Unsplash, and Twitter API’s
 		- Responsive design with full-screen fluidly scaling background images and text, with transition animations
 		- Selectable image themes, about modal overlay`
-	},
-	{
-		projectId: 'project-2',
-		title: 'Single-Page Application - Product Page (JS)',
-		image: screenSpa,
-		website: '',
-		firebase: 'https://product-spa.ptrchoi.com',
-		codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/JayyOP',
-		description: `A pure Javascript & CSS Single Page Application (SPA) product page, fully responsive, dynamic, and interactive with fluid transitions and animations.
-		
-		Features:
-		- vanilla JS | pure CSS | HTML5
-		- Responsive, scaling background video, text, and page elements
-		- Modal image gallery and Nav-menu
-		- Nested CSS Grid & Flex-box layouts
-		- Fictional product page based on content from guitarsalon.com`
 	},
 	{
 		projectId: 'project-3',
@@ -91,6 +75,22 @@ const CARDS = [
 	},
 	{
 		projectId: 'project-4',
+		title: 'Single-Page Application - Product Page (JS)',
+		image: screenSpa,
+		website: '',
+		firebase: 'https://product-spa.ptrchoi.com',
+		codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/JayyOP',
+		description: `A pure Javascript & CSS Single Page Application (SPA) product page, fully responsive, dynamic, and interactive with fluid transitions and animations.
+		
+		Features:
+		- vanilla JS | pure CSS | HTML5
+		- Responsive, scaling background video, text, and page elements
+		- Modal image gallery and Nav-menu
+		- Nested CSS Grid & Flex-box layouts
+		- Fictional product page based on content from guitarsalon.com`
+	},
+	{
+		projectId: 'project-5',
 		title: 'Markdown Editor with Live Preview (REACT)',
 		image: screenMarkdown,
 		website: '',
@@ -105,7 +105,7 @@ const CARDS = [
 		- Modular programming with React and SCSS components`
 	},
 	{
-		projectId: 'project-5',
+		projectId: 'project-6',
 		title: 'Technical Document (JS)',
 		image: screenTech,
 		website: '',
@@ -117,20 +117,6 @@ const CARDS = [
 		- vanilla JS | pure CSS | HTML5
 		- Fully responsive with scaling text and page elements
 		- Persistent active-selection Nav-menu and modal mobile menu`
-	},
-	{
-		projectId: 'project-6',
-		title: 'Wikipedia Viewer (JS + Bootstrap)',
-		image: screenWiki,
-		website: '',
-		firebase: 'https://qwik-wiki.ptrchoi.com',
-		codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/ZWLMzq',
-		description: `A Wikipedia Viewer app that displays Wikipedia search results in a dynamic masonry card layout.
-		
-		Features:
-		- JS | jQuery | CSS3 | Bootstrap | HTML5
-		- Wikipedia API
-		- Masonry card grid layout (masonry-layout)`
 	},
 	{
 		projectId: 'project-7',
