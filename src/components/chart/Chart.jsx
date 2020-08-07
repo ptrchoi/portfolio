@@ -36,10 +36,10 @@ class Chart extends Component {
 								<span className="bar-label">Redux</span>
 							</li>
 							<li className="chart-bar bar-60">
-								<span className="bar-label">Firebase</span>
+								<span className="bar-label">Node.js | Firebase</span>
 							</li>
 							<li className="chart-bar bar-90">
-								<span className="bar-label">CSS3 | SASS | SCSS</span>
+								<span className="bar-label">CSS3 | SCSS | SASS</span>
 							</li>
 							<li className="chart-bar bar-90">
 								<span className="bar-label">HTML5</span>
