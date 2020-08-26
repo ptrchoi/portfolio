@@ -114,6 +114,21 @@ const CARDS = [
 	},
 	{
 		projectId: 'project-7',
+		title: 'Calculator (REACT)',
+		image: screenCalc,
+		website: '',
+		firebase: 'https://calculator.ptrchoi.com',
+		codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/QJRpvQ',
+		description: `Material-themed calculator supporting touch and keyboard/mouse inputs.
+		
+		Features:
+		- Fully responsive
+		- Material design theme
+		- Touch and keyboard/mouse input support
+		- REACT | ES6 | jQuery | SCSS | CSS3 | HTML5 | Firebase`
+	},
+	{
+		projectId: 'project-8',
 		title: 'Pomodoro Clock (JS+Bootstrap)',
 		image: screenPomodoro,
 		website: '',
@@ -124,20 +139,6 @@ const CARDS = [
 		Features:
 		- Pause, reset, and session time settings
 		- JS | jQuery | CSS3 | Bootstrap | HTML5 | Firebase`
-	},
-	{
-		projectId: 'project-8',
-		title: 'Calculator (REACT)',
-		image: screenCalc,
-		website: '',
-		firebase: 'https://calculator.ptrchoi.com',
-		codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/QJRpvQ',
-		description: `Material-themed calculator supporting touch and keyboard/mouse inputs.
-		
-		Features:
-		- Material design theme
-		- Touch and keyboard/mouse input support
-		- REACT | ES6 | jQuery | SCSS | CSS3 | HTML5 | Firebase`
 	},
 	{
 		projectId: 'project-9',
