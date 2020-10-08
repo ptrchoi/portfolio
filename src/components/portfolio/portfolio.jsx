@@ -58,21 +58,6 @@ const CARDS = [
   },
   {
     projectId: 'project-3',
-    title: 'Inspiration App (REACT)',
-    image: screenQuote,
-    website: '',
-    firebase: 'https://quotes.ptrchoi.com',
-    codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/mQEMXv',
-    description: `Inspirational quotes displayed with high-resolution, responsive full-screen photo images.
-		
-		Features:
-		- Responsive design with full-screen scaling background images, text, and page elements
-		- Selectable image themes from Unsplash categories
-		- Forismatic and Unsplash API integration
-		- REACT | ES6 | jQuery | SCSS | CSS3 | HTML5 | Firebase`,
-  },
-  {
-    projectId: 'project-4',
     title: 'Top Tweets & Wikis App (REACT)',
     image: screenWiki,
     website: '',
@@ -87,20 +72,22 @@ const CARDS = [
 		- REACT | ES6 | jQuery | SCSS | CSS3 | HTML5 | Firebase`,
   },
   {
-    projectId: 'project-5',
-    title: 'Markdown Editor with Live Preview (REACT)',
-    image: screenMarkdown,
+    projectId: 'project-4',
+    title: 'Inspiration App (REACT)',
+    image: screenQuote,
     website: '',
-    firebase: 'https://markdown-previewer.ptrchoi.com',
-    codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/rqPKJV',
-    description: `GitHub-flavored Markdown editor, renders HTML in a real-time, side-by-side live previewer.
+    firebase: 'https://quotes.ptrchoi.com',
+    codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/mQEMXv',
+    description: `Inspirational quotes displayed with high-resolution, responsive full-screen photo images.
 		
 		Features:
-		- Responsive design with dynamic side-by-side window layout
-		- REACT | ES6 | SCSS | CSS3 | HTML5 | Firebase`,
+		- Responsive design with full-screen scaling background images, text, and page elements
+		- Selectable image themes from Unsplash categories
+		- Forismatic and Unsplash API integration
+		- REACT | ES6 | jQuery | SCSS | CSS3 | HTML5 | Firebase`,
   },
   {
-    projectId: 'project-6',
+    projectId: 'project-5',
     title: 'Virtual Drum Machine (REACT)',
     image: screenDrum,
     website: '',
@@ -111,6 +98,19 @@ const CARDS = [
 		Features:
 		- Variety of drum themes and beats
 		- Touch and keyboard/mouse input support
+		- REACT | ES6 | SCSS | CSS3 | HTML5 | Firebase`,
+  },
+  {
+    projectId: 'project-6',
+    title: 'Markdown Editor with Live Preview (REACT)',
+    image: screenMarkdown,
+    website: '',
+    firebase: 'https://markdown-previewer.ptrchoi.com',
+    codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/rqPKJV',
+    description: `GitHub-flavored Markdown editor, renders HTML in a real-time, side-by-side live previewer.
+		
+		Features:
+		- Responsive design with dynamic side-by-side window layout
 		- REACT | ES6 | SCSS | CSS3 | HTML5 | Firebase`,
   },
   {
