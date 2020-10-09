@@ -32,13 +32,12 @@ const CARDS = [
     website: '',
     firebase: 'https://weather.ptrchoi.com',
     codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/grwMJv',
-    description: `Responsive, real-time weather app with dynamic location-based high-resolution images.
+    description: `Dynamic, responsive, real-time weather app with location-based, high-resolution images.
 		
 		Features:
 		- Detailed weather conditions with daily and hourly forecasts
-		- Dynamic images based on location and weather conditions
-		- Dynamic icons for weather conditions, precipitation %, wind direction
-		- OpenWeatherMap API and device geolocation integration
+		- Dynamic photo images and icons based on location and weather conditions
+		- Geolocation, Open Weather, and Unsplash API integration
 		- REACT | ES6 | jQuery | SCSS | CSS3 | HTML5 | Firebase`,
   },
   {
@@ -48,12 +47,11 @@ const CARDS = [
     website: '',
     firebase: 'https://woodnstrings.ptrchoi.com',
     codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/JayyOP',
-    description: `Pure Javascript and CSS Single Page Application (SPA) product page example. Fully responsive, dynamic page elements.
+    description: `Pure Javascript and CSS Single Page Application (SPA) product page example, with fully responsive, dynamic page elements.
 		
 		Features:
 		- Responsive design with dynamic transitions and animations
 		- Scaling background video, modal image gallery, and mobile nav-menu
-		- Nested CSS Grid & Flex-box layouts
 		- Vanilla JS | CSS | HTML5 | Firebase`,
   },
   {
@@ -63,12 +61,13 @@ const CARDS = [
     website: '',
     firebase: 'https://top-tweet-wiki.ptrchoi.com',
     codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/ZWLMzq',
-    description: `Displays top trending tweets and related Wikipedia articles, in a dynamic, responsive masonry card layout.
+    description: `Find out what's trending on Twitter and learn more from Wikipedia, displayed in a dynamic, compact masonry card layout.
 		
 		Features:
-		- Neumorphic design and styling
-		- Responsive, masonry card grid layout
-		- Twitter & Wikipedia API integration
+    - Neumorphic design and styling with responsive, masonry card grid layout
+    - Real-time Twitter feeds from major US and international cities
+    - Supports Wikipedia topic searches
+		- Twitter and Wikipedia API integration
 		- REACT | ES6 | jQuery | SCSS | CSS3 | HTML5 | Firebase`,
   },
   {
@@ -78,11 +77,11 @@ const CARDS = [
     website: '',
     firebase: 'https://quotes.ptrchoi.com',
     codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/mQEMXv',
-    description: `Inspirational quotes displayed with high-resolution, responsive full-screen photo images.
+    description: `Inspirational quotes displayed with high-resolution, full-screen, themed photo images.
 		
 		Features:
 		- Responsive design with full-screen scaling background images, text, and page elements
-		- Selectable image themes from Unsplash categories
+		- Selectable themes from Unsplash.com images
 		- Forismatic and Unsplash API integration
 		- REACT | ES6 | jQuery | SCSS | CSS3 | HTML5 | Firebase`,
   },
@@ -107,10 +106,11 @@ const CARDS = [
     website: '',
     firebase: 'https://markdown-previewer.ptrchoi.com',
     codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/rqPKJV',
-    description: `GitHub-flavored Markdown editor, renders HTML in a real-time, side-by-side live previewer.
+    description: `GitHub Flavored Markdown editor with real-time, side-by-side HTML previewer.
 		
 		Features:
-		- Responsive design with dynamic side-by-side window layout
+    - Responsive design with dynamic side-by-side window layout
+    - Supports GitHub Flavored Markdown (GFM)
 		- REACT | ES6 | SCSS | CSS3 | HTML5 | Firebase`,
   },
   {
@@ -120,10 +120,10 @@ const CARDS = [
     website: '',
     firebase: 'https://technical-doc.ptrchoi.com',
     codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/jvLoOQ',
-    description: `Pure Javascript and CSS Technical Document featuring Code Element Styling. Recreation of Visual Studio Code’s 'HTML Programming' site.
+    description: `Pure Javascript and CSS Technical Document featuring Code Element Styling. Recreation of VS Code’s 'HTML Programming' website.
 		
 		Features:
-		- From scratch recreation of VSC's technical HTML site as reference
+		- From scratch recreation of VSC's technical HTML site
 		- Fully responsive with scaling text and page elements
 		- Persistent active-selection nav-menu and modal mobile menu
 		- Vanilla JS | CSS | HTML5 | Firebase`,
@@ -135,12 +135,12 @@ const CARDS = [
     website: '',
     firebase: 'https://calculator.ptrchoi.com',
     codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/QJRpvQ',
-    description: `Material-themed calculator supporting touch and keyboard/mouse inputs.
+    description: `Responsive, Material-themed calculator supporting touch and keyboard/mouse inputs with calculation history tracking.
 		
 		Features:
-		- Fully responsive
-		- Material design theme
-		- Touch and keyboard/mouse input support
+		- Fully responsive with touch and keyboard/mouse input support
+    - Material design theme
+    - Tracks calculation history
 		- REACT | ES6 | jQuery | SCSS | CSS3 | HTML5 | Firebase`,
   },
   {
@@ -150,7 +150,7 @@ const CARDS = [
     website: '',
     firebase: 'https://pomodoro.ptrchoi.com',
     codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/RaQdya',
-    description: `Full-featured Pomodoro Clock with adjustable settings for time management/timeboxing.
+    description: `Full-featured, adjustable Pomodoro Clock for time management/timeboxing.
 		
 		Features:
 		- Pause, reset, and session time settings
@@ -194,8 +194,8 @@ const CARDS = [
     description: `Redesigned, rebuilt, and managed the Refresh Conference Website for the 2017 annual conference as part of a distributed team.
 		
 		- Redesign and rebuild of the site from scratch, using Wordpress as the CMS to support frequent client content updates
-		- Created designs and flows that balanced the needs of new users (ie. About/FAQ/Media/Marketing/CTA’s) with users attending the conference (ie. Payment/Events Calendar/Speaker Bios/Sponsors)
-		- *Note that the Refresh site has since changed, particularly the content, but the site retains the overall design from 2017`,
+		- Created designs and flows that balanced the needs of new visitors with registered conference attendees
+		* Note: the Refresh site receives regular updates, but largely retains the designs established in 2017`,
   },
 ];
 
