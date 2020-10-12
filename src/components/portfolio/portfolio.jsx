@@ -61,7 +61,7 @@ const CARDS = [
     website: '',
     firebase: 'https://top-tweet-wiki.ptrchoi.com',
     codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/ZWLMzq',
-    description: `Find out what's trending on Twitter and learn more from Wikipedia, displayed in a dynamic, compact masonry card layout.
+    description: `Location-based, top trending Tweets with related Wikipedia articles, displayed in a dynamic, compact masonry card layout.
 		
 		Features:
     - Neumorphic design and styling with responsive, masonry card grid layout
