@@ -163,12 +163,12 @@ const CARDS = [
     website: '',
     firebase: 'https://simon.ptrchoi.com',
     codepen: '', // codepen: 'https://codepen.io/ptrchoi/pen/wGXNKm',
-    description: `Pure Javascript and CSS version of the classic game of Simon, with authentic visuals, sound effects, and settings.
+    description: `Javascript version of the classic game of Simon, with authentic visuals, sound effects, and settings.
 		
 		Features:
 		- Normal and Strict game modes
 		- Custom created assets
-		- Vanilla JS | CSS | HTML5 | Firebase`,
+		- JS | jQuery | CSS | HTML5 | Firebase`,
   },
   {
     projectId: 'project-11',
