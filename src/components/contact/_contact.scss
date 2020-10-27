@@ -1,47 +1,55 @@
 .contact-wrapper {
-	background-color: $background-gray;
-	align-content: start;
-	color: $white-text;
-	display: grid;
-	padding-top: 18vh;
-	width: 100%;
+  background-color: $background-gray;
+  align-content: start;
+  color: $white-text;
+  display: grid;
+  padding-top: 18vh;
+  width: 100%;
 }
 .logo-icon {
-	@include fluid-type(font-size, $min-width, $max-width, 40px, 72px);
-	padding: 10px;
+  @include fluid-type(font-size, $min-width, $max-width, 40px, 72px);
+  padding: 10px;
 }
 #contactIcons {
-	display: flex;
-	justify-content: space-evenly;
-	margin: auto;
-	padding-top: 6vh;
-	width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  padding-top: 6vh;
+  width: 35%;
+  a:link,
+  a:visited,
+  a:active {
+    color: $white-text;
+  }
+  a:hover {
+    color: $button-bg-blue;
+  }
 }
 #notificationMsg {
-	color: white;
-	font-size: 30px;
-	margin-top: 10vh;
-	text-align: center;
-	z-index: $above-confetti-layer;
+  color: white;
+  font-size: 30px;
+  margin-top: 10vh;
+  text-align: center;
+  z-index: $above-confetti-layer;
 }
 #savedEmail {
-	color: $highlight-yellow;
+  color: $highlight-yellow;
 }
 .element-off {
-	display: none;
-	visibility: hidden;
+  display: none;
+  visibility: hidden;
 }
 .element-on {
-	display: block;
-	visibility: visible;
+  display: block;
+  visibility: visible;
 }
 .contact {
-	opacity: 0;
+  opacity: 0;
 }
 /* --- Slide Class for slide animation --- */
 .contact.slide-contact.slide-contact-right {
-	animation: slideFromRight .75s .2s forwards;
+  animation: slideFromRight 0.75s 0.2s forwards;
 }
 .contact.slide-contact.slide-contact-left {
-	animation: slideFromLeft .75s .2s forwards;
+  animation: slideFromLeft 0.75s 0.2s forwards;
 }

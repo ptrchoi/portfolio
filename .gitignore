@@ -22,6 +22,7 @@
 .env.production.local
 /.vscode
 firebase.jsx
+/.git.bfg-report
 
 npm-debug.log*
 yarn-debug.log*

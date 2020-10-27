@@ -52,10 +52,9 @@ class Contact extends Component {
 						<h1>Contact</h1>
 					</div>
 					<div id="contactIcons" className="contact slide-contact-right">
-						<i className="fab fa-codepen logo-icon" />
-						<i className="fab fa-github logo-icon" />
-						<i className="fab fa-free-code-camp logo-icon" />
-						<i className="fab fa-linkedin logo-icon" />
+						<a href="https://www.linkedin.com/in/peter-choi" target="_blank"><i className="fab fa-linkedin logo-icon" /></a>
+						<a href="https://github.com/ptrchoi?tab=repositories" target="_blank"><i className="fab fa-github logo-icon" /></a>
+						<a href="https://www.freecodecamp.org/ptrchoi" target="_blank"><i className="fab fa-free-code-camp logo-icon" /></a>
 					</div>
 					<div id="notificationMsg" className="element-off">
 						<span>
